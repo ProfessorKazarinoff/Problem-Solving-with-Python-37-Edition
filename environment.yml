@@ -10,6 +10,7 @@ dependencies:
   - bleach=3.1.0=py37_0
   - ca-certificates=2019.1.23=0
   - certifi=2019.3.9=py37_0
+  - click=7.0=py_0
   - colorama=0.4.1=py37_0
   - cycler=0.10.0=py37_0
   - decorator=4.3.2=py37_0
@@ -34,14 +35,17 @@ dependencies:
   - kiwisolver=1.0.1=py37h6538335_0
   - libpng=1.6.36=h2a8f88b_0
   - libsodium=1.0.16=h9d3ae62_0
+  - livereload=2.6.0=py_0
   - m2w64-gcc-libgfortran=5.3.0=6
   - m2w64-gcc-libs=5.3.0=7
   - m2w64-gcc-libs-core=5.3.0=7
   - m2w64-gmp=6.1.0=2
   - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
+  - markdown=3.0.1=py37_0
   - markupsafe=1.1.1=py37he774522_0
   - matplotlib=3.0.3=py37hc8f65d3_0
   - mistune=0.8.4=py37he774522_0
+  - mkdocs=1.0.4=py_0
   - mkl=2019.1=144
   - mkl_fft=1.0.10=py37h14836fe_0
   - mkl_random=1.0.2=py37h343c172_0
@@ -69,6 +73,7 @@ dependencies:
   - python-dateutil=2.8.0=py37_0
   - pytz=2018.9=py37_0
   - pywinpty=0.5.5=py37_1000
+  - pyyaml=5.1=py37hfa6e2cd_0
   - pyzmq=18.0.0=py37ha925a31_0
   - qt=5.9.7=vc14h73c81de_0
   - qtconsole=4.4.3=py37_0
@@ -90,7 +95,11 @@ dependencies:
   - wincertstore=0.2=py37_0
   - winpty=0.4.3=4
   - xlrd=1.2.0=py37_0
+  - yaml=0.1.7=hfa6e2cd_1001
   - zeromq=4.3.1=h33f27b4_3
   - zlib=1.2.11=h62dcd97_3
+  - pip:
+    - mkdocs-material==4.0.2
+    - pymdown-extensions==6.0
 prefix: C:\Users\peter.kazarinoff\AppData\Local\Continuum\Anaconda3\envs\book37
 
