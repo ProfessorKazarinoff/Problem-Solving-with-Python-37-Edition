@@ -99,6 +99,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
+/website/site/
 
 # mypy
 .mypy_cache/
@@ -196,6 +197,11 @@ config.py
 .pdf
 *.pdf
 *.synctex.gz
+.aux
+.log
+.out
+.synctex.gz
+.toc
 
 # PyCharm
 .idea/
@@ -203,3 +209,7 @@ config.py
 *.synctex.gz*
 /pdf/combined_files/
 /pdf/images/
+
+# image files created by nbconvert and nb2latex.py script
+pdf/images/
+pdf/combined_files/

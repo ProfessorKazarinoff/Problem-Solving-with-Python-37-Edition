@@ -215,14 +215,14 @@ def main():
     # export notebooknode to .ipynb file
     # nbnode_to_ipynb(nbnode,'combined')
     # export notebooknode to .pdf
-    pdf_filepath = os.path.join(os.pardir, 'pdf', 'pdfout3')
+    pdf_filepath = os.path.join(os.pardir, 'pdf', 'out')
     # nbnode_to_pdf(nbnode,pdf_filepath)
     # print(f"combined .pdf available in {pdf_filepath}.pdf")
     # nbnode_to_tex(nbnode,pdf_filepath)
     # try with bookbook export function
     outfile_Path = Path(pdf_filepath)
     template_file_Path = Path(os.path.join(os.pardir, 'conversion_tools', 'templates',
-                                           'book_PUU.tplx'))  # more template changes needed, but it is a start
+                                           'book37.tplx'))  # more template changes needed, but it is a start
     export(nbnode, outfile_Path, pdf=False, template_file=template_file_Path)
     # Now compile with seperate LaTeX editor. TexWorks Program with XeLaTex Compiler seems to work
 
