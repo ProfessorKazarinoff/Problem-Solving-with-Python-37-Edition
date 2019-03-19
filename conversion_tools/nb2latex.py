@@ -10,6 +10,7 @@ import nbformat
 from nbformat import NotebookNode
 from nbformat.v4 import new_notebook, new_markdown_cell
 from nbconvert import LatexExporter, NotebookExporter, HTMLExporter, PDFExporter
+from nbconvert.preprocessors import RegexRemovePreprocessor
 from nbconvert.writers import FilesWriter
 from nbconvert.utils.pandoc import pandoc
 from filter_links import convert_links
@@ -144,6 +145,7 @@ def convertNotebooktoLaTeX(notebookPath, outfilePath='latex_out1', template='cla
         exporter = LatexExporter()
         exporter.template_file = template  # classicm style if not specified
         exporter.file_extension = '.tex'
+        exporter.register_preprocessor(RegexRemovePreprocessor, enabled=False)  ###########################
         body, resources = exporter.from_notebook_node(nbnode)
         writer = FilesWriter()
         writer.write(body, resources, notebook_name=outfilePath)  # will end up with .tex extension
@@ -159,6 +161,9 @@ def export(combined_nb: NotebookNode, output_file: Path, pdf=False,
     exporter = MyLatexPDFExporter() if pdf else MyLatexExporter()
     if template_file is not None:
         exporter.template_file = str(template_file)
+    mypreprocessor = RegexRemovePreprocessor() # Create an instance of the RegexRemovePreprocessor
+    mypreprocessor.patterns = ['\s*\Z']        # supply a re pattern (in a list) to the preprocessor's .patterns attribute 
+    exporter.register_preprocessor(mypreprocessor, enabled=True) # apply the preprocessor to the exporter
     writer = FilesWriter(build_directory=str(output_file.parent))
     output, resources = exporter.from_notebook_node(combined_nb, resources)
     writer.write(output, resources, notebook_name=output_file.stem)

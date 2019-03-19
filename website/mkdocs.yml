@@ -62,45 +62,45 @@ pages:
         - Installing Python from Python.org: 01-Orientation/01.06-Installing-Python-from-Python-dot-org.md
         - Summary: 01-Orientation/01.07-Summary.md
         - Review Questions: 01-Orientation/01.08-Review-Questions.md
-    - Chapter 2 The Python REPL:
-        - Introduction: 02-The-Python-REPL/02.00-Introduction.md
-        - Python as a Calculator: 02-The-Python-REPL/02.01-Python-as-a-Calculator.md
-        - Variables: 02-The-Python-REPL/02.02-Variables.md
-        - String Operations: 02-The-Python-REPL/02.03-String-Operations.md
-        - Print Statements: 02-The-Python-REPL/02.04-Print-Statements.md
-        - Summary: 02-The-Python-REPL/02.05-Summary.md
-        - Review Questions: 02-The-Python-REPL/02.06-Review-Questions.md
-    - Chapter 3 Data Types and Variables:
-        - Introduction: 03-Data-Types-and-Variables/03.00-Introduction.md
-        - Numeric Data Types: 03-Data-Types-and-Variables/03.01-Numeric-Data-Types.md
-        - Boolean Data Type: 03-Data-Types-and-Variables/03.02-Boolean-Data-Type.md
-        - Strings: 03-Data-Types-and-Variables/03.03-Strings.md
-        - Lists: 03-Data-Types-and-Variables/03.04-Lists.md
-        - Dictionaries and Tuples: 03-Data-Types-and-Variables/03.05-Dictionaries-and-Tuples.md
-        - Summary: 03-Data-Types-and-Variables/03.06-Summary.md
-        - Review Questions: 03-Data-Types-and-Variables/03.07-Review-Questions.md
-    - Chapter 4 Jupyter Notebooks:
-        - Introduction: 04-Jupyter-Notebooks/04.00-Introduction.md
-        - What is a Jupyter Notebook?: 04-Jupyter-Notebooks/04.01-What-is-a-Jupyter-Notebook.md
-        - Why Jupyter Notebooks?: 04-Jupyter-Notebooks/04.02-Why-Jupyter-Notebooks.md
-        - Installing Juypter: 04-Jupyter-Notebooks/04.03-Installing-Juypter.md
-        - Opening a Jupyter Notebook: 04-Jupyter-Notebooks/04.04-Opening-a-Jupyter-Notebook.md
-        - The Jupyter Notebook Interface: 04-Jupyter-Notebooks/04.05-The-Jupyter-Notebook-Interface.md
-        - Magic Cells: 04-Jupyter-Notebooks/04.06-Magic-Cells.md
-        - Getting Help in a Jupyter Notebook: 04-Jupyter-Notebooks/04.07-Getting-Help-in-a-Jupyter-Notebook.md
-        - Summary: 04-Jupyter-Notebooks/04.08-Summary.md
-        - Review Questions: 04-Jupyter-Notebooks/04.10-Review-Questions.md
-    - Chapter 5 Functions and Modules:
-        - Introduction: 05-Functions-and-Modules/05.00-Introduction.md
-        - Why Functions?: 05-Functions-and-Modules/05.01-Why-functions.md
-        - First Function: 05-Functions-and-Modules/05.02-First-function.md
-        - Functions with Multiple Arguments: 05-Functions-and-Modules/05.03-Functions-with-multiple-arguments.md
-        - Functions with Default Arguments: 05-Functions-and-Modules/05.04-Functions-with-default-arguments.md
-        - Calling Functions from Other Files: 05-Functions-and-Modules/05.05-Calling-Functions-from-Other-Files.md
-        - Docstrings in Functions: 05-Functions-and-Modules/05.06-Docstrings-in-Functions.md
-        - Positional and Keyword Arguments: 05-Functions-and-Modules/05.07-Positional-and-Keyword-Arguments.md
-        - Summary: 05-Functions-and-Modules/05.08-Summary.md
-        - Review Questions: 05-Functions-and-Modules/05.09-Review-Questions.md
+    - Chapter 2 Jupyter Notebooks:
+        - Introduction: 02-Jupyter-Notebooks/02.00-Introduction.md
+        - What is a Jupyter Notebook?: 02-Jupyter-Notebooks/02.01-What-is-a-Jupyter-Notebook.md
+        - Why Jupyter Notebooks?: 02-Jupyter-Notebooks/02.02-Why-Jupyter-Notebooks.md
+        - Installing Juypter: 02-Jupyter-Notebooks/02.03-Installing-Juypter.md
+        - Opening a Jupyter Notebook: 02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook.md
+        - The Jupyter Notebook Interface: 02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface.md
+        - Magic Cells: 02-Jupyter-Notebooks/02.06-Magic-Cells.md
+        - Getting Help in a Jupyter Notebook: 02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook.md
+        - Summary: 02-Jupyter-Notebooks/02.08-Summary.md
+        - Review Questions: 02-Jupyter-Notebooks/02.09-Review-Questions.md
+    - Chapter 3 The Python REPL:
+        - Introduction: 03-The-Python-REPL/03.00-Introduction.md
+        - Python as a Calculator: 03-The-Python-REPL/03.01-Python-as-a-Calculator.md
+        - Variables: 03-The-Python-REPL/03.02-Variables.md
+        - String Operations: 03-The-Python-REPL/03.03-String-Operations.md
+        - Print Statements: 03-The-Python-REPL/03.04-Print-Statements.md
+        - Summary: 03-The-Python-REPL/03.05-Summary.md
+        - Review Questions: 03-The-Python-REPL/03.06-Review-Questions.md
+    - Chapter 4 Data Types and Variables:
+        - Introduction: 04-Data-Types-and-Variables/04.00-Introduction.md
+        - Numeric Data Types: 04-Data-Types-and-Variables/04.01-Numeric-Data-Types.md
+        - Boolean Data Type: 04-Data-Types-and-Variables/04.02-Boolean-Data-Type.md
+        - Strings: 04-Data-Types-and-Variables/04.03-Strings.md
+        - Lists: 04-Data-Types-and-Variables/04.04-Lists.md
+        - Dictionaries and Tuples: 04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples.md
+        - Summary: 04-Data-Types-and-Variables/04.06-Summary.md
+        - Review Questions: 04-Data-Types-and-Variables/04.07-Review-Questions.md
+    - Chapter 5 Matricies and Arrays:
+        - Introduction: 05-Matricies-and-Arrays/05.00-Introduction.md
+        - Installing NumPy: 05-Matricies-and-Arrays/05.01-Installing-NumPy.md
+        - NumPy: 05-Matricies-and-Arrays/05.02-NumPy.md
+        - Array Creation: 05-Matricies-and-Arrays/05.03-Array-Creation.md
+        - Array Indexing: 05-Matricies-and-Arrays/05.04-Array-Indexing.md
+        - Array Slicing: 05-Matricies-and-Arrays/05.05-Array-Slicing.md
+        - Array Operations: 05-Matricies-and-Arrays/05.06-Array-Opperations.md
+        - Systems of Linear Equations: 05-Matricies-and-Arrays/05.07-Systems-of-Linear-Equations.md
+        - Summary: 05-Matricies-and-Arrays/05.08-Summary.md
+        - Review Questions: 05-Matricies-and-Arrays/05.10-Review-Questions.md
     - Chapter 6 Plotting with Matplotlib:
         - Introduction: 06-Plotting-with-Matplotlib/06.00-Introduction.md
         - What is Matplotlib?: 06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib.md
@@ -121,35 +121,35 @@ pages:
         - 3D Surface Plots: 06-Plotting-with-Matplotlib/06.16-3D-Surface-Plots.md
         - Summary: 06-Plotting-with-Matplotlib/06.17-Summary.md
         - Review Questions: 06-Plotting-with-Matplotlib/06.18-Review-Questions.md
-    - Chapter 7 If Else Try Except:
-        - Introduction: 07-If-Else-Try-Except/07.00-Introduction.md
-        - User Input: 07-If-Else-Try-Except/07.01-User-Input.md
-        - If statements: 07-If-Else-Try-Except/07.02-If-Statements.md
-        - Selection Statements: 07-If-Else-Try-Except/07.02-Selection-Statements.md
-        - If Else Statements: 07-If-Else-Try-Except/07.04-If-Else-Statements.md
-        - Try-Except Statements: 07-If-Else-Try-Except/07.05-Try-Except-Statements.md
-        - Flowcharts: 07-If-Else-Try-Except/07.06-Flowcharts.md
-        - Summary: 07-If-Else-Try-Except/07.07-Summary.md
-        - Review Questions: 07-If-Else-Try-Except/07.08-Review-Questions.md
-    - Chapter 8 Loops:
-        - Introduction: 08-Loops/08.00-Introduction.md
-        - For Loops: 08-Loops/08.01-For-Loops.md
-        - While Loops: 08-Loops/08.02-While-Loops.md
-        - Break and Continue: 08-Loops/08.03-Break-and-Continue.md
-        - Flowcharts Describing Loops: 08-Loops/08.04-Flowcharts-Describing-Loops.md
-        - Summary: 08-Loops/08.05-Summary.md
-        - Review Questions: 08-Loops/08.06-Review-Questions.md
-    - Chapter 9 Matricies and Arrays:
-        - Introduction: 09-Matricies-and-Arrays/09.00-Introduction.md
-        - Installing NumPy: 09-Matricies-and-Arrays/09.01-Installing-NumPy.md
-        - NumPy: 09-Matricies-and-Arrays/09.02-NumPy.md
-        - Array Creation: 09-Matricies-and-Arrays/09.03-Array-Creation.md
-        - Array Indexing: 09-Matricies-and-Arrays/09.04-Array-Indexing.md
-        - Array Slicing: 09-Matricies-and-Arrays/09.05-Array-Slicing.md
-        - Array Operations: 09-Matricies-and-Arrays/09.06-Array-Opperations.md
-        - Systems of Linear Equations: 09-Matricies-and-Arrays/09.07-Systems-of-Linear-Equations.md
-        - Summary: 09-Matricies-and-Arrays/09.08-Summary.md
-        - Review Questions: 09-Matricies-and-Arrays/09.10-Review-Questions.md
+    - Chapter 7 Functions and Modules:
+        - Introduction: 07-Functions-and-Modules/07.00-Introduction.md
+        - Why Functions?: 07-Functions-and-Modules/07.01-Why-functions.md
+        - First Function: 07-Functions-and-Modules/07.02-First-function.md
+        - Functions with Multiple Arguments: 07-Functions-and-Modules/07.03-Functions-with-multiple-arguments.md
+        - Functions with Default Arguments: 07-Functions-and-Modules/07.04-Functions-with-default-arguments.md
+        - Calling Functions from Other Files: 07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files.md
+        - Docstrings in Functions: 07-Functions-and-Modules/07.06-Docstrings-in-Functions.md
+        - Positional and Keyword Arguments: 07-Functions-and-Modules/07.07-Positional-and-Keyword-Arguments.md
+        - Summary: 07-Functions-and-Modules/07.08-Summary.md
+        - Review Questions: 07-Functions-and-Modules/07.09-Review-Questions.md
+    - Chapter 8 If Else Try Except:
+        - Introduction: 08-If-Else-Try-Except/08.00-Introduction.md
+        - User Input: 08-If-Else-Try-Except/08.01-User-Input.md
+        - If statements: 08-If-Else-Try-Except/08.02-If-Statements.md
+        - Selection Statements: 08-If-Else-Try-Except/08.02-Selection-Statements.md
+        - If Else Statements: 08-If-Else-Try-Except/08.04-If-Else-Statements.md
+        - Try-Except Statements: 08-If-Else-Try-Except/08.05-Try-Except-Statements.md
+        - Flowcharts: 08-If-Else-Try-Except/08.06-Flowcharts.md
+        - Summary: 08-If-Else-Try-Except/08.07-Summary.md
+        - Review Questions: 08-If-Else-Try-Except/08.08-Review-Questions.md
+    - Chapter 9 Loops:
+        - Introduction: 09-Loops/09.00-Introduction.md
+        - For Loops: 09-Loops/09.01-For-Loops.md
+        - While Loops: 09-Loops/09.02-While-Loops.md
+        - Break and Continue: 09-Loops/09.03-Break-and-Continue.md
+        - Flowcharts Describing Loops: 09-Loops/09.04-Flowcharts-Describing-Loops.md
+        - Summary: 09-Loops/09.05-Summary.md
+        - Review Questions: 09-Loops/09.06-Review-Questions.md
     - Chapter 10 Symbolic Math:
         - Introduction: 10-Symbolic-Math/10.00-Introduction.md
         - SymPy: 10-Symbolic-Math/10.01-SymPy.md

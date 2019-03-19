@@ -8,6 +8,7 @@ the mkdocs.yml file appended and this script run, mkdocs can be run to build the
 import nbformat
 from nbconvert import HTMLExporter
 from nbconvert.writers import FilesWriter
+from nbconvert.preprocessors import RegexRemovePreprocessor
 import os
 import re
 import shutil
@@ -44,6 +45,9 @@ def convertNotebooktoHTML(notebookPath, outfilePath='nb_out', template='md_not_c
         exporter = HTMLExporter()
         exporter.template_file = template  # leaves markdown not converted, converts input and output cells
         exporter.file_extension = '.md'
+        mypreprocessor = RegexRemovePreprocessor() # Create an instance of the RegexRemovePreprocessor
+        mypreprocessor.patterns = ['\s*\Z']        # supply a re pattern (in a list) to the preprocessor's .patterns attribute 
+        exporter.register_preprocessor(mypreprocessor, enabled=True) # apply the preprocessor to the exporter
         body, resources = exporter.from_notebook_node(nbnode)
         writer = FilesWriter()
         writer.write(body, resources, notebook_name=outfilePath)  # will end up with .html extension
