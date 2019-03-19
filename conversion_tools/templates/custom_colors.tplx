@@ -1,0 +1,13 @@
+%custom_colors.tplx
+
+\definecolor{stringred}{RGB}{186,33,33}
+\definecolor{commentteal}{RGB}{64,128,128}
+\definecolor{darkgreen}{RGB}{0,128,0}
+\definecolor{cm-keyword}{HTML}{008000}  %jupyter notebook keyword color
+\definecolor{cm-builtin}{HTML}{008000}  %jupyter notebook built-in function color
+\definecolor{cm-number}{HTML}{008800}   %jupyter notebook number color
+\definecolor{cm-string}{HTML}{BA2121}   %jupyter notebook string color
+\definecolor{cm-operator}{HTML}{AA22FF} %jupyter notebook operator color
+\definecolor{cm-comment}{HTML}{408080}  %jupyter notebook comment color
+
+% end custom_colors.tplx

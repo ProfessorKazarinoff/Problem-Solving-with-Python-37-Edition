@@ -8,113 +8,23 @@
 ((* endblock docclass *))
 
 ((* block packages *))
-    \usepackage{pmboxdraw}
-    \usepackage{verbatim}
-    \usepackage{listings}
-    \usepackage[T1]{fontenc} % Nicer default font (+ math font) than Computer Modern for most use cases
-    \setlength{\parskip}{0.5em} %for a space between paragraphs that is not a full space
-    \setlength{\parindent}{0em} %for no indentation between paragraphs
-    \usepackage{mathpazo}
-    % Basic figure setup, for now with no caption control since it's done
-    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
-    \usepackage{graphicx}
-    % We will generate all images so they have a width \maxwidth. This means
-    % that they will get their normal width if they fit onto the page, but
-    % are scaled down if they would overflow the margins.
-    \makeatletter
-    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
-    \else\Gin@nat@width\fi}
-    \makeatother
-    \let\Oldincludegraphics\includegraphics
-    % Set max figure width to be 80% of text width, for now hardcoded.
-    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
-    % Ensure that by default, figures have no caption (until we provide a
-    % proper Figure object with a Caption API and a way to capture that
-    % in the conversion process - todo).
-    \usepackage{caption}
-    \DeclareCaptionLabelFormat{nolabel}{}
-    %\captionsetup{labelformat=nolabel}
-    % Adds label ``Figure 1.13 The Anaconda Prompt'' in front of each figure caption
-    \captionsetup[figure]{labelfont={bf},name={Figure},labelsep=period}
-    \usepackage{adjustbox} % Used to constrain images to a maximum size
-    \usepackage{xcolor} % Allow colors to be defined
-    \usepackage{enumerate} % Needed for markdown enumerations to work
-    \usepackage{geometry} % Used to adjust the document margins
-    \usepackage{amsmath} % Equations
-    \usepackage{amssymb} % Equations
-    \usepackage{textcomp} % defines textquotesingle
-    % Hack from http://tex.stackexchange.com/a/47451/13684:
-    \AtBeginDocument{%
-        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
-    }
-    \usepackage{upquote} % Upright quotes for verbatim code
-    \usepackage{eurosym} % defines \euro
-    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
-    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
-    \usepackage{fancyvrb} % verbatim replacement that allows latex
-    \usepackage{grffile} % extends the file name processing of package graphics
-                         % to support a larger range
-    % The hyperref package gives us a pdf with properly built
-    % internal navigation ('pdf bookmarks' for the table of contents,
-    % internal cross-reference links, web links for URLs, etc.)
-    \usepackage{hyperref}  % see https://www.overleaf.com/learn/latex/Hyperlinks#Styles_and_colours to style
-    \usepackage{longtable} % longtable support required by pandoc >1.10
-    \usepackage{booktabs}  % table support for pandoc > 1.12.2
-    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
-    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
-                                % normalem makes italics be italics, not underlines
-    \usepackage{titlesec}
-    \setcounter{secnumdepth}{1} %only chapter and sections are numbered, subsections and subsubsections are not numbered
-    \setcounter{tocdepth}{1}    %only chapter and sections in TOC, subsections and subsubsections are not in TOC
-    \usepackage{multicol} % need multicols for end of chapter key terms and end of chapter questions
-
-    \newenvironment{problems}{}{}  %keep regular one column formatting in problems environment. Long table would not output in two col mode
-%   \newenvironment{problems}{\begin{multicols}{2}}{\end{multicols}} %an environment for the review question sections, where two columns are shown instead of one column everywhere else. Depends on the logic looking for latex environment problems in notebook cell metadata.
-
-% in cell metadata
-%{
-%  "latex": {
-%    "environment": "problems"
-%  }
-%}
-
-    \newenvironment{key_terms}{\begin{multicols}{3}}{\end{multicols}} %an environment for the key_terms and concepts sections, where three columns are shown instead of one column everywhere else. Depends on the logic looking for latex environment key terms in notebook cell metadata.
-
-% in cell metadata
-%{
-%  "latex": {
-%    "environment": "key_terms"
-%  }
-%}
-
-% to put a \new page before the cell in question. Add the json below to the cell metadata.
-
-% in cell metadata
-%{
-%  "latex": {
-%    "before_cell": "newpage"
-%  }
-%}
-
-
-% to put a \newpage after the cell in question. Add the json below to the cell metadata.
-% in cell metadata
-%{
-%  "latex": {
-%    "after_cell": "newpage"
-%  }
-%}
-
+    ((* include 'packages.tplx' *))
 ((* endblock packages *))
 
 ((* block preamble *))
 ((* endblock preamble *))
 
-((* block title *))
-\title{Problem Solving with Python}
-\author{Peter D. Kazarinoff, PhD}
-\date{3.7 Edition}
-((* endblock title *))
+((* block definitions *))
+    ((* include 'custom_colors.tplx' *))
+    ((* include 'environments.tplx' *))
+
+    ((* block title *))
+        \title{Problem Solving with Python}
+        \author{Peter D. Kazarinoff, PhD}
+        \date{3.7 Edition}
+    ((* endblock title *))
+    ((( super() )))
+((* endblock definitions *))
 
 ((* block commands *))
     ((* block margins *))
@@ -140,20 +50,9 @@
         %morekeywords = [3]{>>>,+,-,/,*,**,%},
         showstringspaces=false,
         }
-
     \newcommand{\passthrough}[1]{#1}
 
-    %custom colors
-    \definecolor{stringred}{RGB}{186,33,33}
-    \definecolor{commentteal}{RGB}{64,128,128}
-    \definecolor{darkgreen}{RGB}{0,128,0}
-    \definecolor{cm-keyword}{HTML}{008000}  %jupyter notebook keyword color
-    \definecolor{cm-builtin}{HTML}{008000}  %jupyter notebook built-in function color
-    \definecolor{cm-number}{HTML}{008800}   %jupyter notebook number color
-    \definecolor{cm-string}{HTML}{BA2121}   %jupyter notebook string color
-    \definecolor{cm-operator}{HTML}{AA22FF} %jupyter notebook operator color
-    \definecolor{cm-comment}{HTML}{408080}  %jupyter notebook comment color
-
+    ((( super() )))
 ((* endblock commands *))
 
 ((* block predoc *))
