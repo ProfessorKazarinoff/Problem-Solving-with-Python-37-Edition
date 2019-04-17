@@ -213,3 +213,8 @@ config.py
 # image files created by nbconvert and nb2latex.py script
 pdf/images/
 pdf/combined_files/
+
+# Python Virtual Environments
+venv/
+.venv/
+
