@@ -1,0 +1,98 @@
+% book37.tplx
+
+% Inherit from report
+((* extends 'report.tplx' *))
+
+((* block docclass *))
+    \documentclass{book}
+((* endblock docclass *))
+
+((* block packages *))
+    ((* include 'packages.tplx' *))
+((* endblock packages *))
+
+((* block preamble *))
+((* endblock preamble *))
+
+((* block definitions *))
+    ((* include 'custom_colors.tplx' *))
+    ((* include 'environments.tplx' *))
+
+    ((* block title *))
+        \title{Problem Solving with Python}
+        \author{Peter D. Kazarinoff, PhD}
+        \date{3.7 Edition}
+    ((* endblock title *))
+    ((( super() )))
+((* endblock definitions *))
+
+((* block commands *))
+    ((* block margins *))
+        \geometry{
+            verbose,
+            papersize={8in,10in},
+            tmargin=1in,
+            bmargin=0.75in,
+            lmargin=1.0in,
+            rmargin=1.0in}
+    ((* endblock margins *))
+
+    \setcounter{chapter}{0}
+
+    \lstset{
+        language={},
+        basicstyle=\ttfamily,
+        xleftmargin=4ex,
+        stringstyle=\color{cm-string},
+        commentstyle=\color{cm-comment},
+        keywordstyle=\color{cm-keyword}\bfseries,
+        %keywordstyle = {[3]\color{cm-operator}},
+        %morekeywords = [3]{>>>,+,-,/,*,**,%},
+        showstringspaces=false,
+        }
+    \newcommand{\passthrough}[1]{#1}
+
+    ((( super() )))
+((* endblock commands *))
+
+((* block predoc *))
+    ((* block maketitle *))
+        \maketitle
+        \input{copywrite_page.tex}
+        \newpage
+        \input{dedication_page.tex}
+        \newpage
+        \tableofcontents
+    ((* endblock maketitle *))
+    ((* block abstract *))((* endblock abstract *))
+((* endblock predoc *))
+
+((* block markdowncell scoped *))
+
+    ((* if 'problems' in cell['metadata'].get('latex', {}).get('environment', []) *))
+        \begin{problems}
+        ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+        \end{problems}
+
+    ((* elif 'key_terms' in cell['metadata'].get('latex', {}).get('environment', []) *))
+        \begin{key_terms}
+        ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+        \end{key_terms}
+
+    ((* elif 'newpage' in cell['metadata'].get('latex', {}).get('before_cell', []) *))
+        \newpage
+        ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+
+    ((* elif 'newpage' in cell['metadata'].get('latex', {}).get('after_cell', []) *))
+        ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+        \newpage
+
+    ((* else *))
+        ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+    ((* endif *))
+
+
+((* endblock markdowncell *))
+
+% to get lstlisting use: ((( cell.source | citation2latex | strip_files_prefix | markdown2latex(extra_args=["--top-level-division=chapter", "--listings"]) )))
+% in LaTeX doc need \usepackage{listings} \newcommand{\passthrough}[1]{#1}

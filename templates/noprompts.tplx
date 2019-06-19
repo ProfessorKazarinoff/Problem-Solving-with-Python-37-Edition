@@ -1,0 +1,16 @@
+% extend the default article template:
+((* extends 'article.tplx' *))
+
+% display input without prompts:
+((* block input scoped *))
+\begin{Verbatim}[commandchars=\\\{\}]
+((( cell.source | highlight_code(strip_verbatim=True) )))
+\end{Verbatim}
+((* endblock input *))
+
+% treat execute_result (output with prompt) as display_data (output without prompt)
+((* block execute_result scoped *))
+    ((* block display_data scoped *))
+        ((( super() )))
+    ((* endblock display_data *))
+((* endblock execute_result *))

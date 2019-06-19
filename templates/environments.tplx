@@ -1,0 +1,40 @@
+%environments.tplx
+
+\newenvironment{problems}{}{}  %keep regular one column formatting in problems environment. Long table would not output in two col mode
+%   \newenvironment{problems}{\begin{multicols}{2}}{\end{multicols}} %an environment for the review question sections, where two columns are shown instead of one column everywhere else. Depends on the logic looking for latex environment problems in notebook cell metadata.
+
+% in cell metadata
+%{
+%  "latex": {
+%    "environment": "problems"
+%  }
+%}
+
+\newenvironment{key_terms}{\begin{multicols}{3}}{\end{multicols}} %an environment for the key_terms and concepts sections, where three columns are shown instead of one column everywhere else. Depends on the logic looking for latex environment key terms in notebook cell metadata.
+
+% in cell metadata
+%{
+%  "latex": {
+%    "environment": "key_terms"
+%  }
+%}
+
+% to put a \new page before the cell in question. Add the json below to the cell metadata.
+
+% in cell metadata
+%{
+%  "latex": {
+%    "before_cell": "newpage"
+%  }
+%}
+
+
+% to put a \newpage after the cell in question. Add the json below to the cell metadata.
+% in cell metadata
+%{
+%  "latex": {
+%    "after_cell": "newpage"
+%  }
+%}
+
+% end environments.tplx
