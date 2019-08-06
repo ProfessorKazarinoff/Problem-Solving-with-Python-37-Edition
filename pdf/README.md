@@ -51,7 +51,7 @@ Make the table of contents list Appendix sections in letters. Un-number the appe
 
 ```
 \chapter*{Appendix}\label{appendix}
-\addcontentsline{toc}{chapter}{Appendices}
+\addcontentsline{toc}{chapter}{Appendix}
 
 
 \renewcommand{\thesection}{\Alph{section}.}
