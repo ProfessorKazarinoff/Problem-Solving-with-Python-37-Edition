@@ -25,7 +25,6 @@
 \usepackage[T1]{fontenc} % Nicer default font (+ math font) than Computer Modern for most use cases
 \setlength{\parskip}{0.5em} %for a space between paragraphs that is not a full space
 \setlength{\parindent}{0em} %for no indentation between paragraphs
-\cftsetindents{section}{1em}{3em} %set indent of sections in TOC
 \usepackage{mathpazo}
 % Basic figure setup, for now with no caption control since it's done
 % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
@@ -7157,6 +7156,24 @@ s[8:]
 
 
     
+        \hypertarget{numpy}{%
+\section{NumPy}\label{numpy}}
+    
+
+
+
+
+    
+        NumPy is a Python package used for numerical computation. NumPy is one
+of the foundational packages for scientific computing with Python.
+NumPy's core data type is the array and NumPy functions operate on
+arrays.
+    
+
+
+
+
+    
         \hypertarget{installing-numpy}{%
 \section{Installing NumPy}\label{installing-numpy}}
     
@@ -7165,11 +7182,7 @@ s[8:]
 
 
     
-        NumPy is a Python package used for numerical computation. NumPy's core
-data type is the array. NumPy fuctions operate on arrays. NumPy is one
-of the foundational packages for scientific computing with Python.
-
-Before NumPy's functions and methods can be used, NumPy must be
+        Before NumPy's functions and methods can be used, NumPy must be
 installed. Depending on which distribution of Python you use, the
 installation method is slightly different.
     
@@ -7229,7 +7242,7 @@ This command installs NumPy in the current working Python environment.
         \hypertarget{verify-numpy-installation}{%
 \subsection{Verify NumPy installation}\label{verify-numpy-installation}}
 
-To verify NumPy is installed, invoke the NumPy's version at the Python
+To verify NumPy is installed, invoke NumPy's version using the Python
 REPL. Import NumPy and call the
 \passthrough{\lstinline!.\_\_version\_\_!} attribute common to most
 Python packages.
@@ -7248,8 +7261,17 @@ Python packages.
             
 
     
-        \hypertarget{numpy}{%
-\section{NumPy}\label{numpy}}
+        A version number like \passthrough{\lstinline!'1.16.1'!} indicates a
+successful NumPy installation.
+    
+
+
+
+
+    
+        \hypertarget{python-lists-and-numpy-arrays}{%
+\section{Python Lists and NumPy
+Arrays}\label{python-lists-and-numpy-arrays}}
     
 
 
@@ -7258,7 +7280,7 @@ Python packages.
     
         NumPy is a Python package used for numerical calculations, working with
 arrays of homogeneous values, and scientific computing. This section
-introduces NumPy and arrays then explains the difference between Python
+introduces NumPy arrays then explains the difference between Python
 lists and NumPy arrays.
     
 
@@ -7266,18 +7288,15 @@ lists and NumPy arrays.
 
 
     
-        \hypertarget{python-lists-and-numpy-arrays}{%
-\subsection{Python Lists and NumPy
-Arrays}\label{python-lists-and-numpy-arrays}}
+        \hypertarget{python-lists}{%
+\subsection{Python Lists}\label{python-lists}}
 
-In previous chapters, NumPy was used some of the functions and methods
-the package provides. NumPy is used to construct homogeneous arrays and
-perform mathematical operations on arrays. A NumPy array is different
-from a Python list. The data types stored in a Python list can all be
-different.
+NumPy is used to construct homogeneous arrays and perform mathematical
+operations on arrays. A NumPy array is different from a Python list. The
+data types stored in a Python list can all be different.
 
 \begin{lstlisting}[language=Python]
-python_list =[ 1, -0.038, 'gear', True]
+python_list = [ 1, -0.038, 'gear', True]
 \end{lstlisting}
 
 The Python list above contains four different data types:
@@ -7308,7 +7327,10 @@ The code below prints the data type of each value store in
 
 
     
-        The values stored in a NumPy array must all share the same data type.
+        \hypertarget{numpy-arrays}{%
+\subsection{NumPy Arrays}\label{numpy-arrays}}
+
+The values stored in a NumPy array must all share the same data type.
 Consider the NumPy array below:
 
 \begin{lstlisting}[language=Python]
@@ -7367,8 +7389,9 @@ Python are Unicode by default).
 
     
         NumPy arrays can also be two-dimensional, three-dimensional, or up to
-n-dimensional. Computer resources limit array size, but the data type
-stored in each array is limited to the same type.
+n-dimensional. In practice, computer resources limit array size.
+Remember that regardless of size, all elements in a NumPy array must be
+the same type.
     
 
 
@@ -7376,9 +7399,12 @@ stored in each array is limited to the same type.
 
     
         NumPy arrays are useful because mathematical operations can be run on an
-entire array simultaneously. If a numbers are stored in a regular Python
-list, when the list is multiplied by a scalar, the list extends and
+entire array simultaneously. If numbers are stored in a regular Python
+list and the list is multiplied by a scalar, the list extends and
 repeats- instead of multiplying each number in the list by the scalar.
+
+The code below demonstrates list repetition using the multiplication
+operator, \passthrough{\lstinline!*!}.
     
 
 
@@ -7394,7 +7420,7 @@ repeats- instead of multiplying each number in the list by the scalar.
             
 
     
-        To multiply each element of a Python list by the scalar number
+        To multiply each element in a Python list by the number
 \passthrough{\lstinline!2!}, a loop can be used:
     
 
@@ -7416,10 +7442,18 @@ repeats- instead of multiplying each number in the list by the scalar.
         The method above is relatively cumbersome and is also quite
 \emph{computationally expensive}. An operation that is computationally
 expensive is an operation that takes a lot of processing time or storage
-resources like RAM or CPU bandwidth.
+resources like RAM and CPU bandwidth.
 
 Another way of completing the same action as the loop above is to use a
 NumPy array.
+    
+
+
+
+
+    
+        \hypertarget{array-multiplication}{%
+\subsection{Array Multiplication}\label{array-multiplication}}
 
 An entire NumPy array can be multiplied by a scalar in one step. The
 scalar multiplication operation below produces an array with each
@@ -7440,15 +7474,24 @@ element multiplied by the scalar \passthrough{\lstinline!2!}.
 
     
         If we have a very long list of numbers, we can compare the amount of
-time it takes each of the two computation methods above to complete the
-same operation. We'll compare the Python list calculation to the NumPy
-array calculation.
+time it takes each of the two computation methods above, a list with a
+loop compared to array multiplication to complete the same operation.
+This comparison highlights an advantage of arrays compared to lists-
+speed.
+    
 
-Jupyter notebooks have a nice built-in way to time how a line of code
-takes to execute. In a Jupyter notebook, when a line starts with
-\passthrough{\lstinline!\%timeit!} followed by code, the notebook runs
-the line of code multiple times and outputs an average of the time spent
-to execute the line of code.
+
+
+
+    
+        \hypertarget{timing-arrays}{%
+\subsection{Timing Arrays}\label{timing-arrays}}
+
+Jupyter notebooks have a nice built-in method to time how long a line of
+code takes to execute. In a Jupyter notebook, when a line starts with
+\passthrough{\lstinline!\%timeit!} followed by code, the kernel runs the
+line of code multiple times and outputs an average of the time spent to
+execute the line of code.
 
 We can use \passthrough{\lstinline!\%timit!} to compare a mathematical
 operation on a Python list using a for loop to the same mathematical
@@ -7463,7 +7506,7 @@ operation on a NumPy array.
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-4.47 ms ± 1.41 ms per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+3.09 ms ± 927 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 
     \end{Verbatim}
 
@@ -7473,7 +7516,7 @@ operation on a NumPy array.
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-11.9 µs ± 155 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+7.21 µs ± 105 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 
     \end{Verbatim}
 
@@ -7522,27 +7565,27 @@ square brackets at either end.
     
         The data type can be passed into the
 \passthrough{\lstinline!np.array()!} function as a second optional
-positional arguments. Available data types include
+keyword argument. Available data types include
 \passthrough{\lstinline!'int64'!}, \passthrough{\lstinline!'float'!},
 \passthrough{\lstinline!'complex'!} and \passthrough{\lstinline!'>U32'!}
-(string data type).
+(a string data type).
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}2}]:} array([1., 2., 3.])
+{\color{outcolor}Out[{\color{outcolor}1}]:} array([1., 2., 3.])
 \end{Verbatim}
             
 
     
-        The data type store in a NumPy array can be determined using the
-\passthrough{\lstinline!.dtype!} method. For instance, an array of
+        The data type used in a NumPy array can be determined using the
+\passthrough{\lstinline!.dtype!} attribute. For instance, an array of
 \passthrough{\lstinline!floats!} returns
 \passthrough{\lstinline!float64!}.
     
@@ -7550,15 +7593,23 @@ positional arguments. Available data types include
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{n}{my\PYZus{}array} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{n}{my\PYZus{}array} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{my\PYZus{}array}\PY{o}{.}\PY{n}{dtype}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}3}]:} dtype('float64')
+{\color{outcolor}Out[{\color{outcolor}2}]:} dtype('float64')
 \end{Verbatim}
             
+
+    
+        In addition to \passthrough{\lstinline!np.array()!}, there are other
+functions you can use to create NumPy arrays.
+    
+
+
+
 
     
         \hypertarget{arrays-of-regularly-spaced-numbers}{%
@@ -7566,7 +7617,8 @@ positional arguments. Available data types include
 Numbers}\label{arrays-of-regularly-spaced-numbers}}
 
 There are multiple ways to create arrays of regularly spaced numbers
-with NumPy
+with NumPy. The next section introduces five NumPy functions to create
+regular arrays.
     
 
 
@@ -7651,15 +7703,17 @@ spaced array.
 my_array = np.logspace(start, stop, number of elements, base=<num>)
 \end{lstlisting}
 
-This function is useful for creating an array of logarithmically spaced
-numbers where the spacing interval is not known but the number of values
-is. Consider creating a NumPy array of 4 logarithmically spaced numbers
-between \passthrough{\lstinline!10!} and \passthrough{\lstinline!100!}.
-The function call is \passthrough{\lstinline!np.logspace(1, 2, 4)!}. The
+The \passthrough{\lstinline!np.logspace()!} function is useful for
+creating an array of logarithmically spaced numbers where the spacing
+interval is not known but the number of values is. Consider creating a
+NumPy array of 4 logarithmically spaced numbers between
+\passthrough{\lstinline!10!} and \passthrough{\lstinline!100!}. The
+function call is \passthrough{\lstinline!np.logspace(1, 2, 4)!}. The
 \passthrough{\lstinline!start!} is \(10^1 = 10\) and the
-\passthrough{\lstinline!stop!} is \(10^2 = 100\). Be careful about
-putting large numbers in for \passthrough{\lstinline!stop!} because the
-argument is the power of 10, not the stop value.
+\passthrough{\lstinline!stop!} is \(10^2 = 100\), and the number of
+elements is \passthrough{\lstinline!4!}. Be careful about putting large
+numbers in for \passthrough{\lstinline!stop!} because the stop argument
+is the power of 10, not the stop value.
     
 
 
@@ -7670,6 +7724,31 @@ argument is the power of 10, not the stop value.
 
 \begin{Verbatim}[commandchars=\\\{\}]
 {\color{outcolor}Out[{\color{outcolor}6}]:} array([ 10.        ,  21.5443469 ,  46.41588834, 100.        ])
+\end{Verbatim}
+            
+
+    
+        Large numbers passed to \passthrough{\lstinline!np.logspace()!} will
+produce errors. Remember to pass exponents to
+\passthrough{\lstinline!np.logspace()!}. The code below throws an error
+because \(10^{1000}\) is bigger than the largest floating point number
+supported by a 64 bit computer.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{np}\PY{o}{.}\PY{n}{logspace}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+C:\textbackslash{}Users\textbackslash{}peter.kazarinoff\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Continuum\textbackslash{}Anaconda3\textbackslash{}lib\textbackslash{}site-packages\textbackslash{}numpy\textbackslash{}core\textbackslash{}function\_base.py:279: RuntimeWarning: overflow encountered in power
+  return \_nx.power(base, y)
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:} array([1.e+10,    inf,    inf,    inf])
 \end{Verbatim}
             
 
@@ -7733,6 +7812,14 @@ my_array = np.ones((rows,cols))
             
 
     
+        In the next section, you'll learn how to create array of random numbers
+with NumPy.
+    
+
+
+
+
+    
         \hypertarget{arrays-of-random-numbers}{%
 \subsection{Arrays of Random Numbers}\label{arrays-of-random-numbers}}
     
@@ -7762,38 +7849,39 @@ syntax is:
 np.random.randint(lower limit, upper limit, number of values)
 \end{lstlisting}
 
-To create an array of 5 different random numbers, each random number
-between 1 and 10:
+The code below creates an array of 5 random integers, each random
+integer between 1 and 10:
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}9}]:} array([6, 7, 2, 3, 0])
+{\color{outcolor}Out[{\color{outcolor}5}]:} array([9, 8, 2, 5, 2])
 \end{Verbatim}
             
 
     
-        Array dimensions can be provided as the third argument. A 5 \(\times\) 5
-array of random numbers between 1 and 10:
+        Array dimensions can be provided as the third argument to the
+\passthrough{\lstinline!np.random.randint()!} function. The code below
+creates a 5 \(\times\) 5 array of random numbers between 1 and 10:
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}10}]:} array([[7, 2, 1, 7, 7],
-                [7, 5, 7, 1, 0],
-                [9, 1, 1, 4, 3],
-                [3, 3, 4, 0, 7],
-                [0, 8, 6, 8, 0]])
+{\color{outcolor}Out[{\color{outcolor}6}]:} array([[1, 6, 7, 8, 2],
+               [2, 0, 6, 3, 2],
+               [8, 8, 2, 3, 9],
+               [8, 4, 7, 2, 0],
+               [1, 3, 5, 9, 9]])
 \end{Verbatim}
             
 
@@ -7809,17 +7897,55 @@ is:
 np.random.rand(number of values)
 \end{lstlisting}
 
-To create an array of 5 different random numbers between 0 and 1:
+To create an array of 5 random floats between 0 and 1:
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}11}]:} array([0.87496687, 0.53720722, 0.46532805, 0.34379277, 0.40271602])
+{\color{outcolor}Out[{\color{outcolor}13}]:} array([0.74876036, 0.5403639 , 0.87934604, 0.08373662, 0.18713551])
+\end{Verbatim}
+            
+
+    
+        The upper and lower ranges of random floats can me modified with
+arithmetic.
+
+To expand the range of random floats to between
+\passthrough{\lstinline!0!} and \passthrough{\lstinline!10!}, multiply
+the result by \passthrough{\lstinline!10!}
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{10}
+\end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}15}]:} array([4.07650792, 5.94007487, 3.83427467, 1.0336569 , 3.40368341])
+\end{Verbatim}
+            
+
+    
+        To change the range to between \passthrough{\lstinline!11!} and
+\passthrough{\lstinline!13!}, we multiply the range by
+\passthrough{\lstinline!2!} (range 0-3), then add
+\passthrough{\lstinline!11!} to the result.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{11}
+\end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}16}]:} array([12.51534171, 12.27391119, 12.11401002, 11.55578106, 12.6999884 ])
 \end{Verbatim}
             
 
@@ -7916,10 +8042,17 @@ to quickly plot a normal distribution created with NumPy's
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_356_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_369_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+
+    
+        The next section introduces methods to create 2D NumPy arrays.
+    
+
+
+
 
     
         \hypertarget{d-arrays}{%
@@ -7941,7 +8074,7 @@ of the 2D arrays has the same values in each row; the other 2D array has
 the same values in each column.
 
 \begin{lstlisting}[language=Python]
-np.meshgrid(array1,array2)
+np.meshgrid(array1, array2)
 \end{lstlisting}
     
 
@@ -7973,6 +8106,15 @@ np.meshgrid(array1,array2)
 
 
     
+        Note how the first array \passthrough{\lstinline!X!} has the same
+numbers in each row, and the second array \passthrough{\lstinline!Y!}
+has the same numbers in each column.
+    
+
+
+
+
+    
         \hypertarget{np.mgrid}{%
 \subsubsection{np.mgrid{[}{]}}\label{np.mgrid}}
 
@@ -7985,7 +8127,7 @@ Use square brackets \passthrough{\lstinline![ ]!} after the
 ``lists'' passed as input arguments with a comma and use the
 \passthrough{\lstinline!start:stop:step!} indexing method. The outputs
 of the \passthrough{\lstinline!np.mgrid[]!} function are two 2D arrays.
-The first 2D array have the same values in each row; the second 2D array
+The first 2D array has the same values in each row; the second 2D array
 has the same values in each column.
 
 \begin{lstlisting}[language=Python]
@@ -8025,34 +8167,35 @@ np.mgrid[start:stop:step, start:stop:step]
 
 
     
-        Below is a list of NumPy function descriptions used in this section.
+        Below is a list of NumPy functions and associated descriptions used in
+this section.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
 Function & Description\tabularnewline
 \midrule
 \endhead
-\passthrough{\lstinline!np.array([list,of,numbers])!} & Array from a
+\passthrough{\lstinline!np.array([list, of, numbers])!} & Array from a
 list\tabularnewline
-\passthrough{\lstinline!np.arange(start,stop,step)!} & Array with know
+\passthrough{\lstinline!np.arange(start, stop, step)!} & Array with know
 step\tabularnewline
 \passthrough{\lstinline!np.linspace(start, stop, num)!} & Array with
 known num\tabularnewline
-\passthrough{\lstinline!np.logspace(start,stop,num)!} & Logorithmically
-spaced array\tabularnewline
-\passthrough{\lstinline!np.zeros((rows,cols))!} & Array of
+\passthrough{\lstinline!np.logspace(start, stop, num)!} &
+Logorithmically spaced array\tabularnewline
+\passthrough{\lstinline!np.zeros((rows, cols))!} & Array of
 zeros\tabularnewline
-\passthrough{\lstinline!np.ones((rows,cols))!} & Array of
+\passthrough{\lstinline!np.ones((rows, cols))!} & Array of
 ones\tabularnewline
 \passthrough{\lstinline!np.random.randint(start, stop, num)!} & Random
 integers\tabularnewline
 \passthrough{\lstinline!np.random.rand(num)!} & Random float 0 to
 1\tabularnewline
-\passthrough{\lstinline!np.random.choice(list,num)!} & Randome choice
+\passthrough{\lstinline!np.random.choice(list, num)!} & Randome choice
 from a list\tabularnewline
 \passthrough{\lstinline!np.random.randn(num)!} & Random normal
 distribution\tabularnewline
-\passthrough{\lstinline!np.meshgrid(array1,array2)!} & Two 2D arrays
+\passthrough{\lstinline!np.meshgrid(array1, array2)!} & Two 2D arrays
 from two 1D arrays\tabularnewline
 \passthrough{\lstinline!np.mgrid[start:stop:step, start:stop:step]!} &
 MATLAB meshgrid\tabularnewline
@@ -8084,10 +8227,16 @@ An array with 3 values is created in the code section below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
 \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[2 4 6]
+
+    \end{Verbatim}
 
 
     
@@ -8098,12 +8247,12 @@ these values has a different index.
 \textbf{Remember counting in Python starts at
 \passthrough{\lstinline!0!} and ends at \passthrough{\lstinline!n-1!}.}
 
-The value \passthrough{\lstinline!2!} has an index of 0.
-\passthrough{\lstinline!2!} is in the 0 location of the array. The value
+The value \passthrough{\lstinline!2!} has an index of 0. We could also
+say \passthrough{\lstinline!2!} is in location 0 of the array. The value
 \passthrough{\lstinline!4!} has an index of \passthrough{\lstinline!1!}
 and the value \passthrough{\lstinline!6!} has an index of
-\passthrough{\lstinline!2!}. The table below shows the index of each
-value in the array.
+\passthrough{\lstinline!2!}. The table below shows the index (or
+location) of each value in the array.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -8118,9 +8267,9 @@ Index (or location) & Value\tabularnewline
 
 Individual values stored in an array can be accessed with indexing.
 
-The general form to index a NumPy array is:
+The general form to index a NumPy array is below:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
 <value> = <array>[index]
 \end{lstlisting}
 
@@ -8135,14 +8284,16 @@ In the array above, the value 6 is stored at index 2.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
         \PY{n}{value} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{value}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+[2 4 6]
 6
 
     \end{Verbatim}
@@ -8192,22 +8343,25 @@ column index of the value. Remember Python counting starts at
 column is column zero.
 
 We can access the value \passthrough{\lstinline!8!} in the array above
-by calling the row and column index \passthrough{\lstinline![1,2]!} for
-the 2nd row (remember row 0 is the first row) and the 3rd column
-(remember column 0 is the first column).
+by calling the row and column index \passthrough{\lstinline![1,2]!}.
+This corresponds to the 2nd row (remember row 0 is the first row) and
+the 3rd column (column 0 is the first column).
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
         \PY{n}{value} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{value}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+[[2 3 4]
+ [6 7 8]]
 8
 
     \end{Verbatim}
@@ -8316,8 +8470,7 @@ pulls the first two values out of an array. The index
 \passthrough{\lstinline![1:3]!} pulls the second and third values out of
 an array.
 
-An example of array slicing the first two elements out of an array is
-below.
+An example of slicing the first two elements out of an array is below.
     
 
 
@@ -8337,9 +8490,25 @@ below.
 
 
     
-        A blank stands in for the last index. The slicing operation
-\passthrough{\lstinline![1:]!} pulls out the 2nd through the last values
-of an array.
+        On either sides of the colon, a blank stands for ``default''.
+
+\begin{itemize}
+\tightlist
+\item
+  \passthrough{\lstinline![:2]!} corresponds to
+  \passthrough{\lstinline![start=default:stop=2]!}
+\item
+  \passthrough{\lstinline![1:]!} corresponds to
+  \passthrough{\lstinline![start=1:stop=default]!}
+\end{itemize}
+
+Therefore, the slicing operation \passthrough{\lstinline![:2]!} pulls
+out the first through the third values in an array. The slicing
+operation \passthrough{\lstinline![1:]!} pull out the second through the
+last values in an array.
+
+The example below illustrates the default \passthrough{\lstinline!stop!}
+value is the last value in the array.
     
 
 
@@ -8348,20 +8517,21 @@ of an array.
 {\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
         \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{p}{]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+[2 4 6 8]
 [4 6 8]
 
     \end{Verbatim}
 
 
     
-        A blank also stands in for the first index. The slicing operation
-\passthrough{\lstinline![:3]!} pulls out the first through third values
-of an array.
+        The next examples shows the default \passthrough{\lstinline!start!}
+value is the first value in the array.
     
 
 
@@ -8370,12 +8540,43 @@ of an array.
 {\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
         \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+[2 4 6 8]
 [2 4 6]
+
+    \end{Verbatim}
+
+
+    
+        The following indexing operations output the same array.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        
+        \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{)}
+        \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
+        \PY{n}{c} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{4}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{c}\PY{p}{)}
+        \PY{n}{d} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{d}\PY{p}{)}
+        \PY{n}{e} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{e}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[2 4 6 8]
+[2 4 6 8]
+[2 4 6 8]
+[2 4 6 8]
 
     \end{Verbatim}
 
@@ -8402,14 +8603,17 @@ indexes out the first two rows and the first three columns.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
         \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+[[ 2  4  6  8]
+ [10 20 30 40]]
 [[ 2  4  6]
  [10 20 30]]
 
@@ -8417,20 +8621,40 @@ indexes out the first two rows and the first three columns.
 
 
     
-        Again, a blank represents the first index or the last index. The colon
-operator also represents ``all''.
-
-The code section below slices out the first two rows and all columns
+        The code section below slices out the first two rows and all columns
 from array \passthrough{\lstinline!a!}.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{]}\PY{p}{]}\PY{p}{)}
         \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,} \PY{p}{:}\PY{p}{]}  \PY{c+c1}{\PYZsh{}[first two rows, all columns]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[[ 2  4  6  8]
+ [10 20 30 40]]
+
+    \end{Verbatim}
+
+
+    
+        Again, a blank represents defaults the first index or the last index.
+The colon operator all by itself also represents ``all'' (default start:
+default stop).
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        
+        \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{40}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        \PY{n}{b} \PY{o}{=} \PY{n}{a}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{p}{]}  \PY{c+c1}{\PYZsh{}[all rows, all columns]}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{b}\PY{p}{)}
 \end{Verbatim}
 
@@ -8864,8 +9088,9 @@ The answer should be \passthrough{\lstinline!9.0!}.
     
         In this chapter, you learned how to work with NumPy arrays. NumPy is a
 Python package used for numerical calculations and arrays. An array is a
-data structure only contains objects that share the same data type.
-Arrays are faster than lists in large-scale numerical calculations.
+data structure which only contains objects that share the same data
+type. Arrays are faster than lists in large-scale numerical
+calculations.
 
 You learned how to create arrays in a variety of ways:
 
@@ -8987,14 +9212,16 @@ cross product
 
 Q05.02 Create an array of the numbers \passthrough{\lstinline!-3!},
 \passthrough{\lstinline!15!},\passthrough{\lstinline!0.001!},
-\passthrough{\lstinline!6.02e23!}\$
+\passthrough{\lstinline!6.02e23!}
 
 Q05.03 Create an array of integers between -10 and 10
 
-Q05.04 Create an array of 10 angles between 0 and 2\(\pi\)
+Q05.04 Create an array of 10 equally spaced angles between 0 and
+2\(\pi\)
 
 Q05.05 Create an array of logarithmically spaced numbers between 1 and 1
-million
+million. Hint: remember to pass exponents to the
+\passthrough{\lstinline!np.logspace()!} function.
 
 Q05.06 Create an array of 20 random integers between 1 and 10
 
@@ -9022,23 +9249,15 @@ store the Python list in a variable called \passthrough{\lstinline!x!}.
 Then create a NumPy array of the same values and store it in a variable
 called \passthrough{\lstinline!y!}.
 
-Q05.14 (a) Create an array called \passthrough{\lstinline!r!} of 200
-evenly spaced numbers between and including 0 to 2\(\pi\)
-
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  create an array \passthrough{\lstinline!y!} such that \(y=10sin(3r)\)
-\end{enumerate}
+Q05.14 Create an array called \passthrough{\lstinline!r!} of 200 evenly
+spaced numbers between and including 0 to 2\(\pi\), then create an array
+\passthrough{\lstinline!y!} such that \(y=10sin(3r)\).
 
 Q05.15 Create an array of 25 regularly spaced values beginning at 10 and
 ending with 18.
 
-Q05.16 Create an array of regularly spaced numbers beginning at
-\passthrough{\lstinline!10!}, ending with \passthrough{\lstinline!18.4!}
-using an increment of \passthrough{\lstinline!0.6!}.
+Q05.16 Create an array of regularly spaced numbers beginning at 10,
+ending with 18.4 using an increment of 0.6.
         \end{problems}
 
     
@@ -9057,8 +9276,8 @@ using an increment of \passthrough{\lstinline!0.6!}.
     
         Q05.20 Create a NumPy array called \passthrough{\lstinline!A!} and store
 the values 5, 8, -8, 99, and 0 in array \passthrough{\lstinline!A!} in a
-single row. Reshape \passthrough{\lstinline!A!} to a single column array
-with one column and 5 rows.
+single row, five columns. Reshape \passthrough{\lstinline!A!} to an
+array with one column and 5 rows.
     
 
 
@@ -9073,83 +9292,83 @@ with one column and 5 rows.
 
 
     
-        Q05.30 Create an array \passthrough{\lstinline!A!} that contains the
-values 0 to 24 in one row. Then reshape \passthrough{\lstinline!A!} into
-a 5 row by 5 column array.
+        Q05.30 Create an array \passthrough{\lstinline!B!} that contains
+integers 0 to 24 (including 24) in one row. Then reshape
+\passthrough{\lstinline!B!} into a 5 row by 5 column array.
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Extract the 2nd row from \passthrough{\lstinline!A!}. Store it as a
+  Extract the 2nd row from \passthrough{\lstinline!B!}. Store it as a
   one column array called \passthrough{\lstinline!x!}.
 \item
   Store the number of elements in array \passthrough{\lstinline!x!} in a
   new variable called \passthrough{\lstinline!y!}.
 \item
-  Extract the last column of \passthrough{\lstinline!A!} and store it in
+  Extract the last column of \passthrough{\lstinline!B!} and store it in
   an array called \passthrough{\lstinline!z!}.
 \item
-  Store a transposed version of \passthrough{\lstinline!A!} in an array
+  Store a transposed version of \passthrough{\lstinline!B!} in an array
   called \passthrough{\lstinline!t!}.
 \end{enumerate}
 
 Q05.31 Run the following code to create a NumPy array
-\passthrough{\lstinline!A!}
+\passthrough{\lstinline!C!}
 
-\passthrough{\lstinline!A = np.array(range(11)) + 5!}
+\passthrough{\lstinline!C = np.array(range(11)) + 5!}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Extract the 4th value in array \passthrough{\lstinline!A!} into a
+  Extract the 4th value in array \passthrough{\lstinline!C!} into a
   variable called \passthrough{\lstinline!x!}.
 \item
-  Extract the 2nd-to-last value in array \passthrough{\lstinline!A!}
+  Extract the 2nd-to-last value in array \passthrough{\lstinline!C!}
   into a variable called \passthrough{\lstinline!y!}.
 \item
-  Extract the values from array \passthrough{\lstinline!A!} starting
+  Extract the values from array \passthrough{\lstinline!C!} starting
   from the 3rd value up to and including the 7th value into a variable
   called \passthrough{\lstinline!z!}.
 \end{enumerate}
 
 Q05.32 Run the following code to create a NumPy array
-\passthrough{\lstinline!B!}
+\passthrough{\lstinline!D!}
 
-\passthrough{\lstinline!B = np.array(range(18)) + 3!}
+\passthrough{\lstinline!D = np.array(range(18)) + 3!}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Extract every other value from array \passthrough{\lstinline!B!}
+  Extract every other value from array \passthrough{\lstinline!D!}
   starting from the 2nd value through the 10th value. Store the result
   in a variable called \passthrough{\lstinline!x!}.
 \item
-  Extract every other value from array \passthrough{\lstinline!B!}
+  Extract every other value from array \passthrough{\lstinline!D!}
   starting from the 10th value through the 2nd value. Store the result a
   variable called \passthrough{\lstinline!y!}.
 \item
   Create a variable \passthrough{\lstinline!z!} that contains all of the
-  values in \passthrough{\lstinline!B!} in reverse order.
+  values in \passthrough{\lstinline!D!} in reverse order.
 \end{enumerate}
 
-Q05.33 The 1D NumPy array \passthrough{\lstinline!A!} is defined below.
-But your code should work with any 1D NumPy array filled with numeric
-values.
+Q05.33 The 1D NumPy array \passthrough{\lstinline!F!} is defined below.
+But construct your code to work with any 1D NumPy array filled with
+numbers.
 
-\passthrough{\lstinline!A = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])!}
+\passthrough{\lstinline!F = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])!}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Select all the elements from \passthrough{\lstinline!A!} that are
+  Select all the elements from \passthrough{\lstinline!F!} that are
   greater than \passthrough{\lstinline!5!} and store them in
   \passthrough{\lstinline!x!}.
 \item
-  Select all of the elements from \passthrough{\lstinline!A!} that are
+  Select all of the elements from \passthrough{\lstinline!F!} that are
   between \passthrough{\lstinline!5!} and \passthrough{\lstinline!30!}.
   Store them in \passthrough{\lstinline!y!}.
 \item
-  Select all of the elements from \passthrough{\lstinline!A!} that are
+  Select all of the elements from \passthrough{\lstinline!F!} that are
   between \passthrough{\lstinline!5!} and \passthrough{\lstinline!30!}
   or that are equal to \passthrough{\lstinline!50!}. Store them in
   \passthrough{\lstinline!z!}.
@@ -9169,19 +9388,19 @@ Q05.34 The 1D NumPy array \passthrough{\lstinline!B!} is defined below.
 But your code should work with any 1D NumPy array filled with numeric
 values.
 
-\passthrough{\lstinline!B = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])!}
+\passthrough{\lstinline!G = np.array([5, -4.7, 99, 50, 6, -1, 0, 50, -78, 27, 10])!}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Select all of the positive numbers in \passthrough{\lstinline!B!} and
+  Select all of the positive numbers in \passthrough{\lstinline!G!} and
   store them in \passthrough{\lstinline!x!}.
 \item
-  Select all the numbers in \passthrough{\lstinline!B!} between
+  Select all the numbers in \passthrough{\lstinline!G!} between
   \passthrough{\lstinline!0!} and \passthrough{\lstinline!30!} and store
   them in \passthrough{\lstinline!y!}.
 \item
-  Select all of the numbers in \passthrough{\lstinline!B!} that are
+  Select all of the numbers in \passthrough{\lstinline!G!} that are
   either less than \passthrough{\lstinline!-50!} or greater than
   \passthrough{\lstinline!50!} and store them in
   \passthrough{\lstinline!z!}.
@@ -9223,7 +9442,7 @@ and \passthrough{\lstinline!999!})
 
 \begin{lstlisting}
 
-x = [0.0, 0.1., 0.2, 0.3, 0.4, 0.5]
+x = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
 
 y = [0, 2, 4, 6]
 \end{lstlisting}
@@ -9237,9 +9456,9 @@ x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 \end{lstlisting}
 
-Use element-wise multiplication to multiple each element in one of the
-resulting 2D arrays with the other resulting 2D array to build a
-multiplication table.
+Use element-wise multiplication to multiply each element in the first
+resulting 2D array with the corresponding element is the second array to
+build a multiplication table.
     
 
 
@@ -9267,8 +9486,8 @@ Q05.50 Create the two arrays below and perform each calculation.
   \(\frac{b^2}{a}\)
 \end{enumerate}
 
-Q05.51 Create an array of angles between 0 and 2\(\pi\) radians in
-increments of \(\pi/2\) radians.
+Q05.51 Create an array of angles between (and including) 0 and 2\(\pi\)
+radians in increments of \(\pi/2\) radians.
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
@@ -9280,7 +9499,8 @@ increments of \(\pi/2\) radians.
   Convert each angle in the array to degrees
 \end{enumerate}
 
-Q05.52 Create the two arrays below and then perform the following
+Q05.52 Create the two arrays \passthrough{\lstinline!F1!},
+\passthrough{\lstinline!F2!} below and then perform the following
 operations.
 
 \passthrough{\lstinline!F1 = [-1, 0, 2]!}
@@ -9309,40 +9529,40 @@ square meter. Store the result in a 2D array. The lengths should
 increase from top to bottom and widths should increase from left to
 right.
 
-Q05.54 Create an array \passthrough{\lstinline!A!} defined by the code
+Q05.54 Create an array \passthrough{\lstinline!H!} defined by the code
 below:
 
-\passthrough{\lstinline!A = np.array([-5, 10, 12, 500, 20, 10, -46, 16])!}
+\passthrough{\lstinline!H = np.array([-5, 10, 12, 500, 20, 10, -46, 16])!}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
   Create a boolean array \passthrough{\lstinline!x!} based on the
-  variable \passthrough{\lstinline!A!}. \passthrough{\lstinline!x!}
+  variable \passthrough{\lstinline!H!}. \passthrough{\lstinline!x!}
   should be \passthrough{\lstinline!True!} everywhere
-  \passthrough{\lstinline!A!} equals \passthrough{\lstinline!10!} and
+  \passthrough{\lstinline!H!} equals \passthrough{\lstinline!10!} and
   \passthrough{\lstinline!False!} everywhere else.
 \item
   Create a boolean array \passthrough{\lstinline!y!} based on the
-  variable \passthrough{\lstinline!A!}. \passthrough{\lstinline!y!}
+  variable \passthrough{\lstinline!H!}. \passthrough{\lstinline!y!}
   should be \passthrough{\lstinline!True!} everywhere
-  \passthrough{\lstinline!A!} is not equal to
+  \passthrough{\lstinline!H!} is not equal to
   \passthrough{\lstinline!10!}. \passthrough{\lstinline!y!} should be
   \passthrough{\lstinline!False!} everywhere else.
 \item
   Create a boolean array \passthrough{\lstinline!z!} based on the
-  variable \passthrough{\lstinline!A!}. \passthrough{\lstinline!z!}
+  variable \passthrough{\lstinline!H!}. \passthrough{\lstinline!z!}
   should be \passthrough{\lstinline!True!} everywhere
-  \passthrough{\lstinline!A!} is less than or equal to
+  \passthrough{\lstinline!H!} is less than or equal to
   \passthrough{\lstinline!20!}. \passthrough{\lstinline!z!} should be
   \passthrough{\lstinline!False!} everywhere else.
 \end{enumerate}
 
-Q05.55 Create an array \passthrough{\lstinline!B!} using the code below:
+Q05.55 Create an array \passthrough{\lstinline!J!} using the code below:
 
 \begin{lstlisting}
-B = np.array(range(7*5)).reshape((7, 5))
-B[4, 3] = 500
+J = np.array(range(7*5)).reshape((7, 5))
+J[4, 3] = 500
 \end{lstlisting}
 
 \begin{enumerate}
@@ -9355,27 +9575,27 @@ B[4, 3] = 500
   a variable called \passthrough{\lstinline!col\_500!}.
 \end{enumerate}
 
-Q05.56 Create an array \passthrough{\lstinline!C!} using the code below:
+Q05.56 Create an array \passthrough{\lstinline!K!} using the code below:
 
 \begin{lstlisting}
-C = np.random.randint(100, 500, 7*7).reshape(7, 7)
-C[2, 6] = 250
+K = np.random.randint(100, 500, 7*7).reshape(7, 7)
+K[2, 6] = 250
 \end{lstlisting}
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Extract all of the values from \passthrough{\lstinline!C!} that are
+  Extract all of the values from \passthrough{\lstinline!K!} that are
   greater or equal to
   \passthrough{\lstinline!250```` and store them in an array called!}x```.
 \item
-  Extract all of the values from \passthrough{\lstinline!C!} that are
+  Extract all of the values from \passthrough{\lstinline!K!} that are
   less than \passthrough{\lstinline!250!} and store them in an array
   called \passthrough{\lstinline!y!}.
 \item
   Programmatically determine which column and which row the number
   \passthrough{\lstinline!250!} is stored inside of
-  \passthrough{\lstinline!C!}.
+  \passthrough{\lstinline!K!}.
 \end{enumerate}
     
 
@@ -9672,7 +9892,7 @@ the end to show the plot. Make sure to include the double parenthesis
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_472_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_491_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10148,7 +10368,7 @@ below.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_485_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_504_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10223,7 +10443,7 @@ the image file \textbf{\emph{plot.png}}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_489_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_508_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10340,7 +10560,7 @@ Matplotlib's object-oriented interface.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_495_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_514_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10388,7 +10608,7 @@ methods to build a multi-line plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_497_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_516_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10540,7 +10760,7 @@ The list of materials is passed to the
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_511_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_530_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10615,7 +10835,7 @@ of a percent.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_514_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_533_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10657,7 +10877,7 @@ method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_516_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_535_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10768,7 +10988,7 @@ positions (\passthrough{\lstinline!x\_pos!}), bar heights
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_525_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_544_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10832,7 +11052,7 @@ vertical error bars included on each point in the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_528_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_547_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10913,7 +11133,7 @@ The code section below builds a histogram that contains 20 bins.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_533_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_552_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10994,7 +11214,7 @@ The code section below creates a box plot with four elements.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_558_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11054,7 +11274,7 @@ Matplotlib.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_542_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_561_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11117,7 +11337,7 @@ must be equal.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_546_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_565_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11181,7 +11401,7 @@ colors and areas.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_548_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_567_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11294,7 +11514,7 @@ the figure window.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_553_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_572_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11404,7 +11624,7 @@ one figure. The axes of each subplot is scaled in a different way.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_557_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_576_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11465,7 +11685,7 @@ the plots on \href{https://fivethirtyeight.com}{fivethirtyeight.com}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_562_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_581_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11553,27 +11773,27 @@ styles including the \passthrough{\lstinline!'default'!},
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_3.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_3.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_4.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_4.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11644,7 +11864,7 @@ useful to create two 2D arrays from two 1D arrays.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_572_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_591_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11699,7 +11919,7 @@ determines the color of the areas on the 2D plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_575_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_594_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11772,7 +11992,7 @@ placed beside the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_578_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_597_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11840,7 +12060,7 @@ has a different color map.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_581_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_600_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11929,7 +12149,7 @@ The following code section builds a quiver plot that contains one arrow.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_588_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_607_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11995,7 +12215,7 @@ arrow points straight down.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_592_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12085,7 +12305,7 @@ the aspect ratio of the plot to 1:1.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12130,7 +12350,7 @@ function \(\vec{F}\) to the \passthrough{\lstinline!X!} and
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_598_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_617_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12176,7 +12396,7 @@ apply the gradient function to every arrow's x, y starting position.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_600_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12224,7 +12444,7 @@ The code section below builds a quiver plot with four vortices.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_602_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_621_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12314,7 +12534,7 @@ is a colored quiver plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_604_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_623_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12383,7 +12603,7 @@ parallel lines pointing to the right.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_608_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12425,7 +12645,7 @@ vector field.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_630_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12468,7 +12688,7 @@ charges.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_613_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_632_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12536,7 +12756,7 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_618_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_637_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12600,7 +12820,7 @@ The next code section draws two wire frame plots side by side.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_621_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_640_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12665,7 +12885,7 @@ surface plot object.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_624_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_643_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12719,7 +12939,7 @@ projections of the 3D surface are visualized on 2D contour plots.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_646_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -15043,7 +15263,7 @@ height of triangle: 2
           2 h = input('height of triangle: ')
     ----> 3 A = (1/2)*b*h
           4 print(f'The area of the triangle is: \{A\}')
-    
+
 
         TypeError: can't multiply sequence by non-int of type 'float'
 
@@ -15535,7 +15755,7 @@ The line of code below contains a syntax error. The string
         string = "problem solving
                                 \^{}
     SyntaxError: EOL while scanning string literal
-    
+
 
     \end{Verbatim}
 
@@ -15566,7 +15786,7 @@ not complete the program.
         string = 10problems
                           \^{}
     SyntaxError: invalid syntax
-    
+
 
     \end{Verbatim}
 
@@ -17268,14 +17488,14 @@ The result is the expression:
 
 \[ a^{2} + 2ab + b^{2} + y^{2} = z \]
 
-Solving for \(y\) in terms of \(a\),\(b\) and \(z\), results in:
+Solving for \(y\) in terms of \(a\), \(b\) and \(z\) results in:
 
 \[ y = \sqrt{z - a^{2} - 2ab - b^{2}} \]
 
 In the symbolic math substitution above, symbolic math variables were
 rearranged, grouped and inserted. None of the variables were equal to a
-specific number, like 5 or 0.001, but you can still solve for one
-variable in terms on the other variables.
+specific number, like 5 or 0.001, but we can still solve for one
+variable in terms on the other variables when we use symbolic math.
     
 
 
@@ -17298,14 +17518,69 @@ working with numerical values in a programmatic way is called
 
 
     
+        \hypertarget{installing-sympy}{%
+\section{Installing SymPy}\label{installing-sympy}}
+    
+
+
+
+
+    
         To work with symbolic math in Python, the SymPy library needs to be
 installed. SymPy comes pre-installed with the Anaconda distribution of
-Python. If you are not using the Anaconda distribution of Python, SymPy
-can be installed with the \textbf{Anaconda Prompt}. Use the command:
+Python.
+    
+
+
+
+
+    
+        If you are not using the Anaconda distribution of Python, SymPy can be
+installed with the \textbf{Anaconda Prompt}. Use the command:
 
 \begin{lstlisting}
 > conda install sympy
 \end{lstlisting}
+    
+
+
+
+
+    
+        Alternatively, you can install SymPy using the Python package manager
+\textbf{pip}. The command below installs SymPy into the current
+environment.
+
+\begin{lstlisting}
+$ pip install sympy
+\end{lstlisting}
+    
+
+
+
+
+    
+        You can confirm your SymPy installation by opening up the Python REPL
+and typing the two commands below.
+    
+
+
+
+
+    
+        \begin{lstlisting}
+>>> import sympy
+>>> sympy.__version__
+'1.4'
+\end{lstlisting}
+    
+
+
+
+
+    
+        The ouput above shows SymPy version \passthrough{\lstinline!'1.4'!} is
+installed.
     
 
 
@@ -17321,8 +17596,8 @@ can be installed with the \textbf{Anaconda Prompt}. Use the command:
 
     
         Before we can construct symbolic math expressions or symbolic math
-equations, we first need to create symbolic math variables, also called
-symbolic math \emph{symbols}.
+equations with SymPy, first we need to create symbolic math variables,
+also called symbolic math \emph{symbols}.
 
 To define symbolic math variables with SymPy, first import the
 \passthrough{\lstinline!symbols()!} function from the SymPy module:
@@ -17337,9 +17612,11 @@ To define symbolic math variables with SymPy, first import the
 
     
         Symbolic math symbols are declared using SymPy's
-\passthrough{\lstinline!symbols()!} function. A string is passed to the
-\passthrough{\lstinline!symbols()!} function as an input argument and
-the output is assigned to a SymPy symbols object (not a string).
+\passthrough{\lstinline!symbols()!} function. Pass a string surrounded
+by quotes to the \passthrough{\lstinline!symbols()!} function as an
+input argument. The the output of the
+\passthrough{\lstinline!symbols()!} function is assigned to a SymPy
+symbols object (not a string, no quotes).
     
 
 
@@ -17351,7 +17628,7 @@ the output is assigned to a SymPy symbols object (not a string).
 
 
     
-        SymPy's \passthrough{\lstinline!symbol()!} function can define multiple
+        SymPy's \passthrough{\lstinline!symbols()!} function can define multiple
 symbols in the same line of code. Note the input arguments passed to the
 \passthrough{\lstinline!symbols()!} function is a string, entries
 separated by a space (no comma) and surrounded by quotes. The output of
@@ -17389,15 +17666,16 @@ substituion.
 \subsection{Expressions}\label{expressions}}
 
 A symbolic math expression is a combination of symbolic math variables
-with numbers and mathematical operators (such as
-\passthrough{\lstinline!+!},\passthrough{\lstinline!-!},\passthrough{\lstinline!/!}
-and \passthrough{\lstinline!*!}. The standard Python rules for
-calculating numbers apply in SymPy symbolic math expressions.
+with numbers and mathematical operators such as
+\passthrough{\lstinline!+!}, \passthrough{\lstinline!-!},
+\passthrough{\lstinline!/!} and \passthrough{\lstinline!*!}. The
+standard Python rules for calculating numbers apply in SymPy symbolic
+math expressions.
 
 After the symbols \passthrough{\lstinline!x!} and
 \passthrough{\lstinline!y!} are created, a symbolic math expression
 using \passthrough{\lstinline!x!} and \passthrough{\lstinline!y!} can be
-created.
+defined.
     
 
 
@@ -17421,8 +17699,8 @@ created.
     
         Use SymPy's \passthrough{\lstinline!.subs()!} method to insert a
 numerical value into a symbolic math expression. The first argument of
-the \passthrough{\lstinline!.subs()!} method is the variable and the
-second argument is the numerical value. In the expression above:
+the \passthrough{\lstinline!.subs()!} method is the mathematical symbol
+and the second argument is the numerical value. In the expression above:
 
 \[ 2x +y \]
 
@@ -17432,7 +17710,9 @@ If we substitute
 
 The resulting expression should be
 
-\[ 2(2) + y \] \[ 4 +y \]
+\[ 2(2) + y \] \[ 4 + y \]
+
+We can code this substitution above using the code below.
     
 
 
@@ -17448,8 +17728,8 @@ The resulting expression should be
 
     
         The \passthrough{\lstinline!.subs()!} method does not replace variables
-in place, it only completes a one-time substitution. If
-\passthrough{\lstinline!expr!} is called after the
+in place, \passthrough{\lstinline!.subs()!} only completes a one-time
+substitution. If \passthrough{\lstinline!expr!} is called after the
 \passthrough{\lstinline!.subs()!} method is applied, the original
 \passthrough{\lstinline!expr!} expression is returned.
     
@@ -17507,11 +17787,11 @@ code section below, the symbol \(z\) is substituted for the symbol \(x\)
         Expressions can also be substituted into other expressions. Consider the
 following:
 
-\[ 2x + y \]
+\[ y + 2x^2 + z^{-3} \]
 
 substitute in
 
-\[ y = 2x^2 + z^{-3} \]
+\[ y = 2x \]
 
 results in
 
@@ -17522,8 +17802,8 @@ results in
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}6}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x y z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        \PY{n}{expr} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x} \PY{o}{+} \PY{n}{y}
-        \PY{n}{expr2} \PY{o}{=} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{+} \PY{n}{z}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+        \PY{n}{expr} \PY{o}{=} \PY{n}{y} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{+} \PY{n}{z}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{)}
+        \PY{n}{expr2} \PY{o}{=} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{)}
         \PY{n}{expr2}
 \end{Verbatim}
 
@@ -17534,7 +17814,7 @@ results in
 
     
         A practical example involving symbolic math variables, expressions and
-substitutions could include a large equation and several replacements.
+substitutions could include a large expression and several replacements.
 
 \[ n_0e^{-Q_v/RT} \]
 
@@ -17545,6 +17825,9 @@ substitutions could include a large equation and several replacements.
 \[ R = 8.31 \]
 
 \[ T = 1000 + 273 \]
+
+We can create four symbolic math variables and combine the variables
+into an expression with the code below.
     
 
 
@@ -17591,6 +17874,74 @@ together to substitute multiple variables in one line of code.
 {\color{outcolor}Out[{\color{outcolor}10}]:} 3.47567968697765e-6
 \end{Verbatim}
             
+
+    
+        You can control the number of digits the
+\passthrough{\lstinline!.evalf()!} method outputs by passing a number as
+an argument.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{expr2}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}
+\end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}11}]:} 3.476e-6
+\end{Verbatim}
+            
+
+    
+        \hypertarget{summary}{%
+\subsection{Summary}\label{summary}}
+    
+
+
+
+
+    
+        The SymPy functions and methods used in this section are summarized in
+the table below.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\raggedright
+SymPy function or method\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Description\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Example\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!symbols()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+create symbolic math variables\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!x, y = symbols('x y')!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!.subs()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+substitute a value into a symbolic math expression\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!expr.subs(x,2)!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!.evalf()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+evaluate a symbolic math expression as a floating point number\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!expr.evalf()!}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+    
+
+
+
 
     
         \hypertarget{equations}{%
@@ -18161,6 +18512,49 @@ Tce = 19.7246603876972
 
 
     
+        \hypertarget{review-questions}{%
+\section{Review Questions}\label{review-questions}}
+    
+
+
+
+
+    
+        \hypertarget{solving-equations}{%
+\subsubsection{Solving Equations}\label{solving-equations}}
+    
+
+
+
+
+    
+        \begin{problems}
+        Q10.20 Use SymPy to solve for \(x\) if \$ x - 4 = 2\$
+
+Q10.21 Use SympPy to solve for the roots of the quadratic equation
+\(2x^2 - 4x + 1.5 = 0\)
+
+Q10.30 Use SymPy to solve the system of linear equations below for the
+varaibles \(x\) and \(y\):
+
+\[ -3x - 2y + 7  = 0 \]
+
+\[ 5x - 3y - 6 = 0 \]
+
+Q10.50 Use SymPy to solve the system of non-linear equations below for
+the variables \(x\) and \(y\):
+
+\[ 3x^2 + 2y^3 = -\frac{17}{4} \]
+
+\[ \frac{-x^3}{2} - 8y^2 + \frac{127}{2} = 0 \]
+        \end{problems}
+
+    
+
+
+
+
+    
         \newpage
         \hypertarget{summary}{%
 \section{Summary}\label{summary}}
@@ -18225,49 +18619,6 @@ linear equation
 
 quadratic equation
         \end{key_terms}
-
-    
-
-
-
-
-    
-        \hypertarget{review-questions}{%
-\section{Review Questions}\label{review-questions}}
-    
-
-
-
-
-    
-        \hypertarget{solving-equations}{%
-\subsubsection{Solving Equations}\label{solving-equations}}
-    
-
-
-
-
-    
-        \begin{problems}
-        Q10.20 Use SymPy to solve for \(x\) if \$ x - 4 = 2\$
-
-Q10.21 Use SympPy to solve for the roots of the quadratic equation
-\(2x^2 - 4x + 1.5 = 0\)
-
-Q10.30 Use SymPy to solve the system of linear equations below for the
-varaibles \(x\) and \(y\):
-
-\[ -3x - 2y + 7  = 0 \]
-
-\[ 5x - 3y - 6 = 0 \]
-
-Q10.50 Use SymPy to solve the system of non-linear equations below for
-the variables \(x\) and \(y\):
-
-\[ 3x^2 + 2y^3 = -\frac{17}{4} \]
-
-\[ \frac{-x^3}{2} - 8y^2 + \frac{127}{2} = 0 \]
-        \end{problems}
 
     
 
@@ -21493,8 +21844,9 @@ Python}\label{reserved-and-keywords-in-python}}
 
     
         The following are reserved and keywords in Python. These words should
-not be used as the names for user-defined functions, classes, methods or
-modules. The keywords can be accessed with the following code:
+not be used as the names for user-defined variables, functions, classes,
+methods or modules. Python's keywords can be accessed with the following
+code:
     
 
 
@@ -21648,106 +22000,106 @@ character codes can be accessed using the following code:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k}{for} \PY{n}{ASCIIcode} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{32}\PY{p}{,}\PY{l+m+mi}{127}\PY{p}{)}\PY{p}{:}
-            \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ASCII code: }\PY{l+s+si}{\PYZob{}ASCIIcode\PYZcb{}}\PY{l+s+s1}{    Character: }\PY{l+s+s1}{\PYZob{}}\PY{l+s+s1}{chr(ASCIIcode)\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{32}\PY{p}{,} \PY{l+m+mi}{127}\PY{p}{)}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ASCII code: }\PY{l+s+si}{\PYZob{}n\PYZcb{}}\PY{l+s+s1}{     Character: }\PY{l+s+s1}{\PYZob{}}\PY{l+s+s1}{chr(n)\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-ASCII code: 32    Character:  
-ASCII code: 33    Character: !
-ASCII code: 34    Character: "
-ASCII code: 35    Character: \#
-ASCII code: 36    Character: \$
-ASCII code: 37    Character: \%
-ASCII code: 38    Character: \&
-ASCII code: 39    Character: '
-ASCII code: 40    Character: (
-ASCII code: 41    Character: )
-ASCII code: 42    Character: *
-ASCII code: 43    Character: +
-ASCII code: 44    Character: ,
-ASCII code: 45    Character: -
-ASCII code: 46    Character: .
-ASCII code: 47    Character: /
-ASCII code: 48    Character: 0
-ASCII code: 49    Character: 1
-ASCII code: 50    Character: 2
-ASCII code: 51    Character: 3
-ASCII code: 52    Character: 4
-ASCII code: 53    Character: 5
-ASCII code: 54    Character: 6
-ASCII code: 55    Character: 7
-ASCII code: 56    Character: 8
-ASCII code: 57    Character: 9
-ASCII code: 58    Character: :
-ASCII code: 59    Character: ;
-ASCII code: 60    Character: <
-ASCII code: 61    Character: =
-ASCII code: 62    Character: >
-ASCII code: 63    Character: ?
-ASCII code: 64    Character: @
-ASCII code: 65    Character: A
-ASCII code: 66    Character: B
-ASCII code: 67    Character: C
-ASCII code: 68    Character: D
-ASCII code: 69    Character: E
-ASCII code: 70    Character: F
-ASCII code: 71    Character: G
-ASCII code: 72    Character: H
-ASCII code: 73    Character: I
-ASCII code: 74    Character: J
-ASCII code: 75    Character: K
-ASCII code: 76    Character: L
-ASCII code: 77    Character: M
-ASCII code: 78    Character: N
-ASCII code: 79    Character: O
-ASCII code: 80    Character: P
-ASCII code: 81    Character: Q
-ASCII code: 82    Character: R
-ASCII code: 83    Character: S
-ASCII code: 84    Character: T
-ASCII code: 85    Character: U
-ASCII code: 86    Character: V
-ASCII code: 87    Character: W
-ASCII code: 88    Character: X
-ASCII code: 89    Character: Y
-ASCII code: 90    Character: Z
-ASCII code: 91    Character: [
-ASCII code: 92    Character: \textbackslash{}
-ASCII code: 93    Character: ]
-ASCII code: 94    Character: \^{}
-ASCII code: 95    Character: \_
-ASCII code: 96    Character: `
-ASCII code: 97    Character: a
-ASCII code: 98    Character: b
-ASCII code: 99    Character: c
-ASCII code: 100    Character: d
-ASCII code: 101    Character: e
-ASCII code: 102    Character: f
-ASCII code: 103    Character: g
-ASCII code: 104    Character: h
-ASCII code: 105    Character: i
-ASCII code: 106    Character: j
-ASCII code: 107    Character: k
-ASCII code: 108    Character: l
-ASCII code: 109    Character: m
-ASCII code: 110    Character: n
-ASCII code: 111    Character: o
-ASCII code: 112    Character: p
-ASCII code: 113    Character: q
-ASCII code: 114    Character: r
-ASCII code: 115    Character: s
-ASCII code: 116    Character: t
-ASCII code: 117    Character: u
-ASCII code: 118    Character: v
-ASCII code: 119    Character: w
-ASCII code: 120    Character: x
-ASCII code: 121    Character: y
-ASCII code: 122    Character: z
-ASCII code: 123    Character: \{
-ASCII code: 124    Character: |
-ASCII code: 125    Character: \}
-ASCII code: 126    Character: \textasciitilde{}
+ASCII code: 32     Character:  
+ASCII code: 33     Character: !
+ASCII code: 34     Character: "
+ASCII code: 35     Character: \#
+ASCII code: 36     Character: \$
+ASCII code: 37     Character: \%
+ASCII code: 38     Character: \&
+ASCII code: 39     Character: '
+ASCII code: 40     Character: (
+ASCII code: 41     Character: )
+ASCII code: 42     Character: *
+ASCII code: 43     Character: +
+ASCII code: 44     Character: ,
+ASCII code: 45     Character: -
+ASCII code: 46     Character: .
+ASCII code: 47     Character: /
+ASCII code: 48     Character: 0
+ASCII code: 49     Character: 1
+ASCII code: 50     Character: 2
+ASCII code: 51     Character: 3
+ASCII code: 52     Character: 4
+ASCII code: 53     Character: 5
+ASCII code: 54     Character: 6
+ASCII code: 55     Character: 7
+ASCII code: 56     Character: 8
+ASCII code: 57     Character: 9
+ASCII code: 58     Character: :
+ASCII code: 59     Character: ;
+ASCII code: 60     Character: <
+ASCII code: 61     Character: =
+ASCII code: 62     Character: >
+ASCII code: 63     Character: ?
+ASCII code: 64     Character: @
+ASCII code: 65     Character: A
+ASCII code: 66     Character: B
+ASCII code: 67     Character: C
+ASCII code: 68     Character: D
+ASCII code: 69     Character: E
+ASCII code: 70     Character: F
+ASCII code: 71     Character: G
+ASCII code: 72     Character: H
+ASCII code: 73     Character: I
+ASCII code: 74     Character: J
+ASCII code: 75     Character: K
+ASCII code: 76     Character: L
+ASCII code: 77     Character: M
+ASCII code: 78     Character: N
+ASCII code: 79     Character: O
+ASCII code: 80     Character: P
+ASCII code: 81     Character: Q
+ASCII code: 82     Character: R
+ASCII code: 83     Character: S
+ASCII code: 84     Character: T
+ASCII code: 85     Character: U
+ASCII code: 86     Character: V
+ASCII code: 87     Character: W
+ASCII code: 88     Character: X
+ASCII code: 89     Character: Y
+ASCII code: 90     Character: Z
+ASCII code: 91     Character: [
+ASCII code: 92     Character: \textbackslash{}
+ASCII code: 93     Character: ]
+ASCII code: 94     Character: \^{}
+ASCII code: 95     Character: \_
+ASCII code: 96     Character: `
+ASCII code: 97     Character: a
+ASCII code: 98     Character: b
+ASCII code: 99     Character: c
+ASCII code: 100     Character: d
+ASCII code: 101     Character: e
+ASCII code: 102     Character: f
+ASCII code: 103     Character: g
+ASCII code: 104     Character: h
+ASCII code: 105     Character: i
+ASCII code: 106     Character: j
+ASCII code: 107     Character: k
+ASCII code: 108     Character: l
+ASCII code: 109     Character: m
+ASCII code: 110     Character: n
+ASCII code: 111     Character: o
+ASCII code: 112     Character: p
+ASCII code: 113     Character: q
+ASCII code: 114     Character: r
+ASCII code: 115     Character: s
+ASCII code: 116     Character: t
+ASCII code: 117     Character: u
+ASCII code: 118     Character: v
+ASCII code: 119     Character: w
+ASCII code: 120     Character: x
+ASCII code: 121     Character: y
+ASCII code: 122     Character: z
+ASCII code: 123     Character: \{
+ASCII code: 124     Character: |
+ASCII code: 125     Character: \}
+ASCII code: 126     Character: \textasciitilde{}
 
     \end{Verbatim}
 
@@ -21766,9 +22118,9 @@ virtual environment is an isolated installation of Python with
 associated packages. When you use virtual environments, one project can
 have a separate version of Python and packages. Another project can use
 a different virtual environment and therefore have a separate version of
-Python and packages. By utilizing virtual environments, two projects on
-the same computer can use different versions of Python and different
-versions of packages.
+Python and a different set of packages. By utilizing virtual
+environments, two projects on the same computer can use different
+versions of Python and different versions of packages.
     
 
 
@@ -21783,14 +22135,14 @@ To create the new virtual environment, open the \textbf{Anaconda Prompt}
 and issue the command:
 
 \begin{lstlisting}
-> conda create --name env_name python=3.6
+> conda create --name env_name python=3.7
 \end{lstlisting}
 
 The \passthrough{\lstinline!conda create!} command builds the new
 virtual environment. The \passthrough{\lstinline!--name env\_name!} flag
 gives the new virtual environment the name
 \passthrough{\lstinline!env\_name!}. Including
-\passthrough{\lstinline!python=3.6!} ensures the virtual environment has
+\passthrough{\lstinline!python=3.7!} ensures the virtual environment has
 a current version of Python.
 
 The following output or something similar results:
@@ -21798,25 +22150,17 @@ The following output or something similar results:
 \begin{lstlisting}
 The following NEW packages will be INSTALLED:
 
-    ca-certificates: 2018.03.07-0           
-    certifi:         2018.11.29-py36_0      
-    libedit:         3.1.20170329-h6b74fdf_2
-    libffi:          3.2.1-hd88cf55_4       
-    libgcc-ng:       8.2.0-hdf63c60_1       
-    libstdcxx-ng:    8.2.0-hdf63c60_1       
-    ncurses:         6.1-he6710b0_1         
-    openssl:         1.1.1a-h7b6447c_0      
-    pip:             18.1-py36_0            
-    python:          3.6.8-h0371630_0       
-    readline:        7.0-h7b6447c_5         
-    setuptools:      40.6.3-py36_0          
-    sqlite:          3.26.0-h7b6447c_0      
-    tk:              8.6.8-hbc83047_0       
-    wheel:           0.32.3-py36_0          
-    xz:              5.2.4-h14c3975_4       
-    zlib:            1.2.11-h7b6447c_3      
-
-Proceed ([y]/n)?
+  ca-certificates    pkgs/main/win-64::ca-certificates-2019.5.15-0
+  certifi            pkgs/main/win-64::certifi-2019.6.16-py37_0
+  openssl            pkgs/main/win-64::openssl-1.1.1c-he774522_1
+  pip                pkgs/main/win-64::pip-19.1.1-py37_0
+  python             pkgs/main/win-64::python-3.7.3-h8c8aaf0_1
+  setuptools         pkgs/main/win-64::setuptools-41.0.1-py37_0
+  sqlite             pkgs/main/win-64::sqlite-3.28.0-he774522_0
+  vc                 pkgs/main/win-64::vc-14.1-h0510ff6_4
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.15.26706-h3a45250_4
+  wheel              pkgs/main/win-64::wheel-0.33.4-py37_0
+  wincertstore       pkgs/main/win-64::wincertstore-0.2-py37_0
 \end{lstlisting}
 
 Type \passthrough{\lstinline!y!} to confirm and create the new virtual
@@ -21862,9 +22206,9 @@ that come with Anaconda. But a fresh new virtual environment will just
 have Python installed, no other packages.
 
 To install a package into the virtual environment
-\passthrough{\lstinline!(env\_name)!}, first, make sure the environment
-is active (\passthrough{\lstinline!(env\_name)!} before the prompt).
-Package installation is accomplished with the
+\passthrough{\lstinline!env\_name!}, first make sure the environment is
+active (\passthrough{\lstinline!(env\_name)!} before the prompt). Then
+package installation is accomplished with the
 \passthrough{\lstinline!conda install!} command followed by the package
 name. To install Matplotlib into the virtual environment type:
 
@@ -21873,7 +22217,7 @@ name. To install Matplotlib into the virtual environment type:
 \end{lstlisting}
 
 Multiple packages can be installed with the same command. To install
-both NumPy and Jupyter use:
+both NumPy and Jupyter at the same time use:
 
 \begin{lstlisting}
 (env_name) > conda install numpy jupyter
@@ -21960,8 +22304,8 @@ matplotlib               /home/tribilium/anaconda3/envs/matplotlib
 environment}\label{remove-a-virtual-environment}}
 
 Remove a virtual environment with the command
-\passthrough{\lstinline!conda remove --name env\_name --all!}. Exit out
-of the environment to want to remove before you remove it.
+\passthrough{\lstinline!conda remove --name env\_name --all!}. You need
+to exit out of the environment before you remove it.
 
 Check to see if the virtual environment you want to remove is present:
 
@@ -21976,7 +22320,7 @@ matplotlib               /home/tribilium/anaconda3/envs/matplotlib
 \end{lstlisting}
 
 Remove the virtual environment called
-\passthrough{\lstinline!env\_name!}.
+\passthrough{\lstinline!env\_name!} using the command.
 
 \begin{lstlisting}
 > conda remove --name env_name --all
@@ -21985,7 +22329,7 @@ Proceed ([y]/n)?
 \end{lstlisting}
 
 Type {[}y{]} to remove the environment. View a list of your virtual
-environments again. Note that \passthrough{\lstinline!env\_name!}is no
+environments again. Note that \passthrough{\lstinline!env\_name!} is no
 longer in the list.
 
 \begin{lstlisting}
@@ -22453,7 +22797,7 @@ Construction}\label{problem-solving-with-python-book-construction}}
 for the book can be found at:
 
 \begin{quote}
-\url{https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python}
+\href{https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}{github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}
 \end{quote}
     
 
@@ -22472,7 +22816,7 @@ notebooks into \textbf{\emph{.html}} and \textbf{\emph{.tex}} files.
 
     
         \begin{lstlisting}
-Problem-Solving-with-Python/
+Problem-Solving-with-Python-37-Edition/
 |-- conversion_tools/
 |-- notebooks/
 |-- LICENSE
@@ -22499,14 +22843,14 @@ for each chapter of the book:
 notebooks/
 |-- 00-Preface/
 |-- 01-Orientation/
-|-- 02-The-Python-REPL/
-|-- 03-Data-Types-and-Variables/
-|-- 04-Jupyter-Notebooks/
-|-- 05-Functions-and-Modules/
-|-- 06-Plotting-with-Matplotlib/
-|-- 07-If-Else-Try-Except/
-|-- 08-Loops/
-|-- 09-Matrices-and-Arrays/
+|-- 02-Jupyter-Notebooks/
+|-- 03-The-Python-REPL/
+|-- 04-Data-Types-and-Variables/
+|-- 05-Matrices-and-Arrays/
+|-- 06-Functions-and-Modules/
+|-- 07-Plotting-with-Matplotlib/
+|-- 08-If-Else-Try-Except/
+|-- 09-Loops/
 |-- 10-Symbolic-Math/
 |-- 11-Python-and-External-Hardware/
 |-- 12-MicroPython/
@@ -22547,10 +22891,12 @@ markdown cells of the notebooks.
 
 
     
-        The website for this book was constructed using \textbf{mkdocs} and the
-\textbf{Material for MkDocs} theme. Jupyter noteboks were exported to
-\textbf{\emph{.html}} files with markdown cells unformatted using a
-custom script and \passthrough{\lstinline!nbconvert!}.
+        The website for this book was constructed using \textbf{Mkdocs}
+(https://www.mkdocs.org) and the \textbf{Material for MkDocs}
+(https://squidfunk.github.io/mkdocs-material/) theme. Jupyter noteboks
+were exported to \textbf{\emph{.html}} files with markdown cells
+unformatted using a custom script and
+\passthrough{\lstinline!nbconvert!}.
     
 
 
@@ -22568,10 +22914,10 @@ custom script and \passthrough{\lstinline!nbconvert!}.
         The hard copy of the book was constructed using LaTeX,
 \passthrough{\lstinline!nbconvert!} and a set of custom scripts and
 templates. One conversion script combined all of the notebooks into one
-BIG notebook. The BIG notebook was then converted into \textbf{LaTeX}
-using \passthrough{\lstinline!nbconvert!} and a custom template. Outside
-of the Python ecosystem, a separate installation of TeXworks compiled
-the LaTeX \textbf{\emph{.tex}} file to a \textbf{\emph{.pdf}} document.
+BIG notebook. The BIG notebook was then converted into LaTeX using
+\passthrough{\lstinline!nbconvert!} and a custom template. Outside of
+the Python ecosystem, a separate installation of TeXworks compiled the
+LaTeX \textbf{\emph{.tex}} file to a \textbf{\emph{.pdf}} document.
     
 
 
