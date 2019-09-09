@@ -47,14 +47,15 @@ pages:
         - Review Questions: 04-Data-Types-and-Variables/04.07-Review-Questions.md
     - Chapter 5 Matricies and Arrays:
         - Introduction: 05-Matricies-and-Arrays/05.00-Introduction.md
-        - Installing NumPy: 05-Matricies-and-Arrays/05.01-Installing-NumPy.md
-        - NumPy: 05-Matricies-and-Arrays/05.02-NumPy.md
-        - Array Creation: 05-Matricies-and-Arrays/05.03-Array-Creation.md
-        - Array Indexing: 05-Matricies-and-Arrays/05.04-Array-Indexing.md
-        - Array Slicing: 05-Matricies-and-Arrays/05.05-Array-Slicing.md
-        - Array Operations: 05-Matricies-and-Arrays/05.06-Array-Opperations.md
-        - Systems of Linear Equations: 05-Matricies-and-Arrays/05.07-Systems-of-Linear-Equations.md
-        - Summary: 05-Matricies-and-Arrays/05.08-Summary.md
+        - NumPy: 05-Matricies-and-Arrays/05.01-NumPy.md
+        - Installing NumPy: 05-Matricies-and-Arrays/05.02-Installing-NumPy.md
+        - Python Lists and NumPy Arrays: 05-Matricies-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md
+        - Array Creation: 05-Matricies-and-Arrays/05.04-Array-Creation.md
+        - Array Indexing: 05-Matricies-and-Arrays/05.05-Array-Indexing.md
+        - Array Slicing: 05-Matricies-and-Arrays/05.06-Array-Slicing.md
+        - Array Operations: 05-Matricies-and-Arrays/05.07-Array-Opperations.md
+        - Systems of Linear Equations: 05-Matricies-and-Arrays/05.08-Systems-of-Linear-Equations.md
+        - Summary: 05-Matricies-and-Arrays/05.09-Summary.md
         - Review Questions: 05-Matricies-and-Arrays/05.10-Review-Questions.md
     - Chapter 6 Plotting with Matplotlib:
         - Introduction: 06-Plotting-with-Matplotlib/06.00-Introduction.md
@@ -108,13 +109,14 @@ pages:
     - Chapter 10 Symbolic Math:
         - Introduction: 10-Symbolic-Math/10.00-Introduction.md
         - SymPy: 10-Symbolic-Math/10.01-SymPy.md
-        - Defining Varaibles: 10-Symbolic-Math/10.02-Defining-Varaibles.md
-        - Expressions and Substitutions: 10-Symbolic-Math/10.03-Expressions-and-Substitutions.md
-        - Equations: 10-Symbolic-Math/10.04-Equations.md
-        - Solving Equations: 10-Symbolic-Math/10.05-Solving-Equations.md
-        - Solving Two Equations for Two Unknows: 10-Symbolic-Math/10.06-Solving-Two-Equations-for-Two-Unknowns.md
-        - Summary: 10-Symbolic-Math/10.07-Summary.md
+        - Installing SymPy: 10-Symbolic-Math/10.02-Installing-SymPy.md
+        - Defining Varaibles: 10-Symbolic-Math/10.03-Defining-Varaibles.md
+        - Expressions and Substitutions: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.md
+        - Equations: 10-Symbolic-Math/10.05-Equations.md
+        - Solving Equations: 10-Symbolic-Math/10.06-Solving-Equations.md
+        - Solving Two Equations for Two Unknows: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.md
         - Review Questions: 10-Symbolic-Math/10.08-Review-Questions.md
+        - Summary: 10-Symbolic-Math/10.09-Summary.md
     - Chapter 11 Python and External Hardware:
         - Introduction: 11-Python-and-External-Hardware/11.00-Introduction.md
         - PySerial: 11-Python-and-External-Hardware/11.01-PySerial.md
