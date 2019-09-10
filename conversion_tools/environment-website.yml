@@ -1,4 +1,4 @@
-name: book
+name: book37-website
 channels:
   - https://repo.anaconda.com/pkgs/free
   - damianavila82
@@ -149,5 +149,3 @@ dependencies:
     - pymdown-extensions==4.9.1
     - pyyaml==3.12
     - tornado==4.5.3
-prefix: C:\Users\Peter\Anaconda3\envs\book
-
