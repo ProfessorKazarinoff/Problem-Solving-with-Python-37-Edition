@@ -1,0 +1,45 @@
+# mkdocs.yml
+
+site_name: 'Problem Solving with Python'
+site_description: 'Website companion for the book Problem Solving with Python by Peter D. Kazarinoff'
+site_author: 'Peter D. Kazarinoff'
+repo_url: 'https://github.com/professorkazarinoff/Problem-Solving-with-Python/'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'cyan'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.arithmatex
+
+# Javascript for MathJax
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Extra css
+extra_css:
+  - 'stylesheets/extra.css'
+
+# Theme Customization
+extra:
+  social:
+    - type: 'globe'
+      link: 'https://pcc.edu'
+    - type: 'github'
+      link: 'https://github.com/professorkazarinoff'
+    - type: 'twitter'
+      link: 'https://twitter.com/pkazarinoff'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 - 2018 Peter D. Kazarinoff'
+

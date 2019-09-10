@@ -1,0 +1,194 @@
+# mkdocs.yml
+
+site_name: 'Problem Solving with Python'
+site_description: 'Website companion for the book Problem Solving with Python by Peter D. Kazarinoff'
+site_author: 'Peter D. Kazarinoff'
+repo_url: 'https://github.com/professorkazarinoff/Problem-Solving-with-Python/'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'cyan'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.arithmatex
+
+# Javascript for MathJax
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Extra css
+extra_css:
+  - 'stylesheets/extra.css'
+
+# Theme Customization
+extra:
+  social:
+    - type: 'globe'
+      link: 'https://pcc.edu'
+    - type: 'github'
+      link: 'https://github.com/professorkazarinoff'
+    - type: 'twitter'
+      link: 'https://twitter.com/pkazarinoff'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 - 2018 Peter D. Kazarinoff'
+
+# Content
+pages:
+    - Home: index.md
+    - Preface:
+        - Motivation: 00-Preface/00.00-Motivation.md
+        - Acknowledgments: 00-Preface/00.02-Acknowledgments.md
+        - Supporting Materials: 00-Preface/00.03-Supporting-Materials.md
+        - Formatting Conventions: 00-Preface/00.04-Formatting-Conventions.md
+        - Errata: 00-Preface/00.05-Errata.md
+    - Chapter 1 Orientation:
+        - Introduction: 01-Orientation/01.00-Welcome.md
+        - Why Python?: 01-Orientation/01.01-Why-Python.md
+        - The Anaconda Distribution of Python: 01-Orientation/01.02-The-Anaconda-Distribution-of-Python.md
+        - Installing Anaconda on Windows: 01-Orientation/01.03-Installing-Anaconda-on-Windows.md
+        - Installing Anaconda on MacOS: 01-Orientation/01.04-Installing-Anaconda-on-MacOS.md
+        - Installing Anaconda on Linux: 01-Orientation/01.05-Installing-Anaconda-on-Linux.md
+        - Installing Python from Python.org: 01-Orientation/01.06-Installing-Python-from-Python-dot-org.md
+        - Summary: 01-Orientation/01.07-Summary.md
+        - Review Questions: 01-Orientation/01.08-Review-Questions.md
+    - Chapter 2 Jupyter Notebooks:
+        - Introduction: 02-Jupyter-Notebooks/02.00-Introduction.md
+        - What is a Jupyter Notebook?: 02-Jupyter-Notebooks/02.01-What-is-a-Jupyter-Notebook.md
+        - Why Jupyter Notebooks?: 02-Jupyter-Notebooks/02.02-Why-Jupyter-Notebooks.md
+        - Installing Juypter: 02-Jupyter-Notebooks/02.03-Installing-Juypter.md
+        - Opening a Jupyter Notebook: 02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook.md
+        - The Jupyter Notebook Interface: 02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface.md
+        - Magic Cells: 02-Jupyter-Notebooks/02.06-Magic-Cells.md
+        - Getting Help in a Jupyter Notebook: 02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook.md
+        - Summary: 02-Jupyter-Notebooks/02.08-Summary.md
+        - Review Questions: 02-Jupyter-Notebooks/02.09-Review-Questions.md
+    - Chapter 3 The Python REPL:
+        - Introduction: 03-The-Python-REPL/03.00-Introduction.md
+        - Python as a Calculator: 03-The-Python-REPL/03.01-Python-as-a-Calculator.md
+        - Variables: 03-The-Python-REPL/03.02-Variables.md
+        - String Operations: 03-The-Python-REPL/03.03-String-Operations.md
+        - Print Statements: 03-The-Python-REPL/03.04-Print-Statements.md
+        - Summary: 03-The-Python-REPL/03.05-Summary.md
+        - Review Questions: 03-The-Python-REPL/03.06-Review-Questions.md
+    - Chapter 4 Data Types and Variables:
+        - Introduction: 04-Data-Types-and-Variables/04.00-Introduction.md
+        - Numeric Data Types: 04-Data-Types-and-Variables/04.01-Numeric-Data-Types.md
+        - Boolean Data Type: 04-Data-Types-and-Variables/04.02-Boolean-Data-Type.md
+        - Strings: 04-Data-Types-and-Variables/04.03-Strings.md
+        - Lists: 04-Data-Types-and-Variables/04.04-Lists.md
+        - Dictionaries and Tuples: 04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples.md
+        - Summary: 04-Data-Types-and-Variables/04.06-Summary.md
+        - Review Questions: 04-Data-Types-and-Variables/04.07-Review-Questions.md
+    - Chapter 5 Matricies and Arrays:
+        - Introduction: 05-Matricies-and-Arrays/05.00-Introduction.md
+        - NumPy: 05-Matricies-and-Arrays/05.01-NumPy.md
+        - Installing NumPy: 05-Matricies-and-Arrays/05.02-Installing-NumPy.md
+        - Python Lists and NumPy Arrays: 05-Matricies-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md
+        - Array Creation: 05-Matricies-and-Arrays/05.04-Array-Creation.md
+        - Array Indexing: 05-Matricies-and-Arrays/05.05-Array-Indexing.md
+        - Array Slicing: 05-Matricies-and-Arrays/05.06-Array-Slicing.md
+        - Array Operations: 05-Matricies-and-Arrays/05.07-Array-Opperations.md
+        - Systems of Linear Equations: 05-Matricies-and-Arrays/05.08-Systems-of-Linear-Equations.md
+        - Summary: 05-Matricies-and-Arrays/05.09-Summary.md
+        - Review Questions: 05-Matricies-and-Arrays/05.10-Review-Questions.md
+    - Chapter 6 Plotting with Matplotlib:
+        - Introduction: 06-Plotting-with-Matplotlib/06.00-Introduction.md
+        - What is Matplotlib?: 06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib.md
+        - Installing Matplotlib: 06-Plotting-with-Matplotlib/06.02-Installing Matplotlib.md
+        - Line Plots: 06-Plotting-with-Matplotlib/06.03-Line-Plots.md
+        - Saving plots: 06-Plotting-with-Matplotlib/06.04-Saving-Plots.md
+        - Multi Line Plots: 06-Plotting-with-Matplotlib/06.05-Multi-Line-Plots.md
+        - Bar Charts and Pie Charts: 06-Plotting-with-Matplotlib/06.06-Bar-Charts-and-Pie-Charts.md
+        - Error Bars: 06-Plotting-with-Matplotlib/06.07-Error-Bars.md
+        - Histograms: 06-Plotting-with-Matplotlib/06.08-Histograms.md
+        - Box Plots and Violin Plots: 06-Plotting-with-Matplotlib/06.09-Box-Plots-and-Violin-Plots.md
+        - Scatter Plots: 06-Plotting-with-Matplotlib/06.10-Scatter-Plots.md
+        - Plot annotations: 06-Plotting-with-Matplotlib/06.11-Plot-Annotations.md
+        - Subplots: 06-Plotting-with-Matplotlib/06.12-Subplots.md
+        - Plot Styles: 06-Plotting-with-Matplotlib/06.13-Plot-Styles.md
+        - Contour Plots: 06-Plotting-with-Matplotlib/06.14-Contour-Plots.md
+        - Quiver and Stream Plots: 06-Plotting-with-Matplotlib/06.15-Quiver-and-Stream-Plots.md
+        - 3D Surface Plots: 06-Plotting-with-Matplotlib/06.16-3D-Surface-Plots.md
+        - Summary: 06-Plotting-with-Matplotlib/06.17-Summary.md
+        - Review Questions: 06-Plotting-with-Matplotlib/06.18-Review-Questions.md
+    - Chapter 7 Functions and Modules:
+        - Introduction: 07-Functions-and-Modules/07.00-Introduction.md
+        - Why Functions?: 07-Functions-and-Modules/07.01-Why-functions.md
+        - First Function: 07-Functions-and-Modules/07.02-First-function.md
+        - Functions with Multiple Arguments: 07-Functions-and-Modules/07.03-Functions-with-multiple-arguments.md
+        - Functions with Default Arguments: 07-Functions-and-Modules/07.04-Functions-with-default-arguments.md
+        - Calling Functions from Other Files: 07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files.md
+        - Docstrings in Functions: 07-Functions-and-Modules/07.06-Docstrings-in-Functions.md
+        - Positional and Keyword Arguments: 07-Functions-and-Modules/07.07-Positional-and-Keyword-Arguments.md
+        - Summary: 07-Functions-and-Modules/07.08-Summary.md
+        - Review Questions: 07-Functions-and-Modules/07.09-Review-Questions.md
+    - Chapter 8 If Else Try Except:
+        - Introduction: 08-If-Else-Try-Except/08.00-Introduction.md
+        - User Input: 08-If-Else-Try-Except/08.01-User-Input.md
+        - If statements: 08-If-Else-Try-Except/08.02-If-Statements.md
+        - Selection Statements: 08-If-Else-Try-Except/08.02-Selection-Statements.md
+        - If Else Statements: 08-If-Else-Try-Except/08.04-If-Else-Statements.md
+        - Try-Except Statements: 08-If-Else-Try-Except/08.05-Try-Except-Statements.md
+        - Flowcharts: 08-If-Else-Try-Except/08.06-Flowcharts.md
+        - Summary: 08-If-Else-Try-Except/08.07-Summary.md
+        - Review Questions: 08-If-Else-Try-Except/08.08-Review-Questions.md
+    - Chapter 9 Loops:
+        - Introduction: 09-Loops/09.00-Introduction.md
+        - For Loops: 09-Loops/09.01-For-Loops.md
+        - While Loops: 09-Loops/09.02-While-Loops.md
+        - Break and Continue: 09-Loops/09.03-Break-and-Continue.md
+        - Flowcharts Describing Loops: 09-Loops/09.04-Flowcharts-Describing-Loops.md
+        - Summary: 09-Loops/09.05-Summary.md
+        - Review Questions: 09-Loops/09.06-Review-Questions.md
+    - Chapter 10 Symbolic Math:
+        - Introduction: 10-Symbolic-Math/10.00-Introduction.md
+        - SymPy: 10-Symbolic-Math/10.01-SymPy.md
+        - Installing SymPy: 10-Symbolic-Math/10.02-Installing-SymPy.md
+        - Defining Varaibles: 10-Symbolic-Math/10.03-Defining-Varaibles.md
+        - Expressions and Substitutions: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.md
+        - Equations: 10-Symbolic-Math/10.05-Equations.md
+        - Solving Equations: 10-Symbolic-Math/10.06-Solving-Equations.md
+        - Solving Two Equations for Two Unknows: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.md
+        - Review Questions: 10-Symbolic-Math/10.08-Review-Questions.md
+        - Summary: 10-Symbolic-Math/10.09-Summary.md
+    - Chapter 11 Python and External Hardware:
+        - Introduction: 11-Python-and-External-Hardware/11.00-Introduction.md
+        - PySerial: 11-Python-and-External-Hardware/11.01-PySerial.md
+        - Bytes and Unicode Strings: 11-Python-and-External-Hardware/11.02-Bytes-and-Unicode-Strings.md
+        - Controlling an LED with Python: 11-Python-and-External-Hardware/11.03-Controlling-an-LED.md
+        - Reading a Sensor with Python: 11-Python-and-External-Hardware/11.04-Reading-a-Sensor-with-Python.md
+        - Summary: 11-Python-and-External-Hardware/11.05-Summary.md
+        - Project Ideas: 11-Python-and-External-Hardware/11.06-Project-Ideas.md
+    - Chapter 12 MicroPython:
+        - Introduction: 12-MicroPython/12.00-Introduction.md
+        - What is MicroPython?: 12-MicroPython/12.01-What-is-MicroPython.md
+        - Installing MicroPython: 12-MicroPython/12.02-Installing-MicroPython.md
+        - The MicroPython REPL: 12-MicroPython/12.03-MicroPython-REPL.md
+        - Blinking a LED: 12-MicroPython/12.04-Blinking-a-LED.md
+        - Reading a Sensor: 12-MicroPython/12.05-Reading-a-Sensor.md
+        - Uploading Code: 12-MicroPython/12.06-Uploading-Code.md
+        - Summary: 12-MicroPython/12.07-Summary.md
+        - Project Ideas: 12-MicroPython/12.08-Project-Ideas.md
+    - Appendix:
+        - Contents: 99-Appendix/99.00-Appendix.md
+        - Reserved and Keywords in Python: 99-Appendix/99.01-Reserved-and-Key-Words-in-Python.md
+        - ASCII Character Codes: 99-Appendix/99.02-ASCII-Character-Codes.md
+        - Virtual Environments: 99-Appendix/99.03-Virtual-Environments.md
+        - NumPy Math Functions: 99-Appendix/99.04-NumPy-Math-Functions.md
+        - Git and GitHub: 99-Appendix/99.05-Git-and-GitHub.md
+        - LaTeX Math: 99-Appendix/99.06-LaTeX-Math.md
+        - Problem Solving with Python Book Construction: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
+        - Contributions: 99-Appendix/99.08-Contributions.md
+        - Cover Artwork: 99-Appendix/99.09-Cover-Artwork.md
+        - About the Author: 99-Appendix/99.10-About-the-Author.md
