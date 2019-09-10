@@ -8,7 +8,7 @@ $ conda activate book
 (book)$ python nb2latex.py
 ```
 
-open ```/pdf/pdfout3.tex``` in TexWorks. Put a ```*``` by the Preface chapter header and the appendix chapter header. Follow with a line to add the chapter back to the table of contents.
+open ```/pdf/pdfout3.tex``` in TexWorks. Put a ```*``` by the Preface chapter header and the Appendix chapter header. Follow with a line to add the chapter back to the table of contents.
 
 ```
 \chapter*{Preface}\label{preface}
@@ -47,7 +47,7 @@ Add in the Copywrite Page and Dedication Page between ```\maketitle``` and ```\t
     \tableofcontents
 ```
 
-Make the table of contents list Appendix sections in letters. Un-number the appendix section in table of contents
+Make the table of contents list Appendix sections in letters. Un-number the appendix section in table of contents, then add the \Alpha as the numbering method.
 
 ```
 \chapter*{Appendix}\label{appendix}
@@ -57,7 +57,3 @@ Make the table of contents list Appendix sections in letters. Un-number the appe
 \renewcommand{\thesection}{\Alph{section}.}
 \setcounter{section}{0}
 ```
-
-
-
-
