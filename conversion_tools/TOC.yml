@@ -110,13 +110,13 @@ pages:
         - Introduction: 10-Symbolic-Math/10.00-Introduction.md
         - SymPy: 10-Symbolic-Math/10.01-SymPy.md
         - Installing SymPy: 10-Symbolic-Math/10.02-Installing-SymPy.md
-        - Defining Varaibles: 10-Symbolic-Math/10.03-Defining-Varaibles.md
+        - Defining Variables: 10-Symbolic-Math/10.03-Defining-Variables.md
         - Expressions and Substitutions: 10-Symbolic-Math/10.04-Expressions-and-Substitutions.md
         - Equations: 10-Symbolic-Math/10.05-Equations.md
         - Solving Equations: 10-Symbolic-Math/10.06-Solving-Equations.md
         - Solving Two Equations for Two Unknows: 10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns.md
-        - Review Questions: 10-Symbolic-Math/10.08-Review-Questions.md
-        - Summary: 10-Symbolic-Math/10.09-Summary.md
+        - Summary: 10-Symbolic-Math/10.08-Summary.md
+        - Review Questions: 10-Symbolic-Math/10.09-Review-Questions.md
     - Chapter 11 Python and External Hardware:
         - Introduction: 11-Python-and-External-Hardware/11.00-Introduction.md
         - PySerial: 11-Python-and-External-Hardware/11.01-PySerial.md
@@ -143,7 +143,7 @@ pages:
         - NumPy Math Functions: 99-Appendix/99.04-NumPy-Math-Functions.md
         - Git and GitHub: 99-Appendix/99.05-Git-and-GitHub.md
         - LaTeX Math: 99-Appendix/99.06-LaTeX-Math.md
-        - Problem Solving with Python Book Construction: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
+        - Problem Solving with Python 3.7 Edition Book Construction: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
         - Contributions: 99-Appendix/99.08-Contributions.md
         - Cover Artwork: 99-Appendix/99.09-Cover-Artwork.md
         - About the Author: 99-Appendix/99.10-About-the-Author.md
