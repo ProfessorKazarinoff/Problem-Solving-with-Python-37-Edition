@@ -3,12 +3,12 @@
 cd into the conversion_tools directory. Run the main script in nb2latex.py
 
 ```
-$ conda activate book
-(book)$ cd conversion_tools
-(book)$ python nb2latex.py
+$ conda activate book37
+(book37)$ cd conversion_tools
+(book37)$ python nb2latex.py
 ```
 
-open ```/pdf/pdfout3.tex``` in TexWorks. Put a ```*``` by the Preface chapter header and the Appendix chapter header. Follow with a line to add the chapter back to the table of contents.
+open ```/pdf/out.tex``` in TexWorks. Put a ```*``` by the Preface chapter header and the Appendix chapter header. Follow with a line to add the chapter back to the table of contents.
 
 ```
 \chapter*{Preface}\label{preface}

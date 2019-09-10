@@ -413,8 +413,8 @@
 
     
         \hypertarget{preface}{%
-\chapter*{Preface}\label{preface}}
-\addcontentsline{toc}{chapter}{Preface}    
+\chapter{Preface}\label{preface}}
+    
 
 
 
@@ -493,14 +493,14 @@ examples and Jupyter notebooks for the text can be found in the GitHub
 repository for the book:
 
 \begin{quote}
-\url{https:github.com/ProfessorKazarinoff/Problem-Solving-with-Python}
+\url{https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}
 \end{quote}
 
 Live notebooks, where code examples found in the text can be run without
 installing any software, are available at:
 
 \begin{quote}
-\url{https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python/master}
+\url{https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/master}
 \end{quote}
 
 If you are an instructor and using this book in a course with students-
@@ -5418,7 +5418,7 @@ Q03.81 Electrical power \(P\) is related to current \(I\) and resistance
 Solutions}\label{errors-explanations-and-solutions}}
 
 For each of the problems below, run the line of code. Then explain the
-error in your words. Give an explanation more specific than
+error in your own words. Give an explanation more specific than
 \passthrough{\lstinline!invalid syntax!}. Then suggest and run a line of
 code that fixes the error.
 
@@ -13441,13 +13441,13 @@ Label each subplot with a title that shows the plot type.
 
 \begin{itemize}
 \item
-  Call functions in Python scripts
+  Call functions in Python
 \item
   Import functions into Python scripts
 \item
   Create user-defined functions
 \item
-  Create Python functions with default arguments
+  Create functions with default arguments
 \item
   Utilize functions with positional and keyword arguments
 \item
@@ -13485,9 +13485,9 @@ Functions provide a couple of benefits:
   Functions can be shared and used by other programmers
 \end{itemize}
 
-Every function has a \emph{name}. The function name is used when the
-function is \emph{called} in a program. Calling a function means running
-a function.
+Every function has a \emph{function name}. The function name is used
+when the function is \emph{called} in a program. Calling a function
+means running a function.
 
 Functions can receive input from the program. The input provided to a
 function is called \emph{input arguments} or just \emph{arguments}.
@@ -13504,7 +13504,7 @@ function:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{out} \PY{o}{=} \PY{n+nb}{pow}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{out} \PY{o}{=} \PY{n+nb}{pow}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -13542,7 +13542,9 @@ Python}\label{defining-functions-in-python}}
 
     
         Function definitions in Python typically contain at least two lines. The
-first line defines the function name and arguments.
+first line defines the function name and arguments. The last line
+typically defines the function output. In between is the code that runs
+when the function is called.
 
 \begin{lstlisting}
 def function_name(arguments):
@@ -13557,23 +13559,23 @@ def
 \end{lstlisting}
 
 The keyword \passthrough{\lstinline!def!} needs to be the start of the
-line that declares the function. Def stands for \emph{definition} and
-indicates to the Python interpreter that a function definition will
-follow.
+line that declares the function. \passthrough{\lstinline!def!} stands
+for \emph{definition} and indicates to the Python interpreter that a
+function definition will follow.
 
 \begin{lstlisting}
 function_name
 \end{lstlisting}
 
-Each function needs a name. The function name should start with a letter
-and is typically all lowercase (in Python names that start with
-Uppercase are usually used to define \emph{Classes}). Function names
-need to start with a letter and can only contain letters, numbers and
-the underscore character. Just about any name will do, but it is best to
-avoid using any Python keywords such as \passthrough{\lstinline!def!},
+Each function needs a name. The function name must start with a letter
+(or underscore) and is typically all lowercase (in Python, names that
+start with Uppercase are usually used to define \emph{classes}).
+Function names can only contain letters, numbers and the underscore
+character. Just about any name will do, but it is best to avoid using
+any Python keywords such as \passthrough{\lstinline!def!},
 \passthrough{\lstinline!class!}, \passthrough{\lstinline!if!},
 \passthrough{\lstinline!else!}, \passthrough{\lstinline!for!}. A
-complete list of reserved Python keywords is in the index.
+complete list of reserved Python keywords is in the Appendix.
 
 \begin{lstlisting}
 (argument):
@@ -13598,7 +13600,7 @@ The body of the function contains the code that will run when the
 function is called. Any variables declared by the function arguments can
 be used in the body of the function. Any variables used in the body of
 the function are \emph{local variables}. Local variables cannot be
-called or accessed by other scripts.
+called or accessed by other scripts, or used outside the function body.
 
 \begin{lstlisting}
 return
@@ -13606,7 +13608,7 @@ return
 
 The \passthrough{\lstinline!return!} keyword is often the last line of a
 function. \passthrough{\lstinline!return!} indicates that whatever
-expression that follows will be the output of the function. The
+expression that follows is the output of the function. The
 \passthrough{\lstinline!return!} keyword is not a function or a method,
 and parenthesis are not used after \passthrough{\lstinline!return!},
 just a space.
@@ -13635,17 +13637,17 @@ Function}\label{your-first-user-defined-function}}
 
     
         When you write your own functions, called \emph{user-defined functions},
-you need to consider at least four things:
+consider these criteria:
 
 \begin{itemize}
 \tightlist
 \item
-  What will be the function name?
+  What will you name the function?
 \item
   What, if any, input arguments will the function accept?
 \item
-  What will the function do? What is the purpose of the chunk of code
-  which runs when the function is called?
+  What will the function do? What is the purpose of the code that runs
+  when the function is called?
 \item
   What, if any, output will the function return?
 \end{itemize}
@@ -13700,7 +13702,8 @@ parenthesis is a colon \passthrough{\lstinline!:!}. The body of the
 function includes the code \passthrough{\lstinline!out = n + 2!}. The
 last line of the function includes the keyword
 \passthrough{\lstinline!return!} followed by a space and the variable
-\passthrough{\lstinline!out!}.
+\passthrough{\lstinline!out!}. Note variable \passthrough{\lstinline!n!}
+is a local variable and can only be used inside the function definition.
 
 Let's run our \passthrough{\lstinline!plustwo()!} function and see the
 output.
@@ -13803,29 +13806,57 @@ couple of sets of input arguments.
             
 
     
-        Note that if only one input argument is supplied to the
+        Note if only one input argument is supplied to the
 \passthrough{\lstinline!triarea()!} function, an error is returned:
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{triarea}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{triarea}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
 
-        ------------------------------------------------------------------------
+    
+        \begin{lstlisting}
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-4-ddd55ccdd949> in <module>()
+----> 1 triarea(2)
 
-        TypeError                              Traceback (most recent call last)
-
-        <ipython-input-4-ddd55ccdd949> in <module>
-    ----> 1 triarea(2)
+TypeError: triarea() missing 1 required positional argument: 'height'
+\end{lstlisting}
     
 
-        TypeError: triarea() missing 1 required positional argument: 'height'
 
-    \end{Verbatim}
+
+
+    
+        The variables \passthrough{\lstinline!base!} and
+\passthrough{\lstinline!height!} are local variables. If
+\passthrough{\lstinline!base!} or \passthrough{\lstinline!height!} is
+called outside the function definition, an error is returned.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{triarea}\PY{p}{(}\PY{n}{base}\PY{p}{,} \PY{n}{height}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+        \begin{lstlisting}
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-4-1dd955b62482> in <module>()
+----> 1 triarea(base, height)
+
+NameError: name 'base' is not defined
+\end{lstlisting}
+    
+
+
 
 
     
@@ -13838,13 +13869,13 @@ Arguments}\label{functions-with-default-arguments}}
 
 
     
-        Functions can be specified with default arguments. If values for these
-arguemnts are not supplied when the fuction is called, the default
-values are used. The general format to define a function with default
-arguments is below:
+        Functions can be specified with \emph{default arguments}. If values for
+these arguments are not supplied when the function is called, the
+default values are used. The general format to define a function with
+default arguments is below:
 
 \begin{lstlisting}
-def function_name(arugment1=default_value, arguemnt2=default_value):
+def function_name(argument1=default_value, argument2=default_value):
     <code>
     return output
 \end{lstlisting}
@@ -13854,7 +13885,7 @@ def function_name(arugment1=default_value, arguemnt2=default_value):
 
 
     
-        An example a function with default arguments is a function that
+        An example a function with default arguments might be a function that
 calculates the distance an object falls based on time. The general
 formula for fall distance \(d\) based on fall time \(t\) can be modeled
 as:
@@ -13897,8 +13928,8 @@ by \passthrough{\lstinline!falldist(3)!}. In the function call
             
 
     
-        On earth, we see the ball falls \passthrough{\lstinline!44.145!} meters
-in 3 seconds.
+        On earth, the ball falls \passthrough{\lstinline!44.145!} meters in 3
+seconds.
 
 However, on the moon gravity is much weaker than on earth. The
 acceleration of falling objects on the moon is \(g = 1.625 m/s^2\). To
@@ -13914,13 +13945,21 @@ default value assigned in the first line of the function.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{falldist}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mf}{1.625}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{falldist}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mf}{1.625}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}4}]:} 7.3125
+{\color{outcolor}Out[{\color{outcolor}3}]:} 7.3125
 \end{Verbatim}
             
+
+    
+        On the moon, the ball falls \passthrough{\lstinline!7.3125!} meters in 3
+seconds.
+    
+
+
+
 
     
         \hypertarget{calling-functions-from-other-files}{%
@@ -13934,10 +13973,11 @@ Files}\label{calling-functions-from-other-files}}
     
         User-defined functions can be called from other files. A function can be
 called and run in a different file than the file where the function is
-definition. If a new file called \textbf{\emph{myfunctions.py}} is
-created and contains two function definitions,
-\passthrough{\lstinline!plustwo()!} and
-\passthrough{\lstinline!falldist()!}, the functions
+defined.
+
+If a new file called \textbf{\emph{myfunctions.py}} is created and
+contains two function definitions, \passthrough{\lstinline!plustwo()!}
+and \passthrough{\lstinline!falldist()!}, the functions
 \passthrough{\lstinline!plustwo()!} and
 \passthrough{\lstinline!falldist()!} can be used by a separate script as
 long as the file and function names are imported in the separate script
@@ -13973,7 +14013,7 @@ def falldist(t,g=9.81):
 
     
         This file, \textbf{\emph{myfunctions.py}} can be imported into another
-script (another \textbf{.py} file), or Jupyter Notebook.
+script (another \textbf{\emph{.py}} file), or Jupyter Notebook.
 
 \textbf{Remember the file that contains the function definitions and the
 file calling the functions must be in the same directory.}
@@ -13995,8 +14035,7 @@ function_name(arguments)
 \end{lstlisting}
 
 An example using this syntax with the \textbf{\emph{myfunctions.py}}
-file and the functions \passthrough{\lstinline!plustwo()!} and
-\passthrough{\lstinline!falldist()!} is below:
+file and the function \passthrough{\lstinline!plustwo()!} is below:
     
 
 
@@ -14162,53 +14201,15 @@ sum(iterable, start=0, /)
 
     
         Let's create a new function that converts grams (g) to kilograms (kg).
-Let's call our function \passthrough{\lstinline!g2kg!}. The first thing
-to do is make sure that the name \passthrough{\lstinline!g2kg!} is not
-assigned to another function and is not a keyword by Python. We can
-check quick using Python's built-in \passthrough{\lstinline!type()!}
-function. We know that \passthrough{\lstinline!sum()!} is a Python
-function, how about \passthrough{\lstinline!g2kg()!}?
-    
-
-
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n+nb}{sum}\PY{p}{)}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{g2kg}\PY{p}{)}\PY{p}{)}
-\end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-<class 'builtin\_function\_or\_method'>
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-        ---------------------------------------------------------------------------
-
-        NameError                                 Traceback (most recent call last)
-
-        <ipython-input-2-487fcfc6eb43> in <module>()
-          1 print(type(sum))
-    ----> 2 print(type(g2kg))
-    
-
-        NameError: name 'g2kg' is not defined
-
-    \end{Verbatim}
-
-
-    
-        Since \passthrough{\lstinline!g2kg!} is not already defined in Python,
-we can use \passthrough{\lstinline!g2kg!} as the name of a new
-user-defined function. Remember the \textbf{parenthesis},
+1000 grams is equal to 1 kilogram. Let's call our function
+\passthrough{\lstinline!g2kg!}. Remember the \textbf{parenthesis},
 \textbf{colon}, and \textbf{return} statement.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{def} \PY{n+nf}{g2kg}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k}{def} \PY{n+nf}{g2kg}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{p}{:}
             \PY{n}{kg} \PY{o}{=} \PY{n}{g}\PY{o}{/}\PY{l+m+mi}{1000}
             
             \PY{k}{return} \PY{n}{kg}
@@ -14223,11 +14224,11 @@ expect the output to be \passthrough{\lstinline!1.3!} kilograms.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{g2kg}\PY{p}{(}\PY{l+m+mi}{1300}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{g2kg}\PY{p}{(}\PY{l+m+mi}{1300}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}4}]:} 1.3
+{\color{outcolor}Out[{\color{outcolor}3}]:} 1.3
 \end{Verbatim}
             
 
@@ -14242,7 +14243,7 @@ docstring yet.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{help}\PY{p}{(}\PY{n}{g2kg}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{help}\PY{p}{(}\PY{n}{g2kg}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -14260,7 +14261,7 @@ g2kg(g)
 included in the docstring.
 
 The standard components of docstrings included in function definitions
-include:
+are:
 
 \begin{itemize}
 \tightlist
@@ -14300,7 +14301,7 @@ function definition.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} \PY{k}{def} \PY{n+nf}{g2kg}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k}{def} \PY{n+nf}{g2kg}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{p}{:}
             \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}}
         \PY{l+s+sd}{    }
         \PY{l+s+sd}{    Function g2kg converts between g and kg}
@@ -14331,7 +14332,7 @@ to us.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{help}\PY{p}{(}\PY{n}{g2kg}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{help}\PY{p}{(}\PY{n}{g2kg}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -14364,7 +14365,7 @@ Arguments}\label{positional-and-keyword-arguments}}
 
     
         Python functions can contain two types of arguments: \emph{positional
-arguments} and \emph{keyword arguments}. Positional arguments are
+arguments} and \emph{keyword arguments}. Positional arguments must be
 included in the correct order. Keyword arguments are included with a
 keyword and equals sign.
     
@@ -14377,18 +14378,19 @@ keyword and equals sign.
 \subsection{Positional Arguments}\label{positional-arguments}}
 
 An \emph{argument} is a variable, value or object passed to a function
-or method. \emph{Positional arguments} are arguments that need to be
-included when a function is called in the proper position or order.
+or method as input. \emph{Positional arguments} are arguments that need
+to be included in the proper position or order.
 
-The first positional argument always needs to be listed first. The
-second positional argument needs to be listed second and the third
-positional argument listed third, etc.
+The first positional argument always needs to be listed first when the
+function is called. The second positional argument needs to be listed
+second and the third positional argument listed third, etc.
 
 An example of positional arguments can be seen in Python's
 \passthrough{\lstinline!complex()!} function. This function returns a
 complex number with a real term and an imaginary term. The order that
-numbers are passed to the complex function determines which number is
-the real term and which number is the imaginary term.
+numbers are passed to the \passthrough{\lstinline!complex()!} function
+determines which number is the real term and which number is the
+imaginary term.
 
 If the complex number \passthrough{\lstinline!3 + 5j!} is created, the
 two positional arguments are the numbers \passthrough{\lstinline!3!} and
@@ -14476,13 +14478,15 @@ function(keyword=value)
 
 Where \passthrough{\lstinline!function!} is the function name,
 \passthrough{\lstinline!keyword!} is the keyword argument and value is
-the value or object passed as that keyword. Python's complex function
-can also accept two keyword arguments. The two keyword arguments are
-\passthrough{\lstinline!real=!} and \passthrough{\lstinline!imag=!}. To
-create the complex number \passthrough{\lstinline!3 + 5j!} the
-\passthrough{\lstinline!3!} and \passthrough{\lstinline!5!} can be
-passed to the function as the values assigned to the keyword arguments
-\passthrough{\lstinline!real=!} and \passthrough{\lstinline!imag=!}.
+the value or object passed as that keyword.
+
+Python's complex function can also accept two keyword arguments. The two
+keyword arguments are \passthrough{\lstinline!real=!} and
+\passthrough{\lstinline!imag=!}. To create the complex number
+\passthrough{\lstinline!3 + 5j!} the \passthrough{\lstinline!3!} and
+\passthrough{\lstinline!5!} can be passed to the function as the values
+assigned to the keyword arguments \passthrough{\lstinline!real=!} and
+\passthrough{\lstinline!imag=!}.
     
 
 
@@ -14524,13 +14528,12 @@ produce the same output.
 
     
         \hypertarget{keyword-arguments-specified-by-a-dictionary}{%
-\subsubsection{Keyword Arguments specified by a
-dictionary}\label{keyword-arguments-specified-by-a-dictionary}}
+\subsubsection{Keyword Arguments Specified by a
+Dictionary}\label{keyword-arguments-specified-by-a-dictionary}}
 
 Keyword arguments can also be passed to functions using a Python
-dictionary. The dictionary must contain the keywords as keys in the
-dictionary and the values as values in the dictionary. The general form
-is:
+dictionary. The dictionary must contain the keywords as keys and the
+values as values. The general form is:
 
 \begin{lstlisting}
 keyword_dict = {'keyword1': value1, 'keyword2': value2}
@@ -14582,7 +14585,8 @@ how to call functions which are contained in a different file than the
 file that calls the function. One section of the chapter reviewed how
 docstrings work in Python functions and the results of calling Python's
 \passthrough{\lstinline!help()!} on a function that contains a
-docstring.
+docstring. At the end of the chapter you learned how to pass lists and
+dictionaries to Python functions.
     
 
 
@@ -14654,7 +14658,7 @@ file\tabularnewline
 module or .py file\tabularnewline
 \passthrough{\lstinline!as!} & name an alias for a function, method or
 class\tabularnewline
-\passthrough{\lstinline!"""   """!} & define a doc string\tabularnewline
+\passthrough{\lstinline!"""   """!} & define a docstring\tabularnewline
 \bottomrule
 \end{longtable}
     
@@ -14683,7 +14687,7 @@ Q07.02 Write a function called \passthrough{\lstinline!m\_to\_ft()!}
 which converts meters to feet. Note the conversion factor is 1 meter =
 3.28084 feet. Convert 5,000 meters into feet using your function.
 
-Q07.03 Use the functions in questions Q05.01 and Q05.02 to convert 2
+Q07.03 Use the functions in questions Q07.01 and Q07.02 to convert 2
 meters into inches.
 
 Q07.04 Write a function that calculates the area of a circle based on a
@@ -14691,20 +14695,21 @@ circle's radius. The formula for the area of a circle is \(A = \pi r^2\)
 where \(A\) is area and \(r\) is radius. Use your function to calculate
 the area of circle with a radius of 5.
 
-Q07.05 Write a function that converts degrees Celcius (\(C\)) to degrees
+Q07.05 Write a function that converts degrees Celsius (\(C\)) to degrees
 Fahrenheit (\(F\)). The formula to convert between the two temperature
-scales is \(F = \frac{9}{5} C + 32\)
+scales is \(F = \frac{9}{5} C + 32\). Convert 100 degrees \(C\) to
+degrees \(F\) using your function.
 
 Q07.06 Write a function that converts Kelvin temperature (\(K\)) to
-degrees Celcius (\(C\)). The formula to convert between the two
+degrees Celsius (\(C\)). The formula to convert between the two
 temperature scales is \(C = K - 273.15\).
 
-Q07.07 Use the functions in questions Q05.05 and Q05.06 to convert to
+Q07.07 Use the functions in questions Q07.05 and Q07.06 to convert to
 convert the temperature at Standard Temperature and Pressure (STP) of
-\(273.15 K\) into degrees Fahrenheit.
+\(273.15 K\) into degrees \(F\).
 
-Q07.08 Use the functions in questions Q05.05 and Q05.06 to convert to
-convert the temperature at absolute zero, \(0 K\) into degrees Celcius
+Q07.08 Use the functions in questions Q07.05 and Q07.06 to convert to
+convert the temperature at absolute zero, \(0 K\) into degrees Celsius
 and degrees Fahrenheit.
 
 Q07.09 Write a function called \passthrough{\lstinline!hp\_to\_kw()!}
@@ -14752,8 +14757,8 @@ Use your function \passthrough{\lstinline!cyl\_v()!} to calculate the
 volume of a cylinder with height = 2.7 and radius = 0.73.
 
 Q07.21 The universal gas law states that the pressure \(P\), and
-temperature \(T\) of volume \(V\) of gas with number of particles \(n\)
-is related by the equation below, where \(R\) is the universal gas
+temperature \(T\) of a volume \(V\) of gas with number of particles
+\(n\) is related by the equation below, where \(R\) is the universal gas
 constant.
 
 \[ PV = nRT \]
@@ -14787,7 +14792,9 @@ def bake_conv(ingredient, cups)
 Your function needs to accept the following ingredients:
 \passthrough{\lstinline!'flour'!} and \passthrough{\lstinline!'sugar'!}.
 The conversion factor for flour is 1 cup flour = 128 grams flour. The
-conversion factor for sugar is 1 cup sugar = 200 grams sugar.
+conversion factor for sugar is 1 cup sugar = 200 grams sugar. Use your
+function to convert a recipe that calls for 3 cups of flour and a
+quarter cup of sugar.
 
 Q07.23 The gravitational force between two celestial bodies (planets,
 moons, stars etc) is calculated according to:
@@ -14795,9 +14802,9 @@ moons, stars etc) is calculated according to:
 \[ F_g = \frac{GMm}{r^2} \]
 
 where \(F_g\) is the gravitational force, \(M\) is the mass of one of
-the celestial bodies, \(m\) is the mass of the other the celestial
-bodies, \(r\) is the distance between the two celestial bodies and \(G\)
-is the universal gravitational constant.
+the celestial bodies, \(m\) is the mass of the other the celestial body,
+\(r\) is the distance between the two celestial bodies and \(G\) is the
+universal gravitational constant.
 \(G=6.667408 \times 10^{-11} m^3 kg^{-1}s^{-2}\).
 
 \begin{enumerate}
@@ -14865,7 +14872,7 @@ Your function should accept two input arguments and output three values.
 \subsubsection{Functions with default
 arguments}\label{functions-with-default-arguments}}
 
-Q07.30 (a) Rewrite the function in problem Q05.20 called
+Q07.30 (a) Rewrite the function in problem Q07.20 called
 \passthrough{\lstinline!gas\_v()!} with the default values
 \(n = 6.02 \times 10^{23}\), \(R = 8.314\) and \(P = 101,325\).
 
@@ -14977,7 +14984,7 @@ Q07.36 In mechanical engineering, there are a couple different units of
   Combine the three functions \passthrough{\lstinline!pa\_to\_mpa!},
   \passthrough{\lstinline!mpa\_to\_ksi!},
   \passthrough{\lstinline!ksi\_to\_psi!} into a single function
-  \passthrough{\lstinline!pa\_to\_psi!}. Do this with calling the other
+  \passthrough{\lstinline!pa\_to\_psi!}. Do this by calling the other
   functions as part of the \passthrough{\lstinline!pa\_to\_psi!}
   function, not by rewriting the same code you wrote in parts (a), (b),
   and (c).
@@ -15030,12 +15037,12 @@ code:
 \begin{lstlisting}[language=Python]
 def triangle(base,height):
     area = 0.5*base*height
-    print("Triangle Area:", area)
+    print("Triangle Area: ", area)
     
 
 def rectangle(length, width):
     area = length* width
-    print("Rectangle Area:", area)
+    print("Rectangle Area: ", area)
 \end{lstlisting}
 
 Import your newly created \textbf{\emph{areas.py}} file and run the
@@ -15058,8 +15065,8 @@ For the sections of code below, run the lines of code. Then explain the
 error in your own words. Below your error explanation, rewrite and run
 an improved section of code that fixes the error.
 
-Q07.80 Run the code below and explain the error. Write the code and run
-it error free.
+Q07.80 Run the code below and explain the error. Rewrite the code and
+run it error free.
 
 \begin{lstlisting}[language=Python]
 def add_me(num)
@@ -15068,7 +15075,7 @@ def add_me(num)
 add_me(1)
 \end{lstlisting}
 
-Q07.81 Run the code below and explain the error. Re-write the code and
+Q07.81 Run the code below and explain the error. Rewrite the code and
 run it error free.
 
 \begin{lstlisting}[language=Python]
@@ -15078,7 +15085,7 @@ def add_you[num]:
 add_you(2)
 \end{lstlisting}
 
-Q07.82 Run the code below and explain the error. Re-write the code and
+Q07.82 Run the code below and explain the error. Rewrite the code and
 run it error free.
 
 \begin{lstlisting}[language=Python]
@@ -17587,8 +17594,8 @@ installed.
 
 
     
-        \hypertarget{defining-varaibles}{%
-\section{Defining Varaibles}\label{defining-varaibles}}
+        \hypertarget{defining-variables}{%
+\section{Defining Variables}\label{defining-variables}}
     
 
 
@@ -17952,12 +17959,12 @@ evaluate a symbolic math expression as a floating point number\strut
 
 
     
-        You can define equations using SymPy using symbolic math variables.
-\emph{Equations} in SymPy are different than \emph{expressions}. An
-expression does not have equality. An expression is a collection of
-symbols and operators, but expressions are not equal to anything.
-Equations have equality. An equation can be thought of as an expression
-equal to something else.
+        You can define equations in Python using SymPy and symbolic math
+variables. \emph{Equations} in SymPy are different than
+\emph{expressions}. An expression does not have equality. An expression
+is a collection of symbols and operators, but expressions are not equal
+to anything. Equations have equality. An equation can be thought of as
+an expression equal to something else.
 
 A code section that defines the equation \(4x + 2 = 0\) is below. Note
 all equations defined in SymPy are assumed to equal zero.
@@ -17970,7 +17977,7 @@ all equations defined in SymPy are assumed to equal zero.
         
         \PY{n}{x} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
-        \PY{n}{eq1} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{4}\PY{o}{*}\PY{n}{x}\PY{o}{+}\PY{l+m+mi}{2}\PY{p}{)}
+        \PY{n}{eq1} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{4}\PY{o}{*}\PY{n}{x} \PY{o}{+} \PY{l+m+mi}{2}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -17989,7 +17996,21 @@ the left hand side of the equation first.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}2}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
-        \PY{n}{eq2} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{x} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}
+        \PY{n}{eq2} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+        Alternatively, an equation can be defined with a left hand side and a
+right hand side passed as separate arguments.
+    
+
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{n}{eq2} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{x}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -18006,15 +18027,15 @@ section below, the variable \(z\) is substituted in for the variable
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x y z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x y z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
-        \PY{n}{eq2} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{x} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}
+        \PY{n}{eq2} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y} \PY{o}{\PYZhy{}} \PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{5}\PY{p}{)}
         \PY{n}{eq3} \PY{o}{=} \PY{n}{eq2}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{z}\PY{p}{)}
         \PY{n}{eq3}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}3}]:} 2*y - z - 5
+{\color{outcolor}Out[{\color{outcolor}4}]:} Eq(2*y - z - 5, 0)
 \end{Verbatim}
             
 
@@ -18040,8 +18061,9 @@ equations and expressions that contain symbolic math variables.
 solution}\label{equations-with-one-solution}}
 
 A simple equation that contains one variable like \(x-4-2 = 0\) can be
-solved using the solve function. When only one value is part of the
-solution, the solution is in the form of a list.
+solved using the SymPy's \passthrough{\lstinline!solve()!} function.
+When only one value is part of the solution, the solution is in the form
+of a list.
 
 The code section below demonstrates SymPy's
 \passthrough{\lstinline!solve()!} function when an expression is defined
@@ -18067,7 +18089,8 @@ with symbolic math variables.
             
 
     
-        To pull the value out of the list, regular list indexing can be used.
+        To pull the value out of the solution list
+\passthrough{\lstinline!sol!}, regular list indexing can be used.
     
 
 
@@ -18113,11 +18136,11 @@ solutions}\label{equations-with-two-solutions}}
 Quadratic equations, like \(x^2 - 5x + 6 = 0\), have two solutions.
 SymPy's \passthrough{\lstinline!solve()!} function can be used to solve
 an equation with two solutions. When an equation has two solutions,
-SymPy outputs a list. The elements in the list are the two solutions.
+SymPy's \passthrough{\lstinline!solve()!} function outputs a list. The
+elements in the list are the two solutions.
 
-The code section below shows how SymPy's
-\passthrough{\lstinline!solve()!} function solves an equation with two
-solutions.
+The code section below shows how an equation with two solutions is
+solved with SymPy's \passthrough{\lstinline!solve()!} function.
     
 
 
@@ -18204,8 +18227,7 @@ needed.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k}{import} \PY{n}{symbols}\PY{p}{,} \PY{n}{Eq}\PY{p}{,} \PY{n}{solve}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k}{import} \PY{n}{symbols}\PY{p}{,} \PY{n}{Eq}\PY{p}{,} \PY{n}{solve}
 \end{Verbatim}
 
 
@@ -18312,7 +18334,7 @@ above the horizontal.
 \hypertarget{find}{%
 \subsubsection{FIND:}\label{find}}
 
-magnitude of \(T_{CE}\) and \(T_{BD}\)
+The magnitude of \(T_{CE}\) and \(T_{BD}\)
     
 
 
@@ -18322,13 +18344,13 @@ magnitude of \(T_{CE}\) and \(T_{BD}\)
         \hypertarget{solution}{%
 \subsubsection{SOLUTION:}\label{solution}}
 
-To solve for the magnitude of \(T_{CE}\) and \(T_{BD}\), you need to
+To solve for the magnitude of \(T_{CE}\) and \(T_{BD}\), we need to
 solve to two equations for two unknowns.
 
-To accomplish this with SymPy, first import NumPy and SymPy. The SymPy
+To accomplish this with Python, first import NumPy and SymPy. The SymPy
 functions \passthrough{\lstinline!symbols!},
 \passthrough{\lstinline!Eq!} and \passthrough{\lstinline!solve!} are
-needed.
+needed. We will also use NumPy's trig functions to solve this problem.
     
 
 
@@ -18381,7 +18403,7 @@ The three forces opperating on the ring are defined as:
 
 Taking \(\Sigma F_{x} = 0\) (sum of the \(\hat{i}\) terms):
 
-\[ T_{ce} cos(30) - T_{bd} cos(45) = 0 \]
+\[ T_{ce} cos(30) - T_{bd} cos(45) + 0 = 0 \]
 
 Taking \(\Sigma F_{y} = 0\) (sum of the \(\hat{j}\) terms):
 
@@ -18395,7 +18417,7 @@ Taking \(\Sigma F_{y} = 0\) (sum of the \(\hat{j}\) terms):
         The first equation, based on the sum of the forces in the x-direction
 (the \(\hat{i}\) terms) is:
 
-\[ T_{ce} cos(30) - T_{bd} cos(45) = 0 \]
+\[ T_{ce} cos(30) - T_{bd} cos(45) + 0 = 0 \]
 
 This equation can be represented as a SymPy equation object. Note the
 right-hand side of the equation is \passthrough{\lstinline!0!}. SymPy
@@ -18403,6 +18425,11 @@ equation objects are instantiated with expressions equal to zero. If the
 expression was not equal to zero, simply subtract both sides by the term
 on the right-hand side of the equals sign and use the resulting
 expression (equal to zero) to create the SymPy equation object.
+
+A detail in the code section below is that NumPy's
+\passthrough{\lstinline!np.cos()!} function accepts an angle in radians,
+so we need to convert our angles from degrees to radians using NumPy's
+\passthrough{\lstinline!np.radians()!} function.
     
 
 
@@ -18435,17 +18462,18 @@ Define this equation as a SymPy equation object as well:
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Eq(0.707106781186547*Tbd + 0.5*Tce - 22, 0)
+Eq(0.707106781186548*Tbd + 0.5*Tce - 22, 0)
 
     \end{Verbatim}
 
 
     
         Now solve the two equations for \(T_{ce}\) and \(T_{bd}\) with SymPy's
-\passthrough{\lstinline!solve()!} method. The first argument passed to
-the \passthrough{\lstinline!solve()!} method is a tuple of equations to
-solve, the argument passed to the \passthrough{\lstinline!solve()!}
-method is a tuple of the variables to solve for.
+\passthrough{\lstinline!solve()!} function. The first argument passed to
+the \passthrough{\lstinline!solve()!} function is a tuple of equations
+to solve, the second argument passed to the
+\passthrough{\lstinline!solve()!} function is a tuple of the variables
+to solve for.
     
 
 
@@ -18455,14 +18483,15 @@ method is a tuple of the variables to solve for.
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}10}]:} \{Tce: 16.1051177665153, Tbd: 19.7246603876972\}
+{\color{outcolor}Out[{\color{outcolor}10}]:} \{Tbd: 19.7246603876972, Tce: 16.1051177665153\}
 \end{Verbatim}
             
 
     
         The solution is saved in a Python dictionary. The dictionary keys are
-the variable names and the dictionary values are the numerical
-solutions.
+the variable names \passthrough{\lstinline!Tbd!} and
+\passthrough{\lstinline!Tce!} and the dictionary values are the
+numerical solutions.
 
 The numerical solutions can be pulled out of the dictionary using
 regular Python dictionary access. Note \passthrough{\lstinline!Tce!} and
@@ -18500,55 +18529,12 @@ Tce = 19.7246603876972
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}12}]:} \{Tab: 0.732050807568878*w, Tac: 0.896575472168054*w\}
+{\color{outcolor}Out[{\color{outcolor}12}]:} \{Tab: 0.732050807568877*w, Tac: 0.896575472168053*w\}
 \end{Verbatim}
             
 
     
         The result is a solution is in terms of the variable \(w\).
-    
-
-
-
-
-    
-        \hypertarget{review-questions}{%
-\section{Review Questions}\label{review-questions}}
-    
-
-
-
-
-    
-        \hypertarget{solving-equations}{%
-\subsubsection{Solving Equations}\label{solving-equations}}
-    
-
-
-
-
-    
-        \begin{problems}
-        Q10.20 Use SymPy to solve for \(x\) if \$ x - 4 = 2\$
-
-Q10.21 Use SympPy to solve for the roots of the quadratic equation
-\(2x^2 - 4x + 1.5 = 0\)
-
-Q10.30 Use SymPy to solve the system of linear equations below for the
-varaibles \(x\) and \(y\):
-
-\[ -3x - 2y + 7  = 0 \]
-
-\[ 5x - 3y - 6 = 0 \]
-
-Q10.50 Use SymPy to solve the system of non-linear equations below for
-the variables \(x\) and \(y\):
-
-\[ 3x^2 + 2y^3 = -\frac{17}{4} \]
-
-\[ \frac{-x^3}{2} - 8y^2 + \frac{127}{2} = 0 \]
-        \end{problems}
-
     
 
 
@@ -18566,12 +18552,12 @@ the variables \(x\) and \(y\):
 
     
         In this chapter, you learned about symbolic math and how to complete
-symbolic math calculations with the SymPy package. Symbolic math treats
-variables as mathematical symbols rather than defining variables as
-defined numbers.
+symbolic math calculations with Python the SymPy package. Symbolic math
+treats variables as mathematical symbols rather than defining variables
+as numbers.
 
-You learned how to create symbolic math variables with SymPy's
-\passthrough{\lstinline!symbols()!} function.
+At the start of the chapter, you learned how to create symbolic math
+variables with SymPy's \passthrough{\lstinline!symbols()!} function.
 
 Symbolic math variables can be combined into symbolic math expressions
 and symbolic math equations. You learned how to substitute variables and
@@ -18581,7 +18567,7 @@ At the end of the chapter, you learned how to solve linear and quadratic
 equations with SymPy.
 
 The final example in the chapter was a multi-variable statics problem
-where two variables were solved for two unknowns.
+where two equations were solved for two unknowns.
     
 
 
@@ -18619,6 +18605,185 @@ linear equation
 
 quadratic equation
         \end{key_terms}
+
+    
+
+
+
+
+    
+        \hypertarget{sympy-functions-and-methods}{%
+\subsection{SymPy Functions and
+Methods}\label{sympy-functions-and-methods}}
+    
+
+
+
+
+    
+        \begin{longtable}[]{@{}lll@{}}
+\toprule
+Sympy Function or Method & Description & Example\tabularnewline
+\midrule
+\endhead
+\passthrough{\lstinline!symbols()!} & Define a symbolic math variable &
+\passthrough{\lstinline!x, y = symbols('x y')!}\tabularnewline
+\passthrough{\lstinline!.subs()!} & Substitute a variable or value into
+an expression & \passthrough{\lstinline!expr.subs(x, 2)!}\tabularnewline
+\passthrough{\lstinline!Eq()!} & Define a SymPy equation &
+\passthrough{\lstinline!eq1 = Eq(4*x + 2)!}\tabularnewline
+\passthrough{\lstinline!solve()!} & Solve a SymPy expression or equation
+& \passthrough{\lstinline!solve((eq1,eq2), (x, y))!}\tabularnewline
+\bottomrule
+\end{longtable}
+    
+
+
+
+
+    
+        \hypertarget{review-questions}{%
+\section{Review Questions}\label{review-questions}}
+    
+
+
+
+
+    
+        \hypertarget{creating-expressions-equations}{%
+\subsubsection{Creating Expressions
+Equations}\label{creating-expressions-equations}}
+    
+
+
+
+
+    
+        Q10.01 Create the symbolic math variables \(a\), \(b\), \(c\) and \(x\).
+Use these variables to define the symbolic math expressions:
+
+\[ ax^2 + bx + c \]
+
+\[ sin(ax) + cos(bx) + tan(cx) \]
+
+Q10.02 Create the symbolic math variables \(a\), \(b\), \(c\) and \(x\).
+Use these variables to define the symbolic math equations:
+
+\[ ax^2 + bx = c \]
+
+\[ \frac{sin(ax)}{cos(bx)} = tan(cx) \]
+
+Q10.03 Create the symbolic math variables \(a\), \(b\), \(c\), \(x\),
+and \(y\). Use these variables to define the symbolic math expression:
+
+\[ ax^2 + bx + c \]
+
+Substitute the variable \(y\) in for the variable \(c\).
+
+Substitute the value \passthrough{\lstinline!5!} in for the variable
+\(y\).
+
+Q10.04 Create the symbolic math variables \(E\), \(A\), \(d\), \(P\),
+\(L\), and \(F\). Use these variables to define the symbolic math
+equation:
+
+\[ d = \frac{PL}{AE} \]
+
+Substitute the value \(29 \times 10^6\) for \(E\)
+
+Substitute \(F/2\) for the variable \(P\)
+
+Q10.05 Create the symbolic math variables \(t\), \(T\), \(c\), and
+\(J\). Use these variables to define the symbolic math equation:
+
+\[ t = \frac{Tc}{J} \]
+
+Substitute the \(J = \frac{\pi}{2}c^4\) into the equation
+
+Substitute \(T=9.0\) and \(c=4.5\). Print out the resulting value of
+\(t\).
+
+Q10.06 Mohr's circle is used in mechanical engineering to calculate the
+shear and normal stress. Given the height of Mohr's circle
+\(\tau_{max}\) is equal to the expression below:
+
+\[ \tau_{max} = \sqrt{(\sigma_x - \sigma_y)/2)^2 + \tau_{xy}} \]
+
+Use SymPy expressions or equations to calculate \(\tau\) if
+\(\sigma_x = 90\), \(\sigma_y = 60\) and \(\tau_{xy} = 20\)
+    
+
+
+
+
+    
+        \hypertarget{solving-equations}{%
+\subsubsection{Solving Equations}\label{solving-equations}}
+    
+
+
+
+
+    
+        \begin{problems}
+        Q10.20 Use SymPy to solve for \(x\) if \(x - 4 = 2\)
+
+Q10.21 Use SymPy to solve for the roots of the quadratic equation
+\(2x^2 - 4x + 1.5 = 0\)
+
+Q10.22 Create the symbolic math variable \(b\) and define the equation
+below:
+
+\[ \frac{1}{\sqrt{2}}(b - 6) = -1 \]
+
+Find the numeric value of \(b\) to three decimal places
+
+Q10.30 Use SymPy to solve the system of linear equations below for the
+variables \(x\) and \(y\):
+
+\[ -3x - 2y + 7  = 0 \]
+
+\[ 5x - 3y - 6 = 0 \]
+
+Q10.31 Use SymPy to solve the system of linear equations below for the
+variables \(x\), \(y\), and \(z\):
+
+\[ 2x + 4y - z = -0.6 \]
+
+\[ -x - 3y + 2z = 2.2 \]
+
+\[ \frac{1}{2}x + 6y - 3z = -6.8 \]
+
+Q10.32 A set of five equations is below:
+
+\[ -5x_1 - 4x_2 - 2x_3 + 2x_4 + 3x_5 = 10 \]
+
+\[ 9x_1 + 3x_2 + 4x_3 + 10x_4 + 5x_5 = -5 \]
+
+\[ 2x_1 + 4x_2 + 3x_3 + 2x_4 + x_5 = 12 \]
+
+\[ 5x_1 - 4x_2 + 3x_3 - 2x_4 + 2x_5 = 32 \]
+
+\[ x_1 - x_2 + 2x_3 + 4x_4 + 3x_5 = 42 \]
+
+Use symbolic math variables and equations to solve for \(x_1\), \(x_2\),
+\(x_3\), \(x_4\) and \(x_5\).
+
+Q10.33 An equation in terms of the variables \(L\) and \(x\) is defined
+below.
+
+\[ \frac{1}{6}L^3x^2 - \frac{1}{6}Lx^3 + \frac{1}{24}x^4 - \frac{1}{45}L^4 = 0 \]
+
+Solve the equation for \(x\) in terms of the variable \(L\). Note their
+will be more than one solution.
+
+Q10.50 Use SymPy to solve the system of non-linear equations below for
+the variables \(x\) and \(y\):
+
+\[ 3x^2 + 2y^3 = -\frac{17}{4} \]
+
+\[ \frac{-x^3}{2} - 8y^2 + \frac{127}{2} = 0 \]
+        \end{problems}
 
     
 
@@ -21818,7 +21983,7 @@ measurements up to an IoT cloud server, like io.adafruit.com.
 \item
   LaTeX Math
 \item
-  Problem Solving with Python Book Construction
+  Problem Solving with Python 3.7 Edition Book Construction
 \item
   Contributions
 \item
@@ -21975,7 +22140,6 @@ del
 import
 from
 as
-with
 \end{lstlisting}
         \end{key_terms}
 
@@ -22000,8 +22164,8 @@ character codes can be accessed using the following code:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{32}\PY{p}{,} \PY{l+m+mi}{127}\PY{p}{)}\PY{p}{:}
-             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ASCII code: }\PY{l+s+si}{\PYZob{}n\PYZcb{}}\PY{l+s+s1}{     Character: }\PY{l+s+s1}{\PYZob{}}\PY{l+s+s1}{chr(n)\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{32}\PY{p}{,} \PY{l+m+mi}{127}\PY{p}{)}\PY{p}{:}
+            \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ASCII code: }\PY{l+s+si}{\PYZob{}n\PYZcb{}}\PY{l+s+s1}{     Character: }\PY{l+s+s1}{\PYZob{}}\PY{l+s+s1}{chr(n)\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -22117,10 +22281,11 @@ ASCII code: 126     Character: \textasciitilde{}
 virtual environment is an isolated installation of Python with
 associated packages. When you use virtual environments, one project can
 have a separate version of Python and packages. Another project can use
-a different virtual environment and therefore have a separate version of
-Python and a different set of packages. By utilizing virtual
-environments, two projects on the same computer can use different
-versions of Python and different versions of packages.
+a different virtual environment and therefore have a different version
+of Python and a different set of packages.
+
+Two projects on the same computer can use different versions of Python
+and different versions of packages if virtual environments are used.
     
 
 
@@ -22176,7 +22341,8 @@ environment.
 environment}\label{activate-a-virtual-environment}}
 
 To use the new virtual environment \passthrough{\lstinline!env\_name!},
-it first needs to be activated:
+the virtual environment needs to be \emph{activated}. To activate the
+environment \passthrough{\lstinline!env\_name!}, issue the command:
 
 \begin{lstlisting}
 > conda activate env_name
@@ -22184,7 +22350,7 @@ it first needs to be activated:
 
 The virtual environment is active when you see
 \passthrough{\lstinline!(env\_name) >!} in parenthesis at the start of
-the prompt:
+the prompt.
 
 \begin{lstlisting}
 (env_name) > 
@@ -22210,7 +22376,7 @@ To install a package into the virtual environment
 active (\passthrough{\lstinline!(env\_name)!} before the prompt). Then
 package installation is accomplished with the
 \passthrough{\lstinline!conda install!} command followed by the package
-name. To install Matplotlib into the virtual environment type:
+name. To install Matplotlib into a virtual environment type:
 
 \begin{lstlisting}
 (env_name) > conda install matplotlib
@@ -22232,7 +22398,7 @@ both NumPy and Jupyter at the same time use:
 \subsection{Deactivate a virtual
 environment}\label{deactivate-a-virtual-environment}}
 
-To deactivate an active environment, use:
+To deactivate an active environment, run the command:
 
 \begin{lstlisting}
 (env_name) > conda deactivate
@@ -22240,8 +22406,8 @@ To deactivate an active environment, use:
 \end{lstlisting}
 
 When the virtual environment is deactivated, the prompt looks normal
-\passthrough{\lstinline!>!}, with no environment name in parenthesis
-before it.
+(just \passthrough{\lstinline!>!}), with no environment name in
+parenthesis before it.
     
 
 
@@ -22278,14 +22444,14 @@ To exit the virtual environment, use the command
 (env_name) > conda deactive
 \end{lstlisting}
 
-If you run \passthrough{\lstinline!conda env list!} again, there is no
-\passthrough{\lstinline!*!} in front of
+If you run \passthrough{\lstinline!conda info --envs!} again, there is
+no \passthrough{\lstinline!*!} in front of
 \passthrough{\lstinline!env\_name!}. That's because the
 \passthrough{\lstinline!env\_name!} virtual environment is no longer
 active.
 
 \begin{lstlisting}
-> conda env list
+> conda info --envs
 
 # conda environments:
 #
@@ -22310,7 +22476,7 @@ to exit out of the environment before you remove it.
 Check to see if the virtual environment you want to remove is present:
 
 \begin{lstlisting}
-> conda env list
+> conda info --envs
 
 # conda environments:
 #
@@ -22328,12 +22494,12 @@ Remove the virtual environment called
 Proceed ([y]/n)?
 \end{lstlisting}
 
-Type {[}y{]} to remove the environment. View a list of your virtual
+Type {[}y{]} to remove the environment. Now view a list of your virtual
 environments again. Note that \passthrough{\lstinline!env\_name!} is no
 longer in the list.
 
 \begin{lstlisting}
-> conda env list
+> conda info --envs
 
 # conda environments:
 #
@@ -22511,7 +22677,7 @@ np.percentile
 
 
     
-        \textbf{Git} is one of the standard \emph{version-control} systems used
+        \textbf{Git} is one of the standard \emph{version control} systems used
 by developers to save code and work on code collaboratively as a team.
 \textbf{Git} is a program run on the command line or \textbf{Anaconda
 Prompt}. If you use Windows, the \textbf{gitbash} program can be
@@ -22528,6 +22694,8 @@ operating system.
         \href{https://github.com/}{GitHub.com} (now owned by Microsoft) is a
 website and service used by programmers and open source projects to
 share code and allow contributors to propose changes to existing code.
+Other services such as \href{https://bitbucket.org}{BitBucket.org} can
+be integrated with \textbf{git} too.
     
 
 
@@ -22735,12 +22903,12 @@ and text fields.
 Inline LaTeX math commands need to be enclosed by the dollar signs.
 
 \begin{lstlisting}
-the angle is $2\pi$ radians
+The angle is $2\pi$ radians
 \end{lstlisting}
 
 The markup above is rendered as:
 
-angle is \(2\pi\) radians
+The angle is \(2\pi\) radians
 
 A table of useful LaTeX commands and the associated output is below.
 Note curly braces \passthrough{\lstinline!\{  \}!} are used to surround
@@ -22749,7 +22917,7 @@ before LaTeX commands.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-LaTex Command & Output\tabularnewline
+LaTeX Command & Output\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!2^\{3\}!} & \(2^{3}\)\tabularnewline
@@ -22776,9 +22944,9 @@ LaTex Command & Output\tabularnewline
 
 
     
-        \hypertarget{problem-solving-with-python-book-construction}{%
-\section{Problem Solving with Python Book
-Construction}\label{problem-solving-with-python-book-construction}}
+        \hypertarget{problem-solving-with-python-3.7-edition-book-construction}{%
+\section{Problem Solving with Python 3.7 Edition Book
+Construction}\label{problem-solving-with-python-3.7-edition-book-construction}}
     
 
 
@@ -22847,16 +23015,15 @@ notebooks/
 |-- 03-The-Python-REPL/
 |-- 04-Data-Types-and-Variables/
 |-- 05-Matrices-and-Arrays/
-|-- 06-Functions-and-Modules/
-|-- 07-Plotting-with-Matplotlib/
+|-- 06-Plotting-with-Matplotlib/
+|-- 07-Functions-and-Modules/
 |-- 08-If-Else-Try-Except/
 |-- 09-Loops/
 |-- 10-Symbolic-Math/
 |-- 11-Python-and-External-Hardware/
 |-- 12-MicroPython/
 |-- 99-Appendix/
-|-- figures/
-`-- TOC.ipynb
+`-- figures/
 \end{lstlisting}
 
 There is a Jupyter notebook for each section of the book within each
@@ -22895,8 +23062,7 @@ markdown cells of the notebooks.
 (https://www.mkdocs.org) and the \textbf{Material for MkDocs}
 (https://squidfunk.github.io/mkdocs-material/) theme. Jupyter noteboks
 were exported to \textbf{\emph{.html}} files with markdown cells
-unformatted using a custom script and
-\passthrough{\lstinline!nbconvert!}.
+unformatted using a custom script and \textbf{nbconvert}.
     
 
 
@@ -22912,12 +23078,12 @@ unformatted using a custom script and
 
     
         The hard copy of the book was constructed using LaTeX,
-\passthrough{\lstinline!nbconvert!} and a set of custom scripts and
-templates. One conversion script combined all of the notebooks into one
-BIG notebook. The BIG notebook was then converted into LaTeX using
-\passthrough{\lstinline!nbconvert!} and a custom template. Outside of
-the Python ecosystem, a separate installation of TeXworks compiled the
-LaTeX \textbf{\emph{.tex}} file to a \textbf{\emph{.pdf}} document.
+\textbf{nbconvert} and a set of custom scripts and templates. One
+conversion script combined all of the notebooks into one BIG notebook.
+The BIG notebook was then converted into LaTeX using \textbf{nbconvert}
+and a custom template. Outside of the Python ecosystem, a separate
+installation of TeXworks compiled the LaTeX \textbf{\emph{.tex}} file to
+a \textbf{\emph{.pdf}} document.
     
 
 
