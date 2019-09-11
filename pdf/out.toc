@@ -93,23 +93,23 @@
 \contentsline {subsubsection}{Images}{52}{lstnumber.-47.1}
 \contentsline {subsubsection}{LaTeX Math}{52}{figure.caption.39}
 \contentsline {subsubsection}{html}{53}{lstnumber.-49.1}
-\contentsline {subsubsection}{warning boxes}{54}{lstnumber.-51.1}
+\contentsline {subsubsection}{warning boxes}{53}{lstnumber.-51.1}
 \contentsline {subsection}{Creating a new cell}{54}{lstnumber.-52.3}
 \contentsline {subsection}{Changing the cell type}{54}{figure.caption.40}
 \contentsline {subsection}{Saving a Jupyter Notebook}{54}{figure.caption.41}
-\contentsline {subsection}{Renaming a Jupyter Notebook}{56}{figure.caption.43}
-\contentsline {subsection}{Downloading a Jupyter Notebook}{56}{figure.caption.45}
-\contentsline {subsection}{Saving Jupyter Notebooks in Other Formats}{56}{figure.caption.47}
+\contentsline {subsection}{Renaming a Jupyter Notebook}{55}{figure.caption.43}
+\contentsline {subsection}{Downloading a Jupyter Notebook}{55}{figure.caption.45}
+\contentsline {subsection}{Saving Jupyter Notebooks in Other Formats}{57}{figure.caption.47}
 \contentsline {section}{\numberline {3.7}Magic Cells}{58}{section.3.7}
 \contentsline {subsection}{\%matplotlib inline}{58}{section.3.7}
-\contentsline {subsection}{\%load}{59}{lstnumber.-54.4}
+\contentsline {subsection}{\%load}{58}{lstnumber.-54.4}
 \contentsline {subsection}{\%run}{59}{lstnumber.-55.1}
-\contentsline {subsection}{Other useful magic commands}{60}{lstnumber.-57.4}
+\contentsline {subsection}{Other useful magic commands}{59}{lstnumber.-57.4}
 \contentsline {section}{\numberline {3.8}Getting Help in a Jupyter Notebook}{60}{section.3.8}
 \contentsline {subsection}{Get help using \texttt {dir}}{60}{section.3.8}
 \contentsline {subsection}{Get help using Tab}{61}{section.3.8}
 \contentsline {subsection}{Get help using the \texttt {help()} function}{61}{lstnumber.-60.1}
-\contentsline {subsection}{Help online}{63}{lstnumber.-62.20}
+\contentsline {subsection}{Help online}{62}{lstnumber.-62.20}
 \contentsline {section}{\numberline {3.9}Summary}{64}{section.3.9}
 \contentsline {subsection}{Key Terms and Concepts}{64}{section.3.9}
 \contentsline {subsection}{Python Commands and Functions}{64}{section.3.9}
@@ -164,7 +164,7 @@
 \contentsline {subsection}{Boolean Arithmetic}{90}{lstnumber.-131.3}
 \contentsline {section}{\numberline {5.4}Strings}{91}{section.5.4}
 \contentsline {subsection}{Numbers as Strings}{91}{lstnumber.-140.7}
-\contentsline {subsection}{Strings as Boolean Values}{91}{lstnumber.-141.7}
+\contentsline {subsection}{Strings as Boolean Values}{92}{lstnumber.-141.7}
 \contentsline {subsection}{String Indexing}{92}{lstnumber.-144.3}
 \contentsline {subsubsection}{Negative Indexing}{93}{lstnumber.-149.3}
 \contentsline {subsection}{String Slicing}{93}{figure.caption.51}

@@ -2856,8 +2856,8 @@ smallest heading.
 
 Code blocks can be inserted in Jupyter notebook markdown cells. For
 inline code blocks use the ` left quote character, the character to the
-left of the number \passthrough{\lstinline![1]``` and above ```[Tab]!}
-on most keyboards.
+left of the number \passthrough{\lstinline![1]!} and above
+\passthrough{\lstinline![Tab]!} on most keyboards.
 
 This is inline code: ` ` ` Inline code block ` ` ` within a paragraph
 
@@ -4370,7 +4370,7 @@ Try:
 3.141592653589793
 >>> sin(pi/6)
 0.49999999999999994
->>> >>> cos(pi/6)
+>>> cos(pi/6)
 0.8660254037844387
 >>> tan(pi/6)
 0.5773502691896257
@@ -4415,7 +4415,7 @@ ouput in radians & \passthrough{\lstinline!atan(100)!} &
 \passthrough{\lstinline!math.radians()!} & radians conversion & degrees
 to radians & \passthrough{\lstinline!math.radians(90)!} &
 \passthrough{\lstinline!1.57!}\tabularnewline
-\passthrough{\lstinline!math.degress()!} & degree conversion & radians
+\passthrough{\lstinline!math.degrees()!} & degree conversion & radians
 to degrees & \passthrough{\lstinline!math.degrees(2)!} &
 \passthrough{\lstinline!114.59!}\tabularnewline
 \bottomrule
@@ -4428,8 +4428,13 @@ to degrees & \passthrough{\lstinline!math.degrees(2)!} &
     
         \hypertarget{exponents-and-logarithms}{%
 \subsection{Exponents and Logarithms}\label{exponents-and-logarithms}}
+    
 
-Calculating exponents and logarithms with Python is easy. Note the
+
+
+
+    
+        Calculating exponents and logarithms with Python is easy. Note the
 exponent and logarithm functions are imported from the \textbf{math}
 module just like the trig functions were imported from the \textbf{math}
 module above.
@@ -4523,8 +4528,13 @@ number & \passthrough{\lstinline!math.sqrt(16)!} &
     
         \hypertarget{statistics}{%
 \subsection{Statistics}\label{statistics}}
+    
 
-To round out this section, we will look at a couple of statistics
+
+
+
+    
+        To round out this section, we will look at a couple of statistics
 functions. These functions are part of the Python Standard Library, but
 not part of the \textbf{math} module. To access Python's statistics
 functions, we need to import them from the \textbf{statistics} module
@@ -4891,7 +4901,7 @@ below:
 \begin{lstlisting}[language=Python]
 >>> name = "Gabby"
 >>> print("Your name is: ")
-Your name is
+Your name is: 
 >>> print(name)
 Gabby
 \end{lstlisting}
@@ -4924,7 +4934,7 @@ numbers can be shown with the \passthrough{\lstinline!print()!}
 function.
 
 \begin{lstlisting}[language=Python]
->>>print(1+2)
+>>> print(1+2)
 3
 \end{lstlisting}
 
@@ -4933,7 +4943,7 @@ define \passthrough{\lstinline!"1+2"!} as a string and print out the
 string \passthrough{\lstinline!"1+2"!} instead.
 
 \begin{lstlisting}[language=Python]
->>>print("1+2")
+>>> print("1+2")
 1+2
 \end{lstlisting}
     
@@ -5543,8 +5553,13 @@ created.
 
 It is useful for problem solvers to understand a couple of Python's core
 data types in order to write well-constructed code.
+    
 
-\hypertarget{a-review-of-variable-assignment-in-python}{%
+
+
+
+    
+        \hypertarget{a-review-of-variable-assignment-in-python}{%
 \subsection{A review of variable assignment in
 Python}\label{a-review-of-variable-assignment-in-python}}
 
@@ -5669,8 +5684,7 @@ using a real component \passthrough{\lstinline!+!} an imaginary
 component \passthrough{\lstinline!j!}. The letter
 \passthrough{\lstinline!j!} must be used to denote the imaginary
 component. Using the letter \passthrough{\lstinline!i!} to define a
-complex number in Python returns an error. Note how imaginary numbers
-add to integers and floats.
+complex number in Python returns an error.
 
 \begin{lstlisting}[language=Python]
 >>> comp = 4 + 2j
@@ -5681,6 +5695,8 @@ add to integers and floats.
               ^
 SyntaxError: invalid syntax
 \end{lstlisting}
+
+Imaginary numbers can be added to integers and floats.
 
 \begin{lstlisting}[language=Python]
 >>> intgr = 3
@@ -6598,15 +6614,18 @@ string\tabularnewline
 Operator & Description & Example & Result\tabularnewline
 \midrule
 \endhead
-{[} {]} & indexing & \passthrough{\lstinline!lst[1]!} &
+\passthrough{\lstinline![ ]!} & indexing &
+\passthrough{\lstinline!lst[1]!} &
 \passthrough{\lstinline!4!}\tabularnewline
-: & start & \passthrough{\lstinline!lst[:2]!} &
-\passthrough{\lstinline![ 2, 4 ]!}\tabularnewline
-: & end & \passthrough{\lstinline!lst[2:]!} &
+\passthrough{\lstinline!:!} & start & \passthrough{\lstinline!lst[:2]!}
+& \passthrough{\lstinline![ 2, 4 ]!}\tabularnewline
+\passthrough{\lstinline!:!} & end & \passthrough{\lstinline!lst[2:]!} &
 \passthrough{\lstinline![ 6, 8 ]!}\tabularnewline
-: & through & \passthrough{\lstinline!lst[0:3]!} &
+\passthrough{\lstinline!:!} & through &
+\passthrough{\lstinline!lst[0:3]!} &
 \passthrough{\lstinline![ 2, 4, 6 ]!}\tabularnewline
-: & start, step, end+1 & \passthrough{\lstinline!lst[0:5:2]!} &
+\passthrough{\lstinline!:!} & start, step, end+1 &
+\passthrough{\lstinline!lst[0:5:2]!} &
 \passthrough{\lstinline![2, 6]!}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -8042,7 +8061,7 @@ to quickly plot a normal distribution created with NumPy's
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_369_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_372_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -9067,7 +9086,7 @@ The answer should be \passthrough{\lstinline!9.0!}.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{l+m+mi}{8} \PY{o}{*} \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{+} \PY{l+m+mi}{3} \PY{o}{*} \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{l+m+mi}{8}\PY{o}{*}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{o}{+} \PY{l+m+mi}{3}\PY{o}{*}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -9892,7 +9911,7 @@ the end to show the plot. Make sure to include the double parenthesis
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_491_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_495_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10368,7 +10387,7 @@ below.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_504_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_508_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10443,7 +10462,7 @@ the image file \textbf{\emph{plot.png}}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_508_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_512_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10560,7 +10579,7 @@ Matplotlib's object-oriented interface.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_514_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_518_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10608,7 +10627,7 @@ methods to build a multi-line plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_516_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_520_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10760,7 +10779,7 @@ The list of materials is passed to the
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_530_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_534_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10835,7 +10854,7 @@ of a percent.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_533_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_537_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10877,7 +10896,7 @@ method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_535_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10988,7 +11007,7 @@ positions (\passthrough{\lstinline!x\_pos!}), bar heights
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_544_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_548_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11052,7 +11071,7 @@ vertical error bars included on each point in the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_547_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_551_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11133,7 +11152,7 @@ The code section below builds a histogram that contains 20 bins.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_552_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_556_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11214,7 +11233,7 @@ The code section below creates a box plot with four elements.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_558_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_562_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11274,7 +11293,7 @@ Matplotlib.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_561_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_565_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11337,7 +11356,7 @@ must be equal.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_565_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_569_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11401,7 +11420,7 @@ colors and areas.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_567_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_571_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11514,7 +11533,7 @@ the figure window.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_572_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_576_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11624,7 +11643,7 @@ one figure. The axes of each subplot is scaled in a different way.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_576_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_580_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11685,7 +11704,7 @@ the plots on \href{https://fivethirtyeight.com}{fivethirtyeight.com}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_581_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11773,27 +11792,27 @@ styles including the \passthrough{\lstinline!'default'!},
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_3.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_3.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_4.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_4.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11864,7 +11883,7 @@ useful to create two 2D arrays from two 1D arrays.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_591_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_595_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11919,7 +11938,7 @@ determines the color of the areas on the 2D plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_594_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_598_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11992,7 +12011,7 @@ placed beside the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_597_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_601_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12060,7 +12079,7 @@ has a different color map.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_600_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_604_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12149,7 +12168,7 @@ The following code section builds a quiver plot that contains one arrow.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_607_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12215,7 +12234,7 @@ arrow points straight down.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12305,7 +12324,7 @@ the aspect ratio of the plot to 1:1.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12350,7 +12369,7 @@ function \(\vec{F}\) to the \passthrough{\lstinline!X!} and
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_617_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_621_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12396,7 +12415,7 @@ apply the gradient function to every arrow's x, y starting position.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_623_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12444,7 +12463,7 @@ The code section below builds a quiver plot with four vortices.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_621_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_625_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12534,7 +12553,7 @@ is a colored quiver plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_623_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12603,7 +12622,7 @@ parallel lines pointing to the right.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_631_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12645,7 +12664,7 @@ vector field.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_630_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_634_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12688,7 +12707,7 @@ charges.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_632_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_636_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12756,7 +12775,7 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_637_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_641_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12820,7 +12839,7 @@ The next code section draws two wire frame plots side by side.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_640_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_644_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12885,7 +12904,7 @@ surface plot object.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_643_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_647_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12939,7 +12958,7 @@ projections of the 3D surface are visualized on 2D contour plots.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_646_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_650_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -18435,7 +18454,7 @@ so we need to convert our angles from degrees to radians using NumPy's
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{eq1}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Tbd}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{eq1}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Tbd} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{eq1}\PY{p}{)}
 \end{Verbatim}
 
@@ -18457,7 +18476,7 @@ Define this equation as a SymPy equation object as well:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{eq2}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{Tbd}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{22}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{eq2}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{Tbd} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{22}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{eq2}\PY{p}{)}
 \end{Verbatim}
 
@@ -18522,8 +18541,8 @@ Tce = 19.7246603876972
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}12}]:} \PY{n}{w}\PY{p}{,} \PY{n}{Tce}\PY{p}{,} \PY{n}{Tbd} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{w, Tab, Tac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
          
-         \PY{n}{eq1}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Tbd}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-         \PY{n}{eq2}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{Tbd}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{w}\PY{p}{)}
+         \PY{n}{eq1}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{Tbd} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         \PY{n}{eq2}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{Tce} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{30}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{Tbd} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{45}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{n}{w}\PY{p}{)}
          
          \PY{n}{solve}\PY{p}{(}\PY{p}{(}\PY{n}{eq1}\PY{p}{,}\PY{n}{eq2}\PY{p}{)}\PY{p}{,}\PY{p}{(}\PY{n}{Tce}\PY{p}{,}\PY{n}{Tbd}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
@@ -23102,7 +23121,7 @@ a \textbf{\emph{.pdf}} document.
 to:
 
 \begin{quote}
-\url{errata@problemsolvingwithpython.com}
+\href{mailto:errata@problemsolvingwithpython.com}{\nolinkurl{errata@problemsolvingwithpython.com}}
 \end{quote}
 
 Please include the chapter number and section number in your email.
