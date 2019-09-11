@@ -21,6 +21,7 @@ import shutil
 from nb_list_tools import iter_notebook_paths
 
 from filter_links import convert_links
+import tex_modify_contents
 
 log = logging.getLogger(__name__)
 
@@ -231,6 +232,8 @@ def main():
     export(nbnode, outfile_Path, pdf=False, template_file=template_file_Path)
     # Now compile with seperate LaTeX editor. TexWorks Program with XeLaTex Compiler seems to work
 
+    # do the TOC conversions, this still needs work as the pdf links don't seem to work right
+    tex_modify_contents.main()
 
 if __name__ == '__main__':
     main()
