@@ -399,18 +399,15 @@
     
     
     
-        {
-        \hypersetup{linkcolor=black}
-        \tableofcontents
-        }
-    
-    
         \maketitle
         \input{copywrite_page.tex}
         \newpage
         \input{dedication_page.tex}
         \newpage
+        {
+        \hypersetup{linkcolor=black}    % set TOC color black
         \tableofcontents
+        }
     
     
 
@@ -2191,7 +2188,12 @@ Q02.95 Open the Python Interpreter (the Python REPL). Try to view
 
 
     
-        By the end of this chapter you will be able to:
+        In this chapter, you will be introduced to Jupyter notebooks. A Jupyter
+notebook is an application that can run Python code, display plots, show
+equations and contain formatted text. Jupyter notebooks are a great tool
+for problem solvers to write, run, document and share code with others.
+
+By the end of this chapter you will be able to:
 
 \begin{itemize}
 \item
@@ -2207,7 +2209,7 @@ Q02.95 Open the Python Interpreter (the Python REPL). Try to view
 \item
   Save and close a Jupyter notebook
 \item
-  Download a Jupyter notebook in different file formats
+  Download Jupyter notebooks in different file formats
 \end{itemize}
         \newpage
 
@@ -4104,9 +4106,10 @@ help you receive in a Jupyter notebook code cell. Run the code cell.
 
 
     
-        Welcome to the world of problem solving with Python! This first
-Orientation Chapter will help you get started by guiding you through the
-process of installing Python on your computer.
+        The last chapter detailed how to install Python on your computer. In
+this chapter, you will learn how to write and run your first lines of
+Python code. You will learn how to use Python as a calculator and you
+will be introduced to Python variables.
     
 
 
@@ -5515,8 +5518,8 @@ Q03.99
 
 
     
-        Python has many built-in data types. These include integers, floats,
-booleans, strings, and lists.
+        This chapter is about Python data types. Python has many built-in data
+types such as integers, floats, booleans, strings, and lists.
 
 By the end of this chapter you will be able to:
 
@@ -5530,7 +5533,7 @@ By the end of this chapter you will be able to:
   Create variables with different data types
 \item
   Use Python's \passthrough{\lstinline!type()!} function to determine an
-  object's type
+  object's data type
 \item
   Complete logical evaluations of variables
 \item

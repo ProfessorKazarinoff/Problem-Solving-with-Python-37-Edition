@@ -56,19 +56,16 @@
 ((* endblock commands *))
 
 ((* block predoc *))
-    ((* block hypersetup *))
-        {
-        \hypersetup{linkcolor=black}
-        \tableofcontents
-        }
-    ((* endblock hypersetup *))
     ((* block maketitle *))
         \maketitle
         \input{copywrite_page.tex}
         \newpage
         \input{dedication_page.tex}
         \newpage
+        {
+        \hypersetup{linkcolor=black}    % set TOC color black
         \tableofcontents
+        }
     ((* endblock maketitle *))
     ((* block abstract *))((* endblock abstract *))
 ((* endblock predoc *))

@@ -475,39 +475,39 @@
 \contentsline {section}{\numberline {13.8}Summary}{332}{section.1996}
 \contentsline {subsection}{Key Terms and Concepts}{332}{section.1996}
 \contentsline {section}{\numberline {13.9}Project Ideas}{332}{section.1997}
-\contentsline {chapter}{Appendix}{335}{chapter*.1998}
-\contentsline {section}{\numberline {A.}Contents}{335}{section.1999}
-\contentsline {section}{\numberline {B.}Reserved and Keywords in Python}{336}{section.2000}
+\contentsline {chapter}{\numberline {14}Appendix}{335}{chapter.1998}
+\contentsline {section}{\numberline {14.1}Contents}{335}{section.1999}
+\contentsline {section}{\numberline {14.2}Reserved and Keywords in Python}{336}{section.2000}
 \contentsline {subsection}{Logical Keywords}{336}{lstnumber.2013}
 \contentsline {subsection}{Control Flow Key Words}{336}{lstnumber.2022}
 \contentsline {subsection}{Definition Key Words}{336}{lstnumber.2037}
 \contentsline {subsection}{Module Keywords}{336}{lstnumber.2046}
-\contentsline {section}{\numberline {C.}ASCII Character Codes}{337}{section.2051}
-\contentsline {section}{\numberline {D.}Virtual Environments}{339}{section.2052}
+\contentsline {section}{\numberline {14.3}ASCII Character Codes}{337}{section.2051}
+\contentsline {section}{\numberline {14.4}Virtual Environments}{339}{section.2052}
 \contentsline {subsection}{Create a virtual environment with the Anaconda Prompt}{339}{section.2052}
 \contentsline {subsection}{Activate a virtual environment}{340}{lstnumber.2068}
 \contentsline {subsection}{Install packages in a virtual environment}{340}{lstnumber.2072}
 \contentsline {subsection}{Deactivate a virtual environment}{340}{lstnumber.2076}
 \contentsline {subsection}{List your virtual environments}{340}{lstnumber.2079}
 \contentsline {subsection}{Remove a virtual environment}{341}{lstnumber.2098}
-\contentsline {section}{\numberline {E.}NumPy Math Functions}{342}{section.2118}
+\contentsline {section}{\numberline {14.5}NumPy Math Functions}{342}{section.2118}
 \contentsline {subsection}{NumPy Array Creation and Manipulation Functions and Methods}{342}{lstnumber.2122}
 \contentsline {subsection}{NumPy Exponential and Logarithmic Functions and Methods}{342}{lstnumber.2138}
 \contentsline {subsection}{NumPy Trigonometric Functions and Methods}{342}{lstnumber.2150}
 \contentsline {subsection}{NumPy Statistics Functions and Methods}{342}{lstnumber.2170}
-\contentsline {section}{\numberline {F.}Git and GitHub}{343}{section.2183}
+\contentsline {section}{\numberline {14.6}Git and GitHub}{343}{section.2183}
 \contentsline {subsection}{Cloning a repo}{343}{section.2183}
 \contentsline {subsection}{Creating and synching a remote repo on GitHub.com with a local repo}{344}{lstnumber.2187}
 \contentsline {subsubsection}{Create a remote repo on GitHub.com}{344}{lstnumber.2187}
 \contentsline {subsubsection}{Make a new local repo and link the local repo to the remote repo on GitHub.com}{344}{lstnumber.2187}
 \contentsline {subsubsection}{Add, commit and push changes up to Github.com}{344}{lstnumber.2193}
 \contentsline {subsubsection}{Pull the most recent version from GitHub.com before each work session}{344}{lstnumber.2197}
-\contentsline {section}{\numberline {G.}LaTeX Math}{345}{section.2204}
-\contentsline {section}{\numberline {H.}Problem Solving with Python 3.7 Edition Book Construction}{345}{section.2208}
+\contentsline {section}{\numberline {14.7}LaTeX Math}{345}{section.2204}
+\contentsline {section}{\numberline {14.8}Problem Solving with Python 3.7 Edition Book Construction}{345}{section.2208}
 \contentsline {subsection}{Jupyter Notebooks}{345}{section.2208}
 \contentsline {subsection}{Website}{346}{lstnumber.2246}
 \contentsline {subsection}{Hardcopy}{347}{lstnumber.2246}
-\contentsline {section}{\numberline {I.}Contributions}{347}{section.2247}
+\contentsline {section}{\numberline {14.9}Contributions}{347}{section.2247}
 \contentsline {subsection}{Contributor List}{347}{section.2247}
-\contentsline {section}{\numberline {J.}Cover Artwork}{347}{section.2248}
-\contentsline {section}{\numberline {K.}About the Author}{347}{section.2249}
+\contentsline {section}{\numberline {14.10}Cover Artwork}{347}{section.2248}
+\contentsline {section}{\numberline {14.11}About the Author}{347}{section.2249}

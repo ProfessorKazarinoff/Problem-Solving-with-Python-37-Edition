@@ -1,513 +1,513 @@
-\contentsline {chapter}{Preface}{7}{chapter*.3}
-\contentsline {section}{Motivation}{7}{section*.4}
-\contentsline {section}{Acknowledgments}{7}{section*.4}
-\contentsline {section}{Supporting Materials}{7}{section*.4}
-\contentsline {section}{Formatting Conventions}{8}{section*.4}
-\contentsline {subsection}{Web Address}{8}{section*.4}
-\contentsline {subsection}{Important terms and vocabulary}{8}{section*.4}
-\contentsline {subsection}{File Names}{8}{section*.4}
-\contentsline {subsection}{Module and Package Names}{8}{section*.4}
-\contentsline {subsection}{Inline code}{9}{section*.4}
-\contentsline {subsection}{Separate code blocks}{9}{section*.4}
-\contentsline {subsection}{Anaconda Prompt Commands}{9}{lstnumber.8}
-\contentsline {subsection}{Terminal Commands}{9}{lstnumber.11}
-\contentsline {subsection}{Python REPL Commands}{9}{lstnumber.14}
-\contentsline {subsection}{Jupyter Notebook cells}{10}{lstnumber.19}
-\contentsline {subsection}{Keystrokes and Buttons}{10}{lstnumber.19}
-\contentsline {section}{Errata}{10}{lstnumber.19}
-\contentsline {chapter}{\numberline {1}Orientation}{11}{chapter.20}
-\contentsline {section}{\numberline {1.1}Introduction}{11}{section.21}
-\contentsline {section}{\numberline {1.2}Why Python?}{12}{section.22}
-\contentsline {subsection}{Python is a powerful programming language}{12}{section.22}
-\contentsline {subsection}{Python is easy to learn and use}{12}{section.22}
-\contentsline {subsubsection}{Python is transportable}{12}{section.22}
-\contentsline {subsubsection}{Python is free}{13}{section.22}
-\contentsline {subsubsection}{Python is growing}{13}{section.22}
-\contentsline {section}{\numberline {1.3}The Anaconda Distribution of Python}{13}{section.23}
-\contentsline {subsection}{How is Anaconda different from Python?}{13}{section.23}
-\contentsline {subsection}{Why download Anaconda, if I want to use is Python?}{13}{section.23}
-\contentsline {subsubsection}{Anaconda includes Python plus about 600 additional Python packages}{13}{section.23}
-\contentsline {subsubsection}{Anaconda installs without administrator privileges}{14}{section.23}
-\contentsline {subsubsection}{Anaconda works on MacOS}{14}{section.23}
-\contentsline {subsubsection}{Anaconda makes package management and virtual environments easier}{14}{section.23}
-\contentsline {section}{\numberline {1.4}Installing Anaconda on Windows}{14}{section.24}
-\contentsline {subsubsection}{Steps:}{15}{section.24}
-\contentsline {subsubsection}{1. Visit the Anaconda downloads page}{15}{Item.29}
-\contentsline {subsubsection}{2. Select Windows}{15}{figure.caption.30}
-\contentsline {subsubsection}{3. Download}{15}{figure.caption.31}
-\contentsline {subsubsection}{4. Open and run the installer}{16}{figure.caption.34}
-\contentsline {subsubsection}{5. Open the Anaconda Prompt from the Windows start menu}{18}{figure.caption.38}
-\contentsline {section}{\numberline {1.5}Installing Anaconda on MacOS}{19}{section.45}
-\contentsline {subsubsection}{Steps:}{21}{lstnumber.47}
-\contentsline {subsubsection}{1. Visit the Anaconda downloads page}{21}{Item.53}
-\contentsline {subsubsection}{2. Select MacOS and download the .pkg installer}{21}{Item.53}
-\contentsline {subsubsection}{3. Open the .pkg installer}{21}{figure.caption.55}
-\contentsline {subsubsection}{4. Follow the installation instructions}{23}{figure.caption.55}
-\contentsline {subsubsection}{5. Source your .bash-rc file}{23}{figure.caption.55}
-\contentsline {subsubsection}{6. Open a terminal and type \texttt {python} and run some code.}{23}{lstnumber.58}
-\contentsline {section}{\numberline {1.6}Installing Anaconda on Linux}{23}{section.67}
-\contentsline {subsubsection}{Steps:}{24}{lstnumber.71}
-\contentsline {subsection}{1. Visit the Anaconda downloads page}{24}{Item.78}
-\contentsline {subsection}{2. Select Linux}{24}{Item.78}
-\contentsline {subsection}{3. Copy the bash (.sh file) installer link}{24}{figure.caption.79}
-\contentsline {subsection}{4. Use \texttt {wget} to download the bash installer}{24}{figure.caption.80}
-\contentsline {subsection}{5. Run the bash script to install \textbf {Anaconda3}}{25}{lstnumber.85}
-\contentsline {subsubsection}{6. \texttt {source} the \texttt {.bash-rc} file to add Anaconda to your \texttt {PATH}}{25}{lstnumber.90}
-\contentsline {subsubsection}{7. Start the Python REPL}{26}{lstnumber.93}
-\contentsline {section}{\numberline {1.7}Installing Python from Python.org}{26}{section.103}
-\contentsline {subsection}{Installing Python on Windows}{26}{section.103}
-\contentsline {subsection}{Installing Python on MacOS}{27}{figure.caption.104}
-\contentsline {subsection}{Installing Python on Linux}{27}{figure.caption.105}
-\contentsline {section}{\numberline {1.8}Summary}{29}{section.133}
-\contentsline {subsection}{Key Terms and Concepts}{29}{section.133}
-\contentsline {section}{\numberline {1.9}Review Questions}{29}{section.134}
-\contentsline {subsubsection}{Installing Python on MacOS}{30}{section.134}
-\contentsline {subsubsection}{Installing Python on Linux}{30}{section.134}
-\contentsline {subsubsection}{Installing Python from Python.org}{31}{section.134}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{31}{section.134}
-\contentsline {chapter}{\numberline {2}Jupyter Notebooks}{33}{chapter.145}
-\contentsline {section}{\numberline {2.1}Introduction}{33}{section.146}
-\contentsline {section}{\numberline {2.2}What is a Jupyter Notebook?}{34}{section.147}
-\contentsline {section}{\numberline {2.3}Why Jupyter Notebooks?}{34}{section.148}
-\contentsline {section}{\numberline {2.4}Installing Juypter}{35}{section.151}
-\contentsline {subsection}{Installing Jupyter on Windows using the Anaconda Prompt}{35}{section.151}
-\contentsline {subsection}{Installing Jupyter on MacOS}{36}{lstnumber.155}
-\contentsline {subsection}{Installing Jupyter on Linux}{36}{lstnumber.161}
-\contentsline {section}{\numberline {2.5}Opening a Jupyter Notebook}{36}{section.166}
-\contentsline {subsubsection}{3 ways to open a \textbf {Jupyter notebook}:}{37}{section.166}
-\contentsline {subsection}{Open a Jupyter notebook with the Windows Start Menu}{37}{section.166}
-\contentsline {subsection}{Open a Jupyter Notebook with the Anaconda Prompt}{38}{figure.caption.172}
-\contentsline {subsection}{Open a Jupyter Notebook with Anaconda Navigator}{41}{figure.caption.187}
-\contentsline {section}{\numberline {2.6}The Jupyter Notebook Interface}{41}{section.192}
-\contentsline {subsection}{Menus and Buttons}{41}{section.192}
-\contentsline {subsection}{Code Cells}{42}{section.192}
-\contentsline {subsection}{Output Cells}{42}{figure.caption.194}
-\contentsline {subsection}{Markdown Cells}{42}{figure.caption.196}
-\contentsline {subsubsection}{Headings}{46}{figure.caption.197}
-\contentsline {subsubsection}{Code Blocks}{46}{lstnumber.205}
-\contentsline {subsubsection}{Bold and italics}{47}{lstnumber.205}
-\contentsline {subsubsection}{Tables}{47}{lstnumber.205}
-\contentsline {subsubsection}{Bullet Points and Lists}{47}{table.211}
-\contentsline {subsubsection}{Horizontal Rule}{48}{Item.228}
-\contentsline {subsubsection}{Links}{48}{lstnumber.230}
-\contentsline {subsubsection}{Images}{48}{lstnumber.232}
-\contentsline {subsubsection}{LaTeX Math}{48}{figure.caption.235}
-\contentsline {subsubsection}{html}{49}{lstnumber.237}
-\contentsline {subsubsection}{warning boxes}{49}{lstnumber.241}
-\contentsline {subsection}{Creating a new cell}{50}{lstnumber.245}
-\contentsline {subsection}{Changing the cell type}{50}{figure.caption.246}
-\contentsline {subsection}{Saving a Jupyter Notebook}{50}{figure.caption.247}
-\contentsline {subsection}{Renaming a Jupyter Notebook}{51}{figure.caption.249}
-\contentsline {subsection}{Downloading a Jupyter Notebook}{51}{figure.caption.251}
-\contentsline {subsection}{Saving Jupyter Notebooks in Other Formats}{53}{figure.caption.253}
-\contentsline {section}{\numberline {2.7}Magic Cells}{54}{section.256}
-\contentsline {subsection}{\%matplotlib inline}{54}{section.256}
-\contentsline {subsection}{\%load}{54}{lstnumber.263}
-\contentsline {subsection}{\%run}{55}{lstnumber.265}
-\contentsline {subsection}{Other useful magic commands}{55}{lstnumber.274}
-\contentsline {section}{\numberline {2.8}Getting Help in a Jupyter Notebook}{56}{section.288}
-\contentsline {subsection}{Get help using \texttt {dir}}{56}{section.288}
-\contentsline {subsection}{Get help using Tab}{57}{section.288}
-\contentsline {subsection}{Get help using the \texttt {help()} function}{57}{lstnumber.290}
-\contentsline {subsection}{Help online}{58}{lstnumber.330}
-\contentsline {section}{\numberline {2.9}Summary}{60}{section.331}
-\contentsline {subsection}{Key Terms and Concepts}{60}{section.331}
-\contentsline {subsection}{Python Commands and Functions}{60}{section.331}
-\contentsline {subsubsection}{Jupyter Notebook Magic Commands}{60}{section.331}
-\contentsline {section}{\numberline {2.10}Review Questions}{61}{section.333}
-\contentsline {subsubsection}{Code cells and markdown cells}{61}{section.333}
-\contentsline {subsubsection}{Markdown cells}{61}{lstnumber.337}
-\contentsline {subsubsection}{LaTeX Math}{62}{Item.354}
-\contentsline {subsubsection}{Code cells}{62}{Item.354}
-\contentsline {subsubsection}{Cell Magic}{63}{lstnumber.373}
-\contentsline {subsubsection}{Getting Help}{63}{lstnumber.387}
-\contentsline {chapter}{\numberline {3}The Python REPL}{65}{chapter.388}
-\contentsline {section}{\numberline {3.1}Introduction}{65}{section.389}
-\contentsline {section}{\numberline {3.2}Python as a Calculator}{66}{section.390}
-\contentsline {subsection}{Arithmetic}{66}{section.390}
-\contentsline {subsubsection}{Section Summary}{67}{lstnumber.413}
-\contentsline {subsection}{Trigonometry: sine, cosine, and tangent}{67}{table.414}
-\contentsline {subsubsection}{Section Summary}{68}{lstnumber.437}
-\contentsline {subsection}{Exponents and Logarithms}{69}{table.438}
-\contentsline {subsubsection}{Section Summary}{69}{lstnumber.451}
-\contentsline {subsection}{Statistics}{70}{table.452}
-\contentsline {subsubsection}{Section Summary}{70}{lstnumber.484}
-\contentsline {section}{\numberline {3.3}Variables}{71}{section.486}
-\contentsline {subsubsection}{Problem}{72}{lstnumber.509}
-\contentsline {section}{\numberline {3.4}String Operations}{72}{section.519}
-\contentsline {subsection}{String Concatenation}{72}{lstnumber.523}
-\contentsline {subsection}{String Comparison}{73}{lstnumber.537}
-\contentsline {section}{\numberline {3.5}Print Statements}{73}{section.553}
-\contentsline {section}{\numberline {3.6}Summary}{75}{section.580}
-\contentsline {subsection}{Key Terms and Concepts}{75}{section.580}
-\contentsline {subsection}{Summary of Python Functions and Commands}{75}{section.580}
-\contentsline {subsubsection}{Arithmetic}{75}{section.580}
-\contentsline {subsubsection}{Trigonometry}{75}{table.581}
-\contentsline {subsubsection}{Logarithms and Exponents}{76}{table.582}
-\contentsline {subsubsection}{Statistics}{76}{table.583}
-\contentsline {section}{\numberline {3.7}Review Questions}{76}{section.585}
-\contentsline {subsubsection}{Arithmetic}{76}{section.585}
-\contentsline {subsubsection}{String Indexing}{77}{section.585}
-\contentsline {subsubsection}{Trigonometry}{77}{section.585}
-\contentsline {subsubsection}{Logarithms and Exponents}{78}{section.585}
-\contentsline {subsubsection}{Variables in Calculations}{79}{section.585}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{80}{section.585}
-\contentsline {chapter}{\numberline {4}Data Types and Variables}{81}{chapter.604}
-\contentsline {section}{\numberline {4.1}Introduction}{81}{section.605}
-\contentsline {section}{\numberline {4.2}Numeric Data Types}{83}{section.606}
-\contentsline {subsection}{A review of variable assignment in Python}{83}{section.606}
-\contentsline {subsection}{Integers}{83}{lstnumber.608}
-\contentsline {subsection}{Floating Point Numbers}{84}{lstnumber.619}
-\contentsline {subsection}{Complex Numbers}{84}{lstnumber.638}
-\contentsline {section}{\numberline {4.3}Boolean Data Type}{85}{section.660}
-\contentsline {subsection}{Integers and Floats as Booleans}{85}{lstnumber.678}
-\contentsline {subsection}{Boolean Arithmetic}{86}{lstnumber.690}
-\contentsline {section}{\numberline {4.4}Strings}{87}{section.719}
-\contentsline {subsection}{Numbers as Strings}{87}{lstnumber.727}
-\contentsline {subsection}{Strings as Boolean Values}{88}{lstnumber.735}
-\contentsline {subsection}{String Indexing}{88}{lstnumber.747}
-\contentsline {subsubsection}{Negative Indexing}{89}{lstnumber.764}
-\contentsline {subsection}{String Slicing}{89}{figure.caption.771}
-\contentsline {section}{\numberline {4.5}Lists}{90}{section.790}
-\contentsline {subsection}{Indexing Lists}{90}{lstnumber.798}
-\contentsline {section}{\numberline {4.6}Dictionaries and Tuples}{91}{section.827}
-\contentsline {subsection}{Dictionaries}{91}{section.827}
-\contentsline {subsection}{Tuples}{92}{lstnumber.862}
-\contentsline {section}{\numberline {4.7}Summary}{94}{section.886}
-\contentsline {subsection}{Key Terms and Concepts}{94}{section.886}
-\contentsline {subsection}{Summary of Python Functions and Commands}{94}{section.886}
-\contentsline {subsubsection}{Built-in Data Types}{94}{section.886}
-\contentsline {subsubsection}{Python Functions}{94}{table.887}
-\contentsline {subsubsection}{Python List Operators}{95}{table.888}
-\contentsline {section}{\numberline {4.8}Review Questions}{95}{section.890}
-\contentsline {subsubsection}{Determine the Data Type}{95}{section.890}
-\contentsline {subsubsection}{Numeric Data Types}{95}{section.890}
-\contentsline {subsubsection}{Booleans}{96}{Item.898}
-\contentsline {subsubsection}{Strings}{96}{lstnumber.901}
-\contentsline {subsubsection}{Lists}{98}{Item.919}
-\contentsline {subsubsection}{Dictionaries}{98}{Item.919}
-\contentsline {subsubsection}{Tuples}{99}{Item.919}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{99}{lstnumber.923}
-\contentsline {chapter}{\numberline {5}Matricies and Arrays}{101}{chapter.952}
-\contentsline {section}{\numberline {5.1}Introduction}{101}{section.953}
-\contentsline {section}{\numberline {5.2}NumPy}{102}{section.954}
-\contentsline {section}{\numberline {5.3}Installing NumPy}{102}{section.955}
-\contentsline {subsection}{Install NumPy on Anaconda}{102}{section.955}
-\contentsline {subsection}{Install NumPy with the Anaconda Prompt}{102}{section.955}
-\contentsline {subsection}{Install NumPy with pip}{102}{lstnumber.957}
-\contentsline {subsection}{Verify NumPy installation}{102}{lstnumber.959}
-\contentsline {section}{\numberline {5.4}Python Lists and NumPy Arrays}{103}{section.960}
-\contentsline {subsection}{Python Lists}{103}{section.960}
-\contentsline {subsection}{NumPy Arrays}{103}{lstnumber.962}
-\contentsline {subsection}{Array Multiplication}{104}{lstnumber.964}
-\contentsline {subsection}{Timing Arrays}{105}{lstnumber.964}
-\contentsline {section}{\numberline {5.5}Array Creation}{105}{section.965}
-\contentsline {subsection}{Arrays of Regularly Spaced Numbers}{106}{section.965}
-\contentsline {subsubsection}{np.arange()}{106}{section.965}
-\contentsline {subsubsection}{np.linspace()}{106}{lstnumber.967}
-\contentsline {subsubsection}{np.logspace()}{107}{lstnumber.969}
-\contentsline {subsubsection}{np.zeros()}{107}{lstnumber.971}
-\contentsline {subsubsection}{np.ones()}{108}{lstnumber.973}
-\contentsline {subsection}{Arrays of Random Numbers}{108}{lstnumber.975}
-\contentsline {subsubsection}{Array of Random Integers}{108}{lstnumber.975}
-\contentsline {subsubsection}{Array of Random Floats}{109}{lstnumber.977}
-\contentsline {subsubsection}{Random Array Choice from a List}{109}{lstnumber.979}
-\contentsline {subsubsection}{Random Array with a Normal Distribution}{110}{lstnumber.981}
-\contentsline {subsection}{2-D Arrays}{111}{lstnumber.983}
-\contentsline {subsubsection}{np.meshgrid()}{111}{lstnumber.983}
-\contentsline {subsubsection}{np.mgrid{[}{]}}{112}{lstnumber.985}
-\contentsline {subsection}{Section Summary}{112}{lstnumber.987}
-\contentsline {section}{\numberline {5.6}Array Indexing}{113}{section.989}
-\contentsline {subsection}{Multi-dimensional Array Indexing}{114}{lstnumber.992}
-\contentsline {subsection}{Assigning Values with Indexing}{115}{lstnumber.994}
-\contentsline {section}{\numberline {5.7}Array Slicing}{115}{section.999}
-\contentsline {subsection}{Slicing 2D Arrays}{117}{lstnumber.1001}
-\contentsline {section}{\numberline {5.8}Array Operations}{118}{section.1004}
-\contentsline {subsection}{Scalar Addition}{118}{section.1004}
-\contentsline {subsection}{Scalar Multiplication}{118}{section.1004}
-\contentsline {subsection}{Array Multiplication}{119}{section.1004}
-\contentsline {subsubsection}{Element-wise Multiplication}{119}{section.1004}
-\contentsline {subsubsection}{Dot Product}{119}{section.1004}
-\contentsline {subsubsection}{Cross Product}{119}{section.1004}
-\contentsline {subsection}{Exponents and Logarithms}{120}{section.1004}
-\contentsline {subsubsection}{np.exp()}{120}{section.1004}
-\contentsline {subsubsection}{Logarithms}{120}{section.1004}
-\contentsline {subsection}{Trigonometry}{120}{section.1004}
-\contentsline {section}{\numberline {5.9}Systems of Linear Equations}{121}{section.1005}
-\contentsline {section}{\numberline {5.10}Summary}{123}{section.1006}
-\contentsline {subsection}{Key Terms and Concepts}{123}{section.1006}
-\contentsline {section}{\numberline {5.11}Review Questions}{123}{section.1007}
-\contentsline {subsubsection}{Array Creation}{123}{section.1007}
-\contentsline {subsubsection}{Array Manipulation}{124}{section.1007}
-\contentsline {subsubsection}{Array Slicing}{124}{section.1007}
-\contentsline {subsubsection}{Meshgrids}{126}{Item.1026}
-\contentsline {subsubsection}{Array Operations}{126}{lstnumber.1036}
-\contentsline {subsubsection}{Linear Algebra}{127}{Item.1060}
-\contentsline {chapter}{\numberline {6}Plotting with Matplotlib}{129}{chapter.1061}
-\contentsline {section}{\numberline {6.1}Introduction}{129}{section.1062}
-\contentsline {section}{\numberline {6.2}What is Matplotlib?}{130}{section.1063}
-\contentsline {subsection}{Why use Matplotlib?}{130}{section.1063}
-\contentsline {section}{\numberline {6.3}Installing Matplotlib}{130}{section.1064}
-\contentsline {subsection}{Use the Anaconda distribution of Python}{130}{section.1064}
-\contentsline {subsection}{Install Matplotlib with the Anaconda Prompt}{130}{section.1064}
-\contentsline {subsection}{Install Matplotlib with \textbf {pip}}{130}{lstnumber.1066}
-\contentsline {subsection}{Verify the installation}{131}{lstnumber.1068}
-\contentsline {section}{\numberline {6.4}Line Plots}{131}{section.1073}
-\contentsline {subsection}{Features of a Matplotlib plot}{132}{section.1073}
-\contentsline {subsubsection}{Line Color, Line Width, Line Style, Line Opacity and Marker Options}{132}{section.1073}
-\contentsline {subsubsection}{Title}{134}{lstnumber.1098}
-\contentsline {subsubsection}{x-axis label}{134}{lstnumber.1100}
-\contentsline {subsubsection}{y-axis label}{134}{lstnumber.1102}
-\contentsline {subsubsection}{Legend}{135}{lstnumber.1104}
-\contentsline {subsubsection}{Grid}{135}{table.1107}
-\contentsline {subsubsection}{Tick Labels}{135}{lstnumber.1109}
-\contentsline {subsection}{Build a plot in five steps}{136}{lstnumber.1112}
-\contentsline {subsubsection}{1. Imports}{136}{Item.1117}
-\contentsline {subsubsection}{2. Define data}{136}{Item.1117}
-\contentsline {subsubsection}{3. Plot data including options}{136}{Item.1117}
-\contentsline {subsubsection}{4. Add plot details}{136}{Item.1117}
-\contentsline {subsubsection}{5. Show the plot}{137}{Item.1117}
-\contentsline {section}{\numberline {6.5}Saving plots}{138}{section.1118}
-\contentsline {section}{\numberline {6.6}Multi Line Plots}{140}{section.1121}
-\contentsline {subsection}{The Matplotlib's object-oriented interface}{140}{section.1121}
-\contentsline {section}{\numberline {6.7}Bar Charts and Pie Charts}{143}{section.1128}
-\contentsline {subsection}{Bar Charts}{143}{section.1128}
-\contentsline {subsection}{Pie Charts}{145}{section.1128}
-\contentsline {section}{\numberline {6.8}Error Bars}{148}{section.1130}
-\contentsline {subsection}{Error bars in bar plots}{148}{section.1130}
-\contentsline {subsection}{Error bars in line plots}{150}{section.1130}
-\contentsline {section}{\numberline {6.9}Histograms}{152}{section.1136}
-\contentsline {section}{\numberline {6.10}Box Plots and Violin Plots}{153}{section.1139}
-\contentsline {subsection}{Box Plots}{153}{section.1139}
-\contentsline {subsection}{Violin Plots}{155}{lstnumber.1141}
-\contentsline {section}{\numberline {6.11}Scatter Plots}{156}{section.1146}
-\contentsline {section}{\numberline {6.12}Plot annotations}{159}{section.1150}
-\contentsline {section}{\numberline {6.13}Subplots}{162}{section.1154}
-\contentsline {section}{\numberline {6.14}Plot Styles}{164}{section.1162}
-\contentsline {section}{\numberline {6.15}Contour Plots}{168}{section.1165}
-\contentsline {subsection}{Matplotlib's \texttt {plt.contourf()} method}{168}{section.1165}
-\contentsline {subsection}{Matplotlib's \texttt {plt.contourf()} method}{169}{lstnumber.1167}
-\contentsline {subsection}{Color bars on contour plots}{171}{lstnumber.1169}
-\contentsline {subsection}{Color maps on contour plots}{172}{lstnumber.1172}
-\contentsline {section}{\numberline {6.16}Quiver and Stream Plots}{174}{section.1176}
-\contentsline {subsection}{Quiver Plots}{174}{section.1176}
-\contentsline {subsubsection}{Quiver plot with one arrow}{174}{section.1176}
-\contentsline {subsubsection}{Quiver plot with two arrows}{175}{lstnumber.1178}
-\contentsline {subsubsection}{Quiver plot using a meshgrid}{176}{lstnumber.1178}
-\contentsline {subsubsection}{Quiver plot containing a gradient}{180}{lstnumber.1180}
-\contentsline {subsubsection}{Quiver plot with four vortices}{182}{lstnumber.1180}
-\contentsline {subsubsection}{Quiver plots with color}{184}{lstnumber.1180}
-\contentsline {subsection}{Stream Plots}{186}{lstnumber.1182}
-\contentsline {subsubsection}{A simple stream plot}{186}{lstnumber.1184}
-\contentsline {subsubsection}{Stream plot of a field}{187}{lstnumber.1184}
-\contentsline {subsubsection}{Stream plot of two point charges}{188}{lstnumber.1184}
-\contentsline {section}{\numberline {6.17}3D Surface Plots}{190}{section.1185}
-\contentsline {subsection}{Surface Plots}{190}{section.1185}
-\contentsline {subsection}{Wire Frame Plots}{192}{lstnumber.1187}
-\contentsline {subsection}{Gradient Surface Plots}{193}{lstnumber.1189}
-\contentsline {subsection}{3D Surface Plots with 2D Contour Plot Projections}{195}{lstnumber.1194}
-\contentsline {section}{\numberline {6.18}Summary}{197}{section.1195}
-\contentsline {subsection}{Key Terms and Concepts}{197}{table.1196}
-\contentsline {subsection}{Additional Resources}{198}{table.1196}
-\contentsline {section}{\numberline {6.19}Review Questions}{198}{section.1197}
-\contentsline {subsubsection}{Line plots}{198}{section.1197}
-\contentsline {subsubsection}{Bar Charts and Pie Charts}{199}{section.1197}
-\contentsline {subsubsection}{Histograms, Box Plots, and Violin Plots}{201}{table.1203}
-\contentsline {subsubsection}{Scatter Plots}{202}{table.1203}
-\contentsline {subsubsection}{Subplots}{202}{lstnumber.1216}
-\contentsline {chapter}{\numberline {7}Functions and Modules}{205}{chapter.1217}
-\contentsline {section}{\numberline {7.1}Introduction}{205}{section.1218}
-\contentsline {section}{\numberline {7.2}Why Functions?}{206}{section.1219}
-\contentsline {section}{\numberline {7.3}First Function}{206}{section.1220}
-\contentsline {subsection}{Defining Functions in Python}{206}{section.1220}
-\contentsline {subsection}{Your First User-defined Function}{207}{lstnumber.1236}
-\contentsline {section}{\numberline {7.4}Functions with Multiple Arguments}{208}{section.1240}
-\contentsline {section}{\numberline {7.5}Functions with Default Arguments}{210}{section.1259}
-\contentsline {section}{\numberline {7.6}Calling Functions from Other Files}{211}{section.1264}
-\contentsline {section}{\numberline {7.7}Docstrings in Functions}{212}{section.1289}
-\contentsline {section}{\numberline {7.8}Positional and Keyword Arguments}{215}{section.1313}
-\contentsline {subsection}{Positional Arguments}{215}{section.1313}
-\contentsline {subsubsection}{Positional Arguments Specified by an Iterable}{216}{section.1313}
-\contentsline {subsection}{Keyword Arguments}{216}{lstnumber.1315}
-\contentsline {subsubsection}{Keyword Arguments Specified by a Dictionary}{217}{lstnumber.1317}
-\contentsline {section}{\numberline {7.9}Summary}{218}{section.1321}
-\contentsline {subsection}{Key Terms and Concepts}{218}{section.1321}
-\contentsline {subsection}{Python Commands}{218}{section.1321}
-\contentsline {section}{\numberline {7.10}Review Questions}{218}{section.1323}
-\contentsline {subsubsection}{User-defined functions}{218}{section.1323}
-\contentsline {subsubsection}{Functions with multiple arguments}{219}{section.1323}
-\contentsline {subsubsection}{Functions with default arguments}{221}{Item.1331}
-\contentsline {subsubsection}{Nested Functions}{222}{Item.1337}
-\contentsline {subsubsection}{Functions in other files}{222}{Item.1342}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{223}{lstnumber.1357}
-\contentsline {chapter}{\numberline {8}If Else Try Except}{225}{chapter.1390}
-\contentsline {section}{\numberline {8.1}Introduction}{225}{section.1391}
-\contentsline {section}{\numberline {8.2}User Input}{226}{section.1392}
-\contentsline {section}{\numberline {8.3}If statements}{227}{section.1395}
-\contentsline {subsection}{Multiple if statements}{228}{lstnumber.1398}
-\contentsline {section}{\numberline {8.4}Selection Statements}{229}{section.1399}
-\contentsline {section}{\numberline {8.5}If Else Statements}{229}{section.1400}
-\contentsline {subsection}{elif}{230}{lstnumber.1405}
-\contentsline {section}{\numberline {8.6}Try-Except Statements}{231}{section.1413}
-\contentsline {subsection}{Syntax Errors and Exception Errors}{231}{section.1413}
-\contentsline {subsection}{Syntax Errors}{231}{section.1413}
-\contentsline {subsubsection}{Exception Errors}{232}{section.1413}
-\contentsline {section}{\numberline {8.7}Flowcharts}{234}{section.1419}
-\contentsline {section}{\numberline {8.8}Summary}{241}{section.1453}
-\contentsline {subsection}{Key Terms and Concepts}{241}{section.1453}
-\contentsline {section}{\numberline {8.9}Review Questions}{241}{section.1454}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{242}{table.1460}
-\contentsline {chapter}{\numberline {9}Loops}{245}{chapter.1478}
-\contentsline {section}{\numberline {9.1}Introduction}{245}{section.1479}
-\contentsline {section}{\numberline {9.2}For Loops}{246}{section.1480}
-\contentsline {subsubsection}{\texttt {range()} function}{246}{lstnumber.1488}
-\contentsline {subsubsection}{Customizing \texttt {range()}}{247}{lstnumber.1488}
-\contentsline {subsection}{For loops with lists}{247}{table.1491}
-\contentsline {subsection}{For loops with strings}{248}{lstnumber.1494}
-\contentsline {section}{\numberline {9.3}While Loops}{249}{section.1498}
-\contentsline {subsection}{Using a while loop to validate user input}{249}{lstnumber.1501}
-\contentsline {section}{\numberline {9.4}Break and Continue}{250}{section.1502}
-\contentsline {subsection}{Break}{250}{section.1502}
-\contentsline {subsection}{Continue}{251}{section.1502}
-\contentsline {section}{\numberline {9.5}Flowcharts Describing Loops}{251}{section.1503}
-\contentsline {subsection}{Basic Flow Chart Shapes}{251}{section.1503}
-\contentsline {subsection}{Flowchart of a program that contains a for loop}{251}{figure.caption.1504}
-\contentsline {subsection}{Flowchart of a program that contains a while loop}{254}{lstnumber.1510}
-\contentsline {section}{\numberline {9.6}Summary}{256}{section.1520}
-\contentsline {subsection}{Key Terms and Concpets}{256}{section.1520}
-\contentsline {section}{\numberline {9.7}Review Questions}{256}{section.1521}
-\contentsline {subsubsection}{For Loops}{256}{section.1521}
-\contentsline {subsubsection}{While Loops}{259}{lstnumber.1539}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{260}{Item.1545}
-\contentsline {chapter}{\numberline {10}Symbolic Math}{263}{chapter.1565}
-\contentsline {section}{\numberline {10.1}Introduction}{263}{section.1566}
-\contentsline {section}{\numberline {10.2}SymPy}{264}{section.1567}
-\contentsline {section}{\numberline {10.3}Installing SymPy}{264}{section.1568}
-\contentsline {section}{\numberline {10.4}Defining Variables}{265}{section.1577}
-\contentsline {section}{\numberline {10.5}Expressions and Substitutions}{265}{section.1578}
-\contentsline {subsection}{Expressions}{265}{section.1578}
-\contentsline {subsection}{Substitution}{266}{section.1578}
-\contentsline {subsection}{Summary}{268}{section.1578}
-\contentsline {section}{\numberline {10.6}Equations}{268}{section.1580}
-\contentsline {subsection}{Substitutions in Equations}{269}{section.1580}
-\contentsline {section}{\numberline {10.7}Solving Equations}{269}{section.1581}
-\contentsline {subsection}{Equations with one solution}{270}{section.1581}
-\contentsline {subsection}{Equations with two solutions}{270}{section.1581}
-\contentsline {section}{\numberline {10.8}Solving Two Equations for Two Unknows}{271}{section.1582}
-\contentsline {subsection}{Solve a statics problem with SymPy}{272}{section.1582}
-\contentsline {subsubsection}{GIVEN:}{272}{section.1582}
-\contentsline {subsubsection}{FIND:}{273}{section.1582}
-\contentsline {subsubsection}{SOLUTION:}{273}{section.1582}
-\contentsline {section}{\numberline {10.9}Summary}{276}{section.1583}
-\contentsline {subsection}{Key Terms and Concepts}{276}{section.1583}
-\contentsline {subsection}{SymPy Functions and Methods}{276}{section.1583}
-\contentsline {section}{\numberline {10.10}Review Questions}{276}{section.1585}
-\contentsline {subsubsection}{Creating Expressions Equations}{276}{section.1585}
-\contentsline {subsubsection}{Solving Equations}{277}{section.1585}
-\contentsline {chapter}{\numberline {11}Python and External Hardware}{281}{chapter.1586}
-\contentsline {section}{\numberline {11.1}Introduction}{281}{section.1587}
-\contentsline {section}{\numberline {11.2}PySerial}{282}{section.1588}
-\contentsline {subsection}{Installing PySerial}{282}{section.1588}
-\contentsline {section}{\numberline {11.3}Bytes and Unicode Strings}{282}{section.1593}
-\contentsline {subsection}{Unicode Strings}{282}{section.1593}
-\contentsline {subsection}{Byte Strings}{283}{section.1593}
-\contentsline {subsection}{Convert between Unicode strings and byte strings}{284}{section.1593}
-\contentsline {section}{\numberline {11.4}Controlling an LED with Python}{284}{section.1594}
-\contentsline {subsection}{Wire the LED to the Arduino}{285}{figure.caption.1595}
-\contentsline {subsection}{Upload code to the Arduino}{285}{figure.caption.1596}
-\contentsline {subsection}{Connect the Arduino to the Computer}{287}{lstnumber.1626}
-\contentsline {subsection}{Turn the LED on and off with the Arduino Serial Monitor}{288}{figure.caption.1628}
-\contentsline {subsection}{Use the Python REPL to turn the Arduino LED on and off}{288}{figure.caption.1629}
-\contentsline {subsection}{Write a Python Script to turn the LED on and off}{289}{lstnumber.1652}
-\contentsline {subsection}{Write a Python script to allow a user to turn the LED on and off}{289}{lstnumber.1668}
-\contentsline {section}{\numberline {11.5}Reading a Sensor with Python}{290}{section.1690}
-\contentsline {subsection}{Wire the sensor to the Arduino}{291}{section.1690}
-\contentsline {subsection}{Upload code to the Arduino}{291}{figure.caption.1691}
-\contentsline {subsection}{Connect the Arduino to the computer and Upload the Sketch}{292}{lstnumber.1720}
-\contentsline {subsection}{Check the Sensor Signal}{293}{figure.caption.1722}
-\contentsline {subsubsection}{LED turns ON and OFF}{293}{figure.caption.1722}
-\contentsline {subsubsection}{Arudino Serial Monitor}{293}{figure.caption.1722}
-\contentsline {subsubsection}{Arduino Serial Plotter}{294}{figure.caption.1724}
-\contentsline {subsection}{Use the Python REPL to read the potentiometer data}{294}{figure.caption.1726}
-\contentsline {subsection}{Write a Python script to read the sensor}{296}{lstnumber.1754}
-\contentsline {section}{\numberline {11.6}Summary}{298}{section.1791}
-\contentsline {subsection}{Key Terms and Concepts}{298}{section.1791}
-\contentsline {subsection}{Additional Resources}{298}{section.1791}
-\contentsline {section}{\numberline {11.7}Project Ideas}{299}{section.1792}
-\contentsline {chapter}{\numberline {12}MicroPython}{301}{chapter.1793}
-\contentsline {section}{\numberline {12.1}Introduction}{301}{section.1794}
-\contentsline {section}{\numberline {12.2}What is MicroPython?}{302}{section.1795}
-\contentsline {subsection}{What is MicroPython?}{302}{section.1795}
-\contentsline {subsection}{What is MicroPython used for?}{302}{section.1795}
-\contentsline {subsection}{Why should problem solvers learn MircoPython?}{302}{section.1795}
-\contentsline {section}{\numberline {12.3}Installing MicroPython}{303}{section.1796}
-\contentsline {subsection}{Summary of Steps:}{303}{table.1798}
-\contentsline {subsection}{Install the Anaconda distribution of Python}{304}{Item.1807}
-\contentsline {subsection}{Create a new conda environment and install \textbf {esptool}}{304}{Item.1807}
-\contentsline {subsection}{Download the latest MicroPython firmware .bin file}{304}{lstnumber.1815}
-\contentsline {subsection}{Install the SiLabs driver for the ESP8266-based microcontroller}{304}{figure.caption.1816}
-\contentsline {subsection}{Connect the ESP8266-based microcontroller to the computer}{306}{figure.caption.1817}
-\contentsline {subsection}{Determine which serial port the ESP8266-based microcontroller is connected to}{306}{figure.caption.1817}
-\contentsline {subsection}{Run esptool to upload the .bin file to the ESP8266-based microcontroller}{306}{figure.caption.1819}
-\contentsline {subsection}{Download and install PuTTY, a serial monitor}{309}{figure.caption.1835}
-\contentsline {subsection}{Connect to the ESP8266-based Microcontroller with PuTTY}{309}{figure.caption.1836}
-\contentsline {section}{\numberline {12.4}The MicroPython REPL}{312}{section.1848}
-\contentsline {subsection}{Summary of Steps}{312}{section.1848}
-\contentsline {subsection}{Connect the ESP8266-based microcontroller to your computer with a USB cable}{312}{Item.1852}
-\contentsline {subsection}{Determine which COM port the microcontroller is connected to using the Windows Device Manager}{312}{Item.1852}
-\contentsline {subsection}{Open PuTTY and connect to the ESP8266-based microcontroller}{313}{figure.caption.1854}
-\contentsline {subsection}{Run commands at the MicroPython REPL}{314}{figure.caption.1857}
-\contentsline {section}{\numberline {12.5}Blinking a LED}{317}{section.1881}
-\contentsline {subsection}{Connect the ESP8266-based Microcontroller to the computer and bring up the MicroPython REPL}{318}{section.1881}
-\contentsline {subsection}{Use the MicroPython REPL to turn the microcontroller's LED on and off}{318}{figure.caption.1883}
-\contentsline {subsection}{Run code at the MicroPython REPL to blink the LED}{320}{lstnumber.1900}
-\contentsline {section}{\numberline {12.6}Reading a Sensor}{320}{section.1911}
-\contentsline {subsection}{Summary of Steps}{320}{section.1911}
-\contentsline {subsection}{Connect the MCP9808 temperature sensor to the Adafruit Feather Huzzah ESP8266 microcontroller}{321}{Item.1914}
-\contentsline {subsection}{Connect the Adafruit Feather Huzzah ESP8266 microcontroller to the computer with a USB cable and bring up the MicroPython REPL with PuTTY}{321}{figure.caption.1916}
-\contentsline {subsection}{Run code at the MicroPython REPL to measure the temperature}{323}{figure.caption.1918}
-\contentsline {section}{\numberline {12.7}Uploading Code}{324}{section.1929}
-\contentsline {subsection}{Summary of Steps}{324}{section.1929}
-\contentsline {subsection}{Install ampy with pip}{324}{Item.1933}
-\contentsline {subsection}{Write MicroPython Code}{324}{lstnumber.1937}
-\contentsline {subsection}{Upload MicroPython Code to the ESP8266 Microcontroller with \textbf {ampy}}{326}{lstnumber.1965}
-\contentsline {subsection}{Unplug and then power up the Feather Huzzah and watch the temperature scroll by}{326}{lstnumber.1972}
-\contentsline {section}{\numberline {12.8}Summary}{328}{section.1993}
-\contentsline {subsection}{Key Terms and Concepts}{328}{section.1993}
-\contentsline {section}{\numberline {12.9}Project Ideas}{328}{section.1994}
-\contentsline {chapter}{Appendix}{331}{chapter*.1995}
-\contentsline {section}{\numberline {A.}Contents}{331}{section.1996}
-\contentsline {section}{\numberline {B.}Reserved and Keywords in Python}{332}{section.1997}
-\contentsline {subsection}{Logical Keywords}{332}{lstnumber.2010}
-\contentsline {subsection}{Control Flow Key Words}{332}{lstnumber.2019}
-\contentsline {subsection}{Definition Key Words}{332}{lstnumber.2034}
-\contentsline {subsection}{Module Keywords}{332}{lstnumber.2043}
-\contentsline {section}{\numberline {C.}ASCII Character Codes}{333}{section.2048}
-\contentsline {section}{\numberline {D.}Virtual Environments}{335}{section.2049}
-\contentsline {subsection}{Create a virtual environment with the Anaconda Prompt}{335}{section.2049}
-\contentsline {subsection}{Activate a virtual environment}{336}{lstnumber.2065}
-\contentsline {subsection}{Install packages in a virtual environment}{336}{lstnumber.2069}
-\contentsline {subsection}{Deactivate a virtual environment}{336}{lstnumber.2073}
-\contentsline {subsection}{List your virtual environments}{336}{lstnumber.2076}
-\contentsline {subsection}{Remove a virtual environment}{337}{lstnumber.2095}
-\contentsline {section}{\numberline {E.}NumPy Math Functions}{338}{section.2115}
-\contentsline {subsection}{NumPy Array Creation and Manipulation Functions and Methods}{338}{lstnumber.2119}
-\contentsline {subsection}{NumPy Exponential and Logarithmic Functions and Methods}{338}{lstnumber.2135}
-\contentsline {subsection}{NumPy Trigonometric Functions and Methods}{338}{lstnumber.2147}
-\contentsline {subsection}{NumPy Statistics Functions and Methods}{338}{lstnumber.2167}
-\contentsline {section}{\numberline {F.}Git and GitHub}{339}{section.2180}
-\contentsline {subsection}{Cloning a repo}{339}{section.2180}
-\contentsline {subsection}{Creating and synching a remote repo on GitHub.com with a local repo}{340}{lstnumber.2184}
-\contentsline {subsubsection}{Create a remote repo on GitHub.com}{340}{lstnumber.2184}
-\contentsline {subsubsection}{Make a new local repo and link the local repo to the remote repo on GitHub.com}{340}{lstnumber.2184}
-\contentsline {subsubsection}{Add, commit and push changes up to Github.com}{340}{lstnumber.2190}
-\contentsline {subsubsection}{Pull the most recent version from GitHub.com before each work session}{340}{lstnumber.2194}
-\contentsline {section}{\numberline {G.}LaTeX Math}{341}{section.2201}
-\contentsline {section}{\numberline {H.}Problem Solving with Python 3.7 Edition Book Construction}{341}{section.2205}
-\contentsline {subsection}{Jupyter Notebooks}{341}{section.2205}
-\contentsline {subsection}{Website}{342}{lstnumber.2243}
-\contentsline {subsection}{Hardcopy}{343}{lstnumber.2243}
-\contentsline {section}{\numberline {I.}Contributions}{343}{section.2244}
-\contentsline {subsection}{Contributor List}{343}{section.2244}
-\contentsline {section}{\numberline {J.}Cover Artwork}{343}{section.2245}
-\contentsline {section}{\numberline {K.}About the Author}{343}{section.2246}
+\contentsline {chapter}{Preface}{11}{chapter*.2}
+\contentsline {section}{Motivation}{11}{section*.3}
+\contentsline {section}{Acknowledgments}{11}{section*.3}
+\contentsline {section}{Supporting Materials}{11}{section*.3}
+\contentsline {section}{Formatting Conventions}{12}{section*.3}
+\contentsline {subsection}{Web Address}{12}{section*.3}
+\contentsline {subsection}{Important terms and vocabulary}{12}{section*.3}
+\contentsline {subsection}{File Names}{12}{section*.3}
+\contentsline {subsection}{Module and Package Names}{12}{section*.3}
+\contentsline {subsection}{Inline code}{13}{section*.3}
+\contentsline {subsection}{Separate code blocks}{13}{section*.3}
+\contentsline {subsection}{Anaconda Prompt Commands}{13}{lstnumber.7}
+\contentsline {subsection}{Terminal Commands}{13}{lstnumber.10}
+\contentsline {subsection}{Python REPL Commands}{13}{lstnumber.13}
+\contentsline {subsection}{Jupyter Notebook cells}{14}{lstnumber.18}
+\contentsline {subsection}{Keystrokes and Buttons}{14}{lstnumber.18}
+\contentsline {section}{Errata}{14}{lstnumber.18}
+\contentsline {chapter}{\numberline {1}Orientation}{15}{chapter.19}
+\contentsline {section}{\numberline {1.1}Introduction}{15}{section.20}
+\contentsline {section}{\numberline {1.2}Why Python?}{16}{section.21}
+\contentsline {subsection}{Python is a powerful programming language}{16}{section.21}
+\contentsline {subsection}{Python is easy to learn and use}{16}{section.21}
+\contentsline {subsubsection}{Python is transportable}{16}{section.21}
+\contentsline {subsubsection}{Python is free}{17}{section.21}
+\contentsline {subsubsection}{Python is growing}{17}{section.21}
+\contentsline {section}{\numberline {1.3}The Anaconda Distribution of Python}{17}{section.22}
+\contentsline {subsection}{How is Anaconda different from Python?}{17}{section.22}
+\contentsline {subsection}{Why download Anaconda, if I want to use is Python?}{17}{section.22}
+\contentsline {subsubsection}{Anaconda includes Python plus about 600 additional Python packages}{17}{section.22}
+\contentsline {subsubsection}{Anaconda installs without administrator privileges}{18}{section.22}
+\contentsline {subsubsection}{Anaconda works on MacOS}{18}{section.22}
+\contentsline {subsubsection}{Anaconda makes package management and virtual environments easier}{18}{section.22}
+\contentsline {section}{\numberline {1.4}Installing Anaconda on Windows}{18}{section.23}
+\contentsline {subsubsection}{Steps:}{19}{section.23}
+\contentsline {subsubsection}{1. Visit the Anaconda downloads page}{19}{Item.28}
+\contentsline {subsubsection}{2. Select Windows}{19}{figure.caption.29}
+\contentsline {subsubsection}{3. Download}{19}{figure.caption.30}
+\contentsline {subsubsection}{4. Open and run the installer}{20}{figure.caption.33}
+\contentsline {subsubsection}{5. Open the Anaconda Prompt from the Windows start menu}{22}{figure.caption.37}
+\contentsline {section}{\numberline {1.5}Installing Anaconda on MacOS}{23}{section.44}
+\contentsline {subsubsection}{Steps:}{25}{lstnumber.46}
+\contentsline {subsubsection}{1. Visit the Anaconda downloads page}{25}{Item.52}
+\contentsline {subsubsection}{2. Select MacOS and download the .pkg installer}{25}{Item.52}
+\contentsline {subsubsection}{3. Open the .pkg installer}{25}{figure.caption.54}
+\contentsline {subsubsection}{4. Follow the installation instructions}{27}{figure.caption.54}
+\contentsline {subsubsection}{5. Source your .bash-rc file}{27}{figure.caption.54}
+\contentsline {subsubsection}{6. Open a terminal and type \texttt {python} and run some code.}{27}{lstnumber.57}
+\contentsline {section}{\numberline {1.6}Installing Anaconda on Linux}{27}{section.66}
+\contentsline {subsubsection}{Steps:}{28}{lstnumber.70}
+\contentsline {subsection}{1. Visit the Anaconda downloads page}{28}{Item.77}
+\contentsline {subsection}{2. Select Linux}{28}{Item.77}
+\contentsline {subsection}{3. Copy the bash (.sh file) installer link}{28}{figure.caption.78}
+\contentsline {subsection}{4. Use \texttt {wget} to download the bash installer}{28}{figure.caption.79}
+\contentsline {subsection}{5. Run the bash script to install \textbf {Anaconda3}}{29}{lstnumber.84}
+\contentsline {subsubsection}{6. \texttt {source} the \texttt {.bash-rc} file to add Anaconda to your \texttt {PATH}}{29}{lstnumber.89}
+\contentsline {subsubsection}{7. Start the Python REPL}{30}{lstnumber.92}
+\contentsline {section}{\numberline {1.7}Installing Python from Python.org}{30}{section.102}
+\contentsline {subsection}{Installing Python on Windows}{30}{section.102}
+\contentsline {subsection}{Installing Python on MacOS}{31}{figure.caption.103}
+\contentsline {subsection}{Installing Python on Linux}{31}{figure.caption.104}
+\contentsline {section}{\numberline {1.8}Summary}{33}{section.132}
+\contentsline {subsection}{Key Terms and Concepts}{33}{section.132}
+\contentsline {section}{\numberline {1.9}Review Questions}{33}{section.133}
+\contentsline {subsubsection}{Installing Python on MacOS}{34}{section.133}
+\contentsline {subsubsection}{Installing Python on Linux}{34}{section.133}
+\contentsline {subsubsection}{Installing Python from Python.org}{35}{section.133}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{35}{section.133}
+\contentsline {chapter}{\numberline {2}Jupyter Notebooks}{37}{chapter.144}
+\contentsline {section}{\numberline {2.1}Introduction}{37}{section.145}
+\contentsline {section}{\numberline {2.2}What is a Jupyter Notebook?}{38}{section.146}
+\contentsline {section}{\numberline {2.3}Why Jupyter Notebooks?}{38}{section.147}
+\contentsline {section}{\numberline {2.4}Installing Juypter}{39}{section.150}
+\contentsline {subsection}{Installing Jupyter on Windows using the Anaconda Prompt}{39}{section.150}
+\contentsline {subsection}{Installing Jupyter on MacOS}{40}{lstnumber.154}
+\contentsline {subsection}{Installing Jupyter on Linux}{40}{lstnumber.160}
+\contentsline {section}{\numberline {2.5}Opening a Jupyter Notebook}{40}{section.165}
+\contentsline {subsubsection}{3 ways to open a \textbf {Jupyter notebook}:}{41}{section.165}
+\contentsline {subsection}{Open a Jupyter notebook with the Windows Start Menu}{41}{section.165}
+\contentsline {subsection}{Open a Jupyter Notebook with the Anaconda Prompt}{42}{figure.caption.171}
+\contentsline {subsection}{Open a Jupyter Notebook with Anaconda Navigator}{45}{figure.caption.186}
+\contentsline {section}{\numberline {2.6}The Jupyter Notebook Interface}{45}{section.191}
+\contentsline {subsection}{Menus and Buttons}{45}{section.191}
+\contentsline {subsection}{Code Cells}{46}{section.191}
+\contentsline {subsection}{Output Cells}{46}{figure.caption.193}
+\contentsline {subsection}{Markdown Cells}{46}{figure.caption.195}
+\contentsline {subsubsection}{Headings}{50}{figure.caption.196}
+\contentsline {subsubsection}{Code Blocks}{50}{lstnumber.204}
+\contentsline {subsubsection}{Bold and italics}{51}{lstnumber.204}
+\contentsline {subsubsection}{Tables}{51}{lstnumber.204}
+\contentsline {subsubsection}{Bullet Points and Lists}{51}{table.210}
+\contentsline {subsubsection}{Horizontal Rule}{52}{Item.227}
+\contentsline {subsubsection}{Links}{52}{lstnumber.229}
+\contentsline {subsubsection}{Images}{52}{lstnumber.231}
+\contentsline {subsubsection}{LaTeX Math}{52}{figure.caption.234}
+\contentsline {subsubsection}{html}{53}{lstnumber.236}
+\contentsline {subsubsection}{warning boxes}{53}{lstnumber.240}
+\contentsline {subsection}{Creating a new cell}{54}{lstnumber.244}
+\contentsline {subsection}{Changing the cell type}{54}{figure.caption.245}
+\contentsline {subsection}{Saving a Jupyter Notebook}{54}{figure.caption.246}
+\contentsline {subsection}{Renaming a Jupyter Notebook}{55}{figure.caption.248}
+\contentsline {subsection}{Downloading a Jupyter Notebook}{55}{figure.caption.250}
+\contentsline {subsection}{Saving Jupyter Notebooks in Other Formats}{57}{figure.caption.252}
+\contentsline {section}{\numberline {2.7}Magic Cells}{58}{section.255}
+\contentsline {subsection}{\%matplotlib inline}{58}{section.255}
+\contentsline {subsection}{\%load}{58}{lstnumber.262}
+\contentsline {subsection}{\%run}{59}{lstnumber.264}
+\contentsline {subsection}{Other useful magic commands}{59}{lstnumber.273}
+\contentsline {section}{\numberline {2.8}Getting Help in a Jupyter Notebook}{60}{section.287}
+\contentsline {subsection}{Get help using \texttt {dir}}{60}{section.287}
+\contentsline {subsection}{Get help using Tab}{61}{section.287}
+\contentsline {subsection}{Get help using the \texttt {help()} function}{61}{lstnumber.289}
+\contentsline {subsection}{Help online}{62}{lstnumber.329}
+\contentsline {section}{\numberline {2.9}Summary}{64}{section.330}
+\contentsline {subsection}{Key Terms and Concepts}{64}{section.330}
+\contentsline {subsection}{Python Commands and Functions}{64}{section.330}
+\contentsline {subsubsection}{Jupyter Notebook Magic Commands}{64}{section.330}
+\contentsline {section}{\numberline {2.10}Review Questions}{65}{section.332}
+\contentsline {subsubsection}{Code cells and markdown cells}{65}{section.332}
+\contentsline {subsubsection}{Markdown cells}{65}{lstnumber.336}
+\contentsline {subsubsection}{LaTeX Math}{66}{Item.353}
+\contentsline {subsubsection}{Code cells}{66}{Item.353}
+\contentsline {subsubsection}{Cell Magic}{67}{lstnumber.372}
+\contentsline {subsubsection}{Getting Help}{67}{lstnumber.386}
+\contentsline {chapter}{\numberline {3}The Python REPL}{69}{chapter.387}
+\contentsline {section}{\numberline {3.1}Introduction}{69}{section.388}
+\contentsline {section}{\numberline {3.2}Python as a Calculator}{70}{section.389}
+\contentsline {subsection}{Arithmetic}{70}{section.389}
+\contentsline {subsubsection}{Section Summary}{71}{lstnumber.412}
+\contentsline {subsection}{Trigonometry: sine, cosine, and tangent}{71}{table.413}
+\contentsline {subsubsection}{Section Summary}{72}{lstnumber.436}
+\contentsline {subsection}{Exponents and Logarithms}{73}{table.437}
+\contentsline {subsubsection}{Section Summary}{73}{lstnumber.450}
+\contentsline {subsection}{Statistics}{74}{table.451}
+\contentsline {subsubsection}{Section Summary}{74}{lstnumber.483}
+\contentsline {section}{\numberline {3.3}Variables}{75}{section.485}
+\contentsline {subsubsection}{Problem}{76}{lstnumber.508}
+\contentsline {section}{\numberline {3.4}String Operations}{76}{section.518}
+\contentsline {subsection}{String Concatenation}{76}{lstnumber.522}
+\contentsline {subsection}{String Comparison}{77}{lstnumber.536}
+\contentsline {section}{\numberline {3.5}Print Statements}{77}{section.552}
+\contentsline {section}{\numberline {3.6}Summary}{79}{section.579}
+\contentsline {subsection}{Key Terms and Concepts}{79}{section.579}
+\contentsline {subsection}{Summary of Python Functions and Commands}{79}{section.579}
+\contentsline {subsubsection}{Arithmetic}{79}{section.579}
+\contentsline {subsubsection}{Trigonometry}{79}{table.580}
+\contentsline {subsubsection}{Logarithms and Exponents}{80}{table.581}
+\contentsline {subsubsection}{Statistics}{80}{table.582}
+\contentsline {section}{\numberline {3.7}Review Questions}{80}{section.584}
+\contentsline {subsubsection}{Arithmetic}{80}{section.584}
+\contentsline {subsubsection}{String Indexing}{81}{section.584}
+\contentsline {subsubsection}{Trigonometry}{81}{section.584}
+\contentsline {subsubsection}{Logarithms and Exponents}{82}{section.584}
+\contentsline {subsubsection}{Variables in Calculations}{83}{section.584}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{84}{section.584}
+\contentsline {chapter}{\numberline {4}Data Types and Variables}{85}{chapter.603}
+\contentsline {section}{\numberline {4.1}Introduction}{85}{section.604}
+\contentsline {section}{\numberline {4.2}Numeric Data Types}{87}{section.605}
+\contentsline {subsection}{A review of variable assignment in Python}{87}{section.605}
+\contentsline {subsection}{Integers}{87}{lstnumber.607}
+\contentsline {subsection}{Floating Point Numbers}{88}{lstnumber.618}
+\contentsline {subsection}{Complex Numbers}{88}{lstnumber.637}
+\contentsline {section}{\numberline {4.3}Boolean Data Type}{89}{section.659}
+\contentsline {subsection}{Integers and Floats as Booleans}{89}{lstnumber.677}
+\contentsline {subsection}{Boolean Arithmetic}{90}{lstnumber.689}
+\contentsline {section}{\numberline {4.4}Strings}{91}{section.718}
+\contentsline {subsection}{Numbers as Strings}{91}{lstnumber.726}
+\contentsline {subsection}{Strings as Boolean Values}{92}{lstnumber.734}
+\contentsline {subsection}{String Indexing}{92}{lstnumber.746}
+\contentsline {subsubsection}{Negative Indexing}{93}{lstnumber.763}
+\contentsline {subsection}{String Slicing}{93}{figure.caption.770}
+\contentsline {section}{\numberline {4.5}Lists}{94}{section.789}
+\contentsline {subsection}{Indexing Lists}{94}{lstnumber.797}
+\contentsline {section}{\numberline {4.6}Dictionaries and Tuples}{95}{section.826}
+\contentsline {subsection}{Dictionaries}{95}{section.826}
+\contentsline {subsection}{Tuples}{96}{lstnumber.861}
+\contentsline {section}{\numberline {4.7}Summary}{98}{section.885}
+\contentsline {subsection}{Key Terms and Concepts}{98}{section.885}
+\contentsline {subsection}{Summary of Python Functions and Commands}{98}{section.885}
+\contentsline {subsubsection}{Built-in Data Types}{98}{section.885}
+\contentsline {subsubsection}{Python Functions}{98}{table.886}
+\contentsline {subsubsection}{Python List Operators}{99}{table.887}
+\contentsline {section}{\numberline {4.8}Review Questions}{99}{section.889}
+\contentsline {subsubsection}{Determine the Data Type}{99}{section.889}
+\contentsline {subsubsection}{Numeric Data Types}{99}{section.889}
+\contentsline {subsubsection}{Booleans}{100}{Item.897}
+\contentsline {subsubsection}{Strings}{100}{lstnumber.900}
+\contentsline {subsubsection}{Lists}{102}{Item.918}
+\contentsline {subsubsection}{Dictionaries}{102}{Item.918}
+\contentsline {subsubsection}{Tuples}{103}{Item.918}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{103}{lstnumber.922}
+\contentsline {chapter}{\numberline {5}Matricies and Arrays}{105}{chapter.951}
+\contentsline {section}{\numberline {5.1}Introduction}{105}{section.952}
+\contentsline {section}{\numberline {5.2}NumPy}{106}{section.953}
+\contentsline {section}{\numberline {5.3}Installing NumPy}{106}{section.954}
+\contentsline {subsection}{Install NumPy on Anaconda}{106}{section.954}
+\contentsline {subsection}{Install NumPy with the Anaconda Prompt}{106}{section.954}
+\contentsline {subsection}{Install NumPy with pip}{106}{lstnumber.956}
+\contentsline {subsection}{Verify NumPy installation}{106}{lstnumber.958}
+\contentsline {section}{\numberline {5.4}Python Lists and NumPy Arrays}{107}{section.959}
+\contentsline {subsection}{Python Lists}{107}{section.959}
+\contentsline {subsection}{NumPy Arrays}{107}{lstnumber.961}
+\contentsline {subsection}{Array Multiplication}{108}{lstnumber.963}
+\contentsline {subsection}{Timing Arrays}{109}{lstnumber.963}
+\contentsline {section}{\numberline {5.5}Array Creation}{109}{section.964}
+\contentsline {subsection}{Arrays of Regularly Spaced Numbers}{110}{section.964}
+\contentsline {subsubsection}{np.arange()}{110}{section.964}
+\contentsline {subsubsection}{np.linspace()}{110}{lstnumber.966}
+\contentsline {subsubsection}{np.logspace()}{111}{lstnumber.968}
+\contentsline {subsubsection}{np.zeros()}{111}{lstnumber.970}
+\contentsline {subsubsection}{np.ones()}{112}{lstnumber.972}
+\contentsline {subsection}{Arrays of Random Numbers}{112}{lstnumber.974}
+\contentsline {subsubsection}{Array of Random Integers}{112}{lstnumber.974}
+\contentsline {subsubsection}{Array of Random Floats}{113}{lstnumber.976}
+\contentsline {subsubsection}{Random Array Choice from a List}{113}{lstnumber.978}
+\contentsline {subsubsection}{Random Array with a Normal Distribution}{114}{lstnumber.980}
+\contentsline {subsection}{2-D Arrays}{115}{lstnumber.982}
+\contentsline {subsubsection}{np.meshgrid()}{115}{lstnumber.982}
+\contentsline {subsubsection}{np.mgrid{[}{]}}{116}{lstnumber.984}
+\contentsline {subsection}{Section Summary}{116}{lstnumber.986}
+\contentsline {section}{\numberline {5.6}Array Indexing}{117}{section.988}
+\contentsline {subsection}{Multi-dimensional Array Indexing}{118}{lstnumber.991}
+\contentsline {subsection}{Assigning Values with Indexing}{119}{lstnumber.993}
+\contentsline {section}{\numberline {5.7}Array Slicing}{119}{section.998}
+\contentsline {subsection}{Slicing 2D Arrays}{121}{lstnumber.1000}
+\contentsline {section}{\numberline {5.8}Array Operations}{122}{section.1003}
+\contentsline {subsection}{Scalar Addition}{122}{section.1003}
+\contentsline {subsection}{Scalar Multiplication}{122}{section.1003}
+\contentsline {subsection}{Array Multiplication}{123}{section.1003}
+\contentsline {subsubsection}{Element-wise Multiplication}{123}{section.1003}
+\contentsline {subsubsection}{Dot Product}{123}{section.1003}
+\contentsline {subsubsection}{Cross Product}{123}{section.1003}
+\contentsline {subsection}{Exponents and Logarithms}{124}{section.1003}
+\contentsline {subsubsection}{np.exp()}{124}{section.1003}
+\contentsline {subsubsection}{Logarithms}{124}{section.1003}
+\contentsline {subsection}{Trigonometry}{124}{section.1003}
+\contentsline {section}{\numberline {5.9}Systems of Linear Equations}{125}{section.1004}
+\contentsline {section}{\numberline {5.10}Summary}{127}{section.1005}
+\contentsline {subsection}{Key Terms and Concepts}{127}{section.1005}
+\contentsline {section}{\numberline {5.11}Review Questions}{127}{section.1006}
+\contentsline {subsubsection}{Array Creation}{127}{section.1006}
+\contentsline {subsubsection}{Array Manipulation}{128}{section.1006}
+\contentsline {subsubsection}{Array Slicing}{128}{section.1006}
+\contentsline {subsubsection}{Meshgrids}{130}{Item.1025}
+\contentsline {subsubsection}{Array Operations}{130}{lstnumber.1035}
+\contentsline {subsubsection}{Linear Algebra}{131}{Item.1059}
+\contentsline {chapter}{\numberline {6}Plotting with Matplotlib}{133}{chapter.1060}
+\contentsline {section}{\numberline {6.1}Introduction}{133}{section.1061}
+\contentsline {section}{\numberline {6.2}What is Matplotlib?}{134}{section.1062}
+\contentsline {subsection}{Why use Matplotlib?}{134}{section.1062}
+\contentsline {section}{\numberline {6.3}Installing Matplotlib}{134}{section.1063}
+\contentsline {subsection}{Use the Anaconda distribution of Python}{134}{section.1063}
+\contentsline {subsection}{Install Matplotlib with the Anaconda Prompt}{134}{section.1063}
+\contentsline {subsection}{Install Matplotlib with \textbf {pip}}{134}{lstnumber.1065}
+\contentsline {subsection}{Verify the installation}{135}{lstnumber.1067}
+\contentsline {section}{\numberline {6.4}Line Plots}{135}{section.1072}
+\contentsline {subsection}{Features of a Matplotlib plot}{136}{section.1072}
+\contentsline {subsubsection}{Line Color, Line Width, Line Style, Line Opacity and Marker Options}{136}{section.1072}
+\contentsline {subsubsection}{Title}{138}{lstnumber.1097}
+\contentsline {subsubsection}{x-axis label}{138}{lstnumber.1099}
+\contentsline {subsubsection}{y-axis label}{138}{lstnumber.1101}
+\contentsline {subsubsection}{Legend}{139}{lstnumber.1103}
+\contentsline {subsubsection}{Grid}{139}{table.1106}
+\contentsline {subsubsection}{Tick Labels}{139}{lstnumber.1108}
+\contentsline {subsection}{Build a plot in five steps}{140}{lstnumber.1111}
+\contentsline {subsubsection}{1. Imports}{140}{Item.1116}
+\contentsline {subsubsection}{2. Define data}{140}{Item.1116}
+\contentsline {subsubsection}{3. Plot data including options}{140}{Item.1116}
+\contentsline {subsubsection}{4. Add plot details}{140}{Item.1116}
+\contentsline {subsubsection}{5. Show the plot}{141}{Item.1116}
+\contentsline {section}{\numberline {6.5}Saving plots}{142}{section.1117}
+\contentsline {section}{\numberline {6.6}Multi Line Plots}{144}{section.1120}
+\contentsline {subsection}{The Matplotlib's object-oriented interface}{144}{section.1120}
+\contentsline {section}{\numberline {6.7}Bar Charts and Pie Charts}{147}{section.1127}
+\contentsline {subsection}{Bar Charts}{147}{section.1127}
+\contentsline {subsection}{Pie Charts}{149}{section.1127}
+\contentsline {section}{\numberline {6.8}Error Bars}{152}{section.1129}
+\contentsline {subsection}{Error bars in bar plots}{152}{section.1129}
+\contentsline {subsection}{Error bars in line plots}{154}{section.1129}
+\contentsline {section}{\numberline {6.9}Histograms}{156}{section.1135}
+\contentsline {section}{\numberline {6.10}Box Plots and Violin Plots}{157}{section.1138}
+\contentsline {subsection}{Box Plots}{157}{section.1138}
+\contentsline {subsection}{Violin Plots}{159}{lstnumber.1140}
+\contentsline {section}{\numberline {6.11}Scatter Plots}{160}{section.1145}
+\contentsline {section}{\numberline {6.12}Plot annotations}{163}{section.1149}
+\contentsline {section}{\numberline {6.13}Subplots}{166}{section.1153}
+\contentsline {section}{\numberline {6.14}Plot Styles}{168}{section.1161}
+\contentsline {section}{\numberline {6.15}Contour Plots}{172}{section.1164}
+\contentsline {subsection}{Matplotlib's \texttt {plt.contourf()} method}{172}{section.1164}
+\contentsline {subsection}{Matplotlib's \texttt {plt.contourf()} method}{173}{lstnumber.1166}
+\contentsline {subsection}{Color bars on contour plots}{175}{lstnumber.1168}
+\contentsline {subsection}{Color maps on contour plots}{176}{lstnumber.1171}
+\contentsline {section}{\numberline {6.16}Quiver and Stream Plots}{178}{section.1175}
+\contentsline {subsection}{Quiver Plots}{178}{section.1175}
+\contentsline {subsubsection}{Quiver plot with one arrow}{178}{section.1175}
+\contentsline {subsubsection}{Quiver plot with two arrows}{179}{lstnumber.1177}
+\contentsline {subsubsection}{Quiver plot using a meshgrid}{180}{lstnumber.1177}
+\contentsline {subsubsection}{Quiver plot containing a gradient}{184}{lstnumber.1179}
+\contentsline {subsubsection}{Quiver plot with four vortices}{186}{lstnumber.1179}
+\contentsline {subsubsection}{Quiver plots with color}{188}{lstnumber.1179}
+\contentsline {subsection}{Stream Plots}{190}{lstnumber.1181}
+\contentsline {subsubsection}{A simple stream plot}{190}{lstnumber.1183}
+\contentsline {subsubsection}{Stream plot of a field}{191}{lstnumber.1183}
+\contentsline {subsubsection}{Stream plot of two point charges}{192}{lstnumber.1183}
+\contentsline {section}{\numberline {6.17}3D Surface Plots}{194}{section.1184}
+\contentsline {subsection}{Surface Plots}{194}{section.1184}
+\contentsline {subsection}{Wire Frame Plots}{196}{lstnumber.1186}
+\contentsline {subsection}{Gradient Surface Plots}{197}{lstnumber.1188}
+\contentsline {subsection}{3D Surface Plots with 2D Contour Plot Projections}{199}{lstnumber.1193}
+\contentsline {section}{\numberline {6.18}Summary}{201}{section.1194}
+\contentsline {subsection}{Key Terms and Concepts}{201}{table.1195}
+\contentsline {subsection}{Additional Resources}{202}{table.1195}
+\contentsline {section}{\numberline {6.19}Review Questions}{202}{section.1196}
+\contentsline {subsubsection}{Line plots}{202}{section.1196}
+\contentsline {subsubsection}{Bar Charts and Pie Charts}{203}{section.1196}
+\contentsline {subsubsection}{Histograms, Box Plots, and Violin Plots}{205}{table.1202}
+\contentsline {subsubsection}{Scatter Plots}{206}{table.1202}
+\contentsline {subsubsection}{Subplots}{206}{lstnumber.1215}
+\contentsline {chapter}{\numberline {7}Functions and Modules}{209}{chapter.1216}
+\contentsline {section}{\numberline {7.1}Introduction}{209}{section.1217}
+\contentsline {section}{\numberline {7.2}Why Functions?}{210}{section.1218}
+\contentsline {section}{\numberline {7.3}First Function}{210}{section.1219}
+\contentsline {subsection}{Defining Functions in Python}{210}{section.1219}
+\contentsline {subsection}{Your First User-defined Function}{211}{lstnumber.1235}
+\contentsline {section}{\numberline {7.4}Functions with Multiple Arguments}{212}{section.1239}
+\contentsline {section}{\numberline {7.5}Functions with Default Arguments}{214}{section.1258}
+\contentsline {section}{\numberline {7.6}Calling Functions from Other Files}{215}{section.1263}
+\contentsline {section}{\numberline {7.7}Docstrings in Functions}{216}{section.1288}
+\contentsline {section}{\numberline {7.8}Positional and Keyword Arguments}{219}{section.1312}
+\contentsline {subsection}{Positional Arguments}{219}{section.1312}
+\contentsline {subsubsection}{Positional Arguments Specified by an Iterable}{220}{section.1312}
+\contentsline {subsection}{Keyword Arguments}{220}{lstnumber.1314}
+\contentsline {subsubsection}{Keyword Arguments Specified by a Dictionary}{221}{lstnumber.1316}
+\contentsline {section}{\numberline {7.9}Summary}{222}{section.1320}
+\contentsline {subsection}{Key Terms and Concepts}{222}{section.1320}
+\contentsline {subsection}{Python Commands}{222}{section.1320}
+\contentsline {section}{\numberline {7.10}Review Questions}{222}{section.1322}
+\contentsline {subsubsection}{User-defined functions}{222}{section.1322}
+\contentsline {subsubsection}{Functions with multiple arguments}{223}{section.1322}
+\contentsline {subsubsection}{Functions with default arguments}{225}{Item.1330}
+\contentsline {subsubsection}{Nested Functions}{226}{Item.1336}
+\contentsline {subsubsection}{Functions in other files}{226}{Item.1341}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{227}{lstnumber.1356}
+\contentsline {chapter}{\numberline {8}If Else Try Except}{229}{chapter.1389}
+\contentsline {section}{\numberline {8.1}Introduction}{229}{section.1390}
+\contentsline {section}{\numberline {8.2}User Input}{230}{section.1391}
+\contentsline {section}{\numberline {8.3}If statements}{231}{section.1394}
+\contentsline {subsection}{Multiple if statements}{232}{lstnumber.1397}
+\contentsline {section}{\numberline {8.4}Selection Statements}{233}{section.1398}
+\contentsline {section}{\numberline {8.5}If Else Statements}{233}{section.1399}
+\contentsline {subsection}{elif}{234}{lstnumber.1404}
+\contentsline {section}{\numberline {8.6}Try-Except Statements}{235}{section.1412}
+\contentsline {subsection}{Syntax Errors and Exception Errors}{235}{section.1412}
+\contentsline {subsection}{Syntax Errors}{235}{section.1412}
+\contentsline {subsubsection}{Exception Errors}{236}{section.1412}
+\contentsline {section}{\numberline {8.7}Flowcharts}{238}{section.1418}
+\contentsline {section}{\numberline {8.8}Summary}{245}{section.1452}
+\contentsline {subsection}{Key Terms and Concepts}{245}{section.1452}
+\contentsline {section}{\numberline {8.9}Review Questions}{245}{section.1453}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{246}{table.1459}
+\contentsline {chapter}{\numberline {9}Loops}{249}{chapter.1477}
+\contentsline {section}{\numberline {9.1}Introduction}{249}{section.1478}
+\contentsline {section}{\numberline {9.2}For Loops}{250}{section.1479}
+\contentsline {subsubsection}{\texttt {range()} function}{250}{lstnumber.1487}
+\contentsline {subsubsection}{Customizing \texttt {range()}}{251}{lstnumber.1487}
+\contentsline {subsection}{For loops with lists}{251}{table.1490}
+\contentsline {subsection}{For loops with strings}{252}{lstnumber.1493}
+\contentsline {section}{\numberline {9.3}While Loops}{253}{section.1497}
+\contentsline {subsection}{Using a while loop to validate user input}{253}{lstnumber.1500}
+\contentsline {section}{\numberline {9.4}Break and Continue}{254}{section.1501}
+\contentsline {subsection}{Break}{254}{section.1501}
+\contentsline {subsection}{Continue}{255}{section.1501}
+\contentsline {section}{\numberline {9.5}Flowcharts Describing Loops}{255}{section.1502}
+\contentsline {subsection}{Basic Flow Chart Shapes}{255}{section.1502}
+\contentsline {subsection}{Flowchart of a program that contains a for loop}{255}{figure.caption.1503}
+\contentsline {subsection}{Flowchart of a program that contains a while loop}{258}{lstnumber.1509}
+\contentsline {section}{\numberline {9.6}Summary}{260}{section.1519}
+\contentsline {subsection}{Key Terms and Concpets}{260}{section.1519}
+\contentsline {section}{\numberline {9.7}Review Questions}{260}{section.1520}
+\contentsline {subsubsection}{For Loops}{260}{section.1520}
+\contentsline {subsubsection}{While Loops}{263}{lstnumber.1538}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{264}{Item.1544}
+\contentsline {chapter}{\numberline {10}Symbolic Math}{267}{chapter.1564}
+\contentsline {section}{\numberline {10.1}Introduction}{267}{section.1565}
+\contentsline {section}{\numberline {10.2}SymPy}{268}{section.1566}
+\contentsline {section}{\numberline {10.3}Installing SymPy}{268}{section.1567}
+\contentsline {section}{\numberline {10.4}Defining Variables}{269}{section.1576}
+\contentsline {section}{\numberline {10.5}Expressions and Substitutions}{269}{section.1577}
+\contentsline {subsection}{Expressions}{269}{section.1577}
+\contentsline {subsection}{Substitution}{270}{section.1577}
+\contentsline {subsection}{Summary}{272}{section.1577}
+\contentsline {section}{\numberline {10.6}Equations}{272}{section.1579}
+\contentsline {subsection}{Substitutions in Equations}{273}{section.1579}
+\contentsline {section}{\numberline {10.7}Solving Equations}{273}{section.1580}
+\contentsline {subsection}{Equations with one solution}{274}{section.1580}
+\contentsline {subsection}{Equations with two solutions}{274}{section.1580}
+\contentsline {section}{\numberline {10.8}Solving Two Equations for Two Unknows}{275}{section.1581}
+\contentsline {subsection}{Solve a statics problem with SymPy}{276}{section.1581}
+\contentsline {subsubsection}{GIVEN:}{276}{section.1581}
+\contentsline {subsubsection}{FIND:}{277}{section.1581}
+\contentsline {subsubsection}{SOLUTION:}{277}{section.1581}
+\contentsline {section}{\numberline {10.9}Summary}{280}{section.1582}
+\contentsline {subsection}{Key Terms and Concepts}{280}{section.1582}
+\contentsline {subsection}{SymPy Functions and Methods}{280}{section.1582}
+\contentsline {section}{\numberline {10.10}Review Questions}{280}{section.1584}
+\contentsline {subsubsection}{Creating Expressions Equations}{280}{section.1584}
+\contentsline {subsubsection}{Solving Equations}{281}{section.1584}
+\contentsline {chapter}{\numberline {11}Python and External Hardware}{285}{chapter.1585}
+\contentsline {section}{\numberline {11.1}Introduction}{285}{section.1586}
+\contentsline {section}{\numberline {11.2}PySerial}{286}{section.1587}
+\contentsline {subsection}{Installing PySerial}{286}{section.1587}
+\contentsline {section}{\numberline {11.3}Bytes and Unicode Strings}{286}{section.1592}
+\contentsline {subsection}{Unicode Strings}{286}{section.1592}
+\contentsline {subsection}{Byte Strings}{287}{section.1592}
+\contentsline {subsection}{Convert between Unicode strings and byte strings}{288}{section.1592}
+\contentsline {section}{\numberline {11.4}Controlling an LED with Python}{288}{section.1593}
+\contentsline {subsection}{Wire the LED to the Arduino}{289}{figure.caption.1594}
+\contentsline {subsection}{Upload code to the Arduino}{289}{figure.caption.1595}
+\contentsline {subsection}{Connect the Arduino to the Computer}{291}{lstnumber.1625}
+\contentsline {subsection}{Turn the LED on and off with the Arduino Serial Monitor}{292}{figure.caption.1627}
+\contentsline {subsection}{Use the Python REPL to turn the Arduino LED on and off}{292}{figure.caption.1628}
+\contentsline {subsection}{Write a Python Script to turn the LED on and off}{293}{lstnumber.1651}
+\contentsline {subsection}{Write a Python script to allow a user to turn the LED on and off}{293}{lstnumber.1667}
+\contentsline {section}{\numberline {11.5}Reading a Sensor with Python}{294}{section.1689}
+\contentsline {subsection}{Wire the sensor to the Arduino}{295}{section.1689}
+\contentsline {subsection}{Upload code to the Arduino}{295}{figure.caption.1690}
+\contentsline {subsection}{Connect the Arduino to the computer and Upload the Sketch}{296}{lstnumber.1719}
+\contentsline {subsection}{Check the Sensor Signal}{297}{figure.caption.1721}
+\contentsline {subsubsection}{LED turns ON and OFF}{297}{figure.caption.1721}
+\contentsline {subsubsection}{Arudino Serial Monitor}{297}{figure.caption.1721}
+\contentsline {subsubsection}{Arduino Serial Plotter}{298}{figure.caption.1723}
+\contentsline {subsection}{Use the Python REPL to read the potentiometer data}{298}{figure.caption.1725}
+\contentsline {subsection}{Write a Python script to read the sensor}{300}{lstnumber.1753}
+\contentsline {section}{\numberline {11.6}Summary}{302}{section.1790}
+\contentsline {subsection}{Key Terms and Concepts}{302}{section.1790}
+\contentsline {subsection}{Additional Resources}{302}{section.1790}
+\contentsline {section}{\numberline {11.7}Project Ideas}{303}{section.1791}
+\contentsline {chapter}{\numberline {12}MicroPython}{305}{chapter.1792}
+\contentsline {section}{\numberline {12.1}Introduction}{305}{section.1793}
+\contentsline {section}{\numberline {12.2}What is MicroPython?}{306}{section.1794}
+\contentsline {subsection}{What is MicroPython?}{306}{section.1794}
+\contentsline {subsection}{What is MicroPython used for?}{306}{section.1794}
+\contentsline {subsection}{Why should problem solvers learn MircoPython?}{306}{section.1794}
+\contentsline {section}{\numberline {12.3}Installing MicroPython}{307}{section.1795}
+\contentsline {subsection}{Summary of Steps:}{307}{table.1797}
+\contentsline {subsection}{Install the Anaconda distribution of Python}{308}{Item.1806}
+\contentsline {subsection}{Create a new conda environment and install \textbf {esptool}}{308}{Item.1806}
+\contentsline {subsection}{Download the latest MicroPython firmware .bin file}{308}{lstnumber.1814}
+\contentsline {subsection}{Install the SiLabs driver for the ESP8266-based microcontroller}{308}{figure.caption.1815}
+\contentsline {subsection}{Connect the ESP8266-based microcontroller to the computer}{310}{figure.caption.1816}
+\contentsline {subsection}{Determine which serial port the ESP8266-based microcontroller is connected to}{310}{figure.caption.1816}
+\contentsline {subsection}{Run esptool to upload the .bin file to the ESP8266-based microcontroller}{310}{figure.caption.1818}
+\contentsline {subsection}{Download and install PuTTY, a serial monitor}{313}{figure.caption.1834}
+\contentsline {subsection}{Connect to the ESP8266-based Microcontroller with PuTTY}{313}{figure.caption.1835}
+\contentsline {section}{\numberline {12.4}The MicroPython REPL}{316}{section.1847}
+\contentsline {subsection}{Summary of Steps}{316}{section.1847}
+\contentsline {subsection}{Connect the ESP8266-based microcontroller to your computer with a USB cable}{316}{Item.1851}
+\contentsline {subsection}{Determine which COM port the microcontroller is connected to using the Windows Device Manager}{316}{Item.1851}
+\contentsline {subsection}{Open PuTTY and connect to the ESP8266-based microcontroller}{317}{figure.caption.1853}
+\contentsline {subsection}{Run commands at the MicroPython REPL}{318}{figure.caption.1856}
+\contentsline {section}{\numberline {12.5}Blinking a LED}{321}{section.1880}
+\contentsline {subsection}{Connect the ESP8266-based Microcontroller to the computer and bring up the MicroPython REPL}{322}{section.1880}
+\contentsline {subsection}{Use the MicroPython REPL to turn the microcontroller's LED on and off}{322}{figure.caption.1882}
+\contentsline {subsection}{Run code at the MicroPython REPL to blink the LED}{324}{lstnumber.1899}
+\contentsline {section}{\numberline {12.6}Reading a Sensor}{324}{section.1910}
+\contentsline {subsection}{Summary of Steps}{324}{section.1910}
+\contentsline {subsection}{Connect the MCP9808 temperature sensor to the Adafruit Feather Huzzah ESP8266 microcontroller}{325}{Item.1913}
+\contentsline {subsection}{Connect the Adafruit Feather Huzzah ESP8266 microcontroller to the computer with a USB cable and bring up the MicroPython REPL with PuTTY}{325}{figure.caption.1915}
+\contentsline {subsection}{Run code at the MicroPython REPL to measure the temperature}{327}{figure.caption.1917}
+\contentsline {section}{\numberline {12.7}Uploading Code}{328}{section.1928}
+\contentsline {subsection}{Summary of Steps}{328}{section.1928}
+\contentsline {subsection}{Install ampy with pip}{328}{Item.1932}
+\contentsline {subsection}{Write MicroPython Code}{328}{lstnumber.1936}
+\contentsline {subsection}{Upload MicroPython Code to the ESP8266 Microcontroller with \textbf {ampy}}{330}{lstnumber.1964}
+\contentsline {subsection}{Unplug and then power up the Feather Huzzah and watch the temperature scroll by}{330}{lstnumber.1971}
+\contentsline {section}{\numberline {12.8}Summary}{332}{section.1992}
+\contentsline {subsection}{Key Terms and Concepts}{332}{section.1992}
+\contentsline {section}{\numberline {12.9}Project Ideas}{332}{section.1993}
+\contentsline {chapter}{Appendix}{335}{chapter*.1994}
+\contentsline {section}{\numberline {A.}Contents}{335}{section.1995}
+\contentsline {section}{\numberline {B.}Reserved and Keywords in Python}{336}{section.1996}
+\contentsline {subsection}{Logical Keywords}{336}{lstnumber.2009}
+\contentsline {subsection}{Control Flow Key Words}{336}{lstnumber.2018}
+\contentsline {subsection}{Definition Key Words}{336}{lstnumber.2033}
+\contentsline {subsection}{Module Keywords}{336}{lstnumber.2042}
+\contentsline {section}{\numberline {C.}ASCII Character Codes}{337}{section.2047}
+\contentsline {section}{\numberline {D.}Virtual Environments}{339}{section.2048}
+\contentsline {subsection}{Create a virtual environment with the Anaconda Prompt}{339}{section.2048}
+\contentsline {subsection}{Activate a virtual environment}{340}{lstnumber.2064}
+\contentsline {subsection}{Install packages in a virtual environment}{340}{lstnumber.2068}
+\contentsline {subsection}{Deactivate a virtual environment}{340}{lstnumber.2072}
+\contentsline {subsection}{List your virtual environments}{340}{lstnumber.2075}
+\contentsline {subsection}{Remove a virtual environment}{341}{lstnumber.2094}
+\contentsline {section}{\numberline {E.}NumPy Math Functions}{342}{section.2114}
+\contentsline {subsection}{NumPy Array Creation and Manipulation Functions and Methods}{342}{lstnumber.2118}
+\contentsline {subsection}{NumPy Exponential and Logarithmic Functions and Methods}{342}{lstnumber.2134}
+\contentsline {subsection}{NumPy Trigonometric Functions and Methods}{342}{lstnumber.2146}
+\contentsline {subsection}{NumPy Statistics Functions and Methods}{342}{lstnumber.2166}
+\contentsline {section}{\numberline {F.}Git and GitHub}{343}{section.2179}
+\contentsline {subsection}{Cloning a repo}{343}{section.2179}
+\contentsline {subsection}{Creating and synching a remote repo on GitHub.com with a local repo}{344}{lstnumber.2183}
+\contentsline {subsubsection}{Create a remote repo on GitHub.com}{344}{lstnumber.2183}
+\contentsline {subsubsection}{Make a new local repo and link the local repo to the remote repo on GitHub.com}{344}{lstnumber.2183}
+\contentsline {subsubsection}{Add, commit and push changes up to Github.com}{344}{lstnumber.2189}
+\contentsline {subsubsection}{Pull the most recent version from GitHub.com before each work session}{344}{lstnumber.2193}
+\contentsline {section}{\numberline {G.}LaTeX Math}{345}{section.2200}
+\contentsline {section}{\numberline {H.}Problem Solving with Python 3.7 Edition Book Construction}{345}{section.2204}
+\contentsline {subsection}{Jupyter Notebooks}{345}{section.2204}
+\contentsline {subsection}{Website}{346}{lstnumber.2242}
+\contentsline {subsection}{Hardcopy}{347}{lstnumber.2242}
+\contentsline {section}{\numberline {I.}Contributions}{347}{section.2243}
+\contentsline {subsection}{Contributor List}{347}{section.2243}
+\contentsline {section}{\numberline {J.}Cover Artwork}{347}{section.2244}
+\contentsline {section}{\numberline {K.}About the Author}{347}{section.2245}
