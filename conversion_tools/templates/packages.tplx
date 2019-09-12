@@ -49,8 +49,8 @@
 % The hyperref package gives us a pdf with properly built
 % internal navigation ('pdf bookmarks' for the table of contents,
 % internal cross-reference links, web links for URLs, etc.)
-\usepackage{hyperref}  % see https://www.overleaf.com/learn/latex/Hyperlinks#Styles_and_colours to style
-    
+% adding [hypertexnames=false] seems to fix links when Appendix sections are lettered
+\usepackage[hypertexnames=false]{hyperref}  % see https://www.overleaf.com/learn/latex/Hyperlinks#Styles_and_colours to style
 \usepackage{longtable} % longtable support required by pandoc >1.10
 \usepackage{booktabs}  % table support for pandoc > 1.12.2
 \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)

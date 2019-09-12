@@ -56,6 +56,12 @@
 ((* endblock commands *))
 
 ((* block predoc *))
+    ((* block hypersetup *))
+        {
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+        }
+    ((* endblock hypersetup *))
     ((* block maketitle *))
         \maketitle
         \input{copywrite_page.tex}

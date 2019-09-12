@@ -68,8 +68,8 @@
 % The hyperref package gives us a pdf with properly built
 % internal navigation ('pdf bookmarks' for the table of contents,
 % internal cross-reference links, web links for URLs, etc.)
-\usepackage{hyperref}  % see https://www.overleaf.com/learn/latex/Hyperlinks#Styles_and_colours to style
-    
+% adding [hypertexnames=false] seems to fix links when Appendix sections are lettered
+\usepackage[hypertexnames=false]{hyperref}  % see https://www.overleaf.com/learn/latex/Hyperlinks#Styles_and_colours to style
 \usepackage{longtable} % longtable support required by pandoc >1.10
 \usepackage{booktabs}  % table support for pandoc > 1.12.2
 \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
@@ -399,6 +399,12 @@
     
     
     
+        {
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+        }
+    
+    
         \maketitle
         \input{copywrite_page.tex}
         \newpage
@@ -434,14 +440,14 @@ MATLAB is a great piece of software, but it currently costs \$49.00 for
 a student license and requires a site license to be used on school
 computers. Subsequently, it is costly for a student to use MATLAB and it
 is costly for a college to support a course that uses MATLAB. In
-addition, this site license expires eventually and students need to
+addition, this site license eventually expires and students need to
 purchase another copy often before they finish their degree.
 
 The Python programming language, on the other hand, is open source and
 free. To download and use Python, the cost to both the student and the
 college is zero (minus time spent). By moving an undergraduate
-engineering programming class to Python, students will save money and
-have greater access to the software they use in class. Further in their
+engineering programming class to Python, students save money and gain
+greater access to the software they use in class. Later on in their
 engineering education, students can continue to use Python for free.
     
 
@@ -529,7 +535,7 @@ problems as well as quiz and exam question banks.
 
     
         This book and supporting materials use the following formatting
-conventions:
+conventions.
     
 
 
@@ -554,7 +560,7 @@ Web address will be shown as:
 \subsection{Important terms and
 vocabulary}\label{important-terms-and-vocabulary}}
 
-Important terms and vocabulary are shown in \emph{italic text}
+Important terms and vocabulary are shown in \emph{italic text}.
 
 \begin{quote}
 There is a difference between \emph{local variables} and \emph{global
@@ -569,7 +575,7 @@ variables} in Python code.
         \hypertarget{file-names}{%
 \subsection{File Names}\label{file-names}}
 
-File Names are shown in \textbf{\emph{bold and italic text}}
+File names are shown in \textbf{\emph{bold and italic text}}.
 
 \begin{quote}
 After completing the code, save the file as \textbf{\emph{hello.py}} in
@@ -584,7 +590,7 @@ the current directory.
         \hypertarget{module-and-package-names}{%
 \subsection{Module and Package Names}\label{module-and-package-names}}
 
-Module and Package names will be shown in \textbf{bold text}
+Module and Package names will be shown in \textbf{bold text}.
 
 \begin{quote}
 \textbf{NumPy} and \textbf{Matplotlib} are two useful packages for
@@ -600,7 +606,7 @@ problem solvers.
 \subsection{Inline code}\label{inline-code}}
 
 Inline code, including variable names, is shown in
-\passthrough{\lstinline!monospace font!}
+\passthrough{\lstinline!monospace font!}.
 
 \begin{quote}
 To compare a variable use \passthrough{\lstinline!var == 'string'!} and
@@ -617,7 +623,7 @@ sign.
 \subsection{Separate code blocks}\label{separate-code-blocks}}
 
 Separate code blocks appear in their own sections in
-\passthrough{\lstinline!monospaced font!}
+\passthrough{\lstinline!monospaced font!}.
 
 \begin{lstlisting}[language=Python]
 import numpy as np
@@ -700,7 +706,7 @@ Commands typed into Jupyter notebook cells appear with the label
 output from Jupyter notebook cells is shown below the input cell. Only
 code in the input cells needs to be typed. Output cell are be produced
 automatically by clicking the run button or typing
-\passthrough{\lstinline![shift]+[Enter]!}
+\passthrough{\lstinline![shift]+[Enter]!}.
     
 
 
@@ -9677,13 +9683,17 @@ of \(x\), \(y\) and \(z\).
 \item
   Use Matplotlib's object-oriented interface
 \item
-  Construct bar charts with Matplotlib
+  Construct bar charts and pie charts with Matplotlib
 \item
   Add error bars to bar charts and line plots
 \item
   Plot histograms
 \item
+  Make box plots and violin plots
+\item
   Plot contours
+\item
+  Create quiver plots and stream plots
 \item
   Construct 3D mesh grid plots
 \end{itemize}
@@ -9708,7 +9718,7 @@ started as a project in the early 2000's partly to use Python to
 visualize the electronic signals in the brain of epilepsy patients.
 Matplotlib's creator, John D. Hunter, was a neurobiologist. He was
 looking for a way to replicate MATLAB's plotting capability with Python.
-In addition to starting matplotlib, Dr.~Hunter was part of the founding
+In addition to starting Matplotlib, Dr.~Hunter was part of the founding
 group that created Numfocus. The Numfocus group oversees some major
 Python projects including Matplotlib, NumPy, Pandas, and Jupyter.
     
@@ -9752,14 +9762,14 @@ your computer, the installation methods are slightly different.
 
 
     
-        \hypertarget{install-matplotlib-with-the-anaconda-distribution-of-python}{%
-\subsection{Install Matplotlib with the Anaconda distribution of
-Python}\label{install-matplotlib-with-the-anaconda-distribution-of-python}}
+        \hypertarget{use-the-anaconda-distribution-of-python}{%
+\subsection{Use the Anaconda distribution of
+Python}\label{use-the-anaconda-distribution-of-python}}
 
 The simplest way to install Matplotlib is to download and install the
 Anaconda distribution of Python. The Anaconda distribution of Python
-comes with Matplotlib included and no further installation steps are
-necessary.
+comes with Matplotlib pre-installed and no further installation steps
+are necessary.
 
 Below are additional methods to install Matplotlib if you are not using
 the Anaconda distribution of Python.
@@ -9818,22 +9828,24 @@ environment.
 
     
         To verify that Matplotlib is installed, try to invoke Matplotlib's
-version at the Python REPL using the
-\passthrough{\lstinline!.\_\_version\_\_!} an attribute common to most
-Python packages.
+version at the Python REPL. Use the commands below that include calling
+the \passthrough{\lstinline!.\_\_version\_\_!} an attribute common to
+most Python packages.
     
 
 
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{o}{\PYZgt{}\PYZgt{}}\PY{o}{\PYZgt{}} \PY{k+kn}{import} \PY{n+nn}{matplotlib}
-        \PY{o}{\PYZgt{}\PYZgt{}}\PY{o}{\PYZgt{}} \PY{n}{matplotlib}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}version\PYZus{}\PYZus{}}
-\end{Verbatim}
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}1}]:} '3.0.2'
-\end{Verbatim}
-            
+    
+        \begin{lstlisting}[language=Python]
+>>> import matplotlib
+>>> matplotlib.__version__
+'3.1.1'
+\end{lstlisting}
+    
+
+
+
 
     
         \hypertarget{line-plots}{%
@@ -9858,13 +9870,13 @@ library as \passthrough{\lstinline!plt!}. The
 \passthrough{\lstinline!plt!} alias will be familiar to other Python
 programmers.
 
-If using a Jupyter notebook include the line
+If using a Jupyter notebook, include the line
 \passthrough{\lstinline!\%matplotlib inline!} after the imports.
 \passthrough{\lstinline!\%matplotlib inline!} is a Jupyter notebook
 magic command which causes Matplotlib plots to display directly inside
 Jupyter notebook output cells.
 
-To build our first plot, we will use NumPy, a numerical computing
+To build our first plot, we will also use NumPy, a numerical computing
 library for Python. NumPy is typically imported with the alias
 \passthrough{\lstinline!np!}.
     
@@ -9874,7 +9886,7 @@ library for Python. NumPy is typically imported with the alias
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
-        \PY{c+c1}{\PYZsh{} include if using a Jupyter notebook}
+        \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
 \end{Verbatim}
 
@@ -9884,7 +9896,9 @@ library for Python. NumPy is typically imported with the alias
 of numbers with the parameters
 \passthrough{\lstinline!np.arange(start,stop,step)!}. NumPy's
 \passthrough{\lstinline!np.sin()!} and \passthrough{\lstinline!np.pi!}
-functions do what you expect.
+functions do what you expect, calculate the sine of an array and compute
+\(\pi\). We use these functions to create two arrays of numbers
+\passthrough{\lstinline!x!} and \passthrough{\lstinline!y!}.
     
 
 
@@ -9917,6 +9931,13 @@ the end to show the plot. Make sure to include the double parenthesis
     
 
     
+        The result is a line plot that shows sin(x) from 0 to 4\(\pi\).
+    
+
+
+
+
+    
         \hypertarget{features-of-a-matplotlib-plot}{%
 \subsection{Features of a Matplotlib
 plot}\label{features-of-a-matplotlib-plot}}
@@ -9939,9 +9960,10 @@ following is a list of commonly defined features:
 Marker
 Options}\label{line-color-line-width-line-style-line-opacity-and-marker-options}}
 
-The color, width, and style of line in a plot can be specified. Line
-color, line width, and line style are included as extra arguments in the
-\passthrough{\lstinline!plt.plot()!} function call.on call.
+The color, width, and style of line in a Matplotlib plot can be
+specified. Line color, line width, and line style are included as extra
+keyword arguments in the \passthrough{\lstinline!plt.plot()!} function
+call.
 
 \begin{lstlisting}[language=Python]
 plt.plot(<x-data>,<y-data>,
@@ -10010,14 +10032,14 @@ Below is a list of color abbreviations. Note
 Name\tabularnewline
 \midrule
 \endhead
-\passthrough{\lstinline!'b'!} & Blue\tabularnewline
-\passthrough{\lstinline!'c'!} & Cyan\tabularnewline
-\passthrough{\lstinline!'g'!} & Green\tabularnewline
-\passthrough{\lstinline!'k'!} & Black\tabularnewline
+\passthrough{\lstinline!'b'!} & blue\tabularnewline
+\passthrough{\lstinline!'c'!} & cyan\tabularnewline
+\passthrough{\lstinline!'g'!} & green\tabularnewline
+\passthrough{\lstinline!'k'!} & black\tabularnewline
 \passthrough{\lstinline!'m'!} & magenta\tabularnewline
-\passthrough{\lstinline!'r'!} & Red\tabularnewline
-\passthrough{\lstinline!'w'!} & White\tabularnewline
-\passthrough{\lstinline!'y'!} & Yellow\tabularnewline
+\passthrough{\lstinline!'r'!} & red\tabularnewline
+\passthrough{\lstinline!'w'!} & white\tabularnewline
+\passthrough{\lstinline!'y'!} & yellow\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -10047,8 +10069,8 @@ Opacity\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!0!} & transparent\tabularnewline
-\passthrough{\lstinline!0.5!} & Half transparent\tabularnewline
-\passthrough{\lstinline!1.0!} & Opaque\tabularnewline
+\passthrough{\lstinline!0.5!} & half transparent\tabularnewline
+\passthrough{\lstinline!1.0!} & opaque\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -10105,7 +10127,7 @@ The plot title will be shown above the plot. The
 argument.
 
 \begin{lstlisting}[language=Python]
-plt.title('My Title')
+plt.title('My Plot Title')
 \end{lstlisting}
     
 
@@ -10133,8 +10155,8 @@ plt.xlabel('My x-axis label')
 \subsubsection{y-axis label}\label{y-axis-label}}
 
 The y-axis label is shown to the left of the y-axis. The
-\passthrough{\lstinline!plt.ylabel()!} command accepts a string as an
-argument.
+\passthrough{\lstinline!plt.ylabel()!} command also accepts a string as
+an argument.
 
 \begin{lstlisting}[language=Python]
 plt.ylabel('My y-axis label')
@@ -10149,18 +10171,18 @@ plt.ylabel('My y-axis label')
 \subsubsection{Legend}\label{legend}}
 
 You can use the \passthrough{\lstinline!plt.legend()!} command to insert
-a legend on a plot. The legend will appear within the plot area, in the
+a legend on a plot. The legend appears within the plot area, in the
 upper right corner by default. The
 \passthrough{\lstinline!plt.legend()!} command accepts a list of strings
 and optionally accepts a \passthrough{\lstinline!loc=!} argument to
-position the legend in a different location
+specify the legend location.
 
 \begin{lstlisting}[language=Python]
 plt.legend(['entry1','entry2'], loc = 0)
 \end{lstlisting}
 
-The following are the location codes for the legend location. These
-numbers need to be placed after \passthrough{\lstinline!loc=!} in the
+The following are the legend location codes. These numbers need to be
+placed after \passthrough{\lstinline!loc=!} in the
 \passthrough{\lstinline!plt.legend()!} call.
 
 \begin{longtable}[]{@{}ll@{}}
@@ -10191,7 +10213,7 @@ Legend Location &
         \hypertarget{grid}{%
 \subsubsection{Grid}\label{grid}}
 
-A grid can be shown on the plot using the
+A grid can be added to a Matplotlib plot using the
 \passthrough{\lstinline!plt.grid()!} command. By defaut, the grid is
 turned off. To turn on the grid use:
 
@@ -10202,7 +10224,7 @@ plt.grid(True)
 The only valid options are \passthrough{\lstinline!plt.grid(True)!} and
 \passthrough{\lstinline!plt.grid(False)!}. Note that
 \passthrough{\lstinline!True!} and \passthrough{\lstinline!False!} are
-capitalized and are not enclosed in quotations.
+capitalized and are not enclosed in quotes.
     
 
 
@@ -10212,7 +10234,7 @@ capitalized and are not enclosed in quotations.
         \hypertarget{tick-labels}{%
 \subsubsection{Tick Labels}\label{tick-labels}}
 
-Tick labels can be specified on the plot using
+Tick labels can be specified on a Matplotlib plot using
 \passthrough{\lstinline!plt.xticks()!} and
 \passthrough{\lstinline!plt.yticks()!}. To add tick labels use:
 
@@ -10240,8 +10262,8 @@ steps}\label{build-a-plot-in-five-steps}}
 
 
     
-        Line plots with the specified features above are constructed in Python
-according to this general outline:
+        The steps below show a logical progression to build a plot with
+Matplotlib:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -10251,7 +10273,7 @@ according to this general outline:
 \item
   Define data
 \item
-  Plot Data including options
+  Plot data including options
 \item
   Add plot details
 \item
@@ -10265,7 +10287,7 @@ Details of each step is explained below.
 
 Import \passthrough{\lstinline!matplot.pyplot as plt!}, as well as any
 other modules needed to work with the data such as NumPy or Pandas. If
-using a Jupyter notebook include the line
+using a Jupyter notebook, include the line
 \passthrough{\lstinline!\%matplotlib inline!} in the import section.
 
 \hypertarget{define-data}{%
@@ -10310,8 +10332,9 @@ include keyword arguments such as:
 \hypertarget{add-plot-details}{%
 \subsubsection{4. Add plot details}\label{add-plot-details}}
 
-Add details such as a title, axis labels, legend, grid, and tick labels.
-Plot details to add include:
+After the \passthrough{\lstinline!plt.plot()!} line, add details such as
+a title, axis labels, legend, grid, and tick labels. Plot details to add
+include:
 
 \begin{itemize}
 \tightlist
@@ -10336,34 +10359,35 @@ Plot details to add include:
 
 Use the \passthrough{\lstinline!plt.show()!} command to show the plot.
 \passthrough{\lstinline!plt.show()!} causes the plot to display in a
-Jupyter notebook or pop out as a new window if the plot is constructed
+Jupyter notebook or pop out in a new window if the plot is constructed
 in a separate \textbf{\emph{.py}} file. Note that
-\passthrough{\lstinline!plt.show()!} needs to be called after all of the
-plot specifications.
+\passthrough{\lstinline!plt.show()!} needs to be called after
+\passthrough{\lstinline!plt.plot()!} and any plot details such as
+\passthrough{\lstinline!plt.title()!}.
     
 
 
 
 
     
-        The next code section follows this outline. The resulting plot is shown
-below.
+        The next code section utilizes the 5 steps to build a plot. The
+resulting plot is shown after the code.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} Imports}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} 1. Imports}
         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-        \PY{c+c1}{\PYZsh{} include if using a Jupyter notebook. Remove if using a .py\PYZhy{}file.}
+        \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
         
-        \PY{c+c1}{\PYZsh{} Define data}
+        \PY{c+c1}{\PYZsh{} 2. Define data}
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{)}
         \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} Plot data including options}
+        \PY{c+c1}{\PYZsh{} 3. Plot data including options}
         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,}
             \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,}
             \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
@@ -10372,22 +10396,22 @@ below.
             \PY{n}{markersize}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,}
             \PY{n}{markerfacecolor}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} Add plot details}
+        \PY{c+c1}{\PYZsh{} 4. Add plot details}
         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Plot of sin(x) vs x from 0 to 4 pi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x (0 to 4 pi)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sin(x)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sin(x)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sin(x)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)} \PY{c+c1}{\PYZsh{} list containing one string}
         \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}
-            \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}
-            \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}3}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi/2\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{5\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{7\PYZdl{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{pi\PYZdl{}/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+            \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{+} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}
+            \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pi/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{pi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3pi/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2pi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{5pi/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3pi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{7pi/2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{4pi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} Show the plot}
+        \PY{c+c1}{\PYZsh{} 5. Show the plot}
         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_508_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_509_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10402,8 +10426,9 @@ below.
 
     
         Matplotlib plots can be saved as image files using the
-\passthrough{\lstinline!plt.savefig()!} function. The
-\passthrough{\lstinline!plt.savefig()!} function needs to be called
+\passthrough{\lstinline!plt.savefig()!} function.
+
+The \passthrough{\lstinline!plt.savefig()!} function needs to be called
 right above the \passthrough{\lstinline!plt.show()!} line. All the
 features of the plot must be specified before the plot is saved as an
 image file. If the figure is saved after the
@@ -10421,14 +10446,15 @@ plt.savefig('plot.png', dpi=300, bbox_inches='tight')
 \end{lstlisting}
 
 Where \passthrough{\lstinline!'plot.png'!} is the name of the saved
-image file. Matplotlib infers the image file format (.png, .jpg, etc)
-based on the extension specified in the filename.
+image file. Matplotlib infers the image file format
+(\textbf{\emph{.png}}, \textbf{\emph{.jpg}}, etc) based on the extension
+specified in the filename.
 
 The keyword argument \passthrough{\lstinline!dpi=!} specifies how many
 dots per inch (image resolution) are in the saved image.
 \passthrough{\lstinline!dpi=72!} is fine for web images.
-\passthrough{\lstinline!dpi=300!} is probably better for an image
-designed to go in a written report or \textbf{\emph{.pdf}} document.
+\passthrough{\lstinline!dpi=300!} is better for an image designed to go
+in a written report or \textbf{\emph{.pdf}} document.
 
 The keyword argument \passthrough{\lstinline!bbox\_inches='tight'!} is
 optional. If the axis labels in the plot are cut off in the saved image,
@@ -10462,7 +10488,7 @@ the image file \textbf{\emph{plot.png}}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_512_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_513_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10495,24 +10521,26 @@ interface}\label{the-matplotlibs-object-oriented-interface}}
 An object-oriented plotting interface is an interface where components
 of the plot (like the axis, title, lines, markers, tick labels, etc.)
 are treated as programmatic \emph{objects} that have \emph{attributes}
-and \emph{methods} associated with them. To create a new \emph{object}
-is called \emph{instantiation}. Once an object is created, or
-\emph{instantiated}, the properties of that object can be modified, and
-methods can be called on that object. The basic anatomy of a Matplotlib
-plot includes a couple of layers, each of these layers is a Python
-\emph{object}:
+and \emph{methods} associated with them.
+
+To create a new \emph{object} is called \emph{instantiation}. Once an
+object is created, or \emph{instantiated}, the properties of that object
+can be modified, and methods can be called on that object.
+
+The basic anatomy of a Matplotlib plot includes a couple of layers, each
+of these layers is a Python \emph{object}:
 
 \begin{itemize}
 \tightlist
 \item
-  Figure objects: The bottom layer. Think of the figure layer as the
-  figure window which contains the minimize, maximize, close buttons. A
-  figure can include one plot or multiple plots.
+  Figure object: The bottom layer. Think of the figure object as the
+  figure window which contains the minimize, maximize, and close
+  buttons. A figure window can include one plot or multiple plots.
 \item
-  Plot objects: A plot builds on the Figure layer. If there are multiple
+  Plot objects: A plot builds on the figure layer. If there are multiple
   plots, each plot is called a subplot.
 \item
-  Axis objects: An axis is added to a Plot layer. Axis can be thought of
+  Axis objects: An axis is added to a plot layer. Axis can be thought of
   as sets of x and y axis that lines and bars are drawn on. An Axis
   contains daughter attributes like axis labels, tick labels, and line
   thickness.
@@ -10527,32 +10555,38 @@ plot includes a couple of layers, each of these layers is a Python
     
         Matplotlib's \passthrough{\lstinline!plt.subplot()!} function is used to
 build figure objects. The \passthrough{\lstinline!plt.subplot()!}
-function creates both a figure \emph{object} and an axis \emph{object}.
-We say the \passthrough{\lstinline!plt.subplot()!} function
+function creates both a figure \emph{object} and axis \emph{objects}. We
+say the \passthrough{\lstinline!plt.subplot()!} function
 \emph{instantiates} a figure \emph{object} and \emph{instantiates} an
 axis object. For now, we'll leave the
 \passthrough{\lstinline!subplot()!} arguments blank. By default, the
 \passthrough{\lstinline!subplot()!} function creates a single figure
-object and a single axis object. We'll call the figure object
-\passthrough{\lstinline!fig!} and the axis object
+object and a single axis object. By convention we'll call the figure
+object \passthrough{\lstinline!fig!} and the axis object
 \passthrough{\lstinline!ax!}. Note these two outputs of the
 \passthrough{\lstinline!plt.subplots()!} function are separated by a
 comma.
 
+\begin{lstlisting}
+fig, ax = plt.subplots()
+\end{lstlisting}
+
 We instantiated a figure object and axis object, now both of these
 objects need attributes. We add attributes to the axis object to build a
-plot. Let's create three NumPy arrays and add the three arrays to our
-axis object.
-
-The NumPy arrays \passthrough{\lstinline!x!},
+plot. NumPy arrays or Python lists \passthrough{\lstinline!x!},
 \passthrough{\lstinline!y!}, and \passthrough{\lstinline!z!} can be
-added to axis object \passthrough{\lstinline!ax!}. We add a plot
-attribute (a line) to our axis object \passthrough{\lstinline!ax!} using
-the object-oriented structure
+added to axis object \passthrough{\lstinline!ax!}.
+
+\begin{lstlisting}
+ax.plot(x,y)
+ax.plot(x,z)
+\end{lstlisting}
+
+We add a plot attribute (a line) to our axis object
+\passthrough{\lstinline!ax!} using the object-oriented structure
 \passthrough{\lstinline!<object>.<attribute>!}. In this case,
 \passthrough{\lstinline!ax!} is the object and
-\passthrough{\lstinline!plot!} is the attribute. The
-\passthrough{\lstinline!plt.show()!} line shows the plot on the screen.
+\passthrough{\lstinline!plot!} is the attribute.
 
 The next code section demonstrates how to build a multi-line plot with
 Matplotlib's object-oriented interface.
@@ -10579,7 +10613,7 @@ Matplotlib's object-oriented interface.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_518_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_519_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10588,9 +10622,10 @@ Matplotlib's object-oriented interface.
         The \passthrough{\lstinline!ax!} object has many \emph{methods} and
 \emph{attributes}. In Python a method is sort of like a function, but
 methods typically modify the object they are associated with, while
-functions modify their input arguments. Two methods we can run on the
-\passthrough{\lstinline!ax!} object include
-\passthrough{\lstinline!ax.set\_title()!} and
+functions modify their input arguments.
+
+Two methods we can run on the \passthrough{\lstinline!ax!} object
+include \passthrough{\lstinline!ax.set\_title()!} and
 \passthrough{\lstinline!ax.legend()!}. A couple daughter objects include
 \passthrough{\lstinline!ax.xaxis!} and
 \passthrough{\lstinline!ax.yaxis!}. These daughter objects in turn have
@@ -10627,10 +10662,179 @@ methods to build a multi-line plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_520_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_521_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+
+    
+        The table below shows common commands to build plots using Matplotlib's
+object-oriented interface.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\raggedright
+Object-oriented command\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Description\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Corresponding \passthrough{\lstinline!plt.!} command\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!fig, ax = plt.subplots()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+create a figure and axis object\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.plot(x,y)!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+create a line plot\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.plot(x,y)!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_title('My Title')!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+plot title\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.title('My Title')!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_xlabel('x label')!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+x-axis label\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.xlabel('x label')!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_ylabel('x label')!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+y-axis label\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.ylabel('x label')!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.legend(['line1','line2'])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+legend\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.legend(['line1','line2'])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_xlim([0, 5])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+x-axis limits\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.xlim([0, 5])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_ylim([-1, 1])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+y-axis limits\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.ylim([-1, 1])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.axis([-x, +x, -y, +y])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+both axis limits\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.grid(True)!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+grid in both directions\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.grid(True)!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.xaxis.grid(True)!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+vertical grid lines\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.yaxis.grid(True)!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+horizontal grid lines\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.xaxis.set\_xticks([loc])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+x-axis tick locations\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.xticks([loc],[label])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.xaxis.set\_xticklabels([labels])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+x-axis tick labels\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.xticks([loc],[label])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.yaxis.set\_yticks([loc])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+y-axis tick locations\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.yticks([loc],[label])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.yaxis.set\_yticklabels([labels])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+y-axis tick labels\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.yticks([loc],[label])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.xaxis.set\_ticks([])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+remove x tick labels\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.xticks([],[])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.yaxis.set\_ticks[])!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+remove y tick labels\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.yticks([],[])!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!ax.set\_aspect('equal')!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+equal axis scales\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+-\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!fig.tight\_layout()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+adjust padding\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.tight\_layout()!}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.show()!}\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+show the plot\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\passthrough{\lstinline!plt.show()!}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+    
+
+
+
 
     
         \hypertarget{bar-charts-and-pie-charts}{%
@@ -10726,8 +10930,9 @@ NumPy's \passthrough{\lstinline!np.mean()!} function.
 
     
         Then build a list of materials and CTE's. Note the list of materials is
-a list of strings, the list of x-postions
-\passthrough{\lstinline!x\_pos!} is an array of numbers and the list
+a list of strings, the list of x-positions
+\passthrough{\lstinline!x\_pos!} is an array of numbers
+\passthrough{\lstinline![0,1,2]!}, and the list
 \passthrough{\lstinline!CTEs!} is a list of three numbers from the
 \passthrough{\lstinline!np.mean()!} calculation above. Python's
 \passthrough{\lstinline!len()!} function returns the length of a list,
@@ -10737,7 +10942,7 @@ array, dictionary or tuple.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} Create Arrays for the plot}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} Create arrays for the plot}
         \PY{n}{materials} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Aluminum}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Copper}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Steel}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
         \PY{n}{x\PYZus{}pos} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{materials}\PY{p}{)}\PY{p}{)}
         \PY{n}{CTEs} \PY{o}{=} \PY{p}{[}\PY{n}{aluminum\PYZus{}mean}\PY{p}{,} \PY{n}{copper\PYZus{}mean}\PY{p}{,} \PY{n}{steel\PYZus{}mean}\PY{p}{]}
@@ -10779,7 +10984,7 @@ The list of materials is passed to the
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_534_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_536_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10794,12 +10999,12 @@ The list of materials is passed to the
 
     
         Pie charts can be constructed with Matplotlib's
-\passthrough{\lstinline!ax.pie()!} method. The one required positional
-argument supplied to the \passthrough{\lstinline!ax.pie()!} method is a
-list of pie piece sizes. Optional keyword arguments include a list of
-pie piece labels (\passthrough{\lstinline!label=!}) and if the
-percentages will be auto-calculated and in what format
-(\passthrough{\lstinline!autopct=!}).
+\passthrough{\lstinline!ax.pie()!} method. The one required
+\emph{positional argument} supplied to the
+\passthrough{\lstinline!ax.pie()!} method is a list of pie piece sizes.
+Optional \emph{keyword arguments} include a list of pie piece labels
+(\passthrough{\lstinline!label=!}) and if the percentages will be
+auto-calculated and in what format (\passthrough{\lstinline!autopct=!}).
 
 For our first pie chart, the data we will plot describes the number of
 students who choose different engineering majors at colleges in the US
@@ -10810,13 +11015,13 @@ graduates in different engineering disciplines:
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-discipline & number of graduates\tabularnewline
+Discipline & Number of graduates\tabularnewline
 \midrule
 \endhead
-civil engineering & 15,000 graduates\tabularnewline
-electrical engineering & 50,000 graduates\tabularnewline
-mechanical engineering & 45,000 graduates\tabularnewline
-chemical engineering & 10,000 graduates\tabularnewline
+Civil Engineering & 15,000 graduates\tabularnewline
+Electrical Engineering & 50,000 graduates\tabularnewline
+Mechanical Engineering & 45,000 graduates\tabularnewline
+Chemical Engineering & 10,000 graduates\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -10829,7 +11034,7 @@ needed to ensure the pie chart is a circle. If you leave out
 an oval instead of a circle.
 
 The code section below builds a pie chart with four pie pieces, each pie
-piece labeled with a relative size auto calculated to the nearest 10th
+piece labeled with a relative size auto-calculated to the nearest 10th
 of a percent.
     
 
@@ -10854,19 +11059,23 @@ of a percent.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_537_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
 
     
         Pie pieces can be highlighted by ``exploding'' them out. Exploded pie
-pieces are applied to a Matplotlib pie chart using the
-\passthrough{\lstinline!explode=!} keyword argument.
+pieces are applied to a Matplotlib pie chart by supplying the
+\passthrough{\lstinline!explode=!} keyword argument to the
+\passthrough{\lstinline!ax.pie()!} method.
 \passthrough{\lstinline!shadow=True!} and
 \passthrough{\lstinline!startangle=!} are two additional keyword
 arguments that can be passed to the \passthrough{\lstinline!ax.pie()!}
-method.
+method to control the angle and rotation of the pieces on a pie chart.
+
+The code section below creates a pie chart with the pie pieces separated
+and the ``Chemical'' piece exploded out.
     
 
 
@@ -10880,6 +11089,7 @@ method.
         \PY{c+c1}{\PYZsh{} Pie chart, where the slices will be ordered and plotted counter\PYZhy{}clockwise}
         \PY{n}{labels} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Civil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Electrical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mechanical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Chemical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
         \PY{n}{sizes} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{15}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{45}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{]}
+        
         \PY{c+c1}{\PYZsh{} Explode out the \PYZsq{}Chemical\PYZsq{} pie piece by offsetting it a greater amount}
         \PY{n}{explode} \PY{o}{=} \PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.4}\PY{p}{)}  
         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
@@ -10896,7 +11106,7 @@ method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_541_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11007,10 +11217,19 @@ positions (\passthrough{\lstinline!x\_pos!}), bar heights
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_548_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_550_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+
+    
+        The resulting plot contains three error bars. We can see the standard
+deviation of the aluminum data is greater than the standard deviation of
+the steel by looking at the error by lengths.
+    
+
+
+
 
     
         \hypertarget{error-bars-in-line-plots}{%
@@ -11040,7 +11259,9 @@ ax.errorbar(x, y,
 \end{lstlisting}
 
 The following code section builds a line plot with horizontal and
-vertical error bars included on each point in the plot.
+vertical error bars included on each point in the plot. The error bar
+widths and heights are created using NumPy's
+\passthrough{\lstinline!random\_sample!} function.
     
 
 
@@ -11053,8 +11274,8 @@ vertical error bars included on each point in the plot.
         
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{5.5}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}
         \PY{n}{y} \PY{o}{=} \PY{l+m+mi}{10}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{x}\PY{p}{)}
-        \PY{n}{xerr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{random\PYZus{}sample}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
-        \PY{n}{yerr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{random\PYZus{}sample}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+        \PY{n}{xerr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{random\PYZus{}sample}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
+        \PY{n}{yerr} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{random\PYZus{}sample}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
         
         \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
         
@@ -11071,7 +11292,7 @@ vertical error bars included on each point in the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_551_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_554_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11087,9 +11308,8 @@ vertical error bars included on each point in the plot.
     
         Histograms are a useful type of statistics plot for problem solvers. A
 histogram is a type of bar plot that shows the frequency or number of
-values compared to a set of value ranges. Histogram plots can be created
-with Matplotlib. Matplotlib's \passthrough{\lstinline!ax.hist()!}
-function creates histogram plots.
+values compared to a set of value ranges. Matplotlib's
+\passthrough{\lstinline!ax.hist()!} function creates histogram plots.
     
 
 
@@ -11101,16 +11321,15 @@ function creates histogram plots.
 of random numbers with a normal distribution. The three arguments passed
 to NumPy's \passthrough{\lstinline!np.random.normal()!} function are
 \passthrough{\lstinline!mu!} (mean), \passthrough{\lstinline!sigma!}
-(standard deviation) and \passthrough{\lstinline!size=!} (size of the
+(standard deviation) and \passthrough{\lstinline!size=!} (length of the
 array).
 
 Matplotlib's \passthrough{\lstinline!ax.hist()!} method is used to build
 the histogram. The first argument passed to
 \passthrough{\lstinline!ax.hist()!} corresponds to the list or array of
-values to plot (\passthrough{\lstinline!data!}). The second argument
-corresponds to the number of bins, or number of bars on the histogram.
-The general format of Matplotlib's \passthrough{\lstinline!ax.hist()!}
-method is below.
+values to plot. The second argument corresponds to the number of bins,
+or number of bars on the histogram. The general format of Matplotlib's
+\passthrough{\lstinline!ax.hist()!} method is below.
 
 \begin{lstlisting}[language=Python]
 ax.hist(data, num_bins)
@@ -11152,10 +11371,18 @@ The code section below builds a histogram that contains 20 bins.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_556_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_559_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+
+    
+        The resulting histogram has 20 bars and shows a roughly normal
+distribution.
+    
+
+
+
 
     
         \hypertarget{box-plots-and-violin-plots}{%
@@ -11191,9 +11418,9 @@ ax.boxplot(data)
 \end{lstlisting}
 
 The \passthrough{\lstinline!data!} passed to the
-\passthrough{\lstinline!ax.boxplot()!} method can be a list or NumPy
-array. To create multiple box plots side by side, pass in a list of
-lists or a 2D array.
+\passthrough{\lstinline!ax.boxplot()!} method can be a Python list or
+NumPy array. To create multiple box plots side by side, pass in a list
+of lists or a 2D NumPy array.
 
 The code section below creates a box plot with four elements.
     
@@ -11206,8 +11433,6 @@ The code section below creates a box plot with four elements.
         \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
         
-        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
-        
         \PY{c+c1}{\PYZsh{} generate some random data}
         \PY{n}{data1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
         \PY{n}{data2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
@@ -11215,25 +11440,27 @@ The code section below creates a box plot with four elements.
         \PY{n}{data4} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
         \PY{n}{data} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{p}{[}\PY{n}{data1}\PY{p}{,} \PY{n}{data2}\PY{p}{,} \PY{n}{data3}\PY{p}{,} \PY{n}{data4}\PY{p}{]}\PY{p}{)}
         
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
         \PY{c+c1}{\PYZsh{} build a box plot}
         \PY{n}{ax}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{n}{data}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} title and axis labels}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{box plot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{xticklabels}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{xticklabels}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} add horizontal grid lines}
         \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        
-        \PY{n}{xticklabels}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{xticklabels}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} show the plot}
         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_562_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11253,8 +11480,23 @@ information. The sides of the ``violins'' in a violin plot corresponds
 to a kernel density estimation (kind of like a histogram) flipped
 vertically.
 
-The code section below demonstrates how to create a violin plot with
-Matplotlib.
+To create a violin plot with Matplotlib, use the
+\passthrough{\lstinline!ax.violinplot()!} method. The general syntax is:
+
+\begin{lstlisting}[language=Python]
+ax.violinplot(data)
+\end{lstlisting}
+
+A couple of extra keyword arguments that can be included are
+\passthrough{\lstinline!showmeans=!} and
+\passthrough{\lstinline!showmedians=!}.
+
+\begin{lstlisting}[language=Python]
+ax.violinplot(data, showmeans=True, showmedians=False)
+\end{lstlisting}
+
+The following code section builds a violin plot with 4 ``violins'' using
+randomly generated data.
     
 
 
@@ -11265,8 +11507,6 @@ Matplotlib.
         \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
         
-        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
-        
         \PY{c+c1}{\PYZsh{} generate some random data}
         \PY{n}{data1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
         \PY{n}{data2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
@@ -11274,26 +11514,30 @@ Matplotlib.
         \PY{n}{data4} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
         \PY{n}{data} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{p}{[}\PY{n}{data1}\PY{p}{,} \PY{n}{data2}\PY{p}{,} \PY{n}{data3}\PY{p}{,} \PY{n}{data4}\PY{p}{]}\PY{p}{)}
         
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
         \PY{c+c1}{\PYZsh{} build a violin plot}
         \PY{n}{ax}\PY{o}{.}\PY{n}{violinplot}\PY{p}{(}\PY{n}{data}\PY{p}{,} \PY{n}{showmeans}\PY{o}{=}\PY{k+kc}{False}\PY{p}{,} \PY{n}{showmedians}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{violin plot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} add horizontal grid lines}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
-        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{} add title and axis labels}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{violin plot}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y\PYZhy{}axis}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} add x\PYZhy{}tick labels}
         \PY{n}{xticklabels} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category 4}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{n}{xticklabels}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} add horizontal grid lines}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} show the plot}
         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_565_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_569_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11308,29 +11552,29 @@ Matplotlib.
 
     
         Scatter plots of (x,y) point pairs are created with Matplotlib's
-\passthrough{\lstinline!plt.scatter()!} function.
+\passthrough{\lstinline!ax.scatter()!} method.
 
 The required positional arguments supplied to
-\passthrough{\lstinline!plt.scatter()!} are two lists or arrays. The
+\passthrough{\lstinline!ax.scatter()!} are two lists or arrays. The
 first positional argument specifies the x-value of each point on the
 scatter plot. The second positional argument specifies the y-value of
 each point on the scatter plot.
 
-The general form of a \passthrough{\lstinline!plt.scatter()!} function
-call shown below.
+The general syntax of the \passthrough{\lstinline!ax.scatter()!} method
+is shown below.
 
 \begin{lstlisting}[language=Python]
-plt.scatter(x-points, y-points)
+ax.scatter(x-points, y-points)
 \end{lstlisting}
 
 The next code section shows how to build a scatter plot with Matplotlib.
 
-First, 150 random, but semi-focused, x and y-values are created using
+First, 150 random (but semi-focused) x and y-values are created using
 NumPy's \passthrough{\lstinline!np.random.randn()!} function. The x and
 y-values are plotted on a scatter plot using Matplotlib's
 \passthrough{\lstinline!ax.scatter()!} method. Note the number of
 x-values is the same as the number of y-values. The size of the two
-lists or two arrays passed to \passthrough{\lstinline!plt.scatter()!}
+lists or two arrays passed to \passthrough{\lstinline!ax.scatter()!}
 must be equal.
     
 
@@ -11342,6 +11586,7 @@ must be equal.
         \PY{c+c1}{\PYZsh{} if uising a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
         
+        \PY{c+c1}{\PYZsh{} random but semi\PYZhy{}focused data}
         \PY{n}{x1} \PY{o}{=} \PY{l+m+mf}{1.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{150}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{10}
         \PY{n}{y1} \PY{o}{=} \PY{l+m+mf}{1.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{150}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{10}
         \PY{n}{x2} \PY{o}{=} \PY{l+m+mf}{1.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{150}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{4}
@@ -11356,7 +11601,7 @@ must be equal.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_569_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_573_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11416,11 +11661,12 @@ colors and areas.
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Scatter plot of x\PYZhy{}y pairs semi\PYZhy{}focused in two regions}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y value}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_571_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_575_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11450,16 +11696,21 @@ Multiple keyword arguments can be passed to
 \passthrough{\lstinline!ax.annotate()!} method to specify the annotation
 location and style the annotation.
 
+\begin{lstlisting}[language=Python]
+ax.annotate('text', xy= , xycoodrs= , xytext= , arrowprops= )
+\end{lstlisting}
+
 The keyword argument to pay attention to in the next code section is
-\passthrough{\lstinline!xycoords=!}. Each of the three annotations has a
-different \passthrough{\lstinline!xycoords=!} keyword argument. The
-annotation can be located relative to the plot data, located relative to
-the axis, or relative to the figure window.
+\passthrough{\lstinline!xycoords=!}. Each of the three annotations in
+the next figure has a different \passthrough{\lstinline!xycoords=!}
+keyword argument. The annotation can be located relative to the plot
+data, located relative to the axis, or located relative to the figure
+window.
 
 In the first annotation, \passthrough{\lstinline!xycoords='data'!}. This
 means the annotation is placed relative to the data. Since
 \passthrough{\lstinline!xy=(0, 0)!}, the annotation arrow points to the
-\passthrough{\lstinline!0,0!} data point.
+data point \passthrough{\lstinline!0,0!} .
 
 In the second annotation,
 \passthrough{\lstinline!xycoords='axes fraction'!}. This means the
@@ -11474,6 +11725,36 @@ annotation is placed relative to the figure window. Since
 \passthrough{\lstinline!20!} pixels to the right and
 \passthrough{\lstinline!75!} pixels up from the bottom left corner of
 the figure window.
+
+The chart below summarizes Matplotlib's
+\passthrough{\lstinline!ax.annotate()!} keyword arguments.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\passthrough{\lstinline!ax.annotate()!} keyword &
+description\tabularnewline
+\midrule
+\endhead
+\passthrough{\lstinline!xy = (0,0)!} & annotation
+location\tabularnewline
+\passthrough{\lstinline!xycoords = 'data'!} & annotation location
+relative to data\tabularnewline
+\passthrough{\lstinline!xycoords = 'axis fraction'!} & annotation
+location relative to axis\tabularnewline
+\passthrough{\lstinline!xycoords = 'figure pixels'!} & annotation
+location relative to figure window\tabularnewline
+\passthrough{\lstinline!bbox = <dict>!} & define bounding box properties
+with a dictionary\tabularnewline
+\passthrough{\lstinline!arrowprops = <dict>!} & define arrow properties
+with a dictionary\tabularnewline
+\passthrough{\lstinline!horizontalalignment='left'!} & horizontal
+alignment of annotation\tabularnewline
+\passthrough{\lstinline!verticalalignment='top'!} & vertical alignment
+of annotation\tabularnewline
+\bottomrule
+\end{longtable}
+
+The next code section builds a figure with three annotation arrows.
     
 
 
@@ -11484,12 +11765,12 @@ the figure window.
         \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
         
-        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
-        
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mf}{0.01}\PY{p}{)}
         \PY{n}{y} \PY{o}{=} \PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
         
-        \PY{c+c1}{\PYZsh{} Plot a line and add some simple annotations}
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Plot a line}
         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} first annotation relative to the data}
@@ -11515,7 +11796,7 @@ the figure window.
                         \PY{n}{horizontalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{left}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
                         \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{center}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} third annotion relative to the figure window}
+        \PY{c+c1}{\PYZsh{} third annotation relative to the figure window}
         \PY{n}{bbox\PYZus{}props} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n}{boxstyle}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{larrow,pad=0.5}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fc}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{w}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ec}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{k}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{lw}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
         
         \PY{n}{ax}\PY{o}{.}\PY{n}{annotate}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{outside the plot }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ relative to figure window}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
@@ -11533,7 +11814,7 @@ the figure window.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_576_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_580_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11548,7 +11829,7 @@ the figure window.
 
     
         Sometimes it is useful for problem solvers to include a couple plots in
-the same figure window. This can be done in Matplotlib using
+the same figure window. This can be accomplished using Matplotlib
 \emph{subplots}. Matplotlib's \passthrough{\lstinline!plt.subplot()!}
 function can include two positional arguments for the number of rows of
 subplots in the figure and the number of columns of subplots in the
@@ -11559,7 +11840,7 @@ fig, <ax objects> = plt.subplots(rows, cols)
 \end{lstlisting}
 
 Where \passthrough{\lstinline!rows!} and \passthrough{\lstinline!cols!}
-denote how the subplots are laid out. The
+are integers that control the subplot layout. The
 \passthrough{\lstinline!<ax objects>!} needs to have dimensions that
 correspond to \passthrough{\lstinline!rows!} and
 \passthrough{\lstinline!cols!}.
@@ -11581,9 +11862,10 @@ fig, ( (ax1,ax2,a3), (ax4,ax5,ax6) ) = plt.subplots(2, 3)
 
 Subplots are useful if you want to show the same data on different
 scales. The plot of an exponential function looks different on a linear
-scale compare to a logarithmic scale. Matplotlib contains three plotting
-methods which scale the x and y-axis linearly or logarithmically. A
-table below summarizes these methods.
+scale compared to a logarithmic scale. Matplotlib contains three
+plotting methods which scale the x and y-axis linearly or
+logarithmically. The table below summarizes Matplotlib's axis scaling
+methods.
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
@@ -11620,22 +11902,22 @@ one figure. The axes of each subplot is scaled in a different way.
         
         \PY{c+c1}{\PYZsh{} linear x and y axis}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{t} \PY{o}{/} \PY{l+m+mf}{5.0}\PY{p}{)}\PY{p}{)}
-        \PY{n}{ax1}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{linear x and y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{linear x and y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} log y axis}
         \PY{n}{ax2}\PY{o}{.}\PY{n}{semilogy}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{t} \PY{o}{/} \PY{l+m+mf}{5.0}\PY{p}{)}\PY{p}{)}
-        \PY{n}{ax2}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{semilogy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{semilogy}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax2}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} log x axis}
         \PY{n}{ax3}\PY{o}{.}\PY{n}{semilogx}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{t} \PY{o}{/} \PY{l+m+mf}{5.0}\PY{p}{)}\PY{p}{)}
-        \PY{n}{ax3}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{semilogx}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax3}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{semilogx}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax3}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} log x and y axis}
         \PY{n}{ax4}\PY{o}{.}\PY{n}{loglog}\PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{l+m+mi}{20} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{t} \PY{o}{/} \PY{l+m+mf}{5.0}\PY{p}{)}\PY{p}{,} \PY{n}{basex}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
-        \PY{n}{ax4}\PY{o}{.}\PY{n}{set}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{loglog base 2 on x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax4}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{loglog base 2 on x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax4}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
         
         \PY{n}{fig}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
@@ -11643,7 +11925,7 @@ one figure. The axes of each subplot is scaled in a different way.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_580_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_584_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11657,18 +11939,18 @@ one figure. The axes of each subplot is scaled in a different way.
 
 
     
-        Colors, font sizes, line thickness, all have default values in
-Matplotlib. In addition to the default style for these plot attributes,
-additional styles are available.
+        Colors, font sizes, line thickness, and many other plot attributes all
+have default values in Matplotlib. In addition to the default style for
+these plot attributes, additional styles are available.
     
 
 
 
 
     
-        To use the default style, either don't specify a style at all or use the
-line \passthrough{\lstinline!plt.style.use('default')!}. If you want to
-apply a different style to a plot use the line:
+        To use the default style, either don't specify a style or use the line
+\passthrough{\lstinline!plt.style.use('default')!}. If you want to apply
+a different style to a plot use the line:
 
 \begin{lstlisting}[language=Python]
 plt.style.use('style')
@@ -11704,7 +11986,7 @@ the plots on \href{https://fivethirtyeight.com}{fivethirtyeight.com}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_585_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11722,40 +12004,40 @@ Matplotlib styles with the command:
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-seaborn-talk
-seaborn-bright
-seaborn-muted
-seaborn-dark
-seaborn-darkgrid
-seaborn-paper
-seaborn-white
-seaborn-pastel
-seaborn-colorblind
-Solarize\_Light2
-seaborn
-fast
-seaborn-dark-palette
-tableau-colorblind10
-seaborn-notebook
-classic
-seaborn-poster
 bmh
-seaborn-whitegrid
-seaborn-deep
+classic
 dark\_background
-\_classic\_test
+fast
 fivethirtyeight
 ggplot
-seaborn-ticks
 grayscale
+seaborn-bright
+seaborn-colorblind
+seaborn-dark-palette
+seaborn-dark
+seaborn-darkgrid
+seaborn-deep
+seaborn-muted
+seaborn-notebook
+seaborn-paper
+seaborn-pastel
+seaborn-poster
+seaborn-talk
+seaborn-ticks
+seaborn-white
+seaborn-whitegrid
+seaborn
+Solarize\_Light2
+tableau-colorblind10
+\_classic\_test
 
     \end{Verbatim}
 
 
     
         The code section below displays a couple of Matplotlib's available plot
-styles including the \passthrough{\lstinline!'default'!},
-\passthrough{\lstinline!'seaborn'!} and the older Matplotlib
+styles including \passthrough{\lstinline!'default'!},
+\passthrough{\lstinline!'seaborn'!} and Matplotlib's older
 \passthrough{\lstinline!'classic'!} style.
     
 
@@ -11773,12 +12055,12 @@ styles including the \passthrough{\lstinline!'default'!},
             
         \PY{k}{def} \PY{n+nf}{lb}\PY{p}{(}\PY{n}{ax}\PY{p}{,}\PY{n}{s}\PY{p}{)}\PY{p}{:}
             \PY{n}{ax}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{s}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}
-            \PY{n}{ax}\PY{o}{.}\PY{n}{xaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticklabels}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{p}{]}\PY{p}{)}
-            \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticklabels}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{p}{]}\PY{p}{)}
+            \PY{n}{ax}\PY{o}{.}\PY{n}{xaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticklabels}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
+            \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticklabels}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
             
         \PY{k}{def} \PY{n+nf}{make\PYZus{}fig}\PY{p}{(}\PY{n}{st}\PY{p}{)}\PY{p}{:}
             \PY{k}{with} \PY{n}{plt}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{context}\PY{p}{(}\PY{n}{st}\PY{p}{)}\PY{p}{:}
-                \PY{n}{fig}\PY{p}{,}\PY{p}{[}\PY{n}{ax1}\PY{p}{,}\PY{n}{ax2}\PY{p}{,}\PY{n}{ax3}\PY{p}{]}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mf}{1.5}\PY{p}{)}\PY{p}{)}
+                \PY{n}{fig}\PY{p}{,}\PY{p}{[}\PY{n}{ax1}\PY{p}{,}\PY{n}{ax2}\PY{p}{,}\PY{n}{ax3}\PY{p}{]} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mf}{1.5}\PY{p}{)}\PY{p}{)}
                 \PY{n}{lb}\PY{p}{(}\PY{n}{ax1}\PY{p}{,}\PY{n}{st}\PY{p}{)}
                 \PY{n}{his}\PY{p}{(}\PY{n}{ax2}\PY{p}{)}
                 \PY{n}{pl}\PY{p}{(}\PY{n}{ax3}\PY{p}{,}\PY{n}{st}\PY{p}{)}
@@ -11792,27 +12074,27 @@ styles including the \passthrough{\lstinline!'default'!},
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_3.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_3.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_4.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_4.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11826,9 +12108,9 @@ styles including the \passthrough{\lstinline!'default'!},
 
 
     
-        Contour plots can be created with Matplotlib. In civil engineering a
-contour plot could show the topology of a build sight. In mechanical
-engineering a contour plot could show the stress gradient across part
+        Contour plots can be created with Matplotlib. In Civil Engineering a
+contour plot could show the topology of a building sight. In Mechanical
+Engineering a contour plot could show the stress gradient across part
 surface.
     
 
@@ -11845,7 +12127,7 @@ method}{Matplotlib's plt.contourf() method}}\label{matplotlibs-plt.contourf-meth
 
 
     
-        Building contour plots using Matplotlib entails using the
+        Building contour plots with Matplotlib entails using the
 \passthrough{\lstinline!ax.contour()!} method. The basic
 \passthrough{\lstinline!ax.contour()!} method call is below.
 
@@ -11856,8 +12138,11 @@ ax.contour(X, Y, Z)
 Where \passthrough{\lstinline!X!} and \passthrough{\lstinline!Y!} are 2D
 arrays of the x and y points, and Z is a 2D array of points that
 determines the ``height'' of the contour, which is represented by color
-in a 2D plot. The \passthrough{\lstinline!np.meshgrid!} function is
-useful to create two 2D arrays from two 1D arrays.
+in a 2D plot.
+
+The code section below includes NumPy's
+\passthrough{\lstinline!np.meshgrid()!} function which produces two 2D
+arrays from two 1D arrays.
     
 
 
@@ -11870,7 +12155,6 @@ useful to create two 2D arrays from two 1D arrays.
         
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{3.0}\PY{p}{,} \PY{l+m+mf}{3.0}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
         \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{3.0}\PY{p}{,} \PY{l+m+mf}{3.0}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{)}
-        
         \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
         
         \PY{n}{Z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{Y}\PY{p}{)}
@@ -11883,7 +12167,7 @@ useful to create two 2D arrays from two 1D arrays.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_595_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_599_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11898,21 +12182,25 @@ method}{Matplotlib's plt.contourf() method}}\label{matplotlibs-plt.contourf-meth
 
 
     
-        Matplotlib's \passthrough{\lstinline!plt.contourf()!} method is similar
-to \passthrough{\lstinline!plt.contour()!} except that it will produce
-contour plots that are ``filled''. Instead of lines in a
-\passthrough{\lstinline!plt.contour()!} plot, shaded areas are produced
-by a \passthrough{\lstinline!plt.contourf()!} plot. The general method
-call for \passthrough{\lstinline!plt.contourf()!} is similar to
-\passthrough{\lstinline!plt.contour()!}.
+        Matplotlib's \passthrough{\lstinline!ax.contourf()!} method is similar
+to \passthrough{\lstinline!ax.contour()!} except that
+\passthrough{\lstinline!ax.contourf()!} produces contour plots that are
+``filled''. Instead of lines in a \passthrough{\lstinline!ax.contour()!}
+plot, shaded areas are produced by a
+\passthrough{\lstinline!ax.contourf()!} plot. The general method call
+for \passthrough{\lstinline!ax.contourf()!} is similar to
+\passthrough{\lstinline!ax.contour()!}.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
 ax.contourf(X, Y, Z)
 \end{lstlisting}
 
 Where \passthrough{\lstinline!X!} and \passthrough{\lstinline!Y!} are 2D
 arrays of the x and y points, and Z is a 2D array of points that
 determines the color of the areas on the 2D plot.
+
+The next code section builds a shaded contour plotting using
+Matplotlib's \passthrough{\lstinline!ax.contourf()!} method.
     
 
 
@@ -11938,7 +12226,7 @@ determines the color of the areas on the 2D plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_598_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_602_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11955,8 +12243,9 @@ plots}\label{color-bars-on-contour-plots}}
     
         Because colors represent a third dimension (like ``hight'') on a 2D
 plot, it is useful to have a scale to what each color means. A color
-scale is typically represented besides a plot. Color bars are added to
-Matplotlib contour plots using the
+scale is typically represented besides a plot.
+
+Color bars are added to Matplotlib contour plots using the
 \passthrough{\lstinline!fig.colorbar()!} method. Since the color bar is
 not part of the contour plot, the color bar needs to be applied to the
 figure object, often called \passthrough{\lstinline!fig!}. A contour
@@ -11964,11 +12253,13 @@ plot needs to be passed into the
 \passthrough{\lstinline!fig.colorbar()!} method. Therefore, when you add
 a color bar to a figure, a plot object needs to be available. A plot
 object is the output of the \passthrough{\lstinline!ax.contourf()!}
-method. Previously, the output of the
-\passthrough{\lstinline!ax.contourf()!} method was not assigned to a
-variable. But to include a color bar on a contour plot, the plot object
-needs to be saved to a variable, so that the plot object can be passed
-to the \passthrough{\lstinline!fig.colorbar()!} method.
+method.
+
+Previously, the output of the \passthrough{\lstinline!ax.contourf()!}
+method was not assigned to a variable. But to include a color bar on a
+contour plot, the plot object needs to be saved to a variable, so that
+the plot object can be passed to the
+\passthrough{\lstinline!fig.colorbar()!} method.
 
 \begin{lstlisting}
 cf = ax.contourf(X,Y,Z)
@@ -11976,12 +12267,12 @@ fig.colorbar(cf, ax=ax)
 \end{lstlisting}
 
 Where \passthrough{\lstinline!cf!} is the plot object created by
-\passthrough{\lstinline!ax1.contourf(X, Y, Z)!}. The axis object that
-contains the contour plot, \passthrough{\lstinline!ax1!} is passed to
-the \passthrough{\lstinline!fig.colorbar()!} method along with the
+\passthrough{\lstinline!ax.contourf(X, Y, Z)!}. The axis object that
+contains the contour plot, \passthrough{\lstinline!ax!} is passed to the
+\passthrough{\lstinline!fig.colorbar()!} method along with the
 \passthrough{\lstinline!cf!} plot object.
 
-The code section below creates a filled contour plot with a color scale
+The code section below creates a filled contour plot with a color bar
 placed beside the plot.
     
 
@@ -12011,7 +12302,7 @@ placed beside the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_601_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_605_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12031,8 +12322,8 @@ can be modified. A general way to modify the color scheme is to call
 Matplotlib's \passthrough{\lstinline!plt.get\_cmap()!} function that
 outputs a color map object. There are many different colormaps available
 to apply to contour plots. A complete list is available in the
-Matplotlib documentation. The colormap object is then passed to the
-\passthrough{\lstinline!ax.contourf()!} or
+Matplotlib documentation (\url{https://matplotlib.org}). The colormap
+object is then passed to the \passthrough{\lstinline!ax.contourf()!} or
 \passthrough{\lstinline!ax.contour()!} method as a keyword argument.
 
 \begin{lstlisting}
@@ -12059,7 +12350,7 @@ has a different color map.
         
         \PY{n}{Z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{Y}\PY{p}{)}
         
-        \PY{n}{fig}\PY{p}{,} \PY{p}{(}\PY{n}{ax1}\PY{p}{,}\PY{n}{ax2}\PY{p}{)} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+        \PY{n}{fig}\PY{p}{,} \PY{p}{(}\PY{n}{ax1}\PY{p}{,} \PY{n}{ax2}\PY{p}{)} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
         
         \PY{n}{mycmap1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{get\PYZus{}cmap}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gist\PYZus{}earth}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}aspect}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{equal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -12079,7 +12370,7 @@ has a different color map.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_604_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_608_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12110,8 +12401,8 @@ using Matplotlib.
 
     
         A quiver plot is a type of 2D plot that shows vector lines as arrows.
-Quiver plots are useful in electrical engineering to visualize
-electrical potential and useful in mechanical engineering to show stress
+Quiver plots are useful in Electrical Engineering to visualize
+electrical potential and useful in Mechanical Engineering to show stress
 gradients.
     
 
@@ -12123,10 +12414,10 @@ gradients.
 \subsubsection{Quiver plot with one
 arrow}\label{quiver-plot-with-one-arrow}}
 
-Let's buid a simple quiver plot that contains one arrow to see how
-matplotlib's \passthrough{\lstinline!ax.quiver()!} method works. The
-\passthrough{\lstinline!ax.quiver()!} method takes four positional
-arguments:
+First, we'll build a simple quiver plot that contains one arrow to
+demonstrate how Matplotlib's \passthrough{\lstinline!ax.quiver()!}
+method works. The \passthrough{\lstinline!ax.quiver()!} method takes
+four positional arguments:
 
 \begin{lstlisting}[language=Python]
 ax.quiver(x_pos, y_pos, x_direct, y_direct)
@@ -12168,7 +12459,7 @@ The following code section builds a quiver plot that contains one arrow.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12234,17 +12525,25 @@ arrow points straight down.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
+
+    
+        We see a plot with two arrows. Both arrows start at the origin. One
+arrow points to the upper right, the other arrow points straight down.
+    
+
+
+
 
     
         \hypertarget{quiver-plot-using-a-meshgrid}{%
 \subsubsection{Quiver plot using a
 meshgrid}\label{quiver-plot-using-a-meshgrid}}
 
-A quiver plot with two arrows are great, but it is tedious and
+A quiver plot with two arrows is a good start, but it is tedious and
 repetitive to add quiver plot arrows one by one. To create a complete 2D
 surface of arrows, we'll utilize NumPy's
 \passthrough{\lstinline!meshgrid()!} function.
@@ -12289,7 +12588,7 @@ The code section below builds the \passthrough{\lstinline!X!} and
 
     
         Next, we can build the quiver plot using Matplotlib's
-\passthrough{\lstinline!ax.quiver()!} method. The
+\passthrough{\lstinline!ax.quiver()!} method. Recall the
 \passthrough{\lstinline!ax.quiver()!} method accepts four positional
 arguments:
 
@@ -12324,15 +12623,16 @@ the aspect ratio of the plot to 1:1.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_624_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
 
     
         Now let's build another quiver plot where the \(\hat{i}\) and
-\(\hat{j}\) components (the direction) of the arrows, \(\vec{F}\) are
-dependent on the arrow starting point \(x,y\) according to the function:
+\(\hat{j}\) components (the direction) of the force arrows, \(\vec{F}\)
+are dependent on the arrow starting point \(x,y\) according to the
+function:
 
 \[ \vec{F} = \frac{x}{5} \ \hat{i} - \frac{y}{5} \ \hat{j} \]
 
@@ -12369,7 +12669,7 @@ function \(\vec{F}\) to the \passthrough{\lstinline!X!} and
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_621_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_626_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12379,7 +12679,7 @@ function \(\vec{F}\) to the \passthrough{\lstinline!X!} and
 \subsubsection{Quiver plot containing a
 gradient}\label{quiver-plot-containing-a-gradient}}
 
-Next let's build a quiver plot that shows the gradient function. The
+Next let's build a quiver plot that shows a gradient function. The
 gradient function has the form:
 
 \[ z = xe^{-x^2-y^2} \]
@@ -12415,7 +12715,7 @@ apply the gradient function to every arrow's x, y starting position.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_623_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_628_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12463,7 +12763,7 @@ The code section below builds a quiver plot with four vortices.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_625_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_630_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12472,7 +12772,7 @@ The code section below builds a quiver plot with four vortices.
         \hypertarget{quiver-plots-with-color}{%
 \subsubsection{Quiver plots with color}\label{quiver-plots-with-color}}
 
-Finally, let's add some color to the quiver plots. The
+Finally, let's add some color to our quiver plots. The
 \passthrough{\lstinline!ax.quiver()!} method has an optional fifth
 positional argument that specifies the quiver arrow color. The quiver
 arrow color argument needs to have the same dimensions as the position
@@ -12513,6 +12813,7 @@ is a colored quiver plot.
         \PY{n}{ax1}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticks}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+m+mf}{2.3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+m+mf}{2.3}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}aspect}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{equal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{meshgrid function}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} second subplot}
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{,}\PY{l+m+mf}{0.2}\PY{p}{)}
@@ -12528,6 +12829,7 @@ is a colored quiver plot.
         \PY{n}{ax2}\PY{o}{.}\PY{n}{xaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticks}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax2}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticks}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}aspect}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{equal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax2}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gradient}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} third subplot}
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{20}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{20}\PY{p}{)}
@@ -12544,6 +12846,7 @@ is a colored quiver plot.
         \PY{n}{ax3}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticks}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax3}\PY{o}{.}\PY{n}{axis}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{]}\PY{p}{)}
         \PY{n}{ax3}\PY{o}{.}\PY{n}{set\PYZus{}aspect}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{equal}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax3}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{four vortices}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
         \PY{c+c1}{\PYZsh{} save and show the figure}
         \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
@@ -12553,7 +12856,7 @@ is a colored quiver plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_632_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12577,7 +12880,7 @@ ax.streamplot(x_grid,y_grid,x_vec,y_vec, density=spacing)
 \end{lstlisting}
 
 Where \passthrough{\lstinline!x\_grid!} and
-\passthrough{\lstinline!y\_grid!} are arrays of x,y points. The arrays
+\passthrough{\lstinline!y\_grid!} are arrays of x, y points. The arrays
 \passthrough{\lstinline!x\_vec!} and \passthrough{\lstinline!y\_vec!}
 denote the stream velocity at each point on the grid. The keyword
 argument \passthrough{\lstinline!density=spacing!} specifies how close
@@ -12622,7 +12925,7 @@ parallel lines pointing to the right.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_631_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_636_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12645,7 +12948,12 @@ vector field.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
+         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+         
+         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
          \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
          
          \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
@@ -12664,7 +12972,7 @@ vector field.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_634_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_639_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12685,6 +12993,7 @@ charges.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}11}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
          \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+         \PY{c+c1}{\PYZsh{} if using a Jupyter notebook, include:}
          \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
          
          \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mf}{0.2}\PY{p}{)}
@@ -12707,7 +13016,7 @@ charges.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_636_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_641_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12721,11 +13030,11 @@ charges.
 
 
     
-        3D surface plots can be created with Matplotlib
+        3D surface plots can be created with Matplotlib.
 
-The \passthrough{\lstinline!mpl\_toolkits.mplot3d import axes3d!}
-submodule included with Matplotlib provides the methods necessary to
-create 3D surface plots with Python.
+The \passthrough{\lstinline!axes3d!} submodule included in Matplotlib's
+\passthrough{\lstinline!mpl\_toolkits.mplot3d!} toolkit provides the
+methods necessary to create 3D surface plots with Python.
     
 
 
@@ -12758,7 +13067,6 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{mpl\PYZus{}toolkits}\PY{n+nn}{.}\PY{n+nn}{mplot3d} \PY{k}{import} \PY{n}{axes3d}
         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
-        \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k}{import} \PY{n}{cm}
         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         \PY{c+c1}{\PYZsh{}if using a Jupyter notebook, include:}
         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
@@ -12770,12 +13078,15 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
         
         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
         \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{add\PYZus{}subplot}\PY{p}{(}\PY{l+m+mi}{111}\PY{p}{,} \PY{n}{projection}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3d}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Plot a 3D surface}
         \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{)}
+        
         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_641_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_646_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12789,8 +13100,8 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
 
 
     
-        Wire frame plots are like surface plots, but on a wire frame plot the
-entire surface is not included. Instead, the surface is approximated
+        Wire frame plots are similar to surface plots, but on a wire frame plot
+the entire 3d surface is not shown. Instead, the surface is approximated
 with ``wires'' laid over the 3D surface. Wire frame 3D surface plots can
 be constructed using Matplotlib's
 \passthrough{\lstinline!ax.plot\_wireframe()!} method. The general
@@ -12803,9 +13114,9 @@ ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 Where \passthrough{\lstinline!X!} and \passthrough{\lstinline!Y!} are 2D
 array of x and y points and \passthrough{\lstinline!Z!} is a 2D array of
 heights. The keyword arguments \passthrough{\lstinline!rstride=!} and
-\passthrough{\lstinline!cstride=!} are the row step size and the column
-step size. These keyword arguments control how close together the
-``wires'' in the wire plot are drawn.
+\passthrough{\lstinline!cstride=!} determine the row step size and the
+column step size. These keyword arguments control how close together the
+``wires'' in the wire frame plot are drawn.
 
 The next code section draws two wire frame plots side by side.
     
@@ -12828,7 +13139,7 @@ The next code section draws two wire frame plots side by side.
         \PY{n}{X}\PY{p}{,}\PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{)}
         \PY{n}{Z} \PY{o}{=} \PY{n}{X}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{X}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{\PYZhy{}} \PY{n}{Y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
         
-        \PY{c+c1}{\PYZsh{} Plot a basic wireframe.}
+        \PY{c+c1}{\PYZsh{} Plot a basic wireframe}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{plot\PYZus{}wireframe}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
         \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{row step size 10, column step size 10}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
@@ -12839,7 +13150,7 @@ The next code section draws two wire frame plots side by side.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_644_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_649_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12854,12 +13165,12 @@ The next code section draws two wire frame plots side by side.
 
     
         Gradient surface plots combine a 3D surface plot with a 2D contour plot.
-The 3D surface is colored like a 2D contour plot. High parts of the
-surface contain a different color than low parts of the surface. The
-general method call is below. Note the \passthrough{\lstinline!cmap=!}
-keyword argument.
+In a gradient surface plot, the 3D surface is colored like a 2D contour
+plot. High parts of the surface contain a different color than low parts
+of the surface. The general method call is below. Note the
+\passthrough{\lstinline!cmap=!} keyword argument.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Python]
 surf = ax.plot_surface(X, Y, Z, 
                         cmap=<color map>,
                         linewidth=0,
@@ -12876,6 +13187,9 @@ the Matplotlib documentation at
 A color bar can be added along side the plot by calling the
 \passthrough{\lstinline!fig.colorbar()!} method and passing in the
 surface plot object.
+
+The next code section builds a gradient surface plot using the
+\passthrough{\lstinline!'gist\_earth'!} color map.
     
 
 
@@ -12904,22 +13218,22 @@ surface plot object.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_647_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_652_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
 
     
         \hypertarget{d-surface-plots-with-2d-contour-plot-projections}{%
-\subsection{3D Surface Plots with 2D contour plot
-projections}\label{d-surface-plots-with-2d-contour-plot-projections}}
+\subsection{3D Surface Plots with 2D Contour Plot
+Projections}\label{d-surface-plots-with-2d-contour-plot-projections}}
     
 
 
 
 
     
-        3D Surface Plots created with Matplotlib can be projected onto 2D
+        3D Surface plots created with Matplotlib can be projected onto 2D
 surfaces. Below is a code section that creates a 3D surface plot. The
 projections of the 3D surface are visualized on 2D contour plots.
     
@@ -12931,13 +13245,13 @@ projections of the 3D surface are visualized on 2D contour plots.
         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
         \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k}{import} \PY{n}{cm}
         
-        \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
-        \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{add\PYZus{}subplot}\PY{p}{(}\PY{l+m+mi}{111}\PY{p}{,} \PY{n}{projection}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3d}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-        
         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
         \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
         \PY{n}{X}\PY{p}{,}\PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{)}
         \PY{n}{Z} \PY{o}{=} \PY{n}{X}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{n}{X}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{\PYZhy{}} \PY{n}{Y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+        
+        \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+        \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{add\PYZus{}subplot}\PY{p}{(}\PY{l+m+mi}{111}\PY{p}{,} \PY{n}{projection}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3d}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         
         \PY{n}{surf} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{ocean}\PY{p}{)}
         \PY{n}{cset} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{contourf}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{zdir}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{offset}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{Z}\PY{p}{)}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{ocean}\PY{p}{)}
@@ -12958,7 +13272,7 @@ projections of the 3D surface are visualized on 2D contour plots.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_650_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_655_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12982,38 +13296,57 @@ save plots as image files. You learned how to customize plots by
 including axis label, titles, and legends on your plots. You also
 learned how to add annotations to plots.
 
-Types of charts detailed in this chapter:
+The types of plots detailed in this chapter are shown in the table
+below.
 
-\begin{itemize}
-\item
-  line plots
-\item
-  multi-line plots
-\item
-  bar graphs
-\item
-  pie charts
-\item
-  bar and line graphs with error bars
-\item
-  scatter plots
-\item
-  histograms
-\item
-  box plots and violin plots
-\item
-  contour plots
-\item
-  quiver plots
-\item
-  stream plots
-\item
-  3D surface plots
-\item
-  3D wire frame plots
-\item
-  3D surface plots with projections
-\end{itemize}
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Chart Type & Matplotlib method\tabularnewline
+\midrule
+\endhead
+line plot & \passthrough{\lstinline!ax.plot(x,y)!}\tabularnewline
+multi-line plot &
+\passthrough{\lstinline!ax.plot(x,y) ax.plot(x,z)!}\tabularnewline
+bar graph &
+\passthrough{\lstinline!ax.bar(x\_pos, heights)!}\tabularnewline
+pie chart &
+\passthrough{\lstinline!ax.pie(sizes, labels=[labels])!}\tabularnewline
+bar graphs with error bars &
+\passthrough{\lstinline!ax.bar(x\_pos, heights, yerr=[error])!}\tabularnewline
+line plot with error bars &
+\passthrough{\lstinline!ax.errorbar(x, y, xerr= , yerr= )!}\tabularnewline
+histogram &
+\passthrough{\lstinline!ax.hist(data, n\_bins)!}\tabularnewline
+box plot &
+\passthrough{\lstinline!ax.boxplot([data list])!}\tabularnewline
+violin plot &
+\passthrough{\lstinline!ax.violinplot([data list])!}\tabularnewline
+scatter plot &
+\passthrough{\lstinline!ax.scatter(x\_points, y\_points)!}\tabularnewline
+plot annotations &
+\passthrough{\lstinline!ax.annotate('text',xy=loc,xy\_coords= )!}\tabularnewline
+subplots &
+\passthrough{\lstinline!fig, (ax1,ax2,ax3) = plt.subplots(1,3)!}\tabularnewline
+plot styles &
+\passthrough{\lstinline!plt.style.use('style')!}\tabularnewline
+2D contour plot &
+\passthrough{\lstinline!ax.contour(X, Y, Z)!}\tabularnewline
+2D filled contour plot &
+\passthrough{\lstinline!ax.contourf(X, Y, Z)!}\tabularnewline
+color bars &
+\passthrough{\lstinline!fig.colorbar(cf, ax=ax)!}\tabularnewline
+color maps &
+\passthrough{\lstinline!mycmap = plt.get\_cmap('map')!}\tabularnewline
+quiver plot &
+\passthrough{\lstinline!ax.quiver(x\_pos, y\_pos, x\_dir, y\_dir)!}\tabularnewline
+stream plot &
+\passthrough{\lstinline!ax.streamplot(x,y,x\_d,y\_d, density= )!}\tabularnewline
+3D surface plot &
+\passthrough{\lstinline!ax.plot\_surface(X, Y, Z)!}\tabularnewline
+3D wireframe plot &
+\passthrough{\lstinline!ax.plot\_wireframe(X,Y,Z)!}\tabularnewline
+\bottomrule
+\end{longtable}
     
 
 
@@ -13149,7 +13482,7 @@ to \(4\).
 Q06.08 Plot the data set below with a line plot. Use Matplotlib's
 default index system, or create a set of x values from \(x=0\) to \(4\).
 
-\[ y = [-1, 2, -3, 1, 0] \]
+\[ y = [-1,\ 2,\ -3,\ 1,\ 0] \]
 
 Q06.09 Plot the following three functions on the same set of axis. Use a
 different color line for each function.
@@ -13163,13 +13496,13 @@ different color line for each function.
 Set values of \(t=-4\pi\) to \(4\pi\)
 
 Q06.10 Plot the following three functions on the same set of axis.
-Specify a thick red line for the \(\cos\) function, a thin blue line for
-the \(\sin\) function, and a dashed green line for the \(atan\) function
+Specify a thick red line for the \(cos\) function, a thin blue line for
+the \(sin\) function, and a dashed green line for the \(atan\) function
 (the arc tangent function).
 
-\[ x = \cos(r/10) \]
+\[ x = cos(r/10) \]
 
-\[ y = \sin(r/4) \]
+\[ y = sin(r/4) \]
 
 \[ z = atan(r) \]
 
@@ -13225,23 +13558,24 @@ Developers in 2017.
 Q06.32 According to the 2017 Python Developer's Survey, the commercial
 cloud providers used by Python Developers breaks down as follows:
 
-\[ Amazon Web Services = 67\% \]
+\[ Amazon \ Web \ Services = 67\% \]
 
-\[ Google Cloud = 29\% \]
+\[ Google \ Cloud = 29\% \]
 
 \[ Heroku = 26\% \]
 
-\[ Digital Ocean = 23\% \]
+\[ Digital \ Ocean = 23\% \]
 
-\[ Microsoft Azure = 16\% \]
+\[ Microsoft \ Azure = 16\% \]
 
 \[ Other = 13\% \]
 
 Build a pie chart of the commercial cloud providers used by Python
 Developers in 2017.
 
-Q06.33 Create a plot of the function \(y=\sqrt{2x}\) from \(x = 1\) to
-\(10\)
+Q06.33 Re-create the pie chart in Q06.32 that shows which commercial
+cloud providers are used by Python Developers. Explode out the pie
+pieces on the chart and add a shadow to each piece.
 
 Q06.34 Re-create the pie chart in Q06.31 that shows which operating
 system Python developers use. Explode out the Windows (49\%) pie piece
@@ -13275,7 +13609,8 @@ Grade A325 & 85,000 psi\tabularnewline
 \end{longtable}
 
 Build a bar chart of the proof strength of the four types of bolts.
-Include labels on the x-axis and y-axis. Include a title.
+Label the bars by bolt type and include a title and y-axis label with
+units.
 
 Q06.37 According to the 2017 Python Developer's Survey, the IDE
 (Integrated Development Environment) used by \emph{Scientific} Python
@@ -13322,7 +13657,8 @@ Oil Quench and Temper & 422 MPa\tabularnewline
 \end{longtable}
 
 Build a bar plot of tensile strength vs.~heat treatment using the steel
-heat treatment data above.
+heat treatment data above. Label the bars with the type of heat
+treatment and include a y-axis label with units and a title.
         \end{problems}
 
     
@@ -13335,28 +13671,28 @@ heat treatment data above.
 \subsubsection{Histograms, Box Plots, and Violin
 Plots}\label{histograms-box-plots-and-violin-plots}}
 
-Q06.50 Plot a histogram of normal distribution of
+Q06.50 Plot the histogram of a normal distribution of
 \passthrough{\lstinline!100!} random numbers. Use NumPy's
 \passthrough{\lstinline!np.random.normal()!} function to create the
-array of numbers. Set a mean \(\mu\) of 20 and a standard deviation
-\(\sigma\) of \passthrough{\lstinline!7!}.
+array of numbers. Set a mean \(\mu\) = \passthrough{\lstinline!20!} and
+a standard deviation \(\sigma\) = \passthrough{\lstinline!7!}.
 
 Q06.51 NumPy's \passthrough{\lstinline!np.random.randint()!} function
 creates an array of random numbers. NumPy's
 \passthrough{\lstinline!np.random.randn()!} function creates an array of
-normally-distributed random numbers. Use both each of these functions to
+normally-distributed random numbers. Use both of these functions to
 create a set of 200 random numbers. Plot both sets of numbers as
 histograms with Matplotlib's \passthrough{\lstinline!ax.hist()!} method.
 After you construct both histograms, explain how the two NumPy functions
 \passthrough{\lstinline!np.random.randint()!} and
-\passthrough{\lstinline!np.random.randn()!} functions compare.
+\passthrough{\lstinline!np.random.randn()!} compare.
 
 Q06.52 Create a box plot with three elements (three ``boxes''). Use
 NumPy's \passthrough{\lstinline!np.random.randn()!} function to create
 three arrays of 50 elements. Plot each array as a separate element on
 the box plot.
 
-Q06.53 Create a violin plot with five elements (three ``violins''). Use
+Q06.53 Create a violin plot with five elements (five ``violins''). Use
 NumPy's \passthrough{\lstinline!np.random.randn()!} function to create
 five arrays of 50 elements. Plot each array as a separate element on the
 violin plot.
@@ -13434,6 +13770,10 @@ In the second subplot use Matplotlib's
 Matplotlib's \passthrough{\lstinline!ax.semilogx()!} method. In the four
 subplot use Matplotlib's \passthrough{\lstinline!ax.loglog()!} method.
 Label each subplot with a title that shows the plot type.
+
+Q06.70 Use the data in Q06.31 to create a figure with two subplots. In
+the first subplot, build a bar chart of the data in Q06.31. In the
+second subplot, build a pie chart of he data in Q06.31.
     
 
 
@@ -17185,13 +17525,18 @@ Q09.04 Use a for loop to sum the elements in the list
 \passthrough{\lstinline![1,3,5,8,12]!}. Print the sum to the user.
 
 Q09.05 Create the Fibonacci sequence using a for loop. Print out the
-first 20 terms of the Fibonacci sequence on one line.
+first 20 terms of the Fibonacci sequence on one line. The first 10 terms
+of the Fibonacci sequence are below:
 
-Q09.06 (a) Use a for loop to print out the numbers 1 to 30
+\[ 1, \ 1, \ 2, \ 3, \ 5, \ 8, \ 13, \ 21, \ 34, \ 55 \ ... \]
+
+Q09.06 This problem is about \emph{Fizz Buzz}, a programming task that
+is sometimes used in interviews.
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{1}
+\item
+  Use a for loop to print out the numbers 1 to 30
 \item
   Use a for loop to print out all the numbers 1 to 30, but leave out any
   number which is divisible by 3, such as 3,6 and 9.
@@ -17291,6 +17636,116 @@ output.
 For example, if the list \passthrough{\lstinline!['hello', 'bye']!} was
 passed into your function, the output should be
 \passthrough{\lstinline!['helloG', 'byeG']!}.
+
+Q09.13 Write a loop that prints out your name 20 times. Each time your
+name is printed, it should be on a new line.
+
+Q09.14 Write a loops that prints out
+``\passthrough{\lstinline!around and!}'' 20 times. Each time
+``\passthrough{\lstinline!around and!}'' is printed, it should be on the
+same line. As in
+\passthrough{\lstinline!around and around and around and around and around ...!}.
+
+Q09.15 The Appendix contains a section on ASCII character codes. Use
+code similar to the code shown in the Appendix to print out the ASCII
+character code and resulting character for just the letters
+\passthrough{\lstinline!a!} to \passthrough{\lstinline!z!},
+\passthrough{\lstinline!A!} to \passthrough{\lstinline!Z!}, and
+\passthrough{\lstinline!0!} to \passthrough{\lstinline!9!}.
+
+Q09.16 Use a for loop to print out the days of the week. Print each day
+of the week on its own line.
+
+Q09.17 Use a for loop to print out the spelling of the word
+\passthrough{\lstinline!mississippi!} with one letter on each line.
+
+Q09.18 An employee starts with an annual salary of 58 thousand dollars.
+Print out the employees salary each year for five years if the employee
+receives a 2.5 percent (0.02) raise each year.
+
+Q09.19 The factorial function is the product of integers between 1 and
+n. The formula for factorial is below:
+
+\[ n! = 1 \times 2 \times 3 \times 4 \times 5 \times \ ... \ \times n \]
+
+Write a Python function that contains a for loop to find 5 factorial
+(5!) and 20 factorial (20!)
+
+Q09.20 Create a for loop that prints out all of the even numbers between
+1 and 100.
+
+Q09.21 Use Python's \passthrough{\lstinline!input()!} function to ask a
+user for an integer between 1 and 10. Then use a for loop to print out
+all of the multiples of that number between 1 and 100. Use your program
+to print out all of the multiples of 9 between 1 and 100.
+
+Q09.22 The Leibniz approximation for the value of \(\pi\) is below.
+
+\[ \frac{\pi}{4} = \frac{1}{1} - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \ ... \]
+
+Use 15 terms in the Leibniz approximation to calculate the value of
+\(\pi\). Compute the error of the Leibniz approximation with 15 terms
+compared to Pythons \passthrough{\lstinline!math.pi!} function. Hint:
+\((-1)^i\) will alternate in sign as \(i\) steps through integers.
+
+Q09.23 Use a for loop to print two columns on each line. In each line,
+give an SI prefix, then show which power the prefix corresponds to.
+Start with ``nano'' and ``10\^{}-9'' and end on ``giga'' and
+``10\^{}9''. An example of the table is below.
+
+\begin{lstlisting}
+nano     10^-9
+micro    10^-6
+milli    10^-3
+...       ...
+mega     10^6
+giga     10^9
+\end{lstlisting}
+
+Q09.24 Python's \passthrough{\lstinline!bin()!} function converts an
+integer into its binary representation (a number represented as 1's and
+0's). Use the \passthrough{\lstinline!bin()!} function to build a table
+of values from 1 to 10 showing the binary representation of each number.
+Hint: use \passthrough{\lstinline!bin(i)[2:]!} to remove
+\passthrough{\lstinline!0b!} from the output of the
+\passthrough{\lstinline!bin()!} function. An example of the table is
+below.
+
+\begin{lstlisting}
+0     0
+1     1
+2     10
+3     11
+4     100
+...   ...
+\end{lstlisting}
+
+Q09.25 Iodine-131 is a radioactive isotope of iodine that has a
+half-life of about 8 days. This means that after 8 days 100g of
+iodine-131 will decay to 100g/2 = 50g, and after 16 days, 100g of
+iodine-131 will decay to (100g/2)/2 = 25g. Use a for loop to calculate
+the mass of 100g of Iodine-131 left after 1 year of radioactive decay.
+
+Q09.26 Use a for loop to ask a user for five numbers. Use another for
+loop to print out the largest of the five numbers back to the user.
+
+Q09.27 Use a for loop to ask a user for three exam grades. Print back to
+the user the average of the three grades.
+
+Q09.28 Use a for loop to ask a user for 10 numbers. Print back the the
+user the mean, median and mode of the numbers. Hint: Python's
+\passthrough{\lstinline!statistics!} module is part of the Standard
+Library. \passthrough{\lstinline!statistics.mean()!},
+\passthrough{\lstinline!statistics.median()!} and
+\passthrough{\lstinline!statistics.mode()!} are three functions present
+in the \passthrough{\lstinline!statistics!} module.
+
+Q09.29 Write a program that requests a word from a user and then counts
+the number of vowels in the word. The English vowels are
+\passthrough{\lstinline!a, e, i, o, u, y!}. Hint: the code
+\passthrough{\lstinline!'a' in ['a','e','i','o','u','y']!} and
+\passthrough{\lstinline!'a' in 'aeiouy'!} both return
+\passthrough{\lstinline!True!}.
         \end{problems}
 
     
@@ -17435,6 +17890,13 @@ Q09.83
 \begin{lstlisting}[language=Python]
 for i in range(3):
 print(i)
+\end{lstlisting}
+
+Q09.84
+
+\begin{lstlisting}[language=Python]
+for i in range(5,1):
+    print(i)
 \end{lstlisting}
     
 
