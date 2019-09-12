@@ -154,41 +154,41 @@
 \contentsline {subsubsection}{Errors, Explanations, and Solutions}{84}{section.584}
 \contentsline {chapter}{\numberline {4}Data Types and Variables}{85}{chapter.603}
 \contentsline {section}{\numberline {4.1}Introduction}{85}{section.604}
-\contentsline {section}{\numberline {4.2}Numeric Data Types}{87}{section.605}
-\contentsline {subsection}{A review of variable assignment in Python}{87}{section.605}
-\contentsline {subsection}{Integers}{87}{lstnumber.607}
-\contentsline {subsection}{Floating Point Numbers}{88}{lstnumber.618}
-\contentsline {subsection}{Complex Numbers}{88}{lstnumber.637}
-\contentsline {section}{\numberline {4.3}Boolean Data Type}{89}{section.659}
-\contentsline {subsection}{Integers and Floats as Booleans}{89}{lstnumber.677}
-\contentsline {subsection}{Boolean Arithmetic}{90}{lstnumber.689}
-\contentsline {section}{\numberline {4.4}Strings}{91}{section.718}
-\contentsline {subsection}{Numbers as Strings}{91}{lstnumber.726}
-\contentsline {subsection}{Strings as Boolean Values}{92}{lstnumber.734}
-\contentsline {subsection}{String Indexing}{92}{lstnumber.746}
-\contentsline {subsubsection}{Negative Indexing}{93}{lstnumber.763}
-\contentsline {subsection}{String Slicing}{93}{figure.caption.770}
-\contentsline {section}{\numberline {4.5}Lists}{94}{section.789}
-\contentsline {subsection}{Indexing Lists}{94}{lstnumber.797}
-\contentsline {section}{\numberline {4.6}Dictionaries and Tuples}{95}{section.826}
-\contentsline {subsection}{Dictionaries}{95}{section.826}
-\contentsline {subsection}{Tuples}{96}{lstnumber.861}
-\contentsline {section}{\numberline {4.7}Summary}{98}{section.885}
-\contentsline {subsection}{Key Terms and Concepts}{98}{section.885}
-\contentsline {subsection}{Summary of Python Functions and Commands}{98}{section.885}
-\contentsline {subsubsection}{Built-in Data Types}{98}{section.885}
-\contentsline {subsubsection}{Python Functions}{98}{table.886}
-\contentsline {subsubsection}{Python List Operators}{99}{table.887}
-\contentsline {section}{\numberline {4.8}Review Questions}{99}{section.889}
-\contentsline {subsubsection}{Determine the Data Type}{99}{section.889}
-\contentsline {subsubsection}{Numeric Data Types}{99}{section.889}
-\contentsline {subsubsection}{Booleans}{100}{Item.897}
-\contentsline {subsubsection}{Strings}{100}{lstnumber.900}
-\contentsline {subsubsection}{Lists}{102}{Item.918}
-\contentsline {subsubsection}{Dictionaries}{102}{Item.918}
-\contentsline {subsubsection}{Tuples}{103}{Item.918}
-\contentsline {subsubsection}{Errors, Explanations, and Solutions}{103}{lstnumber.922}
-\contentsline {chapter}{\numberline {5}Matricies and Arrays}{105}{chapter.951}
+\contentsline {section}{\numberline {4.2}Numeric Data Types}{86}{section.605}
+\contentsline {subsection}{A review of variable assignment in Python}{86}{section.605}
+\contentsline {subsection}{Integers}{86}{lstnumber.607}
+\contentsline {subsection}{Floating Point Numbers}{87}{lstnumber.618}
+\contentsline {subsection}{Complex Numbers}{87}{lstnumber.637}
+\contentsline {section}{\numberline {4.3}Boolean Data Type}{88}{section.659}
+\contentsline {subsection}{Integers and Floats as Booleans}{88}{lstnumber.677}
+\contentsline {subsection}{Boolean Arithmetic}{89}{lstnumber.689}
+\contentsline {section}{\numberline {4.4}Strings}{90}{section.718}
+\contentsline {subsection}{Numbers as Strings}{90}{lstnumber.726}
+\contentsline {subsection}{Strings as Boolean Values}{91}{lstnumber.734}
+\contentsline {subsection}{String Indexing}{91}{lstnumber.746}
+\contentsline {subsubsection}{Negative Indexing}{92}{lstnumber.763}
+\contentsline {subsection}{String Slicing}{92}{figure.caption.770}
+\contentsline {section}{\numberline {4.5}Lists}{93}{section.789}
+\contentsline {subsection}{Indexing Lists}{93}{lstnumber.797}
+\contentsline {section}{\numberline {4.6}Dictionaries and Tuples}{94}{section.826}
+\contentsline {subsection}{Dictionaries}{94}{section.826}
+\contentsline {subsection}{Tuples}{95}{lstnumber.861}
+\contentsline {section}{\numberline {4.7}Summary}{97}{section.885}
+\contentsline {subsection}{Key Terms and Concepts}{97}{section.885}
+\contentsline {subsection}{Summary of Python Functions and Commands}{97}{section.885}
+\contentsline {subsubsection}{Built-in Data Types}{97}{section.885}
+\contentsline {subsubsection}{Python Functions}{97}{table.886}
+\contentsline {subsubsection}{Python List Operators}{98}{table.887}
+\contentsline {section}{\numberline {4.8}Review Questions}{98}{section.889}
+\contentsline {subsubsection}{Determine the Data Type}{98}{section.889}
+\contentsline {subsubsection}{Numeric Data Types}{98}{section.889}
+\contentsline {subsubsection}{Booleans}{99}{Item.897}
+\contentsline {subsubsection}{Strings}{99}{lstnumber.900}
+\contentsline {subsubsection}{Lists}{101}{Item.918}
+\contentsline {subsubsection}{Dictionaries}{101}{Item.918}
+\contentsline {subsubsection}{Tuples}{102}{Item.918}
+\contentsline {subsubsection}{Errors, Explanations, and Solutions}{102}{lstnumber.922}
+\contentsline {chapter}{\numberline {5}NumPy and Arrays}{105}{chapter.951}
 \contentsline {section}{\numberline {5.1}Introduction}{105}{section.952}
 \contentsline {section}{\numberline {5.2}NumPy}{106}{section.953}
 \contentsline {section}{\numberline {5.3}Installing NumPy}{106}{section.954}
@@ -476,38 +476,41 @@
 \contentsline {subsection}{Key Terms and Concepts}{332}{section.1992}
 \contentsline {section}{\numberline {12.9}Project Ideas}{332}{section.1993}
 \contentsline {chapter}{Appendix}{335}{chapter*.1994}
-\contentsline {section}{\numberline {A.}Contents}{335}{section.1995}
-\contentsline {section}{\numberline {B.}Reserved and Keywords in Python}{336}{section.1996}
+\ttl@change@i {\@ne }{section}{9.3em}{}{\contentslabel {7em}}{\hspace *{-7em}}{\titlerule *[1pc]{.}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\contentsline {section}{\numberline {Appendix A}Contents}{335}{section.1995}
+\contentsline {section}{\numberline {Appendix B}Reserved and Keywords in Python}{336}{section.1996}
 \contentsline {subsection}{Logical Keywords}{336}{lstnumber.2009}
 \contentsline {subsection}{Control Flow Key Words}{336}{lstnumber.2018}
 \contentsline {subsection}{Definition Key Words}{336}{lstnumber.2033}
 \contentsline {subsection}{Module Keywords}{336}{lstnumber.2042}
-\contentsline {section}{\numberline {C.}ASCII Character Codes}{337}{section.2047}
-\contentsline {section}{\numberline {D.}Virtual Environments}{339}{section.2048}
+\contentsline {section}{\numberline {Appendix C}ASCII Character Codes}{337}{section.2047}
+\contentsline {section}{\numberline {Appendix D}Virtual Environments}{339}{section.2048}
 \contentsline {subsection}{Create a virtual environment with the Anaconda Prompt}{339}{section.2048}
 \contentsline {subsection}{Activate a virtual environment}{340}{lstnumber.2064}
 \contentsline {subsection}{Install packages in a virtual environment}{340}{lstnumber.2068}
 \contentsline {subsection}{Deactivate a virtual environment}{340}{lstnumber.2072}
 \contentsline {subsection}{List your virtual environments}{340}{lstnumber.2075}
 \contentsline {subsection}{Remove a virtual environment}{341}{lstnumber.2094}
-\contentsline {section}{\numberline {E.}NumPy Math Functions}{342}{section.2114}
+\contentsline {section}{\numberline {Appendix E}NumPy Math Functions}{342}{section.2114}
 \contentsline {subsection}{NumPy Array Creation and Manipulation Functions and Methods}{342}{lstnumber.2118}
 \contentsline {subsection}{NumPy Exponential and Logarithmic Functions and Methods}{342}{lstnumber.2134}
 \contentsline {subsection}{NumPy Trigonometric Functions and Methods}{342}{lstnumber.2146}
 \contentsline {subsection}{NumPy Statistics Functions and Methods}{342}{lstnumber.2166}
-\contentsline {section}{\numberline {F.}Git and GitHub}{343}{section.2179}
+\contentsline {section}{\numberline {Appendix F}Git and GitHub}{343}{section.2179}
 \contentsline {subsection}{Cloning a repo}{343}{section.2179}
 \contentsline {subsection}{Creating and synching a remote repo on GitHub.com with a local repo}{344}{lstnumber.2183}
 \contentsline {subsubsection}{Create a remote repo on GitHub.com}{344}{lstnumber.2183}
 \contentsline {subsubsection}{Make a new local repo and link the local repo to the remote repo on GitHub.com}{344}{lstnumber.2183}
 \contentsline {subsubsection}{Add, commit and push changes up to Github.com}{344}{lstnumber.2189}
 \contentsline {subsubsection}{Pull the most recent version from GitHub.com before each work session}{344}{lstnumber.2193}
-\contentsline {section}{\numberline {G.}LaTeX Math}{345}{section.2200}
-\contentsline {section}{\numberline {H.}Problem Solving with Python 3.7 Edition Book Construction}{345}{section.2204}
+\contentsline {section}{\numberline {Appendix G}LaTeX Math}{345}{section.2200}
+\contentsline {section}{\numberline {Appendix H}Problem Solving with Python Book Construction}{345}{section.2204}
 \contentsline {subsection}{Jupyter Notebooks}{345}{section.2204}
 \contentsline {subsection}{Website}{346}{lstnumber.2242}
 \contentsline {subsection}{Hardcopy}{347}{lstnumber.2242}
-\contentsline {section}{\numberline {I.}Contributions}{347}{section.2243}
+\contentsline {section}{\numberline {Appendix I}Contributions}{347}{section.2243}
 \contentsline {subsection}{Contributor List}{347}{section.2243}
-\contentsline {section}{\numberline {J.}Cover Artwork}{347}{section.2244}
-\contentsline {section}{\numberline {K.}About the Author}{347}{section.2245}
+\contentsline {section}{\numberline {Appendix J}Cover Artwork}{347}{section.2244}
+\contentsline {section}{\numberline {Appendix K}About the Author}{347}{section.2245}
+\contentsfinish 

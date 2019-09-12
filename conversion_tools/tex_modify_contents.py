@@ -32,7 +32,7 @@ def is_section(line, sec_title):
 
 def remove_ch_number_from_toc(ch_title):
     #line='\\chapter*{Preface}\\label{preface} \n \\addcontentsline{toc}{chapter}{Preface}}'
-    outline = "\\chapter*{"+ch_title+"}\\label{"+ch_title.lower()+"} \n \\addcontentsline{toc}{chapter}{"+ch_title+"}}"
+    outline = "\\chapter*{"+ch_title+"}\\label{"+ch_title.lower()+"} \n \\addcontentsline{toc}{chapter}{"+ch_title+"}} \n \markboth{" + ch_title.upper() + "}{}"
     return outline
 
 def remove_sec_number_from_toc(sec_title):
@@ -54,7 +54,7 @@ def process_tex_file(infile,outfile,ch_list,sec_list):
             if is_chapter(line, ch):
                 line = remove_ch_number_from_toc(ch)
                 if ch=='Appendix':
-                    line=line+'\n \\renewcommand{\\thesection}{\\Alph{section}.} \n \\setcounter{section}{0} \n'
+                    line=line+'\n \\renewcommand{\\thesection}{\\Alph{section}.} \n \\setcounter{section}{0} \n  \\renewcommand{\\thesection}{Appendix \\Alph{section}} \n \\dottedcontents{section}[9.3em]{}{7em}{1pc} \n'
                 print(line)
         for sec in sec_list:
             if is_section(line, sec):

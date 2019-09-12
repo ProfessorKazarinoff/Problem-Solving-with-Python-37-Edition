@@ -60,5 +60,6 @@
 \setcounter{secnumdepth}{1} %only chapter and sections are numbered, subsections and subsubsections are not numbered
 \setcounter{tocdepth}{1}    %only chapter and sections in TOC, subsections and subsubsections are not in TOC
 \usepackage{multicol} % need multicols for end of chapter key terms and end of chapter questions
-
+\usepackage{titletoc} % for TOC formatting
+\dottedcontents{section}[5.5em]{}{3.2em}{1pc} % TOC formmating close to default
 % end packages.tplx
