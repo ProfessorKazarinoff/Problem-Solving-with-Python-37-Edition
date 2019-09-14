@@ -2193,7 +2193,8 @@ Q02.95 Open the Python Interpreter (the Python REPL). Try to view
         In this chapter, you will be introduced to Jupyter notebooks. A Jupyter
 notebook is an application that can run Python code, display plots, show
 equations and contain formatted text. Jupyter notebooks are a great tool
-for problem solvers to write, run, document and share code with others.
+for problem solvers to write, run, document and share Python code with
+others.
 
 By the end of this chapter you will be able to:
 
@@ -2229,10 +2230,10 @@ By the end of this chapter you will be able to:
 
 
     
-        A \emph{Jupyter notebook} is an electronic file type which can contain
-both programming code and text descriptions. Jupyter notebooks can also
+        A \emph{Jupyter notebook} is an electronic file that contains both
+programming code and text descriptions. Jupyter notebooks can also
 contain embedded charts, plots, images, videos, and links. Jupyter
-notebooks run in a web browser like Google Chrome or Firefox.
+notebooks run in a web browser like Firefox or Google Chrome.
     
 
 
@@ -2242,12 +2243,14 @@ notebooks run in a web browser like Google Chrome or Firefox.
         Although Jupyter notebooks can contain the code of many different
 programming languages, many Jupyter notebooks contain Python code. The
 Python code in a Jupyter notebook is the same type of Python code found
-in a \textbf{\emph{.py}} file. The text description sections of Jupyter
-notebooks contain explanations and clarifications of the programming
-code in the \emph{markdown} format. \emph{Markdown} files have the
-extension \textbf{\emph{.md}}. Markdown sections of a Jupyter notebook
-can include formatting to make text bold, italic, form tables and lists,
-show code listings and render images.
+in a \textbf{\emph{.py}} file.
+
+The text description sections of Jupyter notebooks contain explanations
+and clarifications of the programming code in the \emph{markdown}
+format. \emph{Markdown} files have the extension \textbf{\emph{.md}}.
+Markdown sections of a Jupyter notebook can include formatting to make
+text bold, italic, form tables and lists, show code listings and render
+images.
     
 
 
@@ -2256,7 +2259,7 @@ show code listings and render images.
     
         One way to think of a Jupyter notebook is as a combination of the Python
 REPL and a Python module \textbf{\emph{.py}} file with a markdown
-**\_.md** file thrown in between code sections.
+\textbf{\emph{.md}} file thrown in between code sections.
 
 In the Python REPL, only one command can be typed at a time, and only
 one line of output is shown at a time. In a \textbf{\emph{.py}} file,
@@ -2273,12 +2276,21 @@ display rich text with headings, formatting, and images.
 
 
     
-        Jupyter notebooks contain three types of cells: code cells, output
-cells, and markdown cells. Lines of Python code are run in code cells.
-The output from running the code cells is also shown in output cells.
-Markdown cells contain text like descriptions of what will happens in
-subsequent code cells. Charts, plots, command line output, and images
-can all be shown in Jupyter notebooks as well.
+        Jupyter notebooks contain three types of cells: \emph{code cells},
+\emph{output cells}, and \emph{markdown cells}.
+
+\begin{itemize}
+\item
+  Code cells: Lines of Python code are run in code cells.
+\item
+  Output cells: The output from running the code cells is also shown in
+  output cells. Charts, plots, command line output, and images can all
+  be shown in Jupyter notebooks as well.
+\item
+  Markdown cells: Contain text-like descriptions of what will happens in
+  subsequent code cells. Markdown cells can also contain images and
+  links.
+\end{itemize}
     
 
 
@@ -2295,19 +2307,19 @@ can all be shown in Jupyter notebooks as well.
     
         There is a vast array of editors and IDE's (Integrated Development
 Environments) which can be used to edit and run Python code. Why should
-problem solvers learn to use Jupyter Notebooks?
+problem solvers learn to use Jupyter notebooks?
 
-Below is a table of simple text editors and IDE's which can be used to
-edit and run Python code:
+Below is a table of simple text editors and IDE's which can edit and run
+Python code:
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Python Text Editors and IDE's &\tabularnewline
+Python Text Editor or IDE & Description\tabularnewline
 \midrule
 \endhead
-Notepad & simple text editor - included with Windows\tabularnewline
-Idle & included with Python from Python.org\tabularnewline
-Sublime Text & full-featured editor with long-time no-cost
+Notepad & Simple text editor - included with Windows\tabularnewline
+Idle & Included with Python from Python.org\tabularnewline
+Sublime Text & Full-featured editor with long-time no-cost
 license\tabularnewline
 Spyder & IDE included with the Anaconda Distribution of
 Python\tabularnewline
@@ -2318,9 +2330,10 @@ PyCharm & Professional Developer-friendly Python IDE\tabularnewline
 
 A Jupyter notebook is neither a simple text editor nor a full-featured
 IDE. Jupyter notebooks provide a quick and streamlined way for
-problem-solvers to prototype code and quickly share code. Jupyter
-notebooks also provide a way for problem-solvers to share programming
-solutions with team members, supervisors, and customers.
+problem-solvers to prototype code and quickly share code.
+
+Jupyter notebooks also provide a way for problem-solvers to share
+programming solutions with team members, supervisors, and customers.
 
 \begin{figure}
 \centering
@@ -2340,8 +2353,8 @@ highlighting and context help.
 
 
     
-        In the context of problem-solving, Jupyter notebooks can be quite handy.
-Jupyter notebooks are quick to open and quick to produce output. Data
+        In the context of problem-solving, Jupyter notebooks are quite handy.
+Jupyter notebooks open quickly and quickly produce output. Data
 exploration, data cleaning, and plot building are accomplished in
 Jupyter notebooks easier and quicker than in a text editor or an IDE.
 
@@ -2481,10 +2494,9 @@ $ pip3 install jupyter
         In this section, you will learn how to open a Jupyter notebook on
 Windows and MacOS.
 
-One way problem solvers can write and execute Python code is in a
-Jupyter notebook. Jupyter notebooks contain Python code, the output that
-code produces and markdown cells usually used to explain what the code
-means.
+One way problem solvers can write and execute Python code is in Jupyter
+notebooks. Jupyter notebooks contain Python code, the output that code
+produces and markdown cells usually used to explain what the code means.
 
 On Windows, a Jupyter notebook can be started from the \textbf{Anaconda
 Prompt}, the Windows start menu and \textbf{Anaconda Navigator}.
@@ -2516,11 +2528,11 @@ Menu}\label{open-a-jupyter-notebook-with-the-windows-start-menu}}
 
 
     
-        One simple way to open a Jupyter notebook is to use the Windows Start
-Menu. Note that the Anaconda distribution of Python must be installed to
-use the Windows Start Menu to open a Jupyter notebook. Download
+        One way to open a Jupyter notebook is to use the Windows Start Menu.
+Note that the Anaconda distribution of Python must be installed to use
+the Windows Start Menu to open a Jupyter notebook. Download
 \textbf{Anaconda} at the following link:
-\href{https://www.anaconda.com/download/}{Anaconda.com/downloads}
+\href{https://www.anaconda.com/distribution/}{Anaconda.com/distribution}
 
 Open the Windows start menu and select \textbf{{[}Anaconda3(64 bit){]}}
 --\textgreater{} \textbf{{[}Jupyter Notebook{]}}
@@ -2540,8 +2552,8 @@ In the upper right select \textbf{{[}New{]}} --\textgreater{}
 \begin{figure}
 \centering
 \includegraphics{images/new_notebook_from_browser.png}
-\caption{Jupyter Notebook file browser. Notice a new Python 3 notebook
-is selected}
+\caption{Jupyter notebook file browser. Note a new Python 3 notebook is
+selected}
 \end{figure}
 
 A new \textbf{notebook} will open as a new tab in your web browser.
@@ -2552,8 +2564,8 @@ A new \textbf{notebook} will open as a new tab in your web browser.
 \caption{A newly opened Jupyter notebook}
 \end{figure}
 
-Try typing this in the first cell in the notebook to the right of the
-\passthrough{\lstinline!In [ ]:!} prompt:
+Try typing the code below in the first cell in the notebook to the right
+of the \passthrough{\lstinline!In [ ]:!} prompt:
 
 \begin{lstlisting}[language=Python]
 import this
@@ -2565,7 +2577,8 @@ notebook.
 \begin{figure}
 \centering
 \includegraphics{images/run_import_this.png}
-\caption{A Jupyter notebook running ``import this''}
+\caption{A Jupyter notebook running ``import this''. Note the run button
+is selected}
 \end{figure}
     
 
@@ -2597,7 +2610,7 @@ under \textbf{{[}Anaconda3{]}}.
 If you don't see the \textbf{Anaconda Prompt} in the Windows Start Menu,
 then you need to install the Anaconda distribution of Python. Download
 \textbf{Anaconda} at the following link:
-\href{https://www.anaconda.com/download/}{Anaconda.com/downloads}
+\href{https://www.anaconda.com/distribution/}{Anaconda.com/distribution}
 
 The \textbf{Anaconda Prompt} window should look something like the image
 below.
@@ -2605,7 +2618,8 @@ below.
 \begin{figure}
 \centering
 \includegraphics{images/jupyter_notebook_anaconda_prompt.png}
-\caption{Anaconda Prompt}
+\caption{The Anaconda Prompt. Note the command jupyter noteooks is
+entered}
 \end{figure}
 
 At the \textbf{Anaconda Prompt} type:
@@ -2637,7 +2651,7 @@ Prompt} and paste it into a web browser's address bar.
 \begin{figure}
 \centering
 \includegraphics{images/new_notebook_from_browser.png}
-\caption{Jupyter Notebook file browser: create new Python 3 notebook}
+\caption{Jupyter notebook file browser: create new Python 3 notebook}
 \end{figure}
 
 In the upper right select \textbf{{[}New{]}} --\textgreater{}
@@ -2685,7 +2699,8 @@ page, in the \textbf{Jupyter notebook} tile, click \textbf{{[}Launch{]}}
 \begin{figure}
 \centering
 \includegraphics{images/anaconda_navigator_jupyter_notebook_launch.png}
-\caption{Anaconda Navigator- launch new Jupyter Notebook}
+\caption{Anaconda Navigator- showing how to launch a new Jupyter
+notebook}
 \end{figure}
 
 A \textbf{Jupyter file browser} will open in a web browser tab.
@@ -2696,15 +2711,15 @@ In the upper right select \textbf{{[}New{]}} --\textgreater{}
 \begin{figure}
 \centering
 \includegraphics{images/new_notebook_from_browser.png}
-\caption{Jupyter Notebook file browser - create new Python 3 notebook}
+\caption{Jupyter notebook file browser - create new Python 3 notebook}
 \end{figure}
 
-A new \textbf{notebook} will open as a new tab in your web browser.
+A new notebook will open as a new tab in your web browser.
 
 \begin{figure}
 \centering
 \includegraphics{images/new_notebook.png}
-\caption{A Newly opened jupyter Notebook}
+\caption{A newly opened Jupyter notebook showing a blank code cell}
 \end{figure}
     
 
@@ -2723,7 +2738,7 @@ Interface}\label{the-jupyter-notebook-interface}}
     
         When a new Jupyter notebook opens, you will see the Jupyter notebook
 interface. Across the top of the notebook you see the Jupyter icon and
-the Notebook name. You can click on the notebook name field and change
+the notebook name. You can click on the notebook name field and change
 the name of the notebook. Note that the file extension
 \passthrough{\lstinline!.ipynb!} is not printed in the file name field,
 but if you look in the Home tab, you will see that the notebook is saved
@@ -2756,7 +2771,7 @@ and see the resulting output. An example of a code cell is shown below.
 \begin{figure}
 \centering
 \includegraphics{images/code_cell.png}
-\caption{Jupyter Notebook Code Cell}
+\caption{A Jupyter notebook code cell}
 \end{figure}
 
 You can tell you are typing in a code cell because
@@ -2770,7 +2785,7 @@ code cell brings the cursor down to a new line.
 \begin{figure}
 \centering
 \includegraphics{images/run_cell.png}
-\caption{Jupyter Notebook Run Cell}
+\caption{The Jupyter notebook run cell button}
 \end{figure}
     
 
@@ -2791,7 +2806,7 @@ cells.
 \begin{figure}
 \centering
 \includegraphics{images/output_cell.png}
-\caption{Jupyter Notebook Output Cell}
+\caption{A Jupyter notebook output cell}
 \end{figure}
 
 You can clear all the output cells and re-run code cells by selecting
@@ -2801,7 +2816,8 @@ Clear Output{]}}.
 \begin{figure}
 \centering
 \includegraphics{images/kernel_restart_and_clear_output.png}
-\caption{Jupyter Notebook Clear All Outputs}
+\caption{The Jupyter notebook Kernal menu showing Restart and Clear
+Output selected}
 \end{figure}
     
 
@@ -2820,7 +2836,8 @@ also be included in markdown cells.
 \begin{figure}
 \centering
 \includegraphics{images/markdown_cell.png}
-\caption{Jupyter Notebook Markdown Cell}
+\caption{A Jupyter notebook markdown cell. Note Markdown is selected in
+the cell type menu}
 \end{figure}
 
 Markdown cells are used for documentation and explaining your code. The
@@ -2831,7 +2848,7 @@ Markdown cells are run like code cells. The difference is that when
 markdown cells are run, the text is formatted (when code cells run, code
 is executed). Markdown cells are run by clicking the {[}Run{]} button or
 by pressing \passthrough{\lstinline![Shift]!} +
-\passthrough{\lstinline![Enter]!}
+\passthrough{\lstinline![Enter]!}.
 
 Text in markdown cells can be formatted using \emph{markdown syntax}. An
 example of markdown syntax is putting an underscore before and after a
@@ -2881,8 +2898,12 @@ Separated code block
 
 ```
 
+The code in markdown cell code blocks do not execute when the markdown
+cell is run. A code block in a markdown cell is formatted when the
+markdown cell executes.
+
 \hypertarget{bold-and-italics}{%
-\subsubsection{Bold and italics}\label{bold-and-italics}}
+\subsubsection{Bold and Italics}\label{bold-and-italics}}
 
 \textbf{Bold} and \emph{italic font} is displayed by surrounding text
 with a double asterisk for \passthrough{\lstinline!**bold**!} and a
@@ -2899,10 +2920,11 @@ single underscore for \passthrough{\lstinline!\_italics\_!}
 \subsubsection{Tables}\label{tables}}
 
 Tables are displayed using the pipe \passthrough{\lstinline!|!}
-character, which is {[}Shift{]}+{[}\textbackslash{}{]} on most
-keyboards. Columns are separated by pipes \passthrough{\lstinline!|!}
-and rows are separated by lines. After the header row, a row of pipes
-and dashes \passthrough{\lstinline!---!} are needed to define the table.
+character, which is \passthrough{\lstinline![Shift]!} +
+\passthrough{\lstinline![\\]!} on most keyboards. Columns are separated
+by pipes \passthrough{\lstinline!|!} and rows are separated by lines.
+After the header row, a row of pipes and dashes
+\passthrough{\lstinline!---!} are needed to define the table.
 
 \begin{lstlisting}
 | header1 | header 2 | header 3 |
@@ -2943,19 +2965,21 @@ produces
   item 1
 \item
   item 2
+\item
+  item 3
 \end{itemize}
 
 Numbered lists are produced using sequential numbers followed by a dot.
 Indent sub-items with two spaces.
 
 \begin{lstlisting}
-1. First item
-2. Second item
-3. Third item
-  1. sub item
-  2. sub item
-    1. sub-sub item
-    2. sub-sub item
+ 1. First item
+ 2. Second item
+ 3. Third item
+   1. sub item
+   2. sub item
+     1. sub-sub item
+     2. sub-sub item
 \end{lstlisting}
 
 produces
@@ -3022,7 +3046,7 @@ the directory the notebook is saved in.
 ![Engineering Image](images/engineering.png)
 \end{lstlisting}
 
-produces
+displays the image
 
 \begin{figure}
 \centering
@@ -3072,7 +3096,7 @@ produces
 Red Text
 
 \hypertarget{warning-boxes}{%
-\subsubsection{warning boxes}\label{warning-boxes}}
+\subsubsection{Warning Boxes}\label{warning-boxes}}
 
 bootstrap style warning boxes can be included in Jupyter notebook
 markdown using \passthrough{\lstinline!<div>!} tags
@@ -3097,17 +3121,18 @@ Warning! Python lists start at 0
 
 You can create a new cell in a Jupyter Notebook by clicking the {[}+{]}
 button in the upper menu. Clicking the {[}+{]} button produces a new
-code cell below the currently active cell.
+code cell below the active cell.
 
 \begin{figure}
 \centering
 \includegraphics{images/insert_cell_above.png}
-\caption{Jupyter Notebook New Cell Button}
+\caption{Jupyter notebook New Cell Button and Insert Cell Above option
+shown}
 \end{figure}
 
 You can also create a new cell using \textbf{Insert} --\textgreater{}
 \textbf{Insert Cell Above} or \textbf{Insert Cell Below}. You can choose
-to insert a cell above or below the currently active cell.
+to insert a cell above or below the active cell.
     
 
 
@@ -3126,7 +3151,8 @@ the cell type to a markdown cell. Typing \passthrough{\lstinline![Esc]!}
 \begin{figure}
 \centering
 \includegraphics{images/change_cell_type.png}
-\caption{Jupyter Notebook Change Cell Type}
+\caption{Jupyter notebook cell type drop down menu. Note the Markdown
+cell type is selected}
 \end{figure}
     
 
@@ -3143,7 +3169,7 @@ by pressing {[}Ctrl{]} + {[}s{]}.
 \begin{figure}
 \centering
 \includegraphics{images/save_notebook.png}
-\caption{Jupyter Notebook Save}
+\caption{Jupyter notebook Save button}
 \end{figure}
 
 Jupyter notebooks can also be saved as a copy, similar to the Save As
@@ -3153,7 +3179,7 @@ use \textbf{File} --\textgreater{} \textbf{Make a Copy\ldots{}}
 \begin{figure}
 \centering
 \includegraphics{images/file_make_a_copy.png}
-\caption{Jupyter Notebook save a copy}
+\caption{Jupyter notebook File menu. Make a Copy\ldots{} is selected}
 \end{figure}
     
 
@@ -3171,13 +3197,13 @@ upper menu and typing a new name into the dialog box.
 \begin{figure}
 \centering
 \includegraphics{images/rename_notebook.png}
-\caption{Jupyter Notebook rename notebook}
+\caption{Jupyter notebook rename notebook}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics{images/rename_dialog.png}
-\caption{Jupyter Notebook rename dialog box}
+\caption{Jupyter notebook Rename Notebook dialog box}
 \end{figure}
     
 
@@ -3197,7 +3223,7 @@ Selecting this menu option will download the notebook as a
 \begin{figure}
 \centering
 \includegraphics{images/file_download_as_notebook.png}
-\caption{Jupyter Notebook downloaded as .ipynb file}
+\caption{Jupyter notebook downloaded as .ipynb file}
 \end{figure}
 
 Note that when a \passthrough{\lstinline!.ipynb!} file is viewed in a
@@ -3209,7 +3235,7 @@ the markdown text to render.
 \begin{figure}
 \centering
 \includegraphics{images/notebook_json.png}
-\caption{Jupyter Notebook JSON in notepad}
+\caption{Jupyter notebook JSON in notepad}
 \end{figure}
     
 
@@ -3228,7 +3254,7 @@ using the \textbf{{[}File{]} --\textgreater{} {[}Download As{]}} menu.
 \begin{figure}
 \centering
 \includegraphics{images/jupyter_notebook_export_options.png}
-\caption{Jupyter Notebook Export Options}
+\caption{Jupyter notebook Download As file-type options}
 \end{figure}
 
 The available file download types are:
@@ -3248,17 +3274,17 @@ The available file download types are:
 \item
   LaTeX (.tex) - LaTeX Article format
 \item
-  PDF via LaTeX - a pdf exported from LeTeX, requires a converter
+  PDF via LaTeX (.pdf) - a pdf exported from LaTeX, requires a converter
 \end{itemize}
 
-When a Notebook is saved as a \passthrough{\lstinline!.py!} file, all
+When a notebook is saved as a \passthrough{\lstinline!.py!} file, all
 text in markdown cells is converted to comments, and any code cells stay
 intact as Python code.
 
 \begin{figure}
 \centering
 \includegraphics{images/jupyter_notebook_markdown_cells_as_comments.png}
-\caption{Markdown Cells as comments seen in a downloaded .py file}
+\caption{Markdown cells as comments seen in a downloaded .py file}
 \end{figure}
     
 
@@ -3266,8 +3292,8 @@ intact as Python code.
 
 
     
-        \hypertarget{magic-cells}{%
-\section{Magic Cells}\label{magic-cells}}
+        \hypertarget{magic-commands}{%
+\section{Magic Commands}\label{magic-commands}}
     
 
 
@@ -3275,7 +3301,8 @@ intact as Python code.
 
     
         Jupyter notebook code cells can contain special commands which are not
-valid Python code but affect the behavior of the notebook.
+valid Python code but affect the behavior of the notebook. These special
+commands are called \emph{magic commands}.
     
 
 
@@ -3356,9 +3383,9 @@ Hello from the file hello.py
     
         If the \passthrough{\lstinline!\%run!} magic command followed by the
 name of a valid Python file, the Python file runs as a script. Suppose
-the file \passthrough{\lstinline!hello.py!} is created in the same
-directory as the running Jupyter notebook. The directory structure will
-look something like this:
+the file \textbf{\emph{hello.py}} is created in the same directory as
+the running Jupyter notebook. The directory structure will look
+something like this:
 
 \begin{lstlisting}
 | folder
@@ -3366,7 +3393,7 @@ look something like this:
 ---| hello.py
 \end{lstlisting}
 
-In the file \passthrough{\lstinline!hello.py!} is the code:
+In the file \textbf{\emph{hello.py}} is the code:
 
 \begin{lstlisting}[language=Python]
 # hello.py
@@ -3407,13 +3434,13 @@ commands}\label{other-useful-magic-commands}}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-magic command & result\tabularnewline
+Magic command & Result\tabularnewline
 \midrule
 \endhead
-\%pwd & print the current working directory\tabularnewline
-\%cd & change the current working directory\tabularnewline
-\%ls & list the contents of the current directory\tabularnewline
-\%history & the history of the \passthrough{\lstinline!In [ ]:!}
+\%pwd & Print the current working directory\tabularnewline
+\%cd & Change the current working directory\tabularnewline
+\%ls & List the contents of the current directory\tabularnewline
+\%history & Show the history of the \passthrough{\lstinline!In [ ]:!}
 commands\tabularnewline
 \bottomrule
 \end{longtable}
@@ -3518,14 +3545,16 @@ calling \passthrough{\lstinline!dir(glob)!}.
 \subsection{Get help using Tab}\label{get-help-using-tab}}
 
 After typing the name of a variable, object or function following the
-\passthrough{\lstinline!.!} character hit the \textbf{{[}Tab{]}} key.
-Typing \textbf{{[}Tab{]}} brings up a list of available options. Scroll
-through the list or type a letter to filter the list to certain starting
-letters. Use {[}Enter{]} to select the option you want.
+\passthrough{\lstinline!.!} character hit the
+\passthrough{\lstinline![Tab]!} key. Typing
+\passthrough{\lstinline![Tab]!} brings up a list of available options.
+Scroll through the list or type a letter to filter the list to certain
+starting letters. Use \passthrough{\lstinline![Enter]!} to select the
+option you want.
 
-Tab completion can also be used during module import. Hit tab after
-typing the module name to see which functions and classes are available
-in that module.
+Tab completion can also be used during module import. Hit
+\passthrough{\lstinline![Tab!}{]} after typing the module name to see
+which functions and classes are available in that module.
     
 
 
@@ -3683,28 +3712,29 @@ page.
         In this chapter, you learned about Jupyter notebooks. You learned what a
 Jupyter notebook is and why Jupyter notebooks are useful for problem
 solvers. This chapter showed how to install Jupyter notebooks on
-Windows, MacOS, and Linux. Some specific operations with Jupiter
-notebooks were introduced:
+Windows, MacOS, and Linux.
+
+Some specific operations with Jupiter notebooks were introduced:
 
 \begin{itemize}
 \tightlist
 \item
-  how to open a Jupyter Notebook
+  Open a Jupyter Notebook
 \item
-  how to rename a Jupyter Notebook
+  Rename a Jupyter Notebook
 \item
-  how to write Python code in a Jupyter notebook code cells
+  Write Python code in a Jupyter notebook code cells
 \item
-  how to run Python code in a Jupyter notebook code cell
+  Run Python code in a Jupyter notebook code cell
 \item
-  how to write text in Jupyter notebook markdown cells
+  Write text in Jupyter notebook markdown cells
 \item
-  how to use markdown syntax to produce formatted text, headings, lists,
-  and tables
+  Use markdown syntax to produce formatted text, headings, lists, and
+  tables
 \item
-  how to save a Jupyter notebook
+  Save a Jupyter notebook
 \item
-  how to download a Jupyter notebook as different file types
+  Download a Jupyter notebook in different file types
 \end{itemize}
 
 You also learned about special ``magic'' commands that can be used in a
@@ -3798,15 +3828,15 @@ Command & Description\tabularnewline
 \endhead
 \passthrough{\lstinline!\%matplotlib inline!} & Display plots in output
 cells\tabularnewline
-\passthrough{\lstinline!\%run file.py!} & Runs file.py and displays
+\passthrough{\lstinline!\%run file.py!} & Run file.py and displays
 output\tabularnewline
-\passthrough{\lstinline!\%pwd!} & Prints the working directory file
+\passthrough{\lstinline!\%pwd!} & Print the working directory file
 path\tabularnewline
 \passthrough{\lstinline!\%ls!} & List contents of the current working
 directory\tabularnewline
-\passthrough{\lstinline!\%precision!} & sets float point precision for
+\passthrough{\lstinline!\%precision!} & Set float point precision for
 pretty printing\tabularnewline
-\passthrough{\lstinline!\%whos!} & lists variables and types in the
+\passthrough{\lstinline!\%whos!} & List variables and types in the
 running kernel session\tabularnewline
 \passthrough{\lstinline!function?!} & Display help on a
 function\tabularnewline
@@ -3881,7 +3911,7 @@ cell:
 Python Package & Use\tabularnewline
 \midrule
 \endhead
-Jupyter & jupyter notebooks\tabularnewline
+Jupyter & Jupyter notebooks\tabularnewline
 NumPy & arrays\tabularnewline
 Matplotlib & plots\tabularnewline
 PySerial & serial communication\tabularnewline
@@ -3932,7 +3962,9 @@ the lines} like below:
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-\emph{In between the lines} ***
+\emph{In between the lines}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
 Q02.15 Inside a Jupyter notebook markdown cell, make the word
 \passthrough{\lstinline!Red!} the color red, make the word
@@ -3959,12 +3991,12 @@ using LaTeX math.
 
 \[ a^2 + b^2 = c^2 \]
 
-Q02.20 Write the formula for the area of a circle in a Jupyter notebook
+Q02.21 Write the formula for the area of a circle in a Jupyter notebook
 markdown cell using LaTeX math.
 
 \[ A = \pi r^2 \]
 
-Q02.20 Write the formula below in a Jupyter notebook Markdown cell using
+Q02.22 Write the formula below in a Jupyter notebook Markdown cell using
 LaTeX math.
 
 \[ \int_{0}^{1} \frac{1}{y^3} dy \]
@@ -3978,20 +4010,20 @@ LaTeX math.
         \hypertarget{code-cells}{%
 \subsubsection{Code cells}\label{code-cells}}
 
-Q02.31 Run the following in a Jupyter notebook code cell:
+Q02.31 Run the following code in a Jupyter notebook code cell:
 
 \begin{lstlisting}
 import this
 \end{lstlisting}
 
-Q02.32 Run the following in a Jupyter notebook code cell:
+Q02.32 Run the following code in a Jupyter notebook code cell:
 
 \begin{lstlisting}
 import sys
 print(sys.version)
 \end{lstlisting}
 
-Q02.33 Run the following in a Jupyter notebook code cell:
+Q02.33 Run the following code in a Jupyter notebook code cell:
 
 \begin{lstlisting}
 import matplotlib.pyplot as plt
@@ -4001,8 +4033,8 @@ plt.plot([1,3,6,10])
 plt.show()
 \end{lstlisting}
 
-Q02.34 Run the following in a Jupyter notebook code cell. Move the
-slider back and forth:
+Q02.34 Run the following code in a Jupyter notebook code cell. Move the
+slider back and forth and observe the results.
 
 \begin{lstlisting}
 from ipywidgets import interact
@@ -4108,10 +4140,10 @@ help you receive in a Jupyter notebook code cell. Run the code cell.
 
 
     
-        The last chapter detailed how to install Python on your computer. In
-this chapter, you will learn how to write and run your first lines of
-Python code. You will learn how to use Python as a calculator and you
-will be introduced to Python variables.
+        In this chapter, you will learn how to write and run your first lines of
+Python code at the Python REPL also called the Python prompt. You will
+learn how to use Python as a calculator and be introduced to Python
+variables and Python's \passthrough{\lstinline!print()!} function.
     
 
 
@@ -4126,7 +4158,7 @@ will be introduced to Python variables.
 \item
   Compute mathematical calculations using the Python REPL
 \item
-  Use the output from Python REPL as input in another problem
+  Use the output from the Python REPL as input in another problem
 \item
   Import the math and statistics modules from the Python Standard
   Library and use their functions
@@ -4137,7 +4169,7 @@ will be introduced to Python variables.
 \item
   Create strings
 \item
-  Combine, compare, and pull characters out of strings
+  Combine and compare strings
 \end{itemize}
         \newpage
 
@@ -4268,7 +4300,7 @@ A summary of the arithmetic operations in Python is below:
 
 \begin{longtable}[]{@{}llll@{}}
 \toprule
-operator & description & example & result\tabularnewline
+Operator & Description & Example & Result\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!+!} & addition & \passthrough{\lstinline!2 + 3!}
@@ -4399,7 +4431,7 @@ The following trig functions are part of Python's \textbf{math} module:
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule
-trig function & name & description & example & result\tabularnewline
+Trig function & Name & Description & Example & Result\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!math.pi!} & pi & mathematical constant \(\pi\) &
@@ -4486,7 +4518,8 @@ hypotenuse?
 \end{lstlisting}
 
 The power function \passthrough{\lstinline!pow()!} works like the
-\passthrough{\lstinline!**!} operator to raise a number to a power.
+\passthrough{\lstinline!**!} operator. \passthrough{\lstinline!pow()!}
+raises a number to a power.
 
 \begin{lstlisting}[language=Python]
 >>> 5**2
@@ -4506,24 +4539,22 @@ The following exponent and logarithm functions are part of Python's
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule
-math module function & name & description & example &
-result\tabularnewline
+Math function & Name & Description & Example & Result\tabularnewline
 \midrule
 \endhead
-\passthrough{\lstinline!math.e!} & euler's number & mathematical
+\passthrough{\lstinline!math.e!} & Euler's number & mathematical
 constant \(e\) & \passthrough{\lstinline!math.e!} &
 \passthrough{\lstinline!2.718!}\tabularnewline
-& & & &\tabularnewline
 \passthrough{\lstinline!math.exp()!} & exponent & \(e\) raised to a
 power & \passthrough{\lstinline!math.exp(2.2)!} &
 \passthrough{\lstinline!9.025!}\tabularnewline
-\passthrough{\lstinline!math.log()!} & natural logerithm & log base e &
+\passthrough{\lstinline!math.log()!} & natural logarithm & log base e &
 \passthrough{\lstinline!math.log(3.1)!} &
 \passthrough{\lstinline!400!}\tabularnewline
-\passthrough{\lstinline!math.log10()!} & base 10 logerithm & log base 10
+\passthrough{\lstinline!math.log10()!} & base 10 logarithm & log base 10
 & \passthrough{\lstinline!math.log10(100)!} &
 \passthrough{\lstinline!2.0!}\tabularnewline
-\passthrough{\lstinline!math.pow()!} & exponents & raises a number to a
+\passthrough{\lstinline!math.pow()!} & power & raises a number to a
 power & \passthrough{\lstinline!math.pow(2,3)!} &
 \passthrough{\lstinline!8.0!}\tabularnewline
 \passthrough{\lstinline!math.sqrt()!} & square root & square root of a
@@ -4553,7 +4584,7 @@ using the statement
 \passthrough{\lstinline!from statistics import mean, median, mode, stdev!}.
 Then the functions \passthrough{\lstinline!mean!},
 \passthrough{\lstinline!median!}, \passthrough{\lstinline!mode!} and
-\passthrough{\lstinline!stdev!}(standard deviation) can be used.
+\passthrough{\lstinline!stdev!} (standard deviation) can be used.
 
 \begin{lstlisting}[language=Python]
 >>> from statistics import mean, median, mode, stdev
@@ -4607,12 +4638,14 @@ the functions, we need to use the names
         \hypertarget{section-summary}{%
 \subsubsection{Section Summary}\label{section-summary}}
 
-The following functions are part of Python's \textbf{statistics} module:
+The following functions are part of Python's \textbf{statistics} module.
+These functions need to be imported from the
+\passthrough{\lstinline!statistics!} module before they are used.
 
 \begin{longtable}[]{@{}lllll@{}}
 \toprule
-statistics module function & name & description & example &
-result\tabularnewline
+Statistics function & Name & Description & Example &
+Result\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!mean()!} & mean & mean or average &
@@ -4703,6 +4736,8 @@ True
 \item
   variable names can not contain spaces
 \item
+  variable names can not include punctuation
+\item
   variable names are not enclosed in quotes or brackets
 \end{itemize}
     
@@ -4765,6 +4800,9 @@ The Arrhenius relationship states:
 In a system where \(n_v = 2.0 \times 10^{-3}\), \(Q_v = 5\), \(R=3.18\),
 and \(T=293\), calculate \(n\).
 
+\hypertarget{solution}{%
+\subsubsection{Solution}\label{solution}}
+
 Use variables to assign a value to each one of the constants in the
 problem and calculate \(n\).
 
@@ -4803,9 +4841,9 @@ or double quotes \passthrough{\lstinline!" "!}.
 >>> third_word = "3rd solution!"
 \end{lstlisting}
 
-In Python, some operations we can do on strings include concatenation
-(combining strings), logical comparisons (comparing strings) and
-indexing (pulling specific characters out of strings).
+In Python, string operations include concatenation (combining strings),
+logical comparisons (comparing strings) and indexing (pulling specific
+characters out of strings).
     
 
 
@@ -4882,8 +4920,8 @@ Python. A string with the same letters, but different capitalization are
 not equivalent.
 
 \begin{lstlisting}[language=Python]
->>> name1 = 'Gabby'
->>> name2 = 'gabby'
+>>> name1 = 'Maelle'
+>>> name2 = 'maelle'
 >>> name1 == name2
 False
 \end{lstlisting}
@@ -4901,8 +4939,8 @@ False
 
 
     
-        The \passthrough{\lstinline!print()!} function useful in Python. The
-value or expression inside of the parenthesis in the
+        One built-in function in Python is \passthrough{\lstinline!print()!}.
+The value or expression inside of the parenthesis of a
 \passthrough{\lstinline!print()!} function ``prints'' out to the REPL
 when the \passthrough{\lstinline!print()!} function is called.
 
@@ -4983,8 +5021,8 @@ the expressions are placed inside the \passthrough{\lstinline!print()!}
 function and separated by a comma.
 
 \begin{lstlisting}[language=Python]
->>> print("Name:","Gabby","Age", 3+5)
-Name: Gabby Age 8
+>>> print("Name:","Gabby","Age", 2+7)
+Name: Gabby Age 9
 \end{lstlisting}
     
 
@@ -5003,14 +5041,19 @@ Name: Gabby Age 8
 
     
         In this chapter, you learned how to use the Python REPL, also called the
-Python prompt, to solve calculation problems. You learned how to do
-arithmetic, powers and logarithms, trigonometry and save values to
-variables. Operations on strings were introduced including
-concatenation, comparison, indexing, and slicing. In the last section of
-the chapter, Python's \passthrough{\lstinline!print()!} function was
-introduced. As shown multiple times through this chapter, remember
-Python counting starts at \passthrough{\lstinline!0!} and ends at
-\passthrough{\lstinline!n-1!}.
+Python prompt, to solve problems. You learned how to do arithmetic,
+powers and logarithms, trigonometry and save values to variables.
+Operations on strings were introduced including concatenation and
+comparison. In the last section of the chapter, Python's
+\passthrough{\lstinline!print()!} function was introduced.
+    
+
+
+
+
+    
+        \hypertarget{key-terms-and-concepts}{%
+\subsection{Key Terms and Concepts}\label{key-terms-and-concepts}}
     
 
 
@@ -5018,10 +5061,7 @@ Python counting starts at \passthrough{\lstinline!0!} and ends at
 
     
         \begin{key_terms}
-        \hypertarget{key-terms-and-concepts}{%
-\subsection{Key Terms and Concepts}\label{key-terms-and-concepts}}
-
-REPL
+        REPL
 
 Python REPL
 
@@ -5087,7 +5127,7 @@ Below is a summary of the functions and operators used in this chapter:
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Arithmetic Operators & Description\tabularnewline
+Arithmetic Operator & Description\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!+!} & addition\tabularnewline
@@ -5149,13 +5189,13 @@ power\tabularnewline
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Statistical Function & Description\tabularnewline
+Statistics Function & Description\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!from statistics import *!} &\tabularnewline
 \passthrough{\lstinline!mean!} & mean (average)\tabularnewline
 \passthrough{\lstinline!median!} & median (middle value)\tabularnewline
-\passthrough{\lstinline!mode!} & (most often)\tabularnewline
+\passthrough{\lstinline!mode!} & mode (most often)\tabularnewline
 \passthrough{\lstinline!stdev!} & standard deviation of a
 sample\tabularnewline
 \passthrough{\lstinline!pstdev!} & standard deviation of a
@@ -5211,20 +5251,22 @@ Q03.12 \(1 + 9 \times \frac{8}{4^2} + 1^{3-4} \times \frac{1}{2.5}\)
 
 
     
-        \hypertarget{string-indexing}{%
-\subsubsection{String Indexing}\label{string-indexing}}
+        \hypertarget{strings}{%
+\subsubsection{Strings}\label{strings}}
 
-Q03.15 Write two lines of code that pulls out the first three letters of
-the word ``Problem''
+Q03.15 Define the string ``Problem''
 
-Q03.16 Write two lines of code that pulls out the last four letters of
-the word ``Problem''
+Q03.16 Two strings ``Problem'' and ``Solving with Python''. Combine
+these strings to produce ``Problem Solving with Python''. Hint: Don't
+forget the space.
 
-Q03.17 Write two lines of code that pulls out every other letter of the
-word ``Problem'' starting with the letter ``P''.
+Q03.17 Compare the strings ``Problem'' and ``problem'' with the
+comparison operator \passthrough{\lstinline!==!}. Explain the result.
 
-Q03.18 Write two lines of code that rewrites the word ``Problem''
-backwards
+Q03.18 Compare the output of the code
+\passthrough{\lstinline!1 + 2 == 3!} and
+\passthrough{\lstinline!'1 + 2' == '3'!}. Explain why the output is
+different.
     
 
 
@@ -5261,8 +5303,7 @@ see the top of the tree, what is the height of the douglas fir tree?
 Q03.35 The tangent of an angle is equal to the sine of the angle divided
 by the cosine of the angle. Make two calculations, one for the tangent
 of -29 degrees and another calculation for the sine of -29 degrees
-divided by the cosine of -29 degrees. Do you observe the output of both
-calculations to be the same?
+divided by the cosine of -29 degrees. Do you observe the same output?
 
 Q03.36 A simple model of water level based on tides (assuming high tide
 is at midnight) is:
@@ -5355,8 +5396,8 @@ that fit on a microchip doubles every two years can be modeled as:
 Where \(P_0\) is the original number of transistors on a microchip and
 \(P_n\) is the number of transistors on a microchip after \(n\) number
 of years since the original microchip. If the original microchip has
-1000 transistors, how many transistors were projected to be on a
-microchip 40 years later?
+1000 transistors, how many transistors are projected to be on a
+microchip 40 years later according to Moore's Law?
         \end{problems}
 
     
@@ -5373,37 +5414,59 @@ Calculations}\label{variables-in-calculations}}
 Q03.71 \(a = 2\), \(b = 3\), calculate \(\frac{4}{5}(a^2 - b^3)\)
 
 Q03.72 The area of a circle, \(a\), is dependent on the circle's radius,
-\(r\), according to \(a=\pi r^2\). What is the area of a circle with
-radius \(r=4\)?
+\(r\), according to:
+
+\[ a=\pi r^2 \]
+
+What is the area of a circle with radius \(r=4\)?
 
 Q03.73 The area of a circle, \(a\), is dependent on the circle's
-diameter, \(d\), according to \(a=\pi (\frac{d}{2})^2\). What is the
-area of a circle with diameter \(d=6\)?
+diameter, \(d\), according to:
+
+\[ a=\pi (\frac{d}{2})^2 \]
+
+What is the area of a circle with diameter \(d=6\)?
 
 Q03.74 The volume of a sphere, \(v\), is dependent on the sphere's
-radius, \(r\), according to \(v=(\frac{4}{3})\pi r^3\). What is the
-volume of a sphere with radius \(r=1.5\)?
+radius, \(r\), according to:
+
+\[ v=(\frac{4}{3})\pi r^3 \]
+
+What is the volume of a sphere with radius \(r=1.5\)?
 
 Q03.75 The volume of a cylinder, \(v\), is dependent on the cylinder's
-radius, \(r\), and height, \(h\), according to \(v=\pi r^2 h\). What is
-the volume of a cylinder with radius \(r=5\) and height \(h=10\) ?
+radius, \(r\), and height, \(h\), according to:
+
+\[ v=\pi r^2 h \]
+
+What is the volume of a cylinder with radius \(r=5\) and height \(h=10\)
+?
 
 Q03.76 The surface area of a sphere, \(a_s\) is related to the sphere's
-radius, \(r\), according to \(a_s=4\pi r^2\). What is the surface area
-\(a_s\) of a sphere with radius \(r=2.5\)?
+radius, \(r\), according to:
+
+\[ a_s=4\pi r^2 \]
+
+What is the surface area \(a_s\) of a sphere with radius \(r=2.5\)?
 
 Q03.77 The general equation for the distance, \(d\), that a free falling
-body travels (neglecting air resistance) is \(d = \frac{1}{2}gt^2\),
-where \(g\) is the acceleration due to gravity and \(t\) is the fall
-time. Assume the acceleration due to gravity \(g = 9.81\). How far (what
+body travels (neglecting air resistance) is:
+
+\[ d = \frac{1}{2}gt^2 \]
+
+\(g\) is the acceleration due to gravity and \(t\) is the fall time.
+Assume the acceleration due to gravity \(g = 9.81\). How far (what
 distance) will a ball fall in time \(t = 12\)?
 
 Q03.78 The general equation for the fall time, \(t\), that a free
 falling body takes (neglecting air resistance) to cover a distance,
-\(d\) is \(t = \sqrt{\frac{d}{0.5g}}\), where \(g\) is the acceleration
-due to gravity. Assume the acceleration due to gravity \(g = 9.81\). How
-long (what time) will it take a base jumper to fall distance
-\(d = 2000\)?
+\(d\) is:
+
+\[t = \sqrt{\frac{d}{0.5g}}\]
+
+\(g\) is the acceleration due to gravity. Assume the acceleration due to
+gravity \(g = 9.81\). How long (what time) will it take a base jumper to
+fall distance \(d = 2000\)?
 
 Q03.79 The value of an investment \(v\) compounded annually at an
 interest rate of \(r\%\) after \(n\) years is dependent on the original
@@ -5423,9 +5486,12 @@ What is the principal \(P\) needed to save one million dollars at a rate
 \(r=10\%\) over \(n=40\) years?
 
 Q03.81 Electrical power \(P\) is related to current \(I\) and resistance
-\(R\) according to \(P = I^2R\). An electrical load with a resistance
-\(R = 10,000\) running at a current \(I=0.200\) draws how much power
-\(P\) ?
+\(R\) according to:
+
+\[ P = I^2R\]
+
+An electrical load with a resistance \(R = 10,000\) running at a current
+\(I=0.200\) draws how much power \(P\) ?
         \end{problems}
 
     
@@ -5535,9 +5601,18 @@ By the end of this chapter you will be able to:
   Use Python's \passthrough{\lstinline!type()!} function to determine an
   object's data type
 \item
-  Complete logical evaluations of variables
+  Compare variables with the comparison operator
+  \passthrough{\lstinline!==!}
 \item
   Convert variables from one data type to another
+\item
+  Work with integers, floats and complex numbers
+\item
+  Understand the boolean data type
+\item
+  Create and modify lists, dictionaries and tuples
+\item
+  Index and slice strings, lists and tuples
 \end{itemize}
         \newpage
 
@@ -5555,10 +5630,10 @@ By the end of this chapter you will be able to:
 
 
     
-        Python has many useful built-in data types. Python variables can store
-different types of data. A variable's data type is created dynamically,
-without the need to explicitly define a data type when the variable is
-created.
+        Python has many useful built-in \emph{data types}. Python variables can
+store different types of data based on a variable's data type. A
+variable's data type is created dynamically, without the need to
+explicitly define a data type when the variable is created.
 
 It is useful for problem solvers to understand a couple of Python's core
 data types in order to write well-constructed code.
@@ -5572,10 +5647,10 @@ data types in order to write well-constructed code.
 \subsection{A review of variable assignment in
 Python}\label{a-review-of-variable-assignment-in-python}}
 
-Remember from the previous chapter that variables in Python are defined
+Recall from the previous chapter that variables in Python are defined
 with the assignment operator, the equals sign
-\passthrough{\lstinline!=!}. Recall that to define a variable in Python,
-the variable name is written first, then the assignment operator
+\passthrough{\lstinline!=!}. To define a variable in Python, the
+variable name is written first, then the assignment operator
 \passthrough{\lstinline!=!} followed by a value or expression.
 
 The general syntax to assign a value to variable name is below:
@@ -5594,7 +5669,7 @@ Variable names in Python must adhere to the following rules:
   variable names can only contain letters, numbers and the underscore
   character \passthrough{\lstinline!\_!}
 \item
-  variable names can not contain spaces
+  variable names can not contain spaces or punctuation
 \item
   variable names are not enclosed in quotes or brackets
 \end{itemize}
@@ -5611,7 +5686,7 @@ Below is a discussion of a few different built-in data types in Python.
 
 \emph{Integers} are one of the Python data types. An integer is a whole
 number, negative, positive or zero. In Python, integer variables are
-defined by simply assigning a whole number to a variable. Python's
+defined by assigning a whole number to a variable. Python's
 \passthrough{\lstinline!type()!} function can be used to determine the
 data type of a variable.
 
@@ -5644,7 +5719,7 @@ negative or zero.
 
 Floating point numbers or \emph{floats} are another Python data type.
 Floats are decimals, positive, negative and zero. Floats can also be
-numbers in scientific notation which contain exponents.
+represented by numbers in scientific notation which contain exponents.
 
 Both a lower case \passthrough{\lstinline!e!} or an upper case
 \passthrough{\lstinline!E!} can be used to define floats in scientific
@@ -5674,8 +5749,8 @@ point \passthrough{\lstinline!.!} comes after a whole number:
 >>> g = 5
 >>> type(g)
 <class 'int'>
->>> g = 5.
->>> type(g)
+>>> f = 5.
+>>> type(r)
 <class 'float'>
 \end{lstlisting}
     
@@ -5693,7 +5768,7 @@ using a real component \passthrough{\lstinline!+!} an imaginary
 component \passthrough{\lstinline!j!}. The letter
 \passthrough{\lstinline!j!} must be used to denote the imaginary
 component. Using the letter \passthrough{\lstinline!i!} to define a
-complex number in Python returns an error.
+complex number returns an error in Python.
 
 \begin{lstlisting}[language=Python]
 >>> comp = 4 + 2j
@@ -5752,7 +5827,7 @@ variables are defined by the \passthrough{\lstinline!True!} and
 The output \passthrough{\lstinline!<class 'bool'>!} indicates the
 variable is a boolean data type.
 
-Note that \passthrough{\lstinline!True!} and
+Note the keywords \passthrough{\lstinline!True!} and
 \passthrough{\lstinline!False!} must have an Upper Case first letter.
 Using a lowercase \passthrough{\lstinline!true!} returns an error.
 
@@ -5779,9 +5854,9 @@ Booleans}\label{integers-and-floats-as-booleans}}
 
 Integers and floating point numbers can be converted to the boolean data
 type using Python's \passthrough{\lstinline!bool()!} function. An int,
-float or complex number set to zero returns as
+float or complex number set to zero returns
 \passthrough{\lstinline!False!}. An integer, float or complex number set
-to any other number, positive or negative, returns as
+to any other number, positive or negative, returns
 \passthrough{\lstinline!True!}.
 
 \begin{lstlisting}[language=Python]
@@ -5813,8 +5888,8 @@ True
 \emph{Boolean arithmetic} is the arithmetic of true and false logic. A
 boolean or logical value can either be \passthrough{\lstinline!True!} or
 \passthrough{\lstinline!False!}. Boolean values can be manipulated and
-combined with \emph{boolean operators}. Boolean operators include
-\passthrough{\lstinline!and!}, \passthrough{\lstinline!or!}, and
+combined with \emph{boolean operators}. Boolean operators in Python
+include \passthrough{\lstinline!and!}, \passthrough{\lstinline!or!}, and
 \passthrough{\lstinline!not!}.
 
 The common boolean operators in Python are below:
@@ -5921,11 +5996,9 @@ F & F & T & T & T & F & F & F\tabularnewline
     
         Another built-in Python data type is \emph{strings}. Strings are
 sequences of letters, numbers, symbols, and spaces. In Python, strings
-can be almost any length and can contain spaces. String variables are
-assigned in Python using quotation marks \passthrough{\lstinline!'   '!}
-or \passthrough{\lstinline!" "!}. In Python, strings can be defined by
-single quotation marks \passthrough{\lstinline!' '!} or double quotation
-marks \passthrough{\lstinline!" "!}.
+can be almost any length and can contain spaces. Strings are assigned in
+Python using single quotation marks \passthrough{\lstinline!'   '!} or
+double quotation marks \passthrough{\lstinline!" "!}.
 
 Python strings can contain blank spaces. A blank space is a valid
 character in Python string.
@@ -5954,7 +6027,7 @@ variable is a string.
 Numbers and decimals can be defined as strings too. If a decimal number
 is defined using quotes \passthrough{\lstinline!'   '!}, the number is
 saved as a string rather than as a float. Integers defined using quotes
-will become strings as well if surrounded by quotes.
+become strings as well.
 
 \begin{lstlisting}[language=Python]
 >>> num = '5.2'
@@ -6010,11 +6083,13 @@ True
         \hypertarget{string-indexing}{%
 \subsection{String Indexing}\label{string-indexing}}
 
-String indexing is the process of pulling out specific characters from a
-string in a particular order. In Python, strings are indexed using
-square brackets \passthrough{\lstinline![ ]!}. An important point to
-remember: \textbf{Python counting starts at \passthrough{\lstinline!0!}
-and ends at \passthrough{\lstinline!n-1!}}.
+String \emph{indexing} is the process of pulling out specific characters
+from a string in a particular order. In Python, strings are indexed
+using square brackets \passthrough{\lstinline![ ]!}. An important point
+to remember:
+
+\textbf{Python counting starts at \passthrough{\lstinline!0!} and ends
+at \passthrough{\lstinline!n-1!}}.
 
 Consider the word below.
 
@@ -6022,14 +6097,14 @@ Consider the word below.
 Solution
 \end{lstlisting}
 
-The letter \passthrough{\lstinline!S!} is at the zero index, the letter
-\passthrough{\lstinline!o!} is at the first index. The last letter of
-the word \passthrough{\lstinline!Solution!} is
-\passthrough{\lstinline!n!}. \passthrough{\lstinline!n!} is in the
-seventh index. Even though the word \passthrough{\lstinline!Solution!}
-has eight letters, the last letter is in the seventh index. This is
-because Python indexing starts at \passthrough{\lstinline!0!} and ends
-at \passthrough{\lstinline!n-1!}.
+The letter \passthrough{\lstinline!S!} is at index zero, the letter
+\passthrough{\lstinline!o!} is at index one. The last letter of the word
+\passthrough{\lstinline!Solution!} is \passthrough{\lstinline!n!}.
+\passthrough{\lstinline!n!} is in the seventh index. Even though the
+word \passthrough{\lstinline!Solution!} has eight letters, the last
+letter is in the seventh index. This is because Python indexing starts
+at \passthrough{\lstinline!0!} and ends at
+\passthrough{\lstinline!n-1!}.
 
 \begin{figure}
 \centering
@@ -6117,12 +6192,15 @@ character out of a string starting from the end of the string.
         \hypertarget{string-slicing}{%
 \subsection{String Slicing}\label{string-slicing}}
 
-A colon on the inside of the square brackets between two numbers
-indicates \emph{through}. If the index \passthrough{\lstinline![0:3]!}
-is called, the characters at positions \passthrough{\lstinline!0!}
-through \passthrough{\lstinline!3!} are returned. Remember Python
-counting starts at \passthrough{\lstinline!0!} and ends at
-\passthrough{\lstinline!n-1!}. So \passthrough{\lstinline![0:3]!}
+String \emph{slicing} is an operation to pull out a sequence of
+characters from a string. In Python, a colon on the inside of the square
+brackets between two numbers in a slicing operation indicates
+\emph{through}. If the index \passthrough{\lstinline![0:3]!} is called,
+the characters at positions \passthrough{\lstinline!0!} through
+\passthrough{\lstinline!3!} are returned.
+
+Remember Python counting starts at \passthrough{\lstinline!0!} and ends
+at \passthrough{\lstinline!n-1!}. So \passthrough{\lstinline![0:3]!}
 indicates the first through third letters, which are indexes
 \passthrough{\lstinline!0!} to \passthrough{\lstinline!2!}.
 
@@ -6150,7 +6228,7 @@ indicates the first through third letters, which are indexes
     
         When three numbers are separated by two colons inside of square
 brackets, the numbers represent \emph{start} : \emph{stop} :
-\emph{step}. But remember that Python counting starts at
+\emph{step}. Remember that Python counting starts at
 \passthrough{\lstinline!0!} and ends at \passthrough{\lstinline!n-1!}.
 
 \begin{lstlisting}[language=Python]
@@ -6244,10 +6322,23 @@ start with the index zero, not the index 1. For example:
 >>> lst[2]
 'dynamics'
 \end{lstlisting}
+    
 
-Remember! Python lists start indexing at {[}0{]} not at {[}1{]}. To call
+
+
+
+    
+        Remember! Python lists start indexing at {[}0{]} not at {[}1{]}. To call
 the elements in a list with 3 values use: lst{[}0{]}, lst{[}1{]},
 lst{[}2{]}.
+    
+
+
+
+
+    
+        \hypertarget{slicing-lists}{%
+\subsection{Slicing Lists}\label{slicing-lists}}
 
 Colons \passthrough{\lstinline!:!} are used inside the square brackets
 to denote \emph{all}
@@ -6267,28 +6358,33 @@ elements in the list
 6
 \end{lstlisting}
 
-The colon operator can also be used to denote \emph{all upto} and
-\emph{from thru end}.
+The colon operator can also be used to denote \emph{all up to} and
+\emph{thru end}.
 
 \begin{lstlisting}[language=Python]
 >>> lst = [2, 4, 6]
->>> lst[:2]
+>>> lst[:2]         # all up to 2
 [2, 4]
+\end{lstlisting}
 
-
-
-lst = [2, 4, 6]
-lst[2:]
+\begin{lstlisting}[language=Python]
+>>> lst = [2, 4, 6]
+>>> lst[2:]         # 2 thru end
 [6]
 \end{lstlisting}
 
 The colon operator can also be used to denote \emph{start : end + 1}.
-Note that the indexing here in not inclusive.
-\passthrough{\lstinline!lst[1:3]!} will return the 2nd element, and 3rd
+Note that indexing here in not inclusive.
+\passthrough{\lstinline!lst[1:3]!} returns the 2nd element, and 3rd
 element but not the fourth even though \passthrough{\lstinline!3!} is
 used in the index.
+    
 
-Remember! Python indexing is not inclusive. The last element called in
+
+
+
+    
+        Remember! Python indexing is not inclusive. The last element called in
 an index will not be returned.
     
 
@@ -6306,7 +6402,76 @@ an index will not be returned.
     
         Besides lists, Python has two additional data structures that can store
 multiple objects. These data structures are \emph{dictionaries} and
-\emph{tuples}.
+\emph{tuples}. Tuples will be discussed first.
+    
+
+
+
+
+    
+        \hypertarget{tuples}{%
+\subsection{Tuples}\label{tuples}}
+    
+
+
+
+
+    
+        Tuples are \emph{immutable} lists. Elements of a list can be modified,
+but elements in a tuple can only be accessed, not modified. The name
+\emph{tuple} does not mean that only two values can be stored in this
+data structure.
+
+Tuples are defined in Python by enclosing elements in parenthesis
+\passthrough{\lstinline!( )!} and separating elements with commas. The
+command below creates a tuple containing the numbers
+\passthrough{\lstinline!3!}, \passthrough{\lstinline!4!}, and
+\passthrough{\lstinline!5!}.
+
+\begin{lstlisting}[language=Python]
+>>> t_var = (3,4,5)
+>>> t_var
+(3, 4, 5)
+\end{lstlisting}
+
+Note how the elements of a list can be modified:
+
+\begin{lstlisting}[language=Python]
+>>> l_var = [3,4,5]  # a list
+>>> l_var[0]= 8
+>>> l_var
+[8, 4, 5]
+\end{lstlisting}
+
+The elements of a tuple can not be modified. If you try to assign a new
+value to one of the elements in a tuple, an error is returned.
+
+\begin{lstlisting}[language=Python]
+>>> t_var = (3,4,5)  # a tuple
+>>> t_var[0]= 8
+>>> t_var
+
+TypeError: 'tuple' object does not support item assignment
+\end{lstlisting}
+
+To create a tuple that just contains one numerical value, the number
+must be followed by a comma. Without a comma, the variable is defined as
+a number.
+
+\begin{lstlisting}[language=Python]
+>>> num = (5)
+>>> type(num)
+int
+\end{lstlisting}
+
+When a comma is included after the number, the variable is defined as a
+tuple.
+
+\begin{lstlisting}[language=Python]
+>>> t_var = (5,)
+>>> type(t_var)
+tuple
+\end{lstlisting}
     
 
 
@@ -6321,10 +6486,10 @@ multiple objects. These data structures are \emph{dictionaries} and
 
 
     
-        Dictionaries are made up of key: value pairs. In Python, lists are
-organized and accessed based on position. Dictionaries in Python are
-organized and accessed using keys and values. The location of a pair of
-keys and values stored in a Python dictionary is irrelevant.
+        Dictionaries are made up of key: value pairs. In Python, lists and
+tuples are organized and accessed based on position. Dictionaries in
+Python are organized and accessed using keys and values. The location of
+a pair of keys and values stored in a Python dictionary is irrelevant.
 
 Dictionaries are defined in Python with curly braces
 \passthrough{\lstinline!\{  \}!}. Commas separate the key-value pairs
@@ -6405,75 +6570,6 @@ method is removed from the dictionary.
 
 
     
-        \hypertarget{tuples}{%
-\subsection{Tuples}\label{tuples}}
-    
-
-
-
-
-    
-        Tuples are immutable lists. Elements of a list can be modified, but
-elements in a tuple can only be accessed, not modified. The name
-\emph{tuple} does not mean that only two values can be stored in this
-data structure.
-
-Tuples are defined in Python by enclosing elements in parenthesis
-\passthrough{\lstinline!( )!} and separating elements with commas. The
-command below creates a tuple containing the numbers
-\passthrough{\lstinline!3!}, \passthrough{\lstinline!4!}, and
-\passthrough{\lstinline!5!}.
-
-\begin{lstlisting}[language=Python]
->>> t_var = (3,4,5)
->>> t_var
-(3, 4, 5)
-\end{lstlisting}
-
-Note how the elements of a list can be modified:
-
-\begin{lstlisting}[language=Python]
->>> l_var = [3,4,5]  # a list
->>> l_var[0]= 8
->>> l_var
-[8, 4, 5]
-\end{lstlisting}
-
-The elements of a tuple can not be modified. If you try to assign a new
-value to one of the elements in a tuple, an error is returned.
-
-\begin{lstlisting}[language=Python]
->>> t_var = (3,4,5)  # a tuple
->>> t_var[0]= 8
->>> t_var
-
-TypeError: 'tuple' object does not support item assignment
-\end{lstlisting}
-
-To create a tuple that just contains one numerical value, the number
-must be followed by a comma. Without a comma, the variable is defined as
-a number.
-
-\begin{lstlisting}[language=Python]
->>> num = (5)
->>> type(num)
-int
-\end{lstlisting}
-
-When a comma is included after the number, the variable is defined as a
-tuple.
-
-\begin{lstlisting}[language=Python]
->>> t_var = (5,)
->>> type(t_var)
-tuple
-\end{lstlisting}
-    
-
-
-
-
-    
         \newpage
         \hypertarget{summary}{%
 \section{Summary}\label{summary}}
@@ -6484,12 +6580,14 @@ tuple
 
 
     
-        In this chapter, we reviewed a couple of different data types built-in
-to Python. These data types include the numeric data types: integers,
-floats, and complex numbers. The string data type is composed of
-letters, numbers, spaces, and punctuation. Python also has container
-data types which can store many values. These container data types are
-lists, tuples, and dictionaries.
+        In this chapter, you learned about a couple of different data types
+built-in to Python. These data types include the numeric data types:
+integers, floats, and complex numbers. The string data type is composed
+of letters, numbers, spaces, and punctuation. Python also has container
+data types which can store many values. These container data types
+include lists, tuples, and dictionaries. Strings, lists and tuples can
+be indexed and sliced using square brackets
+\passthrough{\lstinline![ ]!}.
     
 
 
@@ -6552,6 +6650,8 @@ list
 index
 
 indexing
+
+immutable
         \end{key_terms}
 
     
@@ -6574,7 +6674,7 @@ Commands}\label{summary-of-python-functions-and-commands}}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-Python Object & Description\tabularnewline
+Python Data Type & Description\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!int!} & integer\tabularnewline
@@ -6585,9 +6685,12 @@ False\tabularnewline
 components\tabularnewline
 \passthrough{\lstinline!str!} & string, sequence of letters, numbers and
 symbols\tabularnewline
-\passthrough{\lstinline!list!} & a Python list\tabularnewline
-\passthrough{\lstinline!dict!} & a Python dictionary\tabularnewline
-\passthrough{\lstinline!tuple!} & an immutable list\tabularnewline
+\passthrough{\lstinline!list!} & list, formed with
+\passthrough{\lstinline![ ]!}\tabularnewline
+\passthrough{\lstinline!dict!} & dictionary, formed with
+\passthrough{\lstinline!\{'key'=value\}!}\tabularnewline
+\passthrough{\lstinline!tuple!} & an immutable list, formed with
+\passthrough{\lstinline!( )!}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -6599,17 +6702,17 @@ symbols\tabularnewline
 Function & Description\tabularnewline
 \midrule
 \endhead
-\passthrough{\lstinline!type()!} & outputs a variable or objects data
+\passthrough{\lstinline!type()!} & output a variable or object data
 type\tabularnewline
-\passthrough{\lstinline!len()!} & return the length of a
-string\tabularnewline
-\passthrough{\lstinline!str()!} & converts a
+\passthrough{\lstinline!len()!} & return the length of a string, list
+dictionary or tuple\tabularnewline
+\passthrough{\lstinline!str()!} & convert a
 \passthrough{\lstinline!float!} or \passthrough{\lstinline!int!} into a
 \passthrough{\lstinline!str!} (string)\tabularnewline
-\passthrough{\lstinline!int()!} & converts a
+\passthrough{\lstinline!int()!} & convert a
 \passthrough{\lstinline!float!} or \passthrough{\lstinline!str!} into an
 \passthrough{\lstinline!int!} (integer)\tabularnewline
-\passthrough{\lstinline!float()!} & converts an
+\passthrough{\lstinline!float()!} & convert an
 \passthrough{\lstinline!int!} or \passthrough{\lstinline!str!} into an
 \passthrough{\lstinline!float!} (floating point number)\tabularnewline
 \bottomrule
@@ -6705,7 +6808,7 @@ Q04.12 What is \passthrough{\lstinline!5.1!} plus
 \passthrough{\lstinline!0 + 3j!}?
 
 Q04.13 What floating point number converts to the boolean
-\passthrough{\lstinline!False?!} Show this in code and the
+\passthrough{\lstinline!False!}? Show this in code using the
 \passthrough{\lstinline!bool()!} function.
 
 Q04.14 Create the floating point number \(0.001 \times 10^{-0.2}\) and
@@ -6734,6 +6837,7 @@ from math import e
   Truncate the decimal portion of \(e\) (remove the 0.71828\ldots{}.
   portion) so you are left with the integer \passthrough{\lstinline!2!}.
   Store the result in a variable called \passthrough{\lstinline!z!}.
+  Hint: convert \(e\) to a string and use string slicing.
 \end{enumerate}
 
 Q04.17 Define the complex number \passthrough{\lstinline!A!} using the
@@ -6779,7 +6883,7 @@ the code.
 
 Q04.22 Pick a number \passthrough{\lstinline!n!} to make the following
 statement \passthrough{\lstinline!True!}:
-\passthrough{\lstinline!(2<n) or (n==2+n)!}Then run the code to show
+\passthrough{\lstinline!(2<n) or (n==2+n)!} Then run the code to show
 your number works.
 
 Q04.23 Pick a number \passthrough{\lstinline!n!} to make the following
@@ -6787,8 +6891,10 @@ statement \passthrough{\lstinline!False!}:
 \passthrough{\lstinline!not (n<6) and (n<4)!} Then run the code to show
 your number works.
 
-Q04.24 Create the floating point number \(0.001 \times 10^{-0.2}\) and
-assign it to the variable \passthrough{\lstinline!b!}.
+Q04.24 Add the integers \passthrough{\lstinline!1!} and
+\passthrough{\lstinline!0!} and convert the answer to a boolean. Add the
+boolean values \passthrough{\lstinline!bool(0) + bool(1)!} and compare
+the result.
 
 Q04.25 Show that \passthrough{\lstinline!(n>5) and (n<=10)!} is
 equivalent to \passthrough{\lstinline!5 < n <= 10!} using the two
@@ -6826,13 +6932,14 @@ operator \passthrough{\lstinline!+!}.
 \item
   Explain why the output from (a) was different from the output of (b)
 \item
-  Multiply the strings \(8\) and \(5\) with the multiplication operator
-  \passthrough{\lstinline!*!}. Compare the output to multiplying the
-  integers \(8\) and \(5\). Why is the out different?
+  Multiply the string \(8\) and the string \(5\) with the multiplication
+  operator \passthrough{\lstinline!*!}. Compare the output to
+  multiplying the integers \(8\) and the integer \(5\). Why is the
+  output different?
 \end{enumerate}
 
-Q03.33 Complete the following index and slicing operations after the
-string \passthrough{\lstinline!word = 'Problem'!} is defined.
+Q03.33 Complete the following index and slicing operations after
+\passthrough{\lstinline!word = 'Problem'!} is defined.
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
@@ -6858,27 +6965,29 @@ Q04.34 Define the strings below:
 \def\labelenumi{(\alph{enumi})}
 \item
   Define a string \passthrough{\lstinline!a!} as \emph{coffee}, define a
-  string \passthrough{\lstinline!b!} as \emph{it's} and define a string
+  string \passthrough{\lstinline!b!} as \emph{it's}, define a string
   \passthrough{\lstinline!c!} as \emph{hot!} and string
   \passthrough{\lstinline!d!} as , (a comma).
 \item
   Combine the strings \passthrough{\lstinline!a!},
-  \passthrough{\lstinline!b!} and \passthrough{\lstinline!c!} and
+  \passthrough{\lstinline!b!}, \passthrough{\lstinline!c!} and
   \passthrough{\lstinline!d!} to produce the string \emph{coffee, it's
   hot} (notice the comma)
 \item
-  Print out the statement \emph{she said ``coffee, it's hot''}
+  Print out the statement \emph{she said ``coffee, it's hot''} using the
+  variables \passthrough{\lstinline!a!}, \passthrough{\lstinline!b!},
+  \passthrough{\lstinline!c!} and \passthrough{\lstinline!d!}.
 \end{enumerate}
 
 Q04.35 Create the string \passthrough{\lstinline!path!} with the value
 \emph{C:\textbackslash{}Users\textbackslash{}Gabby\textbackslash{}Documents}
 
 Q04.36 Convert the string \passthrough{\lstinline!Problem!} to the list
-\passthrough{\lstinline!['P','r','o','b','l','e','m']!} without
-rewriting the list from scratch.
+\passthrough{\lstinline!['P','r','o','b','l','e','m']!} without writing
+the list from scratch.
 
 Q04.37 Use the string \passthrough{\lstinline!over board!} and slicing
-to get the words:
+to produce the following words:
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
@@ -6891,7 +7000,7 @@ to get the words:
 \end{enumerate}
 
 Q04.38 Use the string \passthrough{\lstinline!rotten tomatoes!} and
-slicing to get the words:
+slicing to produce the following words:
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
@@ -6932,11 +7041,10 @@ Q04.45 Create a list with the numbers \(1\) to \(10\) (counting by
 ones). Use slicing to pull out the number \(5\) from the list.
 
 Q04.46 Create a list with the numbers \(1\) to \(10\) (counting by
-ones). Use list slicing to pull out all of the numbers \(5\) or less.
+ones). Use slicing to pull out all of the numbers \(5\) or less.
 
 Q04.47 Create a list with the numbers \(1\) to \(10\) (counting by
-ones). Use list slicing to pull out all of the numbers \(5\) and
-greater.
+ones). Use slicing to pull out all of the numbers \(5\) and greater.
 
 Q04.48 Create a list with the numbers \(1\) to \(10\) (counting by
 ones). Use slicing to pull out all of the even numbers from the list.
@@ -7033,7 +7141,7 @@ Q04.73 Create a list and a tuple that both contains the strings:
 the word \(two\) in both the list and tuple using indexing (square
 brackets).
 
-Q04.74 Code in the following lines:
+Q04.74 Code the following lines:
 
 \begin{lstlisting}[language=Python]
 t1 = (9)
@@ -7065,7 +7173,7 @@ function to demonstrate your tuple converts to
 Solutions}\label{errors-explanations-and-solutions}}
 
 Q04.80 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 n = 503
@@ -7073,7 +7181,7 @@ n[2]
 \end{lstlisting}
 
 Q04.81 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 a = 321
@@ -7082,7 +7190,7 @@ c = a + b
 \end{lstlisting}
 
 Q04.82 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 d = {one:1, two:2, three:3}
@@ -7090,7 +7198,7 @@ d[one]
 \end{lstlisting}
 
 Q04.83 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 f = false
@@ -7098,7 +7206,7 @@ not f
 \end{lstlisting}
 
 Q04.84 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 comp = 0.1 - 4.3i
@@ -7106,7 +7214,7 @@ comp + 5
 \end{lstlisting}
 
 Q04.85 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 empty = ''
@@ -7114,7 +7222,7 @@ bool(empty)
 \end{lstlisting}
 
 Q04.86 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 lst = [1,3,5]
@@ -7122,7 +7230,7 @@ lst[3]
 \end{lstlisting}
 
 Q04.87 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 dict = ['key': 8, 'pair': 9]
@@ -7130,7 +7238,7 @@ dict['key']
 \end{lstlisting}
 
 Q04.88 Run the following lines of code and explain the error in your own
-words, then write the lines of code to run without an error:
+words. Then rewrite the lines of code to run error free:
 
 \begin{lstlisting}[language=Python]
 s = ['Problem Solving']
@@ -8070,7 +8178,7 @@ to quickly plot a normal distribution created with NumPy's
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_372_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_375_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -9928,7 +10036,7 @@ the end to show the plot. Make sure to include the double parenthesis
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_495_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_498_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10414,7 +10522,7 @@ resulting plot is shown after the code.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_509_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_512_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10491,7 +10599,7 @@ the image file \textbf{\emph{plot.png}}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_513_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_516_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10616,7 +10724,7 @@ Matplotlib's object-oriented interface.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_519_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_522_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10665,7 +10773,7 @@ methods to build a multi-line plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_521_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_524_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -10987,7 +11095,7 @@ The list of materials is passed to the
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_536_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11062,7 +11170,7 @@ of a percent.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_539_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_542_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11109,7 +11217,7 @@ and the ``Chemical'' piece exploded out.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_541_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_544_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11220,7 +11328,7 @@ positions (\passthrough{\lstinline!x\_pos!}), bar heights
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_550_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_553_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11295,7 +11403,7 @@ widths and heights are created using NumPy's
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_554_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_557_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11374,7 +11482,7 @@ The code section below builds a histogram that contains 20 bins.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_559_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_562_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11463,7 +11571,7 @@ The code section below creates a box plot with four elements.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_566_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_569_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11540,7 +11648,7 @@ randomly generated data.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_569_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_572_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11604,7 +11712,7 @@ must be equal.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_573_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_576_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11669,7 +11777,7 @@ colors and areas.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_575_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_578_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11817,7 +11925,7 @@ The next code section builds a figure with three annotation arrows.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_580_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_583_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11928,7 +12036,7 @@ one figure. The axes of each subplot is scaled in a different way.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_584_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_587_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -11989,7 +12097,7 @@ the plots on \href{https://fivethirtyeight.com}{fivethirtyeight.com}.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_589_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_592_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12077,27 +12185,27 @@ styles including \passthrough{\lstinline!'default'!},
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_2.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_2.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_3.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_3.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_593_4.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_596_4.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12170,7 +12278,7 @@ arrays from two 1D arrays.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_599_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_602_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12229,7 +12337,7 @@ Matplotlib's \passthrough{\lstinline!ax.contourf()!} method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_602_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_605_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12305,7 +12413,7 @@ placed beside the plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_605_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_608_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12373,7 +12481,7 @@ has a different color map.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_608_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_611_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12462,7 +12570,7 @@ The following code section builds a quiver plot that contains one arrow.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_615_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_618_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12528,7 +12636,7 @@ arrow points straight down.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_619_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_622_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12626,7 +12734,7 @@ the aspect ratio of the plot to 1:1.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_624_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_627_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12672,7 +12780,7 @@ function \(\vec{F}\) to the \passthrough{\lstinline!X!} and
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_626_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_629_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12718,7 +12826,7 @@ apply the gradient function to every arrow's x, y starting position.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_628_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_631_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12766,7 +12874,7 @@ The code section below builds a quiver plot with four vortices.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_630_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_633_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12859,7 +12967,7 @@ is a colored quiver plot.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_632_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_635_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12928,7 +13036,7 @@ parallel lines pointing to the right.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_636_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_639_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -12975,7 +13083,7 @@ vector field.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_639_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_642_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13019,7 +13127,7 @@ charges.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_641_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_644_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13089,7 +13197,7 @@ included in the \passthrough{\lstinline!fig.add\_subplot()!} method.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_646_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_649_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13153,7 +13261,7 @@ The next code section draws two wire frame plots side by side.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_649_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_652_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13221,7 +13329,7 @@ The next code section builds a gradient surface plot using the
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_652_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_655_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13275,7 +13383,7 @@ projections of the 3D surface are visualized on 2D contour plots.
 \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_655_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{combined_files/combined_658_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -13799,7 +13907,15 @@ second subplot, build a pie chart of he data in Q06.31.
 
 
     
-        By the end of this chapter you will be able to:
+        In computer programming, functions are a way to bundle multiple lines of
+code together to run as one block of code. Many functions accept input,
+called arguments, and produce output. Python has many built-in functions
+such as \passthrough{\lstinline!type()!},
+\passthrough{\lstinline!len()!} and \passthrough{\lstinline!pow()!}. In
+this chapter you will learn how to create user-defined functions in
+Python.
+
+By the end of this chapter you will be able to:
 
 \begin{itemize}
 \item
@@ -13832,9 +13948,9 @@ second subplot, build a pie chart of he data in Q06.31.
 
     
         Functions are an essential part of most programming languages. Functions
-are reusable pieces of code that can be called using the function's
-name. Functions can be called anywhere in a Python program, including
-calling functions within other functions.
+are reusable pieces of code that can be called using a function's name.
+Functions can be called anywhere in a Python program, including calling
+functions within other functions.
 
 Functions provide a couple of benefits:
 
@@ -13950,11 +14066,21 @@ function argument(s) should be used in the body of the function. After
 the function name, parenthesis, and arguments comes a
 \passthrough{\lstinline!:!} colon. In Python, a colon is required to end
 the first line of all functions.
+    
 
-A colon : is required at the end of the first line of every function. If
+
+
+
+    
+        A colon : is required at the end of the first line of every function. If
 the : is not present the code will not run.
+    
 
-\begin{lstlisting}
+
+
+
+    
+        \begin{lstlisting}
 <code>
 \end{lstlisting}
 
@@ -14065,7 +14191,8 @@ function includes the code \passthrough{\lstinline!out = n + 2!}. The
 last line of the function includes the keyword
 \passthrough{\lstinline!return!} followed by a space and the variable
 \passthrough{\lstinline!out!}. Note variable \passthrough{\lstinline!n!}
-is a local variable and can only be used inside the function definition.
+is a \emph{local variable} and can only be used inside the function
+definition.
 
 Let's run our \passthrough{\lstinline!plustwo()!} function and see the
 output.
@@ -15510,9 +15637,16 @@ first_a(1)
 
 
     
-        By the end of this chapter you will be able to:
+        In computer programming, selection structures run sections of code based
+on logical conditions. In this chapter you will learn about the
+selections structures if, else, and else if. The end of the chapter
+introduces another selection structure, the try / except block.
+
+By the end of this chapter you will be able to:
 
 \begin{itemize}
+\item
+  Utilize Python's \passthrough{\lstinline!input()!} function
 \item
   Use if, else if, and else selection structures
 \item
@@ -15558,7 +15692,7 @@ var = input('message')
 Where \passthrough{\lstinline!var!} is the variable that stores the
 user's input and \passthrough{\lstinline!'message'!} is the message the
 user sees at the prompt. A string enclosed in quotes, like
-\passthrough{\lstinline!'message'!} needs to be passed as an input
+\passthrough{\lstinline!'message'!}, needs to be passed as an input
 argument to the \passthrough{\lstinline!input()!} function. Let's ask a
 user for their age:
     
@@ -15566,11 +15700,11 @@ user for their age:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{age} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{how old are you?}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{age} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{how old are you? }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-how old are you?8
+how old are you? 9
 
     \end{Verbatim}
 
@@ -15580,30 +15714,30 @@ how old are you?8
 be run on it. Now, let's print the user's age back to them. This can be
 accomplished with an f-string. Note the \passthrough{\lstinline!f' '!}
 inserted before the string. A set of curly braces
-\passthrough{\lstinline!\{  \}!} surrounds the variable's value that is
-printed back to the user.
+\passthrough{\lstinline!\{  \}!} surrounds the variable's name and the
+variable's value is printed back to the user.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{age} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{how old are you?}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{age} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{how old are you? }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{you are }\PY{l+s+si}{\PYZob{}age\PYZcb{}}\PY{l+s+s1}{ years old}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-how old are you?8
-you are 8 years old
+how old are you? 9
+you are 9 years old
 
     \end{Verbatim}
 
 
     
-        Let's try another example. We will we ask for the base and height of a
-triangle and print back the area of the triangle to back to the user.
+        Let's try another example. We will we ask the user for the base and
+height of a triangle and print out the area of the triangle.
 
-There is a problem with the approach below. The code block does not run
-becuase a common error is present.
+But, there is a problem with the approach below. The code block does not
+run because a common error is present.
     
 
 
@@ -15627,12 +15761,12 @@ height of triangle: 2
 
         TypeError                                 Traceback (most recent call last)
 
-        <ipython-input-3-c9cb8f02e604> in <module>()
+        <ipython-input-3-c9cb8f02e604> in <module>
           1 b = input('base of triangle: ')
           2 h = input('height of triangle: ')
     ----> 3 A = (1/2)*b*h
           4 print(f'The area of the triangle is: \{A\}')
-    
+
 
         TypeError: can't multiply sequence by non-int of type 'float'
 
@@ -15640,10 +15774,11 @@ height of triangle: 2
 
 
     
-        The previous section of code returns an error because of the data type
-of the variables \passthrough{\lstinline!b!} and
-\passthrough{\lstinline!h!}. To investigate the data type, we can use
-Python's \passthrough{\lstinline!type()!} function.
+        The previous section of code returns an error because of the \emph{data
+type} of the variables \passthrough{\lstinline!b!} and
+\passthrough{\lstinline!h!}. We can investigate
+\passthrough{\lstinline!b!} and \passthrough{\lstinline!h!}'s data type
+with Python's \passthrough{\lstinline!type()!} function.
     
 
 
@@ -15663,11 +15798,11 @@ b and h are of type: <class 'str'>, <class 'str'>
 
 
     
-        Notice that both \passthrough{\lstinline!b!} and
-\passthrough{\lstinline!h!} are strings, even though the numbers
-\passthrough{\lstinline!5!} and \passthrough{\lstinline!2!} were entered
-as input. The output of the \passthrough{\lstinline!input()!} function
-is always a string, even if the user enters a number.
+        Notice both \passthrough{\lstinline!b!} and \passthrough{\lstinline!h!}
+are strings, even though the numbers \passthrough{\lstinline!5!} and
+\passthrough{\lstinline!2!} were entered as input. The output of the
+\passthrough{\lstinline!input()!} function is always a string, even if
+the user enters a number.
 
 To complete the area calculation, \passthrough{\lstinline!b!} and
 \passthrough{\lstinline!h!} first need to be converted to floats using
@@ -15693,7 +15828,64 @@ The area of the triangle is: 5.0
 
 
     
-        The concept of a selection statement is introduced the next section.
+        Now that you are familiar with Python's
+\passthrough{\lstinline!input()!} function, let's utilize a user's input
+to decide which lines of code will run. The concept of an selection
+statement is introduced the next section.
+    
+
+
+
+
+    
+        \hypertarget{selection-statements}{%
+\section{Selection Statements}\label{selection-statements}}
+    
+
+
+
+
+    
+        Selection statements are used in programming to select particular blocks
+of code to run based on a logical condition. The primary selection
+statements in Python are:
+
+\begin{itemize}
+\tightlist
+\item
+  \passthrough{\lstinline!if!}
+\item
+  \passthrough{\lstinline!else!}
+\item
+  \passthrough{\lstinline!elif!}
+\item
+  \passthrough{\lstinline!try!}
+\item
+  \passthrough{\lstinline!except!}
+\end{itemize}
+    
+
+
+
+
+    
+        So far in this text, all of the Python code has either been strictly
+linear or linear and include functions. A strictly linear program is a
+program that runs top to bottom. Every line of code in a linear program
+is executed. In a linear program with functions, the program still runs
+head to base, but the program takes side excursions to execute functions
+on the way down.
+
+If this next couple chapters, you learn to write programs non-linearly.
+Non-linear programs do not run every line of code top to bottom. In
+non-linear programs, sections of code may not run based on selection
+statements like \emph{if} and \emph{try}. Non-linear programs can
+include loops. Inside loops are sections of code that run multiple
+times. Loops are defined by repetition structures like \emph{for loops}
+and \emph{while loops}.
+
+To start our discussion of non-linear programs, we will begin with
+\emph{if statements}.
     
 
 
@@ -15709,7 +15901,7 @@ The area of the triangle is: 5.0
 
     
         The \emph{if-statement} is one of the basic selection structures in
-Python. The syntax for a section of code that contains an if statement
+Python. The syntax for a section of code that contains an if-statement
 is below:
 
 \begin{lstlisting}[language=Python]
@@ -15731,9 +15923,9 @@ required. After the if-statement, a section of code to run when the
 condition is \passthrough{\lstinline!True!} is included. The section of
 \passthrough{\lstinline!<code to run>!} must be indented and every line
 in this section of code must be indented the same number of spaces. By
-convention, indentation is four spaces in Python. Most Python code
+convention, four space indentation is used in Python. Most Python code
 editors, including Jupyter notebooks, indent code after if-statements
-automatically.
+automatically four spaces.
 
 The section of code below demonstrates an if-statement in Python:
     
@@ -15770,8 +15962,9 @@ if-statement. The line of code including the
 \passthrough{\lstinline!print()!} statement will run if the if-statement
 is \passthrough{\lstinline!True!}. Since the if-statement \emph{is}
 \passthrough{\lstinline!True!}, the indented line
-\passthrough{\lstinline!print('less than five')!} runs. As a result of
-running these three lines of code, the user sees the text
+\passthrough{\lstinline!print('less than five')!} runs.
+
+As a result of running these three lines of code, the user sees the text
 \passthrough{\lstinline!less than five!}.
     
 
@@ -15814,12 +16007,14 @@ is positive
     
         Note how each if-statement is followed by a logical condition and a
 colon \passthrough{\lstinline!:!}. Also, note how the code below each
-if-statement is indented. With the code left-justified (not indented),
-all three code lines will run, and the output will be different. The
-\passthrough{\lstinline!pass!} keyword is used as the code will not run
-unless at least one line of code is indented after the if-statement.
-\passthrough{\lstinline!pass!} is a line of code that does nothing in
-Python.
+if-statement is indented. If the code is left-justified (not indented),
+all three code lines run, and the output is different.
+
+The code block below will not run unless at least one line of code is
+indented after the if-statement. Python's \passthrough{\lstinline!pass!}
+keyword is a line of code that does nothing when executed.
+\passthrough{\lstinline!pass!} is added under the if-statments so the
+code runs error-free.
     
 
 
@@ -15846,60 +16041,6 @@ a is positive
 
 
     
-        \hypertarget{selection-statements}{%
-\section{Selection Statements}\label{selection-statements}}
-    
-
-
-
-
-    
-        Selection statements are used in programming to decide or select
-particular blocks of code to run based on a defined logical condition.
-The primary selection statements in Python are:
-
-\begin{itemize}
-\tightlist
-\item
-  if
-\item
-  else
-\item
-  elif
-\item
-  try
-\item
-  except
-\end{itemize}
-    
-
-
-
-
-    
-        So far in this text, all of the Python code has either been strictly
-linear or linear and include functions. A strictly linear program is a
-program that runs top to bottom. Every line of code in a linear program
-runs. In a linear program with functions, the program still runs head to
-base, but the program takes side excursions to execute functions on the
-way down.
-
-If this next couple chapters, you learn to write programs non-linearly.
-Non-linear programs do not run every line of code top to bottom. In
-non-linear programs, sections of code may not run based on selection
-statements like \emph{if} and \emph{try}. Non-linear programs can
-include loops. Inside loops are sections of code that run multiple
-times. Loops are defined by repetition structures like \emph{for loops}
-and \emph{while loops}.
-
-To start our discussion of non-linear programs, we will begin with
-\emph{if statements}.
-    
-
-
-
-
-    
         \hypertarget{if-else-statements}{%
 \section{If Else Statements}\label{if-else-statements}}
     
@@ -15908,13 +16049,13 @@ To start our discussion of non-linear programs, we will begin with
 
 
     
-        If statements can include \emph{else} clauses. An \emph{else} clause is
-a section of code that runs if the if-statement is
+        In Python, if-statements can include \emph{else} clauses. An else clause
+is a section of code that runs if the if-statement is
 \passthrough{\lstinline!False!}. If the if-statement is
 \passthrough{\lstinline!True!}, the code section under the else clause
 does not run.
 
-The general form of an if / else statement is below:
+The general form of an if-statement with an else statement is below:
 
 \begin{lstlisting}[language=Python]
 if <logical_condition>:
@@ -15923,7 +16064,7 @@ else:
     <code block 2>
 \end{lstlisting}
 
-The \passthrough{\lstinline!else!} keyword needs to be on its own line
+The keyword \passthrough{\lstinline!else!} needs to be on its own line
 and be at the same indentation level as the \passthrough{\lstinline!if!}
 keyword that the \passthrough{\lstinline!else!} corresponds to. The
 keyword \passthrough{\lstinline!else!} needs to be followed by a colon
@@ -15936,7 +16077,7 @@ A sample if/else code section is below:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{5}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{5}
         \PY{k}{if} \PY{n}{a}\PY{o}{\PYZgt{}}\PY{l+m+mi}{10}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a is greater than 10}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{k}{else}\PY{p}{:}
@@ -15955,12 +16096,12 @@ a is less than 10
 \passthrough{\lstinline!a>10!} is \passthrough{\lstinline!False!} and
 the code under the \passthrough{\lstinline!if!} statement does not run.
 Therefore, the code under the \passthrough{\lstinline!else!} statement
-does run, and \passthrough{\lstinline!a is less than 10!} is printed.
+does run, and \passthrough{\lstinline!"a is less than 10"!} is printed.
 
 If the value of \passthrough{\lstinline!a!} is modified so that
 \passthrough{\lstinline!a!} is greater than
 \passthrough{\lstinline!10!}, \passthrough{\lstinline!a>10!} returns
-\passthrough{\lstinline!True!}the code under the
+\passthrough{\lstinline!True!}, and the code under the
 \passthrough{\lstinline!if!} statement \emph{will} run, and the code
 under the \passthrough{\lstinline!else!} keyword \emph{will not}.
     
@@ -15968,7 +16109,7 @@ under the \passthrough{\lstinline!else!} keyword \emph{will not}.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{20}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{20}
         \PY{k}{if} \PY{n}{a}\PY{o}{\PYZgt{}}\PY{l+m+mi}{10}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a is greater than 10}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{k}{else}\PY{p}{:}
@@ -16021,7 +16162,7 @@ below:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{green}\PY{l+s+s1}{\PYZsq{}}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{green}\PY{l+s+s1}{\PYZsq{}}
         \PY{k}{if} \PY{n}{color} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{The color is red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{k}{elif} \PY{n}{color} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{green}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
@@ -16037,18 +16178,17 @@ The color is green
 
 
     
-        If we modify the code to assign the string
-\passthrough{\lstinline!'orange'!} to the variable
-\passthrough{\lstinline!color!}, the code under the
-\passthrough{\lstinline!if!} is not run, and the code under the
-\passthrough{\lstinline!elif!} is not run either. Only the code under
+        If we modify the code and set
+\passthrough{\lstinline!color = 'orange'!}, the code under the
+\passthrough{\lstinline!if!} does not run, and the code under the
+\passthrough{\lstinline!elif!} does not run either. Only the code under
 the \passthrough{\lstinline!else!} is executed.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{orange}\PY{l+s+s1}{\PYZsq{}}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{orange}\PY{l+s+s1}{\PYZsq{}}
         \PY{k}{if} \PY{n}{color} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{The color is red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{k}{elif} \PY{n}{color} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{green}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
@@ -16090,15 +16230,6 @@ errors.
 
 
     
-        \hypertarget{syntax-errors-and-exception-errors}{%
-\subsection{Syntax Errors and Exception
-Errors}\label{syntax-errors-and-exception-errors}}
-    
-
-
-
-
-    
         \hypertarget{syntax-errors}{%
 \subsection{Syntax Errors}\label{syntax-errors}}
 
@@ -16120,11 +16251,11 @@ The line of code below contains a syntax error. The string
 
     \begin{Verbatim}[commandchars=\\\{\}]
 
-          File "<ipython-input-1-c1b051155f57>", line 1
+          File "<ipython-input-1-4c037f6284bc>", line 1
         string = "problem solving
-                                \^{}
+                                 \^{}
     SyntaxError: EOL while scanning string literal
-    
+
 
     \end{Verbatim}
 
@@ -16136,7 +16267,7 @@ message.
 
 Even if a line of code does not run when a program is executed, syntax
 errors in Python are not allowed. For instance, a line of code indented
-after the if-statement \passthrough{\lstinline!if 'a' == 'b:'!} will not
+after the if-statement \passthrough{\lstinline!if 'a' == 'b':!} will not
 be executed. But if the indented line of code contains a syntax error,
 the Python interpreter still flags the error as a syntax error and does
 not complete the program.
@@ -16151,11 +16282,11 @@ not complete the program.
 
     \begin{Verbatim}[commandchars=\\\{\}]
 
-          File "<ipython-input-2-a22f64681124>", line 2
+          File "<ipython-input-2-532ae1edb2a2>", line 2
         string = 10problems
                           \^{}
     SyntaxError: invalid syntax
-    
+
 
     \end{Verbatim}
 
@@ -16168,14 +16299,13 @@ Syntax errors are lines of code that are not valid Python. Another type
 of error in Python is an \emph{exception error}. Exception errors result
 when a \emph{valid} line of Python code \emph{cannot run}. Lines of code
 with exception errors contain \emph{valid} Python code, but the line of
-code still cannot run.
+code still cannot be executed.
 
 For example, the statement
 \passthrough{\lstinline!f = open('file.txt','r')!} is valid Python code.
 But if the file \textbf{\emph{file.txt}} does not exist, Python throws
 an exception error because
-\passthrough{\lstinline!f = open('file.txt','r')!} code cannot be
-executed.
+\passthrough{\lstinline!f = open('file.txt','r')!} cannot be executed.
     
 
 
@@ -16188,13 +16318,13 @@ executed.
 
         ---------------------------------------------------------------------------
 
-        IOError                                   Traceback (most recent call last)
+        FileNotFoundError                         Traceback (most recent call last)
 
-        <ipython-input-3-b0ee218ebbfc> in <module>()
+        <ipython-input-3-cc3c27f5a0c3> in <module>
     ----> 1 f = open('file.txt','r')
     
 
-        IOError: [Errno 2] No such file or directory: 'file.txt'
+        FileNotFoundError: [Errno 2] No such file or directory: 'file.txt'
 
     \end{Verbatim}
 
@@ -16220,18 +16350,18 @@ shown.
 
         TypeError                                 Traceback (most recent call last)
 
-        <ipython-input-4-df093d7733e3> in <module>()
+        <ipython-input-4-0e1fa8aeb4c3> in <module>
           1 a = 1
     ----> 2 print(a[5])
     
 
-        TypeError: 'int' object has no attribute '\_\_getitem\_\_'
+        TypeError: 'int' object is not subscriptable
 
     \end{Verbatim}
 
 
     
-        Try except statements can be used to try run sections of Python code
+        Try except statements can be used to try to run sections of Python code
 that \emph{may} return an exception error. The general syntax of a try
 except statement is below:
 
@@ -16288,8 +16418,8 @@ variable a is not a list
 
     
         When the Python code in a try block does run and does not throw an
-exception error, the code in the \passthrough{\lstinline!except!} does
-not run.
+exception error, the code in the \passthrough{\lstinline!except!} block
+does not run.
     
 
 
@@ -16356,7 +16486,7 @@ The program starts. Then the program prints out ``Output!''. Finally,
 the program ends.
 \end{quote}
 
-A flowchart that describes this simple program is below:
+A flowchart that describes this simple program is shown.
 
 \begin{figure}
 \centering
@@ -16385,12 +16515,12 @@ added to the number. Next, the resulting sum is printed. Finally, the
 program ends.
 \end{quote}
 
-A flowchart that describes this program is below:
+A flowchart that describes this program is is shown.
 
 \begin{figure}
 \centering
 \includegraphics{images/flow_chart_calculation_program.png}
-\caption{Flowchart of a program that includes input, output, and a
+\caption{Flowchart of a program that includes input, output and a
 calculation}
 \end{figure}
 
@@ -16418,7 +16548,7 @@ number is greater than zero, the program prints ``Greater than 0'', then
 the program ends.
 \end{quote}
 
-A flow chart that describes this program is below:
+A flow chart that describes this program is shown.
 
 \begin{figure}
 \centering
@@ -16496,10 +16626,10 @@ print('Done')
 These selection structures allow certain blocks of code to run or not
 run based on logical conditions. Logical conditions are expressions or
 variables that can be evaluated as \passthrough{\lstinline!True!} or
-\passthrough{\lstinline!False!}. You learned that Python uses
-indentation segment code after \passthrough{\lstinline!if!},
-\passthrough{\lstinline!elif!}, and \passthrough{\lstinline!else!}
-statements. The standard indentation in Python is four spaces.
+\passthrough{\lstinline!False!}. You learned to indent code segments
+after \passthrough{\lstinline!if!}, \passthrough{\lstinline!elif!}, and
+\passthrough{\lstinline!else!} statements. Standard indentation in
+Python is four spaces.
 
 The difference between syntax errors and exception errors was
 demonstrated in this chapter.
@@ -16547,7 +16677,11 @@ elif
 
 exceptions
 
+syntax
+
 syntax error
+
+valid code
 
 exception error
 
@@ -16687,7 +16821,7 @@ greater
 Solutions}\label{errors-explanations-and-solutions}}
 
 Run the following code snippets. Explain the error in your own words.
-Rewrite the code snippet to solve the error.
+Then rewrite the code snippet and run the code error-free.
     
 
 
@@ -16754,7 +16888,12 @@ if n > 0:
 
 
     
-        By the end of this chapter you will be able to:
+        Repetition structures allow the same piece of code to run multiple
+times. Two repetion structures in Python are for loops and while loops.
+For loops run a set number of times. While loops run as long as a
+specific logical condition is true.
+
+By the end of this chapter you will be able to:
 
 \begin{itemize}
 \item
@@ -16784,12 +16923,12 @@ if n > 0:
 
 
     
-        In this chapter, you will learn about two kinds of repetition structures
-in Python: \emph{for loops} and \emph{while loops}. This section
-describes for loops.
+        In this chapter, you will learn about two kinds of \emph{repetition
+structures} in Python: \emph{for loops} and \emph{while loops}. This
+section describes for loops.
 
 \emph{For Loops} are a component of many programming languages. A
-\emph{For Loop} is a repetition structure where a section of code runs a
+\emph{for loop} is a repetition structure where a section of code runs a
 specified number of times.
 
 Say we want to print out the statements:
@@ -16812,13 +16951,6 @@ row:
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Problem solving in teams}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-Problem solving in teams
-Problem solving in teams
-Problem solving in teams
-
-    \end{Verbatim}
-
 
     
         Another way to accomplish the same task is to use a for loop. The basic
@@ -16833,13 +16965,15 @@ for <var> in range(<num>):
 Where \passthrough{\lstinline!<var>!} can be any variable,
 \passthrough{\lstinline!range(<num>)!} is the number of times the for
 loop runs and \passthrough{\lstinline!<code>!} are the lines of code
-that execute each time the for loop runs. Note the for loop starts with
-the keyword \passthrough{\lstinline!for!} and includes a colon
-\passthrough{\lstinline!:!}. Both \passthrough{\lstinline!for!} and the
-colon \passthrough{\lstinline!:!} are required. Also, note
-\passthrough{\lstinline!<code>!} is indented. Each line of code that
-runs as part of the for loop needs to be indented the same number of
-spaces. Standard indentation in Python is four spaces.
+that execute each time the for loop runs.
+
+Note the for loop starts with the keyword \passthrough{\lstinline!for!}
+and includes a colon \passthrough{\lstinline!:!}. Both
+\passthrough{\lstinline!for!} and the colon \passthrough{\lstinline!:!}
+are required. Also, note \passthrough{\lstinline!<code>!} is indented.
+Each line of code that runs as part of the for loop needs to be indented
+the same number of spaces. Standard indentation in Python is four
+spaces.
 
 The example above can be rewritten using a for loop:
     
@@ -16851,24 +16985,17 @@ The example above can be rewritten using a for loop:
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Problem solving in teams}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-Problem solving in teams
-Problem solving in teams
-Problem solving in teams
-
-    \end{Verbatim}
-
 
     
-        \hypertarget{range-function}{%
-\subsubsection{\texorpdfstring{\texttt{range()}
-function}{range() function}}\label{range-function}}
+        \hypertarget{pythons-range-function}{%
+\subsubsection{\texorpdfstring{Python's \texttt{range()}
+function}{Python's range() function}}\label{pythons-range-function}}
 
 Python's \passthrough{\lstinline!range()!} function returns an iterable
 list of values starting at zero and ending at
 \passthrough{\lstinline!n-1!}. For example, when
 \passthrough{\lstinline!range(3)!} is called, the values
-\passthrough{\lstinline!0, 1, 2!} are returned. Note
+\passthrough{\lstinline!0, 1, 2!} are returned.
 \passthrough{\lstinline!3!} is not part of the output, even though the
 function input was \passthrough{\lstinline!range(3)!}. We can be confirm
 the behavior of \passthrough{\lstinline!range()!} with a for loop:
@@ -16881,12 +17008,13 @@ the behavior of \passthrough{\lstinline!range()!} with a for loop:
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-0
-1
-2
 
-    \end{Verbatim}
+    
+        \textbf{Remember Python counting starts at \passthrough{\lstinline!0!}
+and ends at \passthrough{\lstinline!n-1!}.}
+    
+
+
 
 
     
@@ -16939,21 +17067,14 @@ A code section that uses a for loop and
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-5
-6
-7
-8
-
-    \end{Verbatim}
-
 
     
         \hypertarget{for-loops-with-lists}{%
 \subsection{For loops with lists}\label{for-loops-with-lists}}
 
-For loops can also be run using lists. If a list is used, the loop will
-run as many times as there are items in the list. The general syntax is:
+For loops can also be run using Python lists. If a list is used, the
+loop will run as many times as there are items in the list. The general
+syntax is:
 
 \begin{lstlisting}[language=Python]
 for <var> in <list>:
@@ -16977,18 +17098,12 @@ An example of a list in a for loop is below:
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{item}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-electrical
-civil
-mechanical
-
-    \end{Verbatim}
-
 
     
-        The loop ran three times because there are three items in the list. Each
-time through the loop, the variable \passthrough{\lstinline!item!} is
-set to one of the items in the list.
+        The loop ran three times because there are three items in
+\passthrough{\lstinline!my\_list!}. Each time through the loop, the
+variable \passthrough{\lstinline!item!} is set to one of the items in
+the list.
 
 \begin{itemize}
 \tightlist
@@ -17073,8 +17188,9 @@ as \passthrough{\lstinline!True!} or \passthrough{\lstinline!False!}.
 The \passthrough{\lstinline!<code>!} after the while statement must be
 indented. Each line of code runs in the while loop needs to be indented
 the same number of spaces. (Many code editors, including Jupyter
-notebooks, auto-indent after a while loop statement) If you add
-indentation manually, four space spaces is the Python standard.
+notebooks, auto-indent after a \passthrough{\lstinline!while!}
+statement) If you add indentation manually, four space spaces is the
+Python standard.
 
 An example of a while loop is below:
     
@@ -17087,14 +17203,6 @@ An example of a while loop is below:
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
             \PY{n}{i} \PY{o}{=} \PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}
 \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-0
-1
-2
-3
-
-    \end{Verbatim}
 
 
     
@@ -17135,17 +17243,11 @@ positive number is entered.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
         \PY{k}{while} \PY{n}{num\PYZus{}input} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{:}
             \PY{n}{str\PYZus{}input} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Enter a positive number: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
             \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{n+nb}{float}\PY{p}{(}\PY{n}{str\PYZus{}input}\PY{p}{)}
 \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-Enter a positive number: -1
-Enter a positive number: 5
-
-    \end{Verbatim}
 
 
     
@@ -17157,7 +17259,9 @@ statement \passthrough{\lstinline!num\_input < 0!} to evaluate as
 \passthrough{\lstinline!num\_input < 0!} to evaluate as
 \passthrough{\lstinline!True!}. Besides
 \passthrough{\lstinline!num\_input = -1!}, any other negative number
-would have worked. If the while statement can't be evaluated as
+would have worked.
+
+If the while statement can't be evaluated as
 \passthrough{\lstinline!True!} or \passthrough{\lstinline!False!},
 Python throws an error. Therefore, it is necessary to convert the user's
 input from a string to a float. The statement
@@ -17180,7 +17284,7 @@ the number \passthrough{\lstinline!0!}.
 
     
         \emph{Break} and \emph{continue} are two ways to modify the behavior of
-a for loop or while loop.
+for loops and while loops.
     
 
 
@@ -17210,15 +17314,6 @@ An example using \passthrough{\lstinline!break!} in a for loop is below.
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Loop exited}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-0
-1
-2
-3
-Loop exited
-
-    \end{Verbatim}
-
 
     
         When the loop hits \passthrough{\lstinline!i=3!},
@@ -17232,20 +17327,12 @@ below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{k}{while} \PY{k+kc}{True}\PY{p}{:}
+{\color{incolor}In [{\color{incolor} }]:} \PY{k}{while} \PY{k+kc}{True}\PY{p}{:}
             \PY{n}{out} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{type q to exit the loop: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
             \PY{k}{if} \PY{n}{out} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
                 \PY{k}{break}
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Loop exited}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-type q to exit the loop: 1
-type q to exit the loop: 2
-type q to exit the loop: q
-Loop exited
-
-    \end{Verbatim}
 
 
     
@@ -17267,18 +17354,11 @@ loop is below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor} }]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
             \PY{k}{if} \PY{n}{i}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{:}
                 \PY{k}{continue}
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-0
-1
-3
-
-    \end{Verbatim}
 
 
     
@@ -17286,7 +17366,7 @@ loop is below.
 not printed. This is because when \passthrough{\lstinline!i=2!} the
 program hits the \passthrough{\lstinline!continue!} statement.
 Therefore, the line \passthrough{\lstinline!print(i)!} isn't run when
-\passthrough{\lstinline!i=2!}. Then the program starts back up to the
+\passthrough{\lstinline!i=2!}. Then the program starts back up at the
 start of the loop with the next number \passthrough{\lstinline!i=3!}.
     
 
@@ -17369,7 +17449,7 @@ The program starts. The program prints the word ``looping'' 10 times.
 Finally, the program ends.
 \end{quote}
 
-A flowchart that describes this program is below:
+A flowchart that describes this program is shown.
 
 \begin{figure}
 \centering
@@ -17377,7 +17457,7 @@ A flowchart that describes this program is below:
 \caption{Flowchart of a program that contains a for loop}
 \end{figure}
 
-The Python code that corresponds to this flowchart is:
+The Python code that corresponds to this flowchart is below:
 
 \begin{lstlisting}[language=Python]
 # start
@@ -17405,12 +17485,12 @@ loop:
 
 \begin{quote}
 The program starts. The program asks the user for a positive number. If
-the number the user enters is negative, the program asks the user for a
-positive number again. If the number the user enters is positive, the
-program prints ``positive''. Finally, the program ends.
+the number is negative, the program asks the user for a positive number
+again. If the number is positive, the program prints ``positive''.
+Finally, the program ends.
 \end{quote}
 
-A flowchart that describes this program is below:
+A flowchart that describes this program is shown.
 
 \begin{figure}
 \centering
@@ -17449,11 +17529,11 @@ print("positive")
 times.
 
 In this chapter, you learned how to write for loops and while loops in
-Python. You learned how to use Python's
-\passthrough{\lstinline!range()!} function in a for loops and how to use
-a list or string in a for loop. For loops run a block of code a definite
-number of times. A while loop runs a block of code as long as a logical
-condition is true. The keywords \passthrough{\lstinline!break!} and
+Python. For loops run a block of code a definite number of times. You
+learned how to use Python's \passthrough{\lstinline!range()!} function
+in a for loops and how to use a list or string in a for loop. A while
+loop runs a block of code as long as a logical condition is true. The
+keywords \passthrough{\lstinline!break!} and
 \passthrough{\lstinline!continue!} cause for and while loops to exit
 early.
 
@@ -17527,11 +17607,12 @@ Q09.03 Create a for loop to print out all the letters in the word
 Q09.04 Use a for loop to sum the elements in the list
 \passthrough{\lstinline![1,3,5,8,12]!}. Print the sum to the user.
 
-Q09.05 Create the Fibonacci sequence using a for loop. Print out the
-first 20 terms of the Fibonacci sequence on one line. The first 10 terms
-of the Fibonacci sequence are below:
+Q09.05 The first 10 terms of the Fibonacci sequence are below:
 
 \[ 1, \ 1, \ 2, \ 3, \ 5, \ 8, \ 13, \ 21, \ 34, \ 55 \ ... \]
+
+Create the Fibonacci sequence using a for loop. Print out the first 20
+terms of the Fibonacci sequence on one line.
 
 Q09.06 This problem is about \emph{Fizz Buzz}, a programming task that
 is sometimes used in interviews.
@@ -17542,10 +17623,10 @@ is sometimes used in interviews.
   Use a for loop to print out the numbers 1 to 30
 \item
   Use a for loop to print out all the numbers 1 to 30, but leave out any
-  number which is divisible by 3, such as 3,6 and 9.
+  number which is divisible by 3, such as 3, 6 and 9.
 \item
   Use a for loop to print out all the numbers 1 to 30, but leave out any
-  number which is divisible by 5, such as 5,10 and 15.
+  number which is divisible by 5, such as 5, 10 and 15.
 \item
   Use a for loop to print out all the numbers 1 to 30, but insert the
   word \passthrough{\lstinline!fizz!} for any number that is divisible
@@ -17580,9 +17661,10 @@ Use the geometric series above to approximate the value of 1 after 10
 terms are added. Print out how far off the geometric series
 approximation is to 1.
 
-Q09.09 A Taylor Series is an infinite series of mathematical terms that
-when summed together approximate a mathematical function. A Taylor
-Series can be used to approximate \(e^x\), \(sine\), and \(cosine\).
+Q09.09 A Taylor Series is an infinite series of mathematical terms when
+summed together approximate a mathematical function. A Taylor Series can
+be used to approximate the mathematical functions \(e^x\), \(sine\), and
+\(cosine\).
 
 Taylor Series expansion for the function \(e^x\) is below:
 
@@ -17788,15 +17870,15 @@ scores the user entered:
   standard deviation
 \end{itemize}
 
-Q09.43 Use while loop to validate user input. Ask the user to enter a
+Q09.43 Use a while loop to validate user input. Ask the user to enter a
 value between 0 and 1. Print back to the user ``Try again'' if the
 user's input is invalid. Print ``Your number works!'' when the user
 enters valid input.
 
 Q09.44 Use a while loop to validate user input. Ask the user to enter a
 day of the week. Keep asking the user for a day of the week until they
-enter one. When the user enters a day of the week, print back to the
-``Yup, it's \passthrough{\lstinline!<day of the week>!}''.
+enter one. When the user enters a day of the week, print ``Yup, it's
+\passthrough{\lstinline!<day of the week>!}''.
 
 Q09.45 Write a program to play the game higher/lower. Tell the user you
 have picked a random integer between 1 and 20.
@@ -17813,7 +17895,7 @@ n = (randint(1, 20))
 \def\labelenumi{(\alph{enumi})}
 \item
   Ask the user to enter a number (one time) and tell the user if the
-  number random is higher or lower. Print
+  random number is higher or lower. Print
   \passthrough{\lstinline!higher!} if the random number is higher than
   the user's guess, print \passthrough{\lstinline!lower!} if the random
   number is lower than the user's guess. Print
@@ -17828,7 +17910,7 @@ n = (randint(1, 20))
 \item
   Extend your higher/lower game to record the number of guesses the user
   enters to guess the random number. Then the user guesses the random
-  number print \passthrough{\lstinline!You guessed: <random number!} in
+  number print \passthrough{\lstinline!You guessed: <random number>!} in
   \passthrough{\lstinline!<number of tries>!}.
 \end{enumerate}
 
@@ -17856,7 +17938,7 @@ off the value of \(e^x\) calculated with Python's
 Solutions}\label{errors-explanations-and-solutions}}
 
 Run the following code snippets. Explain the error in your own words.
-Rewrite the code snippet to solve the error.
+Then rewrite the code snippet to solve the error.
     
 
 
