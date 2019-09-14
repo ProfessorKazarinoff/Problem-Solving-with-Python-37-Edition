@@ -490,7 +490,7 @@ website and into LaTeX for printing.
         Supporting materials for this text can be found on the textbook website:
 
 \begin{quote}
-\url{https://problemsolvingwithpython.com}
+\href{https://problemsolvingwithpython.com}{problemsolvingwithpython.com}
 \end{quote}
 
 The textbook website contains all of the text in web format. Code
@@ -498,14 +498,14 @@ examples and Jupyter notebooks for the text can be found in the GitHub
 repository for the book:
 
 \begin{quote}
-\url{https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}
+\href{https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}{github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition}
 \end{quote}
 
 Live notebooks, where code examples found in the text can be run without
 installing any software, are available at:
 
 \begin{quote}
-\url{https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/master}
+\href{https://mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/master}{mybinder.org/v2/gh/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/master}
 \end{quote}
 
 If you are an instructor and using this book in a course with students-
@@ -15766,7 +15766,7 @@ height of triangle: 2
           2 h = input('height of triangle: ')
     ----> 3 A = (1/2)*b*h
           4 print(f'The area of the triangle is: \{A\}')
-
+    
 
         TypeError: can't multiply sequence by non-int of type 'float'
 
@@ -16255,7 +16255,7 @@ The line of code below contains a syntax error. The string
         string = "problem solving
                                  \^{}
     SyntaxError: EOL while scanning string literal
-
+    
 
     \end{Verbatim}
 
@@ -16286,7 +16286,7 @@ not complete the program.
         string = 10problems
                           \^{}
     SyntaxError: invalid syntax
-
+    
 
     \end{Verbatim}
 
@@ -18293,11 +18293,12 @@ We can code this substitution above using the code below.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}2}]:} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}2}]:}
+    
+    $\displaystyle y + 4$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}2}]:} y + 4
-\end{Verbatim}
-            
+    
+
 
     
         The \passthrough{\lstinline!.subs()!} method does not replace variables
@@ -18312,11 +18313,12 @@ substitution. If \passthrough{\lstinline!expr!} is called after the
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}3}]:} \PY{n}{expr}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}3}]:}
+    
+    $\displaystyle 2 x + y$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}3}]:} 2*x + y
-\end{Verbatim}
-            
+    
+
 
     
         To make the substitution permanent, a new expression object needs to be
@@ -18330,11 +18332,12 @@ assigned to the output of the \passthrough{\lstinline!.subs()!} method.
         \PY{n}{expr2} \PY{o}{=} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
         \PY{n}{expr2}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}4}]:}
+    
+    $\displaystyle y + 4$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}4}]:} y + 4
-\end{Verbatim}
-            
+    
+
 
     
         SymPy variables can also be substituted into SymPy expressions. In the
@@ -18350,11 +18353,12 @@ code section below, the symbol \(z\) is substituted for the symbol \(x\)
         \PY{n}{expr2} \PY{o}{=} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{z}\PY{p}{)}
         \PY{n}{expr2}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}5}]:}
+    
+    $\displaystyle y + 2 z$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}5}]:} y + 2*z
-\end{Verbatim}
-            
+    
+
 
     
         Expressions can also be substituted into other expressions. Consider the
@@ -18379,11 +18383,12 @@ results in
         \PY{n}{expr2} \PY{o}{=} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{)}
         \PY{n}{expr2}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}6}]:}
+    
+    $\displaystyle 2 x^{2} + 2 x + \frac{1}{z^{3}}$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}6}]:} 2*x**2 + 2*x + z**(-3)
-\end{Verbatim}
-            
+    
+
 
     
         A practical example involving symbolic math variables, expressions and
@@ -18422,11 +18427,12 @@ together to substitute multiple variables in one line of code.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}8}]:} \PY{n}{expr}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{n0}\PY{p}{,} \PY{l+m+mf}{3.48e\PYZhy{}6}\PY{p}{)}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{Qv}\PY{p}{,}\PY{l+m+mi}{12700}\PY{p}{)}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{R}\PY{p}{,} \PY{l+m+mi}{8031}\PY{p}{)}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{T}\PY{p}{,} \PY{l+m+mi}{1000}\PY{o}{+}\PY{l+m+mi}{273}\PY{p}{)}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}8}]:}
+    
+    $\displaystyle \frac{3.48 \cdot 10^{-6}}{e^{\frac{12700}{10223463}}}$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}8}]:} 3.48e-6*exp(-12700/10223463)
-\end{Verbatim}
-            
+    
+
 
     
         To evaluate an expression as a floating point number, use SymPy's
@@ -18442,11 +18448,12 @@ together to substitute multiple variables in one line of code.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}10}]:} \PY{n}{expr2}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}10}]:}
+    
+    $\displaystyle 3.47567968697765 \cdot 10^{-6}$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}10}]:} 3.47567968697765e-6
-\end{Verbatim}
-            
+    
+
 
     
         You can control the number of digits the
@@ -18459,11 +18466,12 @@ an argument.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}11}]:} \PY{n}{expr2}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}
 \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}11}]:}
+    
+    $\displaystyle 3.476 \cdot 10^{-6}$
 
-\begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}11}]:} 3.476e-6
-\end{Verbatim}
-            
+    
+
 
     
         \hypertarget{summary}{%
@@ -19189,13 +19197,13 @@ Methods}\label{sympy-functions-and-methods}}
     
         \begin{longtable}[]{@{}lll@{}}
 \toprule
-Sympy Function or Method & Description & Example\tabularnewline
+SymPy Function & Description & Example\tabularnewline
 \midrule
 \endhead
 \passthrough{\lstinline!symbols()!} & Define a symbolic math variable &
 \passthrough{\lstinline!x, y = symbols('x y')!}\tabularnewline
-\passthrough{\lstinline!.subs()!} & Substitute a variable or value into
-an expression & \passthrough{\lstinline!expr.subs(x, 2)!}\tabularnewline
+\passthrough{\lstinline!.subs()!} & Substitute a variable or value &
+\passthrough{\lstinline!expr.subs(x, 2)!}\tabularnewline
 \passthrough{\lstinline!Eq()!} & Define a SymPy equation &
 \passthrough{\lstinline!eq1 = Eq(4*x + 2)!}\tabularnewline
 \passthrough{\lstinline!solve()!} & Solve a SymPy expression or equation
@@ -20097,7 +20105,7 @@ import time
 
     
         \begin{lstlisting}[language=Python]
-print('This is a program that allows a user to turn an LED on and off')
+print('This program allows a user to turn an LED on and off')
 print('type H to turn the LED on')
 print('type L to turn the LED off')
 print('type q to quit')
@@ -20208,8 +20216,8 @@ ground (black wire). If the LED is wired backward, the LED will not turn
 on.
 
 In the hardware schematic, the blue square with an arrow on it is a
-potentiometer. , and the user knows when the sensor signal changes
-because the user has turned the potentiometer dial.
+potentiometer. The user knows when the sensor signal changes because the
+user manually turns the potentiometer dial.
 
 The hardware schematic describes how to the Arduino, LED, resistor, and
 potentiometer are connected with jumper wires and a breadboard.
@@ -20285,10 +20293,10 @@ void loop() // runs repeatedly after setup() finishes
   if (sensorValue < 500) {            // less than 500?
     digitalWrite(ledPin, LOW); }     // Turn the LED off
   
-  else {                               // if sensor reading is greater than 500
+  else {                               // greater than 500?
     digitalWrite(ledPin, HIGH); }     // Keep the LED on
   
-  delay(100);             // Pause 100 milliseconds before next sensor reading
+  delay(100);             // Pause 100 milliseconds
 }
 \end{lstlisting}
     
@@ -20457,7 +20465,6 @@ represents expected output.
 \begin{lstlisting}[language=Python]
 # serial read using the Python REPL
 
-Type "help", "copyright", "credits" or "license" for more information.
 >>> import serial
 >>> import time
 >>> ser = serial.Serial('COM4',9600)
@@ -22887,17 +22894,17 @@ The following output or something similar results:
 \begin{lstlisting}
 The following NEW packages will be INSTALLED:
 
-  ca-certificates    pkgs/main/win-64::ca-certificates-2019.5.15-0
-  certifi            pkgs/main/win-64::certifi-2019.6.16-py37_0
-  openssl            pkgs/main/win-64::openssl-1.1.1c-he774522_1
-  pip                pkgs/main/win-64::pip-19.1.1-py37_0
-  python             pkgs/main/win-64::python-3.7.3-h8c8aaf0_1
-  setuptools         pkgs/main/win-64::setuptools-41.0.1-py37_0
-  sqlite             pkgs/main/win-64::sqlite-3.28.0-he774522_0
-  vc                 pkgs/main/win-64::vc-14.1-h0510ff6_4
-  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.15.26706-h3a45250_4
-  wheel              pkgs/main/win-64::wheel-0.33.4-py37_0
-  wincertstore       pkgs/main/win-64::wincertstore-0.2-py37_0
+  ca-certificates    ca-certificates-2019.5.15-0
+  certifi            certifi-2019.6.16-py37_0
+  openssl            openssl-1.1.1c-he774522_1
+  pip                pip-19.1.1-py37_0
+  python             python-3.7.3-h8c8aaf0_1
+  setuptools         setuptools-41.0.1-py37_0
+  sqlite             sqlite-3.28.0-he774522_0
+  vc                 vc-14.1-h0510ff6_4
+  vs2015_runtime     vs2015_runtime-14.15.26706-h3a45250_4
+  wheel              wheel-0.33.4-py37_0
+  wincertstore       wincertstore-0.2-py37_0
 \end{lstlisting}
 
 Type \passthrough{\lstinline!y!} to confirm and create the new virtual
