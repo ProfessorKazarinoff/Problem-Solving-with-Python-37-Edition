@@ -2985,18 +2985,17 @@ Indent sub-items with two spaces.
 produces
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  First item
-\item
-  Second item
-\item
-  Third item
-\item
-  sub item
-\item
-  sub item 1. sub-sub item 2. sub-sub item
+\item First item
+\item Second item
+\item Third item
+\begin{enumerate}
+\item sub item
+\item sub item 
+\begin{enumerate}
+  \item sub-sub item
+  \item sub-sub item
+\end{enumerate}
+\end{enumerate}
 \end{enumerate}
 
 \hypertarget{horizontal-rule}{%
@@ -3082,7 +3081,7 @@ x<sup>2</sup>
 
 produces
 
-x2
+x\textsuperscript{2}
 
 Text can be colored using html \passthrough{\lstinline!<font>!}
 \passthrough{\lstinline!</font>!} tags
@@ -3093,29 +3092,8 @@ Text can be colored using html \passthrough{\lstinline!<font>!}
 
 produces
 
-Red Text
+\textcolor{red}{Red Text}
 
-\hypertarget{warning-boxes}{%
-\subsubsection{Warning Boxes}\label{warning-boxes}}
-
-bootstrap style warning boxes can be included in Jupyter notebook
-markdown using \passthrough{\lstinline!<div>!} tags
-
-\begin{lstlisting}
-<div class="alert alert-danger" role="alert">
-  <strong>Warning!</strong> Python lists start at 0
-</div>
-\end{lstlisting}
-
-produces
-
-Warning! Python lists start at 0
-    
-
-
-
-
-    
         \hypertarget{creating-a-new-cell}{%
 \subsection{Creating a new cell}\label{creating-a-new-cell}}
 
