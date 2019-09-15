@@ -213,26 +213,26 @@
 \contentsline {subsubsection}{Array of Random Integers}{114}{lstnumber.970}
 \contentsline {subsubsection}{Array of Random Floats}{115}{lstnumber.972}
 \contentsline {subsubsection}{Random Array Choice from a List}{115}{lstnumber.974}
-\contentsline {subsubsection}{Random Array with a Normal Distribution}{116}{lstnumber.976}
+\contentsline {subsubsection}{Random Array with a Normal Distribution}{115}{lstnumber.976}
 \contentsline {subsection}{2-D Arrays}{117}{lstnumber.978}
 \contentsline {subsubsection}{np.meshgrid()}{117}{lstnumber.978}
-\contentsline {subsubsection}{np.mgrid{[}{]}}{118}{lstnumber.980}
+\contentsline {subsubsection}{np.mgrid{[}{]}}{117}{lstnumber.980}
 \contentsline {subsection}{Section Summary}{118}{lstnumber.982}
-\contentsline {section}{\numberline {5.6}Array Indexing}{119}{section.984}
-\contentsline {subsection}{Multi-dimensional Array Indexing}{120}{lstnumber.987}
-\contentsline {subsection}{Assigning Values with Indexing}{121}{lstnumber.989}
+\contentsline {section}{\numberline {5.6}Array Indexing}{118}{section.984}
+\contentsline {subsection}{Multi-dimensional Array Indexing}{119}{lstnumber.987}
+\contentsline {subsection}{Assigning Values with Indexing}{120}{lstnumber.989}
 \contentsline {section}{\numberline {5.7}Array Slicing}{121}{section.994}
-\contentsline {subsection}{Slicing 2D Arrays}{123}{lstnumber.996}
-\contentsline {section}{\numberline {5.8}Array Operations}{124}{section.999}
+\contentsline {subsection}{Slicing 2D Arrays}{122}{lstnumber.996}
+\contentsline {section}{\numberline {5.8}Array Operations}{123}{section.999}
 \contentsline {subsection}{Scalar Addition}{124}{section.999}
 \contentsline {subsection}{Scalar Multiplication}{124}{section.999}
-\contentsline {subsection}{Array Multiplication}{125}{section.999}
+\contentsline {subsection}{Array Multiplication}{124}{section.999}
 \contentsline {subsubsection}{Element-wise Multiplication}{125}{section.999}
 \contentsline {subsubsection}{Dot Product}{125}{section.999}
 \contentsline {subsubsection}{Cross Product}{125}{section.999}
-\contentsline {subsection}{Exponents and Logarithms}{126}{section.999}
-\contentsline {subsubsection}{np.exp()}{126}{section.999}
-\contentsline {subsubsection}{Logarithms}{126}{section.999}
+\contentsline {subsection}{Exponents and Logarithms}{125}{section.999}
+\contentsline {subsubsection}{np.exp()}{125}{section.999}
+\contentsline {subsubsection}{Logarithms}{125}{section.999}
 \contentsline {subsection}{Trigonometry}{126}{section.999}
 \contentsline {section}{\numberline {5.9}Systems of Linear Equations}{127}{section.1000}
 \contentsline {section}{\numberline {5.10}Summary}{129}{section.1001}

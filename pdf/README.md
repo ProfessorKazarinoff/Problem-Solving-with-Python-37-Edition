@@ -100,3 +100,12 @@ produces
 
 \textcolor{red}{Red Text}
 ```
+
+In NumPy chapter the np.logspace() error return is longer than one line. Replace in LaTeX with:
+
+```
+    \begin{Verbatim}[commandchars=\\\{\}]
+RuntimeWarning: overflow encountered in power
+  return \_nx.power(base, y)
+    \end{Verbatim}
+```
