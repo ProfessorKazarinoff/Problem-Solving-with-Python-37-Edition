@@ -24,7 +24,7 @@ pages:
         - Installing Juypter: 02-Jupyter-Notebooks/02.03-Installing-Juypter.md
         - Opening a Jupyter Notebook: 02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook.md
         - The Jupyter Notebook Interface: 02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface.md
-        - Magic Cells: 02-Jupyter-Notebooks/02.06-Magic-Cells.md
+        - Magic Commands: 02-Jupyter-Notebooks/02.06-Magic-Commands.md
         - Getting Help in a Jupyter Notebook: 02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook.md
         - Summary: 02-Jupyter-Notebooks/02.08-Summary.md
         - Review Questions: 02-Jupyter-Notebooks/02.09-Review-Questions.md
@@ -45,18 +45,18 @@ pages:
         - Dictionaries and Tuples: 04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples.md
         - Summary: 04-Data-Types-and-Variables/04.06-Summary.md
         - Review Questions: 04-Data-Types-and-Variables/04.07-Review-Questions.md
-    - Chapter 5 Matricies and Arrays:
-        - Introduction: 05-Matricies-and-Arrays/05.00-Introduction.md
-        - NumPy: 05-Matricies-and-Arrays/05.01-NumPy.md
-        - Installing NumPy: 05-Matricies-and-Arrays/05.02-Installing-NumPy.md
-        - Python Lists and NumPy Arrays: 05-Matricies-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md
-        - Array Creation: 05-Matricies-and-Arrays/05.04-Array-Creation.md
-        - Array Indexing: 05-Matricies-and-Arrays/05.05-Array-Indexing.md
-        - Array Slicing: 05-Matricies-and-Arrays/05.06-Array-Slicing.md
-        - Array Operations: 05-Matricies-and-Arrays/05.07-Array-Opperations.md
-        - Systems of Linear Equations: 05-Matricies-and-Arrays/05.08-Systems-of-Linear-Equations.md
-        - Summary: 05-Matricies-and-Arrays/05.09-Summary.md
-        - Review Questions: 05-Matricies-and-Arrays/05.10-Review-Questions.md
+    - Chapter 5 NumPy and Arrays:
+        - Introduction: 05-NumPy-and-Arrays/05.00-Introduction.md
+        - NumPy: 05-NumPy-and-Arrays/05.01-NumPy.md
+        - Installing NumPy: 05-NumPy-and-Arrays/05.02-Installing-NumPy.md
+        - Python Lists and NumPy Arrays: 05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.md
+        - Array Creation: 05-NumPy-and-Arrays/05.04-Array-Creation.md
+        - Array Indexing: 05-NumPy-and-Arrays/05.05-Array-Indexing.md
+        - Array Slicing: 05-NumPy-and-Arrays/05.06-Array-Slicing.md
+        - Array Operations: 05-NumPy-and-Arrays/05.07-Array-Opperations.md
+        - Systems of Linear Equations: 05-NumPy-and-Arrays/05.08-Systems-of-Linear-Equations.md
+        - Summary: 05-NumPy-and-Arrays/05.09-Summary.md
+        - Review Questions: 05-NumPy-and-Arrays/05.10-Review-Questions.md
     - Chapter 6 Plotting with Matplotlib:
         - Introduction: 06-Plotting-with-Matplotlib/06.00-Introduction.md
         - What is Matplotlib?: 06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib.md
@@ -79,8 +79,8 @@ pages:
         - Review Questions: 06-Plotting-with-Matplotlib/06.18-Review-Questions.md
     - Chapter 7 Functions and Modules:
         - Introduction: 07-Functions-and-Modules/07.00-Introduction.md
-        - Why Functions?: 07-Functions-and-Modules/07.01-Why-functions.md
-        - First Function: 07-Functions-and-Modules/07.02-First-function.md
+        - Why Functions?: 07-Functions-and-Modules/07.01-Why-Functions.md
+        - First Function: 07-Functions-and-Modules/07.02-First-Function.md
         - Functions with Multiple Arguments: 07-Functions-and-Modules/07.03-Functions-with-multiple-arguments.md
         - Functions with Default Arguments: 07-Functions-and-Modules/07.04-Functions-with-default-arguments.md
         - Calling Functions from Other Files: 07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files.md
@@ -91,8 +91,8 @@ pages:
     - Chapter 8 If Else Try Except:
         - Introduction: 08-If-Else-Try-Except/08.00-Introduction.md
         - User Input: 08-If-Else-Try-Except/08.01-User-Input.md
-        - If statements: 08-If-Else-Try-Except/08.02-If-Statements.md
         - Selection Statements: 08-If-Else-Try-Except/08.02-Selection-Statements.md
+        - If statements: 08-If-Else-Try-Except/08.03-If-Statements.md
         - If Else Statements: 08-If-Else-Try-Except/08.04-If-Else-Statements.md
         - Try-Except Statements: 08-If-Else-Try-Except/08.05-Try-Except-Statements.md
         - Flowcharts: 08-If-Else-Try-Except/08.06-Flowcharts.md
@@ -143,7 +143,7 @@ pages:
         - NumPy Math Functions: 99-Appendix/99.04-NumPy-Math-Functions.md
         - Git and GitHub: 99-Appendix/99.05-Git-and-GitHub.md
         - LaTeX Math: 99-Appendix/99.06-LaTeX-Math.md
-        - Problem Solving with Python 3.7 Edition Book Construction: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
+        - Problem Solving with Python Book Construction: 99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction.md
         - Contributions: 99-Appendix/99.08-Contributions.md
         - Cover Artwork: 99-Appendix/99.09-Cover-Artwork.md
         - About the Author: 99-Appendix/99.10-About-the-Author.md
