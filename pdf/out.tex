@@ -4806,14 +4806,14 @@ Use variables to assign a value to each one of the constants in the
 problem and calculate \(n\).
 
 \begin{lstlisting}[language=Python]
->>> nv = 2.0e(-0.3)
+>>> nv = 2.0e-3
 >>> Qv = 5
 >>> R = 3.18
 >>> T = 293
 >>> from math import exp
 >>> n = nv*exp(-1*Qv/(R*T))
 >>> n
-0.8079052775625613
+0.0019892961379660424
 \end{lstlisting}
     
 
@@ -6780,7 +6780,7 @@ Q04.07 Find the data type of \passthrough{\lstinline!a!} if
 \passthrough{\lstinline!a=(1,2,3)!}
 
 Q04.08 Find the data type of \passthrough{\lstinline!a!} if
-\passthrough{\lstinline!a=\{'key'=9\}!}
+\passthrough{\lstinline!a=\{'key': 9\}!}
 
 Q04.09 Find the data type of \passthrough{\lstinline!a!} if
 \passthrough{\lstinline!a=1 + 9j!}
@@ -7105,13 +7105,14 @@ Pull out all the items from the dictionary and add them to a list called
 \passthrough{\lstinline!.items()!} method.
 
 Q04.66 Create a dictionary
-\passthrough{\lstinline!groups = \{'solo':1, 'duo':'2'\}!}. Add the key
-\(trio\) and the corresponding value \(3\).
+\passthrough{\lstinline!groups = \{'solo':1, 'duo':2\}!}. Add the key
+\passthrough{\lstinline!'trio'!} and the corresponding value
+\passthrough{\lstinline!3!}.
 
 Q04.67 Create a dictionary
-\passthrough{\lstinline!groups = \{'solo':1, 'duo':'2'\}!}. Then remove
+\passthrough{\lstinline!groups = \{'solo':1, 'duo':2\}!}. Then remove
 the key \passthrough{\lstinline!'duo'!} and the value
-\passthrough{\lstinline!'2'!} so that only
+\passthrough{\lstinline!2!} so that only
 \passthrough{\lstinline!'solo':1!} remains.
 
 Q04.68 Create a dictionary
@@ -7391,12 +7392,12 @@ Python packages.
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}1}]:} '1.14.3'
+{\color{outcolor}Out[{\color{outcolor}1}]:} '1.16.4'
 \end{Verbatim}
             
 
     
-        A version number like \passthrough{\lstinline!'1.16.1'!} indicates a
+        A version number like \passthrough{\lstinline!'1.16.4'!} indicates a
 successful NumPy installation.
     
 
@@ -7486,7 +7487,6 @@ array above.
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
-        \PY{n}{np\PYZus{}array} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mf}{0.038}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gear}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{k+kc}{True}\PY{p}{]}
         \PY{k}{for} \PY{n}{value} \PY{o+ow}{in} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{1.0}\PY{p}{,} \PY{l+m+mf}{3.1}\PY{p}{,} \PY{l+m+mf}{5e\PYZhy{}04}\PY{p}{,} \PY{l+m+mf}{0.007}\PY{p}{]}\PY{p}{)}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{value}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
@@ -7579,7 +7579,7 @@ operator, \passthrough{\lstinline!*!}.
 expensive is an operation that takes a lot of processing time or storage
 resources like RAM and CPU bandwidth.
 
-Another way of completing the same action as the loop above is to use a
+Another way to complete the same operation in the loop above is to use a
 NumPy array.
     
 
@@ -7598,7 +7598,7 @@ element multiplied by the scalar \passthrough{\lstinline!2!}.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{nparray}\PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{nparray} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
         \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{nparray}
 \end{Verbatim}
 
@@ -7641,17 +7641,17 @@ operation on a NumPy array.
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-3.09 ms ± 927 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+3.21 ms ± 958 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{nparray}\PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{nparray} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
         \PY{o}{\PYZpc{}}\PY{k}{timeit} 2*nparray
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-7.21 µs ± 105 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+7.11 µs ± 200 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 
     \end{Verbatim}
 
@@ -7709,12 +7709,12 @@ keyword argument. Available data types include
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}1}]:} array([1., 2., 3.])
+{\color{outcolor}Out[{\color{outcolor}2}]:} array([1., 2., 3.])
 \end{Verbatim}
             
 
@@ -7728,13 +7728,13 @@ keyword argument. Available data types include
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         \PY{n}{my\PYZus{}array} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{float}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
         \PY{n}{my\PYZus{}array}\PY{o}{.}\PY{n}{dtype}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}2}]:} dtype('float64')
+{\color{outcolor}Out[{\color{outcolor}3}]:} dtype('float64')
 \end{Verbatim}
             
 
@@ -7873,7 +7873,7 @@ supported by a 64 bit computer.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{np}\PY{o}{.}\PY{n}{logspace}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{np}\PY{o}{.}\PY{n}{logspace}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{1000}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}
 \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
@@ -7883,7 +7883,7 @@ C:\textbackslash{}Users\textbackslash{}peter.kazarinoff\textbackslash{}AppData\t
     \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}4}]:} array([1.e+10,    inf,    inf,    inf])
+{\color{outcolor}Out[{\color{outcolor}7}]:} array([1.e+10,    inf,    inf,    inf])
 \end{Verbatim}
             
 
@@ -7905,11 +7905,11 @@ my_array = np.zeros((rows,cols))
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}7}]:} array([[0., 0., 0., 0., 0.],
+{\color{outcolor}Out[{\color{outcolor}8}]:} array([[0., 0., 0., 0., 0.],
                [0., 0., 0., 0., 0.],
                [0., 0., 0., 0., 0.],
                [0., 0., 0., 0., 0.],
@@ -7936,11 +7936,11 @@ my_array = np.ones((rows,cols))
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}8}]:} array([[1., 1., 1., 1., 1.],
+{\color{outcolor}Out[{\color{outcolor}9}]:} array([[1., 1., 1., 1., 1.],
                [1., 1., 1., 1., 1.],
                [1., 1., 1., 1., 1.]])
 \end{Verbatim}
@@ -7991,11 +7991,11 @@ integer between 1 and 10:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}5}]:} array([9, 8, 2, 5, 2])
+{\color{outcolor}Out[{\color{outcolor}10}]:} array([8, 2, 0, 1, 8])
 \end{Verbatim}
             
 
@@ -8008,15 +8008,15 @@ creates a 5 \(\times\) 5 array of random numbers between 1 and 10:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}6}]:} array([[1, 6, 7, 8, 2],
-               [2, 0, 6, 3, 2],
-               [8, 8, 2, 3, 9],
-               [8, 4, 7, 2, 0],
-               [1, 3, 5, 9, 9]])
+{\color{outcolor}Out[{\color{outcolor}11}]:} array([[5, 6, 6, 5, 9],
+                [3, 6, 3, 6, 6],
+                [8, 0, 7, 7, 0],
+                [2, 6, 2, 0, 5],
+                [6, 6, 1, 0, 8]])
 \end{Verbatim}
             
 
@@ -8038,11 +8038,11 @@ To create an array of 5 random floats between 0 and 1:
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}13}]:} array([0.74876036, 0.5403639 , 0.87934604, 0.08373662, 0.18713551])
+{\color{outcolor}Out[{\color{outcolor}12}]:} array([0.54107142, 0.81878142, 0.27066531, 0.78697265, 0.6220432 ])
 \end{Verbatim}
             
 
@@ -8058,29 +8058,29 @@ the result by \passthrough{\lstinline!10!}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{10}
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{10}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}15}]:} array([4.07650792, 5.94007487, 3.83427467, 1.0336569 , 3.40368341])
+{\color{outcolor}Out[{\color{outcolor}13}]:} array([1.86054217, 5.04048366, 3.03427072, 5.81235596, 3.92207223])
 \end{Verbatim}
             
 
     
         To change the range to between \passthrough{\lstinline!11!} and
 \passthrough{\lstinline!13!}, we multiply the range by
-\passthrough{\lstinline!2!} (range 0-3), then add
+\passthrough{\lstinline!2!} (range 0-2), then add
 \passthrough{\lstinline!11!} to the result.
     
 
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{11}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{11}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}16}]:} array([12.51534171, 12.27391119, 12.11401002, 11.55578106, 12.6999884 ])
+{\color{outcolor}Out[{\color{outcolor}14}]:} array([11.95606546, 12.44966196, 12.43080031, 12.06672701, 12.50674459])
 \end{Verbatim}
             
 
@@ -8100,12 +8100,12 @@ To choose three numbers at random from a list of
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{lst} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{lst} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{]}
          \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{lst}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}12}]:} array([11,  1, 11])
+{\color{outcolor}Out[{\color{outcolor}15}]:} array([ 1, 11,  5])
 \end{Verbatim}
             
 
@@ -8126,12 +8126,12 @@ np.random.randn(number of values)
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}13}]:} array([-0.8587019 ,  0.51022209,  1.52989165, -0.62763827,  0.42359871,
-                -0.12794222, -0.05960913,  0.1018347 , -0.13226924,  1.21221629])
+{\color{outcolor}Out[{\color{outcolor}16}]:} array([ 0.93629304,  0.19305144, -0.09340448, -0.71862531,  1.89650645,
+                 1.22280979, -1.21608422, -1.45564297,  0.60289751, -1.94417236])
 \end{Verbatim}
             
 
@@ -8143,15 +8143,15 @@ np.random.randn(number of values)
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{mu} \PY{o}{=} \PY{l+m+mi}{70}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{mu} \PY{o}{=} \PY{l+m+mi}{70}
          \PY{n}{sigma} \PY{o}{=} \PY{l+m+mf}{6.6}
          
          \PY{n}{sigma} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)} \PY{o}{+} \PY{n}{mu}
 \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}14}]:} array([83.08982467, 63.75617079, 54.80340275, 65.64987114, 60.86298488,
-                71.15108776, 72.68180092, 67.74486107, 62.88712717, 71.53153691])
+{\color{outcolor}Out[{\color{outcolor}17}]:} array([76.43953828, 73.29036219, 65.89492089, 79.95439819, 82.31949935,
+                52.03569234, 73.15263818, 78.50005828, 71.12672583, 73.73530972])
 \end{Verbatim}
             
 
@@ -8164,7 +8164,7 @@ to quickly plot a normal distribution created with NumPy's
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+{\color{incolor}In [{\color{incolor}18}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
          \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
          \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
          
@@ -8216,7 +8216,7 @@ np.meshgrid(array1, array2)
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}
          \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{11}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
          \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{)}
          \PY{n+nb}{print}\PY{p}{(}\PY{n}{X}\PY{p}{)}
@@ -8273,7 +8273,7 @@ np.mgrid[start:stop:step, start:stop:step]
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mgrid}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{11}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mgrid}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{11}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}
          \PY{n+nb}{print}\PY{p}{(}\PY{n}{X}\PY{p}{)}
          \PY{n+nb}{print}\PY{p}{(}\PY{n}{Y}\PY{p}{)}
 \end{Verbatim}
@@ -8362,7 +8362,7 @@ An array with 3 values is created in the code section below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
@@ -8419,7 +8419,7 @@ In the array above, the value 6 is stored at index 2.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
@@ -8486,7 +8486,7 @@ the 3rd column (column 0 is the first column).
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{]}\PY{p}{]}\PY{p}{)}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
@@ -8534,6 +8534,7 @@ second index or location of the array \passthrough{\lstinline!a!}.
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        
         \PY{n}{a} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
         \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{10}
         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
@@ -8554,7 +8555,8 @@ using the form:
 \end{lstlisting}
 
 The code example below shows the value \passthrough{\lstinline!20!}
-assigned to the 2nd column and 3rd row of the array.
+assigned to the 2nd row (index \passthrough{\lstinline!1!}) and 3rd
+column (index \passthrough{\lstinline!2!}) of the array.
     
 
 
@@ -8638,9 +8640,9 @@ An example of slicing the first two elements out of an array is below.
 \end{itemize}
 
 Therefore, the slicing operation \passthrough{\lstinline![:2]!} pulls
-out the first through the third values in an array. The slicing
-operation \passthrough{\lstinline![1:]!} pull out the second through the
-last values in an array.
+out the first and second values in an array. The slicing operation
+\passthrough{\lstinline![1:]!} pull out the second through the last
+values in an array.
 
 The example below illustrates the default \passthrough{\lstinline!stop!}
 value is the last value in the array.
@@ -13864,7 +13866,7 @@ marker's on the scatter plot red. Set the marker opacity to
 
     
         \hypertarget{subplots}{%
-\subsubsection{Subplots}\label{subplots}}
+\chapter{Subplots}\label{subplots}}
 
 Q06.70 Create a figure that has four subplots all in one row. In each of
 the subplots plot the function:
@@ -13881,7 +13883,7 @@ Matplotlib's \passthrough{\lstinline!ax.semilogx()!} method. In the four
 subplot use Matplotlib's \passthrough{\lstinline!ax.loglog()!} method.
 Label each subplot with a title that shows the plot type.
 
-Q06.70 Use the data in Q06.31 to create a figure with two subplots. In
+Q06.71 Use the data in Q06.31 to create a figure with two subplots. In
 the first subplot, build a bar chart of the data in Q06.31. In the
 second subplot, build a pie chart of he data in Q06.31.
     
@@ -14932,11 +14934,11 @@ function(*iterable)
 
 Where \passthrough{\lstinline!function!} is the name of the function and
 \passthrough{\lstinline!iterable!} is the name of the iterable preceded
-by the ampersand \passthrough{\lstinline!*!} character.
+by the asterisk \passthrough{\lstinline!*!} character.
 
 An example of using a list to pass positional arguments to the
-\passthrough{\lstinline!complex()!} function is below. Note the
-ampersand \passthrough{\lstinline!*!} character is included before the
+\passthrough{\lstinline!complex()!} function is below. Note the asterisk
+\passthrough{\lstinline!*!} character is included before the
 \passthrough{\lstinline!term\_list!} argument.
     
 
@@ -15030,7 +15032,7 @@ function(**keyword_dict)
 
 Where \passthrough{\lstinline!function!} is the name of the function and
 \passthrough{\lstinline!keyword\_dict!} is the name of the dictionary
-containing keywords and values preceded by the double ampersand
+containing keywords and values preceded by the double asterisk
 \passthrough{\lstinline!**!} character. Note that the keywords assigned
 as keys in a dictionary must be surrounded by quotes
 \passthrough{\lstinline!' '!}. An example of using a dictionary to pass
@@ -15588,9 +15590,10 @@ run it error free.
 
 \begin{lstlisting}[language=Python]
 
-def nothing():
-    
-nothing()
+def nope():
+print('nope')
+
+nope()
 \end{lstlisting}
 
 Q07.84 Run the code below and explain the error. Rewrite the code and
@@ -16950,6 +16953,13 @@ row:
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Problem solving in teams}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+Problem solving in teams
+Problem solving in teams
+Problem solving in teams
+
+    \end{Verbatim}
+
 
     
         Another way to accomplish the same task is to use a for loop. The basic
@@ -16984,6 +16994,13 @@ The example above can be rewritten using a for loop:
             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Problem solving in teams}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+Problem solving in teams
+Problem solving in teams
+Problem solving in teams
+
+    \end{Verbatim}
+
 
     
         \hypertarget{pythons-range-function}{%
@@ -17006,6 +17023,13 @@ the behavior of \passthrough{\lstinline!range()!} with a for loop:
 {\color{incolor}In [{\color{incolor}3}]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+0
+1
+2
+
+    \end{Verbatim}
 
 
     
@@ -17066,6 +17090,14 @@ A code section that uses a for loop and
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+5
+6
+7
+8
+
+    \end{Verbatim}
+
 
     
         \hypertarget{for-loops-with-lists}{%
@@ -17097,6 +17129,13 @@ An example of a list in a for loop is below:
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{item}\PY{p}{)}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+electrical
+civil
+mechanical
+
+    \end{Verbatim}
+
 
     
         The loop ran three times because there are three items in
@@ -17110,10 +17149,10 @@ the list.
   first time through the loop,
   \passthrough{\lstinline!item='electrical'!}
 \item
-  second time through the loop
-  \passthrough{\lstinline!item='mechanical'!}
+  second time through the loop \passthrough{\lstinline!item='civil'!}
 \item
-  third time through the loop \passthrough{\lstinline!item='civil'!}.
+  third time through the loop
+  \passthrough{\lstinline!item='mechanical'!}.
 \end{itemize}
     
 
@@ -17203,6 +17242,14 @@ An example of a while loop is below:
             \PY{n}{i} \PY{o}{=} \PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+0
+1
+2
+3
+
+    \end{Verbatim}
+
 
     
         The first line \passthrough{\lstinline!i=0!} creates the variable
@@ -17242,11 +17289,17 @@ positive number is entered.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
         \PY{k}{while} \PY{n}{num\PYZus{}input} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{:}
             \PY{n}{str\PYZus{}input} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Enter a positive number: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
             \PY{n}{num\PYZus{}input} \PY{o}{=} \PY{n+nb}{float}\PY{p}{(}\PY{n}{str\PYZus{}input}\PY{p}{)}
 \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Enter a positive number: -2
+Enter a positive number: 5
+
+    \end{Verbatim}
 
 
     
@@ -17313,6 +17366,15 @@ An example using \passthrough{\lstinline!break!} in a for loop is below.
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Loop exited}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
+    \begin{Verbatim}[commandchars=\\\{\}]
+0
+1
+2
+3
+Loop exited
+
+    \end{Verbatim}
+
 
     
         When the loop hits \passthrough{\lstinline!i=3!},
@@ -17326,12 +17388,19 @@ below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{k}{while} \PY{k+kc}{True}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k}{while} \PY{k+kc}{True}\PY{p}{:}
             \PY{n}{out} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{type q to exit the loop: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
             \PY{k}{if} \PY{n}{out} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{q}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
                 \PY{k}{break}
         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Loop exited}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+type q to exit the loop: no
+type q to exit the loop: q
+Loop exited
+
+    \end{Verbatim}
 
 
     
@@ -17353,11 +17422,18 @@ loop is below.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{:}
             \PY{k}{if} \PY{n}{i}\PY{o}{==}\PY{l+m+mi}{2}\PY{p}{:}
                 \PY{k}{continue}
             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{)}
 \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+0
+1
+3
+
+    \end{Verbatim}
 
 
     
@@ -18067,7 +18143,7 @@ Solving for \(y\) in terms of \(a\), \(b\) and \(z\) results in:
 In the symbolic math substitution above, symbolic math variables were
 rearranged, grouped and inserted. None of the variables were equal to a
 specific number, like 5 or 0.001, but we can still solve for one
-variable in terms on the other variables when we use symbolic math.
+variable in terms of the other variables when we use symbolic math.
     
 
 
@@ -18272,19 +18348,20 @@ defined.
         Use SymPy's \passthrough{\lstinline!.subs()!} method to insert a
 numerical value into a symbolic math expression. The first argument of
 the \passthrough{\lstinline!.subs()!} method is the mathematical symbol
-and the second argument is the numerical value. In the expression above:
+and the second argument is the numerical value. In the expression below:
 
-\[ 2x +y \]
+\[ 2x + y \]
 
-If we substitute
+If we substitute:
 
 \[ x = 2 \]
 
-The resulting expression should be
+The resulting expression is:
 
 \[ 2(2) + y \] \[ 4 + y \]
 
-We can code this substitution above using the code below.
+We can code the substitution above using SymPy's
+\passthrough{\lstinline!.subs()!} method as shown below.
     
 
 
@@ -18391,7 +18468,7 @@ results in
 
     
         A practical example involving symbolic math variables, expressions and
-substitutions could include a large expression and several replacements.
+substitutions can include a complex expression and several replacements.
 
 \[ n_0e^{-Q_v/RT} \]
 
@@ -18417,7 +18494,7 @@ into an expression with the code below.
 
 
     
-        Multiply SymPy \passthrough{\lstinline!subs()!} methods can be chained
+        Multiple SymPy \passthrough{\lstinline!subs()!} methods can be chained
 together to substitute multiple variables in one line of code.
     
 
@@ -23691,9 +23768,11 @@ improving the text for others.
 \subsection{Contributor List}\label{contributor-list}}
 
 \begin{itemize}
-\tightlist
 \item
   Levi, Blessing, and Ngan helped improve some review questions
+\item
+  Justin improved a worked example and corrected typos in review
+  questions and Chapter 5.
 \end{itemize}
     
 
