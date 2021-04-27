@@ -42,6 +42,11 @@ extra:
 
 # Copyright
 copyright: 'GNU General Public License v3.0'
+
+# Google Analytics
+google_analytics:
+  - UA-116330557-2
+  - auto
 # Content
 pages:
     - Home: index.md
