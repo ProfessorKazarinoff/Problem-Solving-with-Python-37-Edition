@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/00-Preface/00.00-Motivation/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00-Preface/00.02-Acknowledgments/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00-Preface/00.03-Supporting-Materials/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00-Preface/00.04-Formatting-Conventions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00-Preface/00.05-Errata/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/01-Orientation/01.00-Welcome/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.01-Why-Python/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.02-The-Anaconda-Distribution-of-Python/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.03-Installing-Anaconda-on-Windows/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.04-Installing-Anaconda-on-MacOS/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.05-Installing-Anaconda-on-Linux/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.06-Installing-Python-from-Python-dot-org/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.07-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01-Orientation/01.08-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.01-What-is-a-Jupyter-Notebook/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.02-Why-Jupyter-Notebooks/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.03-Installing-Juypter/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.04-Opening-a-Jupyter-Notebook/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.05-The-Jupyter-Notebook-Interface/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.06-Magic-Commands/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.07-Getting-Help-in-a-Jupyter-Notebook/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.08-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02-Jupyter-Notebooks/02.09-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.01-Python-as-a-Calculator/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.02-Variables/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.03-String-Operations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.04-Print-Statements/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.05-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03-The-Python-REPL/03.06-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.01-Numeric-Data-Types/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.02-Boolean-Data-Type/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.03-Strings/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.04-Lists/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.05-Dictionaries-and-Tuples/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.06-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04-Data-Types-and-Variables/04.07-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.01-NumPy/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.02-Installing-NumPy/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.04-Array-Creation/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.05-Array-Indexing/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.06-Array-Slicing/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.07-Array-Opperations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.08-Systems-of-Linear-Equations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.09-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05-NumPy-and-Arrays/05.10-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.01-What-is-Matplotlib/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.02-Installing Matplotlib/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.03-Line-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.04-Saving-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.05-Multi-Line-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.06-Bar-Charts-and-Pie-Charts/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.07-Error-Bars/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.08-Histograms/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.09-Box-Plots-and-Violin-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.10-Scatter-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.11-Plot-Annotations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.12-Subplots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.13-Plot-Styles/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.14-Contour-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.15-Quiver-and-Stream-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.16-3D-Surface-Plots/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.17-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06-Plotting-with-Matplotlib/06.18-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.01-Why-Functions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.02-First-Function/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.03-Functions-with-multiple-arguments/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.04-Functions-with-default-arguments/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.05-Calling-Functions-from-Other-Files/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.06-Docstrings-in-Functions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.07-Positional-and-Keyword-Arguments/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.08-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/07-Functions-and-Modules/07.09-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.01-User-Input/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.02-Selection-Statements/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.03-If-Statements/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.04-If-Else-Statements/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.05-Try-Except-Statements/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.06-Flowcharts/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.07-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/08-If-Else-Try-Except/08.08-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/09-Loops/09.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.01-For-Loops/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.02-While-Loops/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.03-Break-and-Continue/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.04-Flowcharts-Describing-Loops/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.05-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/09-Loops/09.06-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.01-SymPy/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.02-Installing-SymPy/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.03-Defining-Variables/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.04-Expressions-and-Substitutions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.05-Equations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.06-Solving-Equations/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.07-Solving-Two-Equations-for-Two-Unknowns/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.08-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/10-Symbolic-Math/10.09-Review-Questions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.01-PySerial/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.02-Bytes-and-Unicode-Strings/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.03-Controlling-an-LED/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.04-Reading-a-Sensor-with-Python/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.05-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/11-Python-and-External-Hardware/11.06-Project-Ideas/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/12-MicroPython/12.00-Introduction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.01-What-is-MicroPython/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.02-Installing-MicroPython/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.03-MicroPython-REPL/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.04-Blinking-a-LED/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.05-Reading-a-Sensor/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.06-Uploading-Code/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.07-Summary/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/12-MicroPython/12.08-Project-Ideas/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/99-Appendix/99.00-Appendix/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.01-Reserved-and-Key-Words-in-Python/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.02-ASCII-Character-Codes/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.03-Virtual-Environments/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.04-NumPy-Math-Functions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.05-Git-and-GitHub/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.06-LaTeX-Math/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.07-Problem-Solving-with-Python-Book-Construction/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.08-Contributions/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.09-Cover-Artwork/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/99-Appendix/99.10-About-the-Author/</loc>
+     <lastmod>2021-04-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
