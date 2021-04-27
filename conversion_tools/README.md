@@ -57,3 +57,9 @@ If this does not work, ensure the current working directory is website, then
 ```text
 git push -f origin gh-pages
 ```
+
+After pushing the website up to GitHub, the custom domain needs to be added in the GitHub Repo settings. Pushing with gh-pages gets rid of the custom domain.
+
+```text
+problemsolvingwithpython.com
+```
